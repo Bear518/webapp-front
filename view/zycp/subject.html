@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta property="qc:admins" content="3742272215633144221475636" />
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+        <title>职业测评_极视教育网</title>
+        <meta name="keywords" content="极视教育,职业教育,在线教育平台,在线教育,在线学习,职业培训,android,ios,Unity3D,java,Photoshop,Maya,3D MAX,独立游戏">
+        <meta name="description" content="职业锚问卷（Career Anchor Questionaire）是国外职业测评运用最广泛，最有效的工具之一。 职业锚问卷是一种职业生涯规划咨询、自我了解的工具，能够协助组织或个人进行更理想的职业生涯发展计划。职业锚没有好坏， 请根据第一感觉，不假思索迅速答题。">
+        <!-- <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0"> -->
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <script type="text/javascript" src="/js/common/device.check.js"></script>
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/css/zycp/subject.css">
+        <style type="text/css">
+        .container{background: url('/img/zycp/bg.png') no-repeat center center;background-size:cover;padding: 100px 0 198px;    background-attachment: fixed;}
+        .content-wrap{width: 1108px;/*height: 671px;*/margin:0 auto;padding: 16px;background: #fff;-moz-box-shadow: 0 0 35px 5px rgba(0,0,0,0.2);box-shadow: 0 0 35px 5px rgba(0,0,0,0.2);}
+        .content-wrap .inner-wrap{background: #f2f2f2;position: relative;}
+        .share-wrap{position: absolute;right: 16px;top: 16px;}
+        .share-wrap span{border:1px solid #e8e8e8;padding:5px;margin-left: 10px;background: #fff;}
+        .share-wrap .i-size{width: 32px;height:18px;cursor: pointer;}
+        .share-wrap .i-sina{background-position: -193px -62px;border-right: 1px solid #ededed;}
+        .share-wrap .i-qq{background-position:-218px -62px;border-right: 1px solid #ededed;}
+        .share-wrap .i-wx{background-position: -243px -62px;}
+        .share-wrap .i-sina:hover{background-position: -193px -86px;}
+        .share-wrap .i-qq:hover{background-position: -218px -86px;}
+        .share-wrap .i-wx:hover{background-position: -243px -86px;}
+/*.wemcn {position: absolute;right: 20px;top: -103px;z-index: 4;}
+.ewmDiv {width: 255px;height: 89px;border: 2px solid #dcdcdc;padding: 10px;background: #fff;border-radius: 5px;-moz-border-radius: 5px;z-index: 7;}
+#ewmimg {float: left;width: 85px;height: 85px;}
+.rwmtext {float: left;padding-top: 7px;width: 145px;text-indent: 8px;}
+.rwmtext p {line-height: 25px;width: 145px;text-indent: 12px;color: #636363;font-size: 12px;}
+#ewmkg {width: 13px;height: 13px;display: block;position: absolute;right: 12px;top: 11px;background: url(/img/zycp/icon_wem_k_k.png) no-repeat 0 0;}
+.ewmsj {margin-left: 12px;margin-top: -2px;width: 18px;height: 13px;position: absolute;background: url(/img/zycp/icon_erwm_sj.png) no-repeat 0 0;right: 14px;}*/
+body .wemcn{right: 130px;}
+body .ewmsj{display: none;}
+
+        .content-wrap .icon-wrap{width: 345px;height: 50px;margin:0 auto;padding: 26px 0 30px;background-position: -2px 22px;font-size: 24px;font-weight: bold;color: #fff;text-align: center;display: block;line-height: 50px;background-clip: content-box;}
+        .title-wrap{font-size: 16px;width: 682px;height: 73px;padding-bottom: 32px;margin:0 auto;}
+        .subject-wrap{padding:56px 92px 16px;border-top: 1px dashed #999;}
+        .subject-wrap .l-wrap{width: 399px;height:306px;margin-right: 30px;background: #fff;}
+        .subject-wrap .l-wrap span{font-size: 19px;padding:2px 8px;border-radius: 12px;color: #fff;background: #555555;}
+        .subject-wrap .l-wrap .perc-wrap{text-align: center;padding: 12px 0;}
+        .subject-wrap .l-wrap .img-wrap{padding: 0 13.5px;background: #fff;width: 372px;height: 240px;overflow: hidden;}
+        .subject-wrap .l-wrap .img-wrap img{max-width: 100%;height: auto;display: block;}
+        .subject-wrap .select-wrap{width: 452px;}
+        .subject-wrap dl dt{font-size: 20px;color: #333;line-height: 28px;height: 56px;}
+        .subject-wrap dl dd{padding: 18px 0;cursor: pointer;}
+        .select-wrap dl dd li span{color: #333;padding:6px 12px;background: #fff;border-radius: 12px;}
+        .i-icon{background: url('/img/zycp/icon.png') no-repeat;display: inline-block;width: 66px;height: 42px;vertical-align: middle;}
+        .select-wrap .i-active-tick{background-position:19px -56px;}
+        .select-wrap .i-tick{background-position:-24px -56px;}
+        .select-wrap li:hover .i-tick{background-position:19px -56px;}
+.but {width: 90px;height: 32px;background: #ff9001;font-size: 14px;border-radius: 5px;color: #fff;text-align: center;display: block;margin: 0 auto;cursor: pointer;}
+body .but-prev {background: #cecece;margin-left: 26px;}
+.mrg-r42{margin-right: 42px;}
+.h35{height: 35px;}
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div include="/view/module/header.html"></div>
+
+        <div class="container">
+            <div class="content-wrap">
+                <div class="inner-wrap">
+
+                    <div class="share-wrap">分享<span><i data-type="sina" class="i-icon i-size i-sina"></i><i data-type="qqzone" class="i-icon i-size i-qq"></i><i data-type="wx" class="i-icon i-size i-wx"></i></span></div>
+                    <div class="wemcn" id="wemcn" style="display: none;">
+                        
+                         <div id="ewm" class="ewmDiv clearfix">
+                         <img id="ewmimg" class="ewmimg" src="">
+                            <div class="rwmtext">
+                                <p>扫一扫，用手机来测试！</p>
+                                <p>用微信扫描还可以</p>
+                                <p>分享至好友和朋友圈</p> 
+                        </div>
+                         </div> 
+                        <a href="javascript:void(0)" id="ewmkg"></a>
+                         <i class="ewmsj"></i><!-- /ewmsj -->
+                    </div>
+                    <div class="i-icon icon-wrap">职业锚（职业定位）测评</div>
+                    <div class="title-wrap">所有題目都是必选题。花上最多1分钟，回答40道六选一的题目，便可获知自己适合从事的职业。这个测试寻找的是你最天生的傾向，用你的直觉来回答。不要過多考虑具体的情景，也不要想你的同学、同事、家人、朋友對你的期望。选项没有优劣之分，任何一种倾向都有其特点，以及更适合的职业类型。请选择真实的自己。<span style="color:#ff9001;">查看结果后有福利发放哦！</span></div>
+                    <div class="subject-wrap clearfix">
+                        <div class="l-wrap f-l">
+                            <div id="j_perc_wrap" class="perc-wrap"><span>1/40</span></div>
+                            <div class="img-wrap"><img id="j_match_img" src="/img/zycp/matchs/1.jpg"></div>
+                        </div>
+                        <div class="select-wrap f-l">
+                           <dl class="">
+                                <dt id="j_subject_name">我希望做我擅长的事，这样我的专业建议就会不断得到采纳</dt>
+                                <dd>
+                                    <ul>
+                                        <li id="j_score_item_0" data-score="0"><i class="i-icon i-tick"></i><span>从不</span></li>
+                                        <li id="j_score_item_1" data-score="1"><i class="i-icon i-tick"></i><span>偶尔</span></li>
+                                        <li id="j_score_item_2" data-score="2"><i class="i-icon i-tick"></i><span>有时</span></li>
+                                        <li id="j_score_item_3" data-score="3"><i class="i-icon i-tick"></i><span>经常</span></li>
+                                        <li id="j_score_item_4" data-score="4"><i class="i-icon i-tick"></i><span>频繁</span></li>
+                                        <li id="j_score_item_5" data-score="5"><i class="i-icon i-tick"></i><span>总是</span></li>
+                                    </ul>
+                                    
+                                </dd>
+
+                            </dl>
+                            <div id="j_but_wrap" class="clearfix h35">
+                                <div class="f-l"><input style="display:none;" type="button" class="but but-shadow but-animation but-prev mrg-r42" value="上一题"></div>
+                                <div class="f-l"><input style="display:none;" type="button" class="but but-shadow but-animation but-submit" value="提交答案"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <style type="text/css">
+                    .last-subject-wrap{border-top: 1px dashed #999;padding-bottom: 18px;}
+                   .last-subject-wrap .check-wrap dt{font-size: 20px;color: #333;text-align: center;line-height: 72px;}
+                    .check-wrap dd{width: 660px;margin:0 auto;border:1px dashed #999;padding: 12px 28px;}
+                    .check-wrap dd li{cursor: pointer;}
+                    .but-wrap{margin-top: 24px;}
+                    .but-check{width: 150px;}
+                    .i-checkbox-same{width: 40px;margin-right: 12px;}
+                    .i-active-checkbox{background-position: -284px -55px;}
+                    .i-checkbox{background-position: -320px -54px;}
+                    </style>
+                    <div class="last-subject-wrap dis_none">
+                        <div class="check-wrap">
+                            <dl>
+                                <dt>最后，重新看一下你给分较高的描述，从中挑出与你日常想法最为吻合的3个</dt>
+                                <dd>
+                                    <ul id="j_last_subject_wrap">
+                                        <li><i class="i-icon i-active-checkbox i-checkbox-same"></i>我希望做我擅长的事，这样我的专业建议就会不断得到采纳。</li>
+                                        <li><i class="i-icon i-checkbox i-checkbox-same"></i>我希望做我擅长的事，这样我的专业建议就会不断得到采纳。</li>
+                                        <li><i class="i-icon i-checkbox i-checkbox-same"></i>我希望做我擅长的事，这样我的专业建议就会不断得到采纳。</li>
+                                        <li><i class="i-icon i-checkbox i-checkbox-same"></i>我希望做我擅长的事，这样我的专业建议就会不断得到采纳。</li>
+                                        <li><i class="i-icon i-checkbox i-checkbox-same"></i>我希望做我擅长的事，这样我的专业建议就会不断得到采纳。</li>
+                                        <li><i class="i-icon i-checkbox i-checkbox-same"></i>我希望做我擅长的事，这样我的专业建议就会不断得到采纳。</li>
+                                        <li><i class="i-icon i-checkbox i-checkbox-same"></i>我希望做我擅长的事，这样我的专业建议就会不断得到采纳。</li>
+                                         <li><i class="i-icon i-checkbox i-checkbox-same"></i>我希望做我擅长的事，这样我的专业建议就会不断得到采纳。</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <div class="clearfix h35 but-wrap">
+                                    <input type="button" class="but but-shadow but-animation but-check j_check_result" value="登录查看测评结果">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div include="/view/module/footer.html"></div>
+         <script src="/js/vendor/jquery-1.11.3.min.js"></script>
+         <script src="/js/main.js"></script>
+         <script type="text/javascript" src="/js/zycp/common.js"></script>
+         <script type="text/javascript">
+         var subjectModule={
+            bindEvents:function(){
+                var curSubjectIndex=1,subjectTotal=40,self=this;
+                // $('.share-wrap').on('click','.i-icon',function(){
+                //     var $this=$(this),type=$this.data('type'),basicHref;
+                //     switch(type){
+                //         case 'sina':
+                //             basicHref='http://service.weibo.com/share/share.php';
+                //         break;
+                //         case 'qqzone':
+                //             basicHref='http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey';
+                //         break;
+                //         case 'wx':
+
+                //         break;
+                //     }
+                //     var share=function(basicHref){
+                //         var l= {
+                //             url:'http://www.skillbridge.cn',
+                //             showcount:'1',/*是否显示分享总数,显示：'1'，不显示：'0' */
+                //             desc:'职业锚问卷（Career Anchor Questionaire）是国外职业测评运用最广泛，最有效的工具之一。 职业锚问卷是一种职业生涯规划咨询、自我了解的工具，能够协助组织或个人进行更理想的职业生涯发展计划。职业锚没有好坏， 请根据第一感觉，不假思索迅速答题。',/*默认分享理由(可选)*/
+                //             summary:'极视教育职业测评',/*分享摘要(可选)*/
+                //             title:'极视教育职业测评 点击查看：http://skillbridge.cn 分享自@极视教育',/*分享标题(可选)*/
+                //             site:'极视教育职业测评',/*分享来源 如：腾讯网(可选)*/
+                //             pics:'', /*分享图片的路径(可选)*/
+                //             style:'203',
+                //             width:98,
+                //             height:22
+                //         };
+                //         var a=[];
+                //         for(var b in l)
+                //         a.push(b+"="+encodeURIComponent(l[b]));
+                //         window.open(basicHref+"?"+a.join("&"),"_blank","width=615,height=505")
+                //     };
+                //     share(basicHref);
+                //    // window.open('http://service.weibo.com/share/share.php','_blank');
+                // });
+                 $('.select-wrap').on('click','li',function(){
+                    var $this=$(this),score=$this.data('score');
+                    $('.i-active-tick').toggleClass('i-tick i-active-tick');
+                    $this.find('i').toggleClass('i-tick i-active-tick');
+                    var item=self.subjectData[curSubjectIndex-1];
+
+                    self[item.value]=self[item.value]||{};
+                    self[item.value][item.index]=score;
+                    //
+                    if(curSubjectIndex<40){
+                        curSubjectIndex++;
+                        self.controlBtnDisplayByIndex(curSubjectIndex);
+                        var item=self.subjectData[curSubjectIndex-1];
+                        $('#j_match_img').attr('src','/img/zycp/matchs/'+curSubjectIndex+'.png');
+                        $('#j_subject_name').html(item.name);
+                        $('#j_perc_wrap').html('<span>'+curSubjectIndex+'/'+subjectTotal+'</span>');
+                        $('.i-active-tick').toggleClass('i-tick i-active-tick');
+                    }
+                 });
+                $('#j_but_wrap').on('click','.but-prev',function(){
+                    curSubjectIndex--;
+                    self.controlBtnDisplayByIndex(curSubjectIndex);
+                    var item=self.subjectData[curSubjectIndex-1],score=self[item.value][item.index];
+                    $('.i-active-tick').toggleClass('i-tick i-active-tick');
+                    $('#j_score_item_'+score).find('i').toggleClass('i-tick i-active-tick');
+                    $('#j_subject_name').html(item.name);
+                    $('#j_perc_wrap').html('<span>'+curSubjectIndex+'/'+subjectTotal+'</span>');
+                });
+                $('#j_but_wrap').on('click','.but-submit',function(){
+                    var arr=self.calculateHighestScoreSubjectList(),dom='';
+                    console.log(arr);
+                    for(var i=0,ii=arr.length;i<ii;i++){
+                        for(var key in arr[i]){
+                            var item=self.subjectData[key];
+                            //item.value存的就是列的值，也就是职业锚八个列的值，比如c1就是第一列的意思
+                            dom+='<li><i data-index="'+key+'" data-value="'+item.value+'" class="i-icon i-checkbox i-checkbox-same"></i>'+item.name+'</li>';
+                        }
+                    }
+                    $('#j_last_subject_wrap').html(dom);
+                    //显示最后一道多选题
+                    $('.last-subject-wrap').show();
+                    $('.subject-wrap').hide();
+                });
+                //最后一道题选项绑定的点击事件
+                $('.last-subject-wrap').on('click','li',function() {
+                   var $this=$(this),$i=$this.find('i');
+                   if($('.i-active-checkbox').length>2&&!$i.hasClass('i-active-checkbox')){
+                        $($('.i-active-checkbox')[0]).toggleClass('i-checkbox i-active-checkbox');
+                    }
+                   $i.toggleClass('i-checkbox i-active-checkbox');
+
+                });
+                $('.last-subject-wrap').on('click','.but-check',function(){
+                    var $this=$(this);
+					$('.yzm_img').attr('src',$._CACHEOBJ.context+'/base/captcha?'+Math.random());
+                    if(!mainModule.isLogined(true)){
+                        mainModule.loopCheckIsLogined(function(){
+                            mainModule.toggleStrShowByIsLogined($('.j_check_result'),'登录查看测评结果','查看测评结果');
+                            var si=setInterval(function(){
+                                $this.trigger('click');
+                                clearInterval(si);
+                            },1000);
+                        })
+                        return;
+                    }
+                    $('.i-active-checkbox').each(function(value,key){
+                        var $this=$(this),index=$this.data('index'),cValue=$this.data('value');
+                        self[cValue][index]+=4;
+                    });
+                    // cValue：列的值；
+                    var sumObj={},cValue,maxValue;
+                    for(var i=1;i<9;i++){
+                        var key='c'+i,obj=self[key],sum=0;
+                        for(var index in obj){
+                            sum+=obj[index];
+                        }
+                        sumObj[key]=Math.floor(sum/5);
+                    }
+                    for(var key in sumObj){
+                        if(maxValue){
+                            if(maxValue<sumObj[key]){
+                                maxValue=sumObj[key];
+                                cValue=key;
+                            }
+                        }else{
+                            maxValue=sumObj[key];
+                            cValue=key;
+                        }
+                    }
+                    //如果存在多列最大值
+                    var maxArr=[];
+                    for(var key in sumObj){
+                        if(maxValue==sumObj[key]){
+                            var obj={
+                                key:key,
+                                value:maxValue
+                            }
+                            maxArr.push(obj);
+                        }
+                    }
+                    var rad=Math.floor(Math.random()*maxArr.length),selectObj=maxArr[rad];
+                    var careerPathList={
+                        'c1':{name:'TF 技术/职能型职业锚',intro:'这种定位的人会发现自己对某一特定工作很擅长并且很热衷。真正让他们感到自豪的是他们所具备的专业才能。他们倾向于一种“专家式”的生活，一般不喜欢成为全面的管理人员，因为这将意味着他们放弃在技术/职能领域的成就。但他们愿意成为一名职能经理，因为职能经理可以更好地帮助他们在专业领域上发展。',industryChoose:'技术主管、职能部门经理、IT互联网软件、通信电子、机械制药、化工',column:'c1'},
+                        'c2':{name:'GM 管理型职业锚',intro:'这种定位的人对管理本身具有很大的兴趣，具有成为管理人员的强烈愿望，并将此看成职业进步的标准。他们有提升到全面管理职位上所需要的相关能力，并希望自己的职位不断得到提升，这样他们可以承担更大的责任，并能够做出影响成功或失败的决策。',industryChoose:'高管、行政人员、企业管理',column:'c2'},
+                        'c3':{name:'AU 自主/独立型职业锚',intro:'这种定位的人追求自主和独立，不愿意接受别人的约束，也不愿受程序、工作时间、着装方式以及在任何组织中都不可避免的标准规范的制约。无论什么样的工作，他们希望能用自己的方式、工作习惯、时间进度和自己的标准来完成工作。',industryChoose:'教师、咨询顾问、研发人员、科研、自由职业',column:'c3'},
+                        'c4':{name:'SE 安全/稳定型职业锚',intro:'安全与稳定是这种类型的人选择职业最基本、最重要的需求。他们需要“把握自己的发展”，只有在职业的发展可以预测、可以达到或实现的时候，他们才会真正感觉放松。',industryChoose:'银行职员、公务员、财务管理、会计、结算、出纳、审计、税务、银行信贷',column:'c4'},
+                        'c5':{name:'EC 创造/创业型职业锚',intro:'这种定位的人，最重要的是建立或设计某种完全属于自己的东西；建立或投资新的公司；收购其他的公司，并按照自己的意愿进行改造。创造并不仅仅是发明家或艺术家所作的事，创业者也需要创造的激情和动力。他们有强烈的冲动向别人证明：通过自己的努力能够创建新的企业、产品或服务，并使之发展下去。当在经济上获得成功后，赚钱便成为他们衡量成功的标准。',industryChoose:'设计、广告、媒体、艺术、产品、创业',column:'c5'},
+                        'c6':{name:'SV 服务/奉献型职业锚',intro:'这种定位的人希望职业能够体现个人价值观，他们关注工作带来的价值，而不在意是否能发挥自己的才能或能力。他们的职业决策通常基于能否让世界变得更加美好。',industryChoose:'医护、社工、幼师、社会福利组织、志愿者、安全、社会责任、健康、餐饮、旅游、环保',column:'c6'},
+                        'c7':{name:'CH 挑战型职业锚',intro:'这种定位的人认为他们可以征服任何事情或任何人，并将成功定义为“克服不可能的障碍，解决不可能解决的，或战胜非常强硬的对手”。随着自己的进步，他们喜欢寻找越来越强硬的“挑战”，希望在工作中面临越来越艰巨的任务。 ',industryChoose:'特种兵、销售、市场、公关',column:'c7'},
+                        'c8':{name:'LS 生活型职业锚',intro:'这种定位的人是喜欢允许他们平衡并结合个人的需要、家庭的需要和职业的需要的工作环境。他们希望将生活的各个主要方面整合为一个整体。正因为如此，他们需要一个能够提供足够的弹性让他们实现这一目标的职业环境。甚至可以牺牲他们职业的一些方面，如：提升带来的职业转换，他们将成功定义得比职业成功更广泛。他们认为自己在如何去生活，在那里居住，以及如何处理家庭事情，及在组织中的发展道路是与众不同的。',industryChoose:'营养师、宠物医生、档案图书管理员',column:'c8'},
+                    },
+                    selectCareerPath=careerPathList[selectObj.key];
+                    console.log(selectCareerPath);
+                    window.location.href='result.html?column='+selectCareerPath.column+'&score='+selectObj.value*5;
+                })
+
+            },
+            controlBtnDisplayByIndex:function(index){
+                if(index>1){
+                    $('#j_but_wrap').find('.but-prev').show();
+                    if(index>39){
+                        $('#j_but_wrap').find('.but-submit').show();
+                    }else{
+                        $('#j_but_wrap').find('.but-submit').hide();
+                    }
+                }else{
+                    $('#j_but_wrap').find('.but-prev').hide();
+                }
+            },
+            calculateMaxItem:function(obj){
+                var maxValue,maxIndex,maxArr=[];
+                for(var key in obj){
+                    if(maxValue){
+                        if(maxValue<obj[key]){
+                            maxValue=obj[key];
+                            maxIndex=key;
+                        }
+                    }else{
+                        maxValue=obj[key];
+                        maxIndex=key;
+                    }
+                }
+                for(var key in obj){
+                    if(maxValue==obj[key]){
+                        var item={};
+                        item[key]=obj[key];
+                        maxArr.push(item);
+                    }
+                }
+                var len=maxArr.length,rad=Math.floor(Math.random()*len);
+                return maxArr[rad];
+            },
+            calculateHighestScoreSubjectList:function(){
+                var arr=[];
+                for(var i=1;i<9;i++){
+                    var key='c'+i,
+                        obj=this.calculateMaxItem(this[key]);
+                    arr.push(obj);
+                }
+                return arr;
+            },
+            mockSubjectData:function(){
+                var subjectData=[{
+                    name:'我希望做我擅长的事，这样我的专业建议就会不断得到采纳。',
+                    value:'c1',
+                    index:0
+                },{
+                    name:'当我整合并整理其他人的工作时，我非常有成就感。',
+                    value:'c2',
+                    index:1
+                },{
+                    name:'我希望我的工作能够按我自己的方式，按自己的计划去开展。',
+                    value:'c3',
+                    index:2
+                },{
+                    name:'对我而言，安全与稳定比自由和自主更加重要。',
+                    value:'c4',
+                    index:3
+                },{
+                    name:'我一直在寻找可以让我创立自己事业（公司）的创意（点子）。',
+                    value:'c5',
+                    index:4
+                },{
+                    name:'我认为只有对社会做出真正贡献的职业才能算是成功的职业。',
+                    value:'c6',
+                    index:5
+                },{
+                    name:'在工作中，我希望去解决那些有挑战性的问题，并且胜出。',
+                    value:'c7',
+                    index:6
+                },{
+                    name:'我宁愿离开公司，也不愿从事需要个人和家庭做出一定牺牲的工作。',
+                    value:'c8',
+                    index:7
+                },{
+                    name:'将我的技术和专业水平发展到一个更具有竞争力的层次是成功职业的必要条件。',
+                    value:'c1',
+                    index:8
+                },{
+                    name:'我希望能够管理一个大的公司（组织），我的决策将会影响许多人。',
+                    value:'c2',
+                    index:9
+                },{
+                    name:'如果职业允许自由地决定自己的工作内容、计划、过程时，我会非常满意。',
+                    value:'c3',
+                    index:10
+                },{
+                    name:'如果工作的结果使我丧失了自己在组织中的安全稳定感，我宁愿离开这个工作岗位。',
+                    value:'c4',
+                    index:11
+                },{
+                    name:'对我而言，创办自己的公司比在其他的公司中争取一个高的管理位置更有意义。',
+                    value:'c5',
+                    index:12
+                },{
+                    name:'我的职业满足来自于我可以用自己的才能去为他人提供服务。',
+                    value:'c6',
+                    index:13
+                },{
+                    name:'我认为职业的成就感来自于克服自己面临的非常有挑战性的困难。',
+                    value:'c7',
+                    index:14
+                },{
+                    name:'我希望我的职业能够兼顾个人、家庭和工作的需要。',
+                    value:'c8',
+                    index:15
+                },{
+                    name:'对我而言，在我喜欢的专业领域内做资深专家比总经理更具有吸引力。',
+                    value:'c1',
+                    index:16
+                },{
+                    name:'只有在我成为公司的总经理后，我才认为我的职业人生是成功的。',
+                    value:'c2',
+                    index:17
+                },{
+                    name:'成功的职业应该允许我有完全的自主与自由。',
+                    value:'c3',
+                    index:18
+                },{
+                    name:'我愿意在能给我安全感、稳定感的公司中工作。',
+                    value:'c4',
+                    index:19
+                },{
+                    name:'当通过自己的努力或想法完成工作时，我的工作成就感最强。',
+                    value:'c5',
+                    index:20
+                },{
+                    name:'对我而言，利用自己的才能使这个世界变得更适合生活或居住，比争取一个高的管理职位更重要。',
+                    value:'c6',
+                    index:21
+                },{
+                    name:'当我解决了看上去不可能解决的问题，或者在必输无疑的竞赛中胜出，我会非常有成就感。',
+                    value:'c7',
+                    index:22
+                },{
+                    name:'我认为只有很好地平衡个人、家庭、职业三者的关系，生活才能算是成功的。',
+                    value:'c8',
+                    index:23
+                },{
+                    name:'我宁愿离开公司，也不愿频繁接受那些不属于我专业领域的工作。',
+                    value:'c1',
+                    index:24
+                },{
+                    name:'对我而言，做一个全面管理者比在我喜欢的专业领域内做资深专家更有吸引力。',
+                    value:'c2',
+                    index:25
+                },{
+                    name:'对我而言，用我自己的方式不受约束地完成工作，比安全、稳定更加重要。',
+                    value:'c3',
+                    index:26
+                },{
+                    name:'只有当我的收入和工作有保障时，我才会对工作感到满意。',
+                    value:'c4',
+                    index:27
+                },{
+                    name:'在我的职业生涯中，如果我能成功地创造或实现完全属于自己的产品或点子，我会感到非常成功。',
+                    value:'c5',
+                    index:28
+                },{
+                    name:'我希望从事对人类和社会真正有贡献的工作。',
+                    value:'c6',
+                    index:29
+                },{
+                    name:'我希望工作中有很多的机会，可以不断挑战我解决问题的能力（或竞争力）。',
+                    value:'c7',
+                    index:30
+                },{
+                    name:'能很好地平衡个人生活与工作，比达到一个高的管理职位更重要。',
+                    value:'c8',
+                    index:31
+                },{
+                    name:'如果在工作中能经常用到我特别的技巧和才能，我会感到特别满意。',
+                    value:'c1',
+                    index:32
+                },{
+                    name:'我宁愿离开公司，也不愿意接受让我离开全面管理的工作。',
+                    value:'c2',
+                    index:33
+                },{
+                    name:'我宁愿离开公司，也不愿意接受约束我自由和自主控制权的工作。',
+                    value:'c3',
+                    index:34
+                },{
+                    name:'我希望有一份让我有安全感和稳定感的工作。',
+                    value:'c4',
+                    index:35
+                },{
+                    name:'我梦想着创建属于自己的事业。',
+                    value:'c5',
+                    index:36
+                },{
+                    name:'如果工作限制了我为他人提供帮助或服务，我宁愿离开公司。',
+                    value:'c6',
+                    index:37
+                },{
+                    name:'去解决那些几乎无法解决的难题，比获得一个高的管理职位更有意义。',
+                    value:'c7',
+                    index:38
+                },{
+                    name:'我一直在寻找一份能最小化个人和家庭之间冲突的工作。',
+                    value:'c8',
+                    index:39
+                }];
+                return subjectData;
+            },
+            init:function(){
+                this.bindEvents();
+                this.subjectData=this.mockSubjectData();
+                mainModule.toggleStrShowByIsLogined($('.j_check_result'),'登录查看测评结果','查看测评结果');
+            }
+         };
+         subjectModule.init();
+         </script>
+        <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+
+    </body>
+    </html>

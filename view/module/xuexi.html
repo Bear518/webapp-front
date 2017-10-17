@@ -1,0 +1,325 @@
+<style type="text/css">
+.xuexi-shuju-wrap{width: 59%;height: 628px;/*display: inline-block;*/background: #fff;vertical-align: top;margin-right: 1%;padding:0 25px;}
+.wdkc-wrap{width: 40%;height: 628px;/*display: inline-block;*/background: #fff;vertical-align: top;padding: 0 28px;}
+.zyyc-wrap{width: 49%;height: 870px;display: inline-block;background: #fff;vertical-align: top;margin-right: 12px;margin-top: 20px;padding: 0 28px;}
+.wdbj-wrap{width: 100%;height: 870px;/*display: inline-block;*/background: #fff;margin-top: 20px;padding: 0 28px;}
+.i-wode-kechen{background-position: -412px -45px;width: 38px;height:27px; vertical-align: middle;}
+.i-zhiye-yangchen{background-position: -460px -48px;width: 38px;height:27px; vertical-align: middle;}
+.i-wode-biji{background-position: -506px -47px;width: 38px;height:27px; vertical-align: middle;}
+.xuexi-shuju-wrap .header-wrap{line-height: 70px;height: 70px;color: #487aa3;border-bottom:2px solid #487aa3;}
+.wdkc-wrap .header-wrap{line-height: 70px;height: 70px;border-bottom: 2px solid #3c8c80;color: #3c8c80;}
+.zyyc-wrap .header-wrap{line-height: 70px;height: 70px;border-bottom: 2px solid #63b6c1;color: #63b6c1;}
+.wdbj-wrap .header-wrap{line-height: 70px;height: 70px;border-bottom: 2px solid #816a93;color: #816a93;font-size: 16px;}
+.i-shuju{background-position: -375px -45px;width: 36px;height: 28px;}
+.wdkc-wrap .list-wrap{padding: 30px 10px;height: 500px;overflow: auto;}
+.wdkc-wrap li{padding:7px 12px;margin-bottom: 18px;}
+.wdkc-wrap .fist-item{background: #5a9cd1;}
+.cf{color: #fff;}
+.progress-line{height: 3px;background: #fff;margin-top: 8px;}.progress-line .perc{height: 3px;background: #ccc;}
+.cur-xuexi{margin-right: 10px;display: inline-block;width: 15%;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;vertical-align: bottom;text-align: center;}
+.cur-xuexi:hover,.next-kechen:hover{color: #3a3a3a;border-bottom: 1px solid #3a3a3a;}
+.next-kechen{margin-right: 10px;width: 15%;display: inline-block;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;vertical-align: bottom;text-align: center;}
+.wdkc-wrap .fist-item .content-wrap{font-size: 12px;color: #2c4860;margin-top: 18px;}
+.wdkc-wrap .kechen-name{margin-right: 20px;color: #fff;}
+.i-del{background-position: -600px -54px;width: 22px;height: 16px;cursor: pointer;}
+.i-del:hover{background: url('/img/info/fixed.png') no-repeat;background-position: -13px -17px;}
+.wdkc-wrap .content-wrap a{color: #2c4860;}
+.wdkc-wrap .second-item{background: #4cb4a4;}
+.wdkc-wrap .three-item{background: #f36b5a;}
+.wdkc-wrap .four-item{background: #9a7caf;}
+.wdkc-wrap .second-item .content-wrap{color: #255951;font-size: 12px;margin-top: 12px;}
+.wdkc-wrap .three-item .content-wrap{color: #812f24;font-size: 12px;margin-top: 12px;}
+.wdkc-wrap .four-item .content-wrap{color: #3f274f;font-size: 12px;margin-top: 12px;}
+.zyyc-wrap ul>li{border:1px solid #999;margin-top: 44px;}
+.zyyc-wrap .img-wrap img{width: 100%;height: 173px;background: #ccc;}
+.zyyc-wrap .zyyc-progress{height: 19px;background: #eee;}
+.zyyc-wrap .progressed{background: #ffa734;width: 75%;height: 100%;text-align: center;color: #fff;}
+.zyyc-wrap .content-wrap{padding: 18px 30px;width: 60%;position: relative;}
+.zyyc-wrap .img-wrap{width: 40%;}
+.i-kechen{background-position: -621px -48px;}
+.i-keshi{background-position: -660px -48px;}
+.i-time{background-position: -695px -46px;}
+.zyyc-wrap .content-wrap p{margin-top: 6px;height: 50px;overflow: hidden;white-space: pre-wrap;}
+.i-gray-del{background-position: -542px -45px;}
+.zyyc-wrap .content-wrap .del-wrap{position: absolute;right: 0;top: 0px;}
+.xuexi-shuju-wrap .content-wrap{margin-top: 70px;}
+.xuexi-shuju-wrap .line-chart-wrap{width: 60%;height: 422px;}
+.xuexi-shuju-wrap .line-chart-wrap canvas{width: 100%;height: 422px;}
+.xuexi-shuju-wrap .pie-chart-wrap{width: 40%;height: 422px;}
+.pie-chart-wrap canvas{/* width: 78%;height: 100%;*/}
+.time-option-wrap{line-height: 36px;border-left: 2px solid #5ba5af;padding-left: 6px;z-index: 22;position: relative;cursor: pointer;}
+.time-option-wrap li.active{color: #ff9001;}
+.time-option-wrap li:hover{color: #ff9001;}
+.pie-chart-wrap .top-wrap{/* height: 50%;*/}
+.learned-kechen{border-left: 16px solid #a5dc59;padding-left: 12px;margin-left: 12px;margin-right: 20px;width: 41%;display: inline-block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;vertical-align: top;}
+.pie-chart-wrap .canvas-wrap{width: 80%;position: relative;right: 60px;}
+.pie-detail-wrap{margin:25px 0 0 10px;}.pie-detail-wrap ul>li{padding:3px 0;}
+/*@media screen and (min-width: 1300px) {
+.pie-chart-wrap .canvas-wrap{
+right: 0;
+}
+}*/
+/*@media only screen and (max-width: 1300px) {
+Style adjustments for viewports that meet the condition 
+.xuexi-shuju-wrap .line-chart-wrap {
+width: 100%;
+height: 50%; 
+}
+}*/
+.btn-jxxx{display: inline-block;width: 80px;height: 24px;border: 1px solid #ff9001;border-radius: 5px;color: #ff9001;text-align: center;}
+.no-biji-wrap .img-wrap{width: 262px;margin: 0 auto;margin-top: 136px;}
+.no-kechen-wrap .hint-wrap{text-align: center;margin-top: 67px;margin-bottom: 79px;color: #666;}
+.no-kechen-wrap .img-wrap{width: 353px;margin:0 auto;margin-bottom: 74px;}
+.no-kechen-wrap .a-seek a{display: block;width: 118px;height: 35px;background: #ff9825;border:1px solid #df7500;color: #fff;line-height: 35px;margin:0 auto;text-align: center;}
+.no-xuexi-data-wrap .img-wrap{width: 129px;margin:0 auto;margin-top: 90px;}
+.wdkc-wrap .header-wrap .r-wrap{height: 30px;border-radius: 5px;font-size: 14px;color: #999;line-height: 26px;margin-top: 23px;overflow: hidden;padding:2px;}
+.wdkc-wrap .header-wrap .r-wrap span:first-child{  border-top-left-radius: 5px;border-bottom-left-radius: 5px;}
+.wdkc-wrap .header-wrap .r-wrap span:last-child{  border-top-right-radius: 5px;border-bottom-right-radius: 5px;}
+.wdkc-wrap .header-wrap .r-wrap span{padding: 4px 8px;cursor: pointer;border:1px solid #999;border-radius: 1px;}
+.wdkc-wrap .header-wrap .r-wrap span:hover{background: #ff9001;color: #fff;border:1px solid #ff9001;}
+.wdkc-wrap .header-wrap .r-wrap span.active{background: #ff9001;color: #fff;border:1px solid #ff9001;}.kcjh-txt-wrap{font-size: 16px;color: #3c8c80;}
+.xxsj-txt-wrap{font-size: 16px;color: #487aa3;}
+.wdkc-wrap .loading{line-height: 85px;color: #fff;text-align: center;}
+</style>
+<div class="clearfix">
+    <div class="xuexi-shuju-wrap f-l">
+            <div class="header-wrap xxsj-txt-wrap"><i class="i-icon i-shuju"></i>学习数据</div>
+            <div class="content-wrap clearfix">
+                <div class="no-xuexi-data-wrap dis_none">
+                    <div style="text-align:center;">暂时没有该学习数据，在开发中...</div>
+                    <div class="img-wrap"><img src="/img/info/no-xuexi-data.png"></div>
+                </div>
+
+                <div class="f-l line-chart-wrap ">
+                    <p>时长(分钟)</p>
+                    <canvas id="myLine" max-height="422" class="time-line"></canvas>
+                </div>
+                <div class="f-l pie-chart-wrap ">
+                    <div class="clearfix top-wrap">
+                        <div class="canvas-wrap f-l"><canvas class="f-l" id="myPie"></canvas></div>
+                        <ul id="j_time_select_wrap" class="f-l time-option-wrap">
+                            <li class="active" data-type="today">今天</li>
+                            <li data-type="weekday">本周</li>
+                            <li data-type="month">本月</li>
+                            <li data-type="year">本年</li>
+                        </ul>
+                    </div>
+                    <div class="pie-detail-wrap">
+                        <ul id="pieDetail">
+                            <!-- <li><span class="learned-kechen">ui设计</span><span class="time">0时42分</span></li>
+                            <li><span class="learned-kechen">ui设计</span><span class="time">0时42分</span></li>
+                            <li><span class="learned-kechen">ui设计</span><span class="time">0时42分</span></li>
+                            <li><span class="learned-kechen">ui设计</span><span class="time">0时42分</span></li>
+                            <li><span class="learned-kechen">ui设计</span><span class="time">0时42分</span></li> -->
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    <div class="wdkc-wrap f-l">
+            <div class="header-wrap clearfix">
+                <div class="f-l kcjh-txt-wrap"><i class="i-icon i-wode-kechen"></i>课程&计划</div>
+                <div class="f-r "><div id="j_courseandplan" class="r-wrap"><span data-type="course" class="active">课程</span><span data-type="plan">计划</span></div></div>
+            </div>
+            <div id="j_no_kechen_wrap" class="no-kechen-wrap dis_none">
+                <div class="hint-wrap">您还没有添加课程学习计划哟～</div>
+                <div class="img-wrap"><img src="/img/info/no-kechen.png"></div>
+                <div class="a-seek"><a href="/view/seek/course.html">寻找课程</a></div>
+            </div>
+            <div id="j_no_zytp_wrap" class="no-kechen-wrap dis_none">
+                <div class="hint-wrap">您还没有添加职业图谱计划哟～</div>
+                <div class="img-wrap"><img src="/img/info/no-kechen.png"></div>
+                <div class="a-seek"><a href="/view/zytp/list.html">寻找职业图谱</a></div>
+            </div>
+            <ul id="j_course_plan_wrap" class="list-wrap">
+
+                <li class="fist-item">
+                    <div class="loading">正在努力加载数据...</div>
+                </li>
+                <!-- <li class="second-item">
+                    <div class="clearfix"><i class="i-icon i-del f-r"></i></div>
+                    <div class="cf"><span class="kechen-name">ui初级控件</span><span>25%</span></div>
+                    <div class="progress-line"></div>
+                    <div class="content-wrap">正在学习：<a class="c3a cur-xuexi" href="#">ios开发ios开发ios开发</a>下个课程：<span class="c20 next-kechen">ui布局</span>笔记数：<span class="biji-number">20</span></div>
+
+                </li>
+                <li class="three-item">
+                    <div class="clearfix"><i class="i-icon i-del f-r"></i></div>
+                    <div class="cf"><span class="kechen-name">ui初级控件</span><span>25%</span></div>
+                    <div class="progress-line"></div>
+                    <div class="content-wrap">正在学习：<a class="c3a cur-xuexi" href="#">ios开发ios开发ios开发</a>下个课程：<span class="c20 next-kechen">ui布局</span>笔记数：<span class="biji-number">20</span></div>
+
+                </li>
+                <li class="four-item">
+                    <div class="clearfix"><i class="i-icon i-del f-r"></i></div>
+                    <div class="cf"><span class="kechen-name">ui初级控件</span><span>25%</span></div>
+                    <div class="progress-line"></div>
+                    <div class="content-wrap">正在学习：<a class="c3a cur-xuexi" href="#">ios开发ios开发ios开发</a>下个课程：<span class="c20 next-kechen">ui布局</span>笔记数：<span class="biji-number">20</span></div>
+
+                </li> -->
+            </ul>
+    </div>
+    <div class="zyyc-wrap dis_none">
+            <div class="header-wrap clearfix">
+                    <i class="i-icon i-zhiye-yangchen"></i>职业养成
+            </div>
+            <div>
+                <ul>
+                    <li class="clearfix">
+                        <div class="f-l img-wrap img-animation-bigger">
+                            <img src="">
+                            <div class="zyyc-progress"><div class="progressed">75%</div></div>
+                        </div>
+                        <div class="f-l content-wrap">
+                            <div class="clearfix del-wrap"><i class="i-icon i-gray-del f-r"></i></div>
+                            <h5>大前端工程师</h5>
+                            <p>掌握html、css、js等;掌握html、css、js等;掌握html、css、js等</p>
+                            <div>
+                                <i class="i-icon i-kechen"></i>192门课程
+                                <i class="i-icon i-keshi"></i>693课时
+                                <i class="i-icon i-time"></i>91小时32分钟
+                            </div>
+                            <div class="clearfix">2384234人在学习<a class="btn-jxxx f-r" href="#">继续学习</a></div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="f-l img-wrap img-animation-bigger">
+                            <img src="">
+                            <div class="zyyc-progress"><div class="progressed">75%</div></div>
+                        </div>
+                        <div class="f-l content-wrap">
+                            <div class="clearfix del-wrap"><i class="i-icon i-gray-del f-r"></i></div>
+                            <h5>大前端工程师</h5>
+                            <p>掌握html、css、js等;掌握html、css、js等;掌握html、css、js等</p>
+                            <div>
+                                <i class="i-icon i-kechen"></i>192门课程
+                                <i class="i-icon i-keshi"></i>693课时
+                                <i class="i-icon i-time"></i>91小时32分钟
+                            </div>
+                            <div class="clearfix">2384234人在学习<a class="btn-jxxx f-r" href="#">继续学习</a></div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="f-l img-wrap img-animation-bigger">
+                            <img src="">
+                            <div class="zyyc-progress"><div class="progressed">75%</div></div>
+                        </div>
+                        <div class="f-l content-wrap">
+                            <div class="clearfix del-wrap"><i class="i-icon i-gray-del f-r"></i></div>
+                            <h5>大前端工程师</h5>
+                            <p>掌握html、css、js等;掌握html、css、js等;掌握html、css、js等</p>
+                            <div>
+                                <i class="i-icon i-kechen"></i>192门课程
+                                <i class="i-icon i-keshi"></i>693课时
+                                <i class="i-icon i-time"></i>91小时32分钟
+                            </div>
+                            <div class="clearfix">2384234人在学习<a class="btn-jxxx f-r" href="#">继续学习</a></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    </div>
+    <div class="wdbj-wrap f-l">
+            <div class="header-wrap"><i class="i-icon i-wode-biji"></i>我的笔记</div>
+            <div id="j_no_biji_wrap" class="no-biji-wrap">
+                <div class="img-wrap"><img src="/img/info/no-biji.png"></div>
+            </div>
+            <div id="j_biji_wrap" class="biji-content-wrap clearfix dis_none">
+                <ul id="j_kechen_name_wrap" class="f-l kechen-name-wrap">
+                    <!-- <li class="active">Excel高级财经应用</li>
+                    <li>Excel高级财经应用</li>
+                    <li>Excel高级财经应用</li>
+                    <li>Excel高级财经应用</li>
+                    <li>Excel高级财经应用</li>
+                    <li>Excel高级财经应用</li>
+                    <li>Excel高级财经应用</li>
+                    <li>Excel高级财经应用</li> -->
+                </ul>
+                <div class="f-l midden-wrap">课时</div>
+                <div id="j_keshi_biji_container" class="f-l keshi-biji-container">
+<!--                     <dl class="clearfix">
+                        <dt class="f-l"><span class="number">1</span>ios开发使用xcode和模拟</dt>
+                        <dd class="f-l">
+                            <ul class="keshi-biji-wrap clearfix">
+                                <li class="f-l">
+                                    <div class="biji-header-wrap">
+                                        <span>2016/01/26</span><i class="i-icon i-big"></i><i class="i-icon i-del f-r"></i>
+                                    </div>
+                                    <div class="biji-txt-wrap"><p>afsdflmsldf老师的加夫里什酒店房间里说的肌肤</p></div>
+                                    <div><span class="pointtime f-r"><i class="i-icon i-triangle-l"></i>12.15</span></div>
+                                </li>
+                                <li class="f-l">
+                                    <div class="biji-header-wrap">
+                                        <span>2016/01/26</span><i class="i-icon i-big"></i><i class="i-icon i-del f-r"></i>
+                                    </div>
+                                    <div class="biji-txt-wrap"><p>afsdflmsldf老师的加夫里什酒店房间里说的肌肤</p></div>
+                                    <div><span class="pointtime f-r"><i class="i-icon i-triangle-l"></i>12.15</span></div>
+                                </li>
+                                <li class="f-l">
+                                    <div class="biji-header-wrap">
+                                        <span>2016/01/26</span><i class="i-icon i-big"></i><i class="i-icon i-del f-r"></i>
+                                    </div>
+                                    <div class="biji-txt-wrap"><p>afsdflmsldf老师的加夫里什酒店房间里说的肌肤</p></div>
+                                    <div><span class="pointtime f-r"><i class="i-icon i-triangle-l"></i>12.15</span></div>
+                                </li>
+                                <li class="f-l">
+                                    <div class="biji-header-wrap">
+                                        <span>2016/01/26</span><i class="i-icon i-big"></i><i class="i-icon i-del f-r"></i>
+                                    </div>
+                                    <div class="biji-txt-wrap"><p>afsdflmsldf老师的加夫里什酒店房间里说的肌肤</p></div>
+                                    <div><span class="pointtime f-r"><i class="i-icon i-triangle-l"></i>12.15</span></div>
+                                </li>
+                                <li class="f-l">
+                                    <div class="biji-header-wrap">
+                                        <span>2016/01/26</span><i class="i-icon i-big"></i><i class="i-icon i-del f-r"></i>
+                                    </div>
+                                    <div class="biji-txt-wrap"><p>afsdflmsldf老师的加夫里什酒店房间里说的肌肤</p></div>
+                                    <div><span class="pointtime f-r"><i class="i-icon i-triangle-l"></i>12.15</span></div>
+                                </li>
+                                <li class="f-l">
+                                    <div class="biji-header-wrap">
+                                        <span>2016/01/26</span><i class="i-icon i-big"></i><i class="i-icon i-del f-r"></i>
+                                    </div>
+                                    <div class="biji-txt-wrap"><p>afsdflmsldf老师的加夫里什酒店房间里说的肌肤</p></div>
+                                    <div><span class="pointtime f-r"><i class="i-icon i-triangle-l"></i>12.15</span></div>
+                                </li>
+                            </ul>
+                        </dd>
+
+                    </dl>
+                    <dl class="clearfix">
+                        <dt class="f-l"><span class="number">2</span>ios开发使用xcode和模拟</dt>
+                        <dd class="f-l">
+                            <ul  class="keshi-biji-wrap clearfix">
+                                <li class="f-l">
+                                    <div class="biji-header-wrap">
+                                        <span>2016/01/26</span><i class="i-icon i-big"></i><i class="i-icon i-del f-r"></i>
+                                    </div>
+                                    <div class="biji-txt-wrap"><p>afsdflmsldf老师的加夫里什酒店房间里说的肌肤</p></div>
+                                    <div><span class="pointtime f-r"><i class="i-icon i-triangle-l"></i>12.15</span></div>
+                                </li>
+                                <li class="f-l">
+                                    <div class="biji-header-wrap">
+                                        <span>2016/01/26</span><i class="i-icon i-big"></i><i class="i-icon i-del f-r"></i>
+                                    </div>
+                                    <div class="biji-txt-wrap"><p>afsdflmsldf老师的加夫里什酒店房间里说的肌肤</p></div>
+                                    <div><span class="pointtime f-r"><i class="i-icon i-triangle-l"></i>12.15</span></div>
+                                </li>
+                                <li class="f-l">
+                                    <div class="biji-header-wrap">
+                                        <span>2016/01/26</span><i class="i-icon i-big"></i><i class="i-icon i-del f-r"></i>
+                                    </div>
+                                    <div class="biji-txt-wrap"><p>afsdflmsldf老师的加夫里什酒店房间里说的肌肤</p></div>
+                                    <div><span class="pointtime f-r"><i class="i-icon i-triangle-l"></i>12.15</span></div>
+                                </li>
+                            </ul>
+                        </dd>
+                        
+                    </dl> -->
+                </div>
+            </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/vendor/Chart.js"></script>
+<script type="text/javascript" src="/js/info/xuexi.js"></script>

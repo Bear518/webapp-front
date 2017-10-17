@@ -1,0 +1,161 @@
+<style type="text/css">
+    /*******************************第三方登陆成功popbox样式*******************************/
+    .th-login-popbox{width: 400px;height: 342px;padding:0 32px;text-align: center;position: fixed;top: 50%;left: 50%;margin-top: -171px;margin-left: -168px;background: #fff;z-index: 136;}
+    .th-popbox{z-index: 136;text-align: center;position: fixed;top: 50%;left: 50%;background: #fff;}
+    .th-popbox,.th-popbox *{box-sizing:border-box;-moz-box-sizing:border-box;-moz-box-sizing:border-box;}
+    .th-popbox h3{line-height: 52px;border-bottom: 1px solid #f2f2f2;font-size: 20px;color: #333;text-align: center;}
+    .th-login-popbox p{font-size: 14px;color: #666;margin:27px 0;}
+    .th-login-popbox .info-wrap {padding:10.5px 18px;height: 85px;width: 210px;background: #f2f2f2;margin:0 auto;}
+    .th-login-popbox img{width: 64px;height: 64px;vertical-align: middle;}
+    .th-login-popbox .info-wrap .name{width: 102px;overflow: hidden;white-space: nowrap;display: inline-block;text-overflow: ellipsis;}
+    .th-login-popbox .but-wrap{width: 209px;height: 40px;border-radius: 5px;margin:22px auto 16px;}
+    .th-popbox .but-default{width: 209px;height: 38px;background: #ff9001;border-radius: 5px;color: #fff;font-size: 14px;cursor: pointer;}
+    .th-login-popbox .bd{font-size: 14px;color: #62aeb8;}
+    .th-box-bg{width: 100%;height: 100%;position: fixed;top: 0;bottom: 0;background: #333;opacity: 0.3;z-index: 133;}
+    /*******************************第三方登陆成功popbox样式*******************************/
+    /*绑定账号弹框样式*/
+    .bindac-popbox{width: 575px;padding:0 36px;margin-top: -178px;margin-left: -287px;}
+    .bindac-popbox .bindas-wrap{}
+    .bindac-popbox .img-wrap{margin-right: 38px;width: 181px;}
+    .bindac-popbox .img-wrap .photo-wrap{border-right: 1px solid #f2f2f2;padding-bottom: 38px;}
+    .bindac-popbox .img-wrap img{width: 142px;height: 142px;}
+    .bindac-popbox .img-wrap img.free-vip{width: 180px;height: 77px;}
+
+    .bindac-popbox .r-wrap{padding:10px 0;}
+    .bindac-popbox .input-wrap{position: relative;}
+    .bindac-popbox .input-wrap .input-default{width: 284px;height: 38px;border:1px solid #c1c1c1;font-size: 14px;color: #c1c1c1;padding-left: 40px;}
+    .bindac-popbox .input-ac-wrap{margin-bottom: 40px;}
+    .bindac-popbox .i-icon{display: block;height: 22px;width: 22px;position: absolute;top: 9px;left: 10px;background: url(/img/login/zc_ic.png) no-repeat 0 0;}
+    .bindac-popbox .input-wrap i.pwd{background-position: 0 -28px;}
+    .bindac-popbox .input-wrap i.ac{}
+    .bindac-popbox .but-finish-bind{width: 221px;height: 33px;display: block;margin: 34px auto 50px;}
+
+    .complete-info-popbox .but-finish-bind{width: 123px;height: 33px;display: inline-block;margin: 20px 0;}
+    .complete-info-popbox .but-finish-cancel{width: 123px;height: 33px;display: inline-block;margin: 20px 0;color: #fff;}
+
+    .bindac-popbox .mrg-r30{margin-right: 30px;}
+    .bindac-popbox h3 i.close{position: relative;right: -189px;top: -9px;cursor: pointer;}
+    .bindac-popbox .error{  background-color: #db8a83;color: #fff;font-weight: 400;height: 24px;right: 10px;line-height: 24px;padding-right: 10px;position: absolute;top: 6px;padding: 0 7px;display: none;}
+    /*******************************绑定账号弹框样式*******************************/
+    /******************************第三方登陆错误popbox样式**************************************/
+    .thlogin-err-wrap{width: 400px;height: 272px;margin-top: -136px;margin-left: -200px;}
+    .thlogin-err-wrap .content-wrap{width: 235px;height: 57px;margin: 33px auto 40px;}
+    .thlogin-err-wrap .img-wrap{width: 62px;height: 57px;margin-right: 12px;}
+    .thlogin-err-wrap p.reason{width: 140px;}
+    /******************************第三方登陆错误**************************************/
+    .global-hint-wrap{width: 204px;height: 54px;line-height: 54px;text-align: center;position: fixed;font-size: 16px;background: #ffefb3;border-radius: 10px;left: 50%;margin-left: -102px;top: 50%;margin-top: -27px;z-index: 1111;visibility: hidden;}
+    .bindac-popbox .input-wrap .input-default.w180{width: 180px;padding-left: 10px;}
+    .complete-info-popbox .input-wrap{margin-bottom: 10px;}
+    .complete-info-popbox input.yzm_phoneDisEnable{width: 90px;margin-right: 0px;border:none;}
+    .complete-info-popbox .mrg-l10{margin-left: 8px;}
+    .complete-info-popbox {text-align: left;}
+    .complete-info-popbox h3 i.close{}
+    .complete-info-popbox .error-imgcode,.complete-info-popbox .error-vericode{right: 112px;}
+    .bindac-popbox .select-tab-wrap li{width: 82px;font-size: 16px;line-height: 30px;text-align: center;cursor: pointer;color: #666;}
+    .bindac-popbox .select-tab-wrap li:first-child{margin:0 65px 0 215px;}
+    .bindac-popbox .select-tab-wrap li.active{color:#ff9001;border-bottom: 2px solid #ff9001; }
+    .bindac-popbox .select-tab-wrap li:hover{color:#ff9001;border-bottom: 2px solid #ff9001; }
+    .bindac-popbox .i-view-pwd{top: 3px;}
+
+</style>
+<div id="j_thlogin_popbox" class="th-popbox th-login-popbox dis_none">
+    <h3>极视教育网欢迎您</h3>
+    <p>正在使用<span class="type"></span>账号登陆极视教育网</p>
+    <div class="info-wrap">
+        <img class="photo" src="">
+        <span class="name"></span>
+    </div>
+    <div class="but-wrap"><input type="button" class="but-default but-animation but-shadow now-login" value="立即登录"></div>
+    <a class="bd" href="javascript:;">绑定极视教育已有账号</a>
+</div>
+<div id="j_thlogin_err_popbox" class="th-popbox thlogin-err-wrap dis_none">
+    <h3><span class="type">微信</span>登陆失败</h3>
+    <div class="clearfix content-wrap">
+        <div class="img-wrap f-l"><img src="/img/login/cry.png"></div>
+        <div class="f-l"><p class="reason"></p></div>
+    </div>
+    <div><input type="button" class="but-animation but-shadow but-default btn-goback-login" value="返回登陆"></div>
+</div>
+<div id="j_thbind_popbox" class="th-popbox bindac-popbox dis_none">
+    <h3>绑定极视已有账号<i class="iconfont close">&#xe604;</i></h3>
+    <div class="select-tab-wrap"><ul class="clearfix"><li class="f-l nouse">未有账号</li><li class="f-l active">已有账号</li></ul></div>
+    <div class="bindas-wrap clearfix">
+        <div class="img-wrap f-l"><img class="photo" src=""></div>
+        <div class="f-l r-wrap">
+            <div class="input-wrap input-ac-wrap"><i class="i-icon ac"></i><input type="text" class="input-default input-account" placeholder="请输入邮箱/手机号"><span class="error error-ac"></span></div>
+            <div class="input-wrap"><i class="i-icon pwd"></i><input type="password" class="input-default input-pwd" placeholder="请输入密码"><span class="error error-pwd"></span><i class="i-login-icon i-view-pwd j_view_pwd"></i></div>
+            <!-- <div class="wjma">
+                <span class="nouse"><a class="" href="javascript:void(0);">没有账号</a></span>
+            </div> -->
+        </div>
+    </div>
+    <div><input type="button" class="but-animation but-shadow but-default but-finish-bind" value="完成"></div>
+</div>
+<div id="j_complete_accountbind_popbox" class="th-popbox bindac-popbox complete-info-popbox dis_none">
+    <h3>完善账号信息<i class="iconfont close">&#xe604;</i></h3>
+    <div class="select-tab-wrap"><ul class="clearfix"><li class="active f-l">未有账号</li><li class="f-l used">已有账号</li></ul></div>
+    <div class="bindas-wrap clearfix">
+        <div class="img-wrap f-l">
+            <div class="photo-wrap">
+                <img class="photo" src="">
+            </div>
+            <img class="free-vip" src="/img/login/100.png">
+        </div>
+        <div class="f-l r-wrap">
+            <div class="input-wrap">
+                <i class="i-icon ac"></i>
+                <input type="text" class="input-default input-account" placeholder="请输入邮箱/手机号">
+                <span class="error error-ac"></span>
+            </div>
+            <div class="input-wrap">
+                <input type="text" class="input-default input-img-vericode w180" placeholder="请输入验证码">
+                <img align="absmiddle" src="" id="" class="yzm_img mrg-l10" alt="">
+                <a data-url="#" href="javascript:" style="color: Gray" class="yzm_a ">
+                    <img  src="/img/login/refls.png"  style="margin:0" alt="">
+                </a>
+                <span class="error error-imgcode"></span>
+            </div>
+            <div class="input-wrap">
+                <input type="text" class="input-default input-vericode w180" placeholder="请输入验证码">
+                <input type="button" class="yzm_phoneDisEnable w90 mrg-l10 j_get_vericode" id="" value="获取验证码" >
+                <span class="error error-vericode"></span>
+            </div>
+            <div class="input-wrap">
+                <i class="i-icon pwd"></i>
+                <input type="password" class="input-default input-pwd" placeholder="请输入密码">
+                <span class="error error-pwd"></span>
+                <i class="i-login-icon i-view-pwd j_view_pwd"></i>
+            </div>
+            <div class="wjma">
+                <label>
+                    <input type="checkbox" checked="checked" class="ck_agreement" value="" name="ck_agreement" id="">接受
+                    <a href="/view/info/serv_info.html?id=1" target="_blank" class="agreement">极视教育用户协议</a>
+                </label>
+                <!-- <span class="used"><a class="" href="javascript:void(0);">已有账号</a></span> -->
+            </div>
+            <div>
+                <input type="button" class="but-animation but-shadow but-default but-finish-bind mrg-r30" value="完善提交">
+                <input type="button" class="but-animation but-shadow but-false but-finish-cancel now-login" value="暂不完善">
+            </div>
+        </div>
+    </div>
+    <!-- <div><input type="button" class="but-animation but-shadow but-default but-finish-bind" value="完成"></div> -->
+</div>
+<div id="j_thlogin_popbg" class="th-box-bg global-bg j_global_bg dis_none"></div>
+<div id="j_global_hint_wrap" class="global-hint-wrap">已成功获得7天VIP!</div>
+<script type="text/javascript" src="/js/module/footer.js"></script>
+<script src="/js/gb.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+var href=window.location.href;
+if(/127|8000|8001|dev|192/.test(href)){
+
+}else{
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?331f7ddb9c6ac82de384865d8365bbee";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+}
+})();
+</script>

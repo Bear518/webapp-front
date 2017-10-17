@@ -1,0 +1,67 @@
+<style type="text/css">
+	.r-wrap .education-txt-wrap{width: 72px;text-align: right;}
+	.r-wrap .w70{width: 70px;}
+	.r-wrap .w228{width: 228px;}
+	.r-wrap .w545{width: 545px;}
+</style>
+<div id="j_education_wrap" class="item-wrap education-wrap">
+	<div ng-if="shadeInfo.educationInfoShow" class="shade-wrap"></div>
+	<div class="clearfix header-wrap">
+		<div class="f-l title-wrap">
+			<i class="i-sprite i-education"></i>
+			<div class="item-txt">教育经历</div>
+		</div>
+		<div class="f-r"><i ng-click="changeShade('educationInfo')" data-id="#j_education_wrap" class="i-sprite i-add"></i></div>
+	</div>
+	<div class="detail-wrap education-detail-wrap">
+		<table class="default-wrap">
+			<thead><tr><th>毕业院校</th><th>就读时间</th><th>学历</th><th>专业</th><th></th></tr></thead>
+			<tbody>
+				<tr ng-repeat="item in educationList"><td ng-bind="item.schoolName"></td><td><label ng-bind="item.startDate|dateFormatToMonth"></label><span ng-if="!item.asYet">至</span><label ng-if="item.asYet">至今</label><label ng-if="!item.asYet" ng-bind="item.endDate|dateFormatToMonth"></label></td><td ng-bind="item.education"></td><td ng-bind="item.majorName"></td><td><span ng-click="infoEdit(item,'education_edit')" class="mrg-r10 mrg-l20">编辑</span><span ng-click="infoDel(item,'education_del',$index)">删除</span></td></tr>
+			</tbody>
+		</table>
+		<div class="edit-wrap">
+			<ul>
+				<li class="clearfix">
+					<div class="mrg-r38 education-txt-wrap f-l"><i class="i-sprite i-require"></i>就读时间</div>
+					<div class="f-l"><input ng-model="educationInfo.startYear" type="text" class="input-default w70 mrg-r5">年
+						<input type="text" ng-model="educationInfo.startMonth" class="input-default w70 mrg-r5 mrg-l5">月
+						<span class="mrg-l5 mrg-r5">至</span>
+					<input type="text" ng-readonly="educationInfo.asYet" ng-model="educationInfo.endYear" class="input-default w70 mrg-r5 mrg-l5">年
+					<input type="text" ng-readonly="educationInfo.asYet" ng-model="educationInfo.endMonth" class="input-default w70 mrg-r5 mrg-l5">月
+					<input type="checkbox" ng-model="educationInfo.asYet" class="mrg-l10 mrg-r5"><span ng-click="toNowClick('education_tonow')">至今</span><span class="err mrg-l10" ng-bind="educationInfoErr.startDate"></span><span class="err mrg-l10" ng-bind="educationInfoErr.endDate"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 education-txt-wrap f-l"><i class="i-sprite i-require"></i>学校名称</div>
+					<div class="f-l"><input ng-model="educationInfo.schoolName" type="text" class="input-default w228 mrg-r5"><span class="err mrg-l10" ng-bind="educationInfoErr.schoolName"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 education-txt-wrap f-l"><i class="i-sprite i-require"></i>专业名称</div>
+					<div class="f-l"><input ng-model="educationInfo.majorName" type="text" class="input-default w228 mrg-r5"><span class="err mrg-l10" ng-bind="educationInfoErr.majorName"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 education-txt-wrap f-l"><i class="i-sprite i-require"></i>学历</div>
+					<div class="f-l"><select ng-init="educationInfo.education=degreeData[0]" ng-options="item for item in degreeData" ng-model="educationInfo.education" class="w228"></select><span class="err mrg-l10" ng-bind="educationInfoErr.education"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 education-txt-wrap f-l">专业描述</div>
+					<div class="f-l"><textarea ng-keydown="enterToNewLine(this)" ng-model="educationInfo.majorDescription" class="textarea w545"></textarea></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 education-txt-wrap f-l h20"></div>
+					<div class="f-l">
+						<div class="clearfix mrg-t20 h34">
+							<div class="f-l">
+								<input ng-disabled="disabledInfo.educationInfoUpdateBtnDisabled" type="button" ng-click="educationInfoSave('#j_education_wrap')" class="but but-shadow but-animation w95" value="保存">
+							</div>
+							<div class="f-l">
+								<input ng-click="cancelUpdate('education_update_cancel')" type="button" data-id="#j_education_wrap" class="but but-cancel but-shadow but-animation mrg-l80 w95" value="取消">
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+	</div>
+</div>

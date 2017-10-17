@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>通知消息_极视教育网</title>
+    <meta name="description" content="极视教育作为中国领先的游戏职业在线教育平台之一,国内第一家专注于游戏职业培训与发展的在线 教育平台。平台致力于构建“学习+实战+机遇”三元结构闭环的模式，携手企业与名师一 起帮助有职业培训需求的人才，并为企业提供人才储备的解决方案,拥有海量高清职业课程,涵盖20+个技术领域,如Android,iOS ,Unity3D,Java,Photoshop,Maya,3D MAX,独立游戏等视频教程.根据在线学习特点,极视教育推出职业图谱,帮助学习者从零基础起步,结合实战案例演练,系统学习,助你快速成为优秀技术人才！">
+    <meta name="keywords" content="极视教育,职业教育,在线教育平台,在线教育,在线学习,职业培训,android,ios,Unity3D,java,Photoshop,Maya,3D MAX,独立游戏">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../css/system/notice.css">
+    <style type="text/css">
+    .tongzhi-container .tab-con{padding-bottom: 30px;}
+    body .page-control{margin:0;}
+    </style>
+</head>
+<body>
+<div class="" include="/view/module/header.html"></div>
+<div class="body-container">
+    <div class="notice-container">
+        <div class="clearfix ">
+            <div class="notice-l f-l box-shadow">
+                <h3 class="frist">
+                    我的消息
+                </h3>
+                <ul>
+                    <li class="active">
+                        <p>通知 <sup class="icon-mq j_has_notice" style="display:none;"></sup></p>
+
+                    </li>
+                    <li style="display:none;"><p>私信 <sup class="icon-mq"></sup></p></li>
+                </ul>
+            </div>
+            <div class="notice-r box-shadow f-r">
+                <!--通知-->
+                <div class="tongzhi-container">
+                    <div class="tab-tit j_type_tab_wrap">
+                       <ul class="clearfix">
+                           <li class="active">全部</li>
+                           <li data-type="1">活动</li>
+                           <li data-type="2">课程</li>
+                           <li data-type="3">机遇</li>
+                       </ul>
+                        <div class="settingbtn j_setting_wrap" title="通知设置">
+                            <div class="smenu" style="display: none;">
+                                <a data-value="readall" href="javascript:;" class="">全部已读</a>
+                                <a data-value="clearall" href="javascript:;" class="">清空消息</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-con">
+                        <ul class="clearfix j_notice_content_wrap">
+                            <!-- <li class="msg-cnt">
+                                <div class="msg-cnt">
+                                    <div class="msg-txt">下半年想改变？我们决定送你5元钱！2016年过半，年初的计划实现了吗？加紧规划你的下半年学习计划！<a href=""> 去选课>> </a>。</div>
+                                    <div class="msg-close" title="删除"></div>
+                                    <div class="msg-time">6月28日</div>
+                                </div>
+                            </li>
+                            <li class="msg-cnt">
+                                <div class="msg-cnt">
+                                    <div class="msg-txt">下半年想改变？我们决定送你5元钱！2016年过半，年初的计划实现了吗？加紧规划你的下半年学习计划！去选课>>5元钱不成敬意，优惠码：OC2016noregrets8eK，支付时输入即可减免5元。 （购课满49元有效，6月30日24点前使用有效）</div>
+                                    <div class="msg-close" title="删除"></div>
+                                    <div class="msg-time">6月28日</div>
+                                </div>
+                            </li> -->
+                        </ul>
+                        <div id="j_notice_page_control" class="page-control page-wrap">
+                            <!-- <a href="view/more.html">查看更多</a> -->
+                        </div>
+                    </div>
+                </div>
+                <!--私信 -->
+               <!-- <div class="sixin-container"></div>-->
+            </div>
+        </div>
+</div>
+</div>
+<div include="../module/footer.html"></div>
+<script src="/js/vendor/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/js/store.js"></script>
+<script type="text/javascript" src="/js/common/jquery.page.js"></script>
+<script type="text/javascript">
+    var noticeModule={
+        bindEvents:function(){
+            var self=this;
+            $('.tab-con').on('mouseover mouseout','li',function(){
+                var $this=$(this);
+                $(this).toggleClass("msg-hover");
+                $(this).addClass("msg-hover").siblings().removeClass("msg-hover");
+            });
+            $('.tab-con').on('mouseout','li',function(){
+                $(this).removeClass("msg-hover");
+            });
+            $('.settingbtn').on('click',function(event){
+                $(".smenu").toggle();
+                $(document).one("click", function (){
+                    $(".smenu").hide();
+                });
+                event.stopPropagation();
+            });
+
+            $('.tab-con').on('click','li',function(){
+                var $this=$(this),id=$this.data('id');
+              //  $(this).removeClass("text-overflow").siblings().addClass("text-overflow");
+                $(this).toggleClass("text-overflow");
+                $(this).siblings().addClass("text-overflow");
+                if( $(this).children('.msg-icon').html()=="未读"){
+                    $this.find(".msg-icon").removeClass("wd").html("已读");
+                    self.readNoticeById(id);
+                }
+            });
+
+            $('.j_type_tab_wrap').on('click','li',function(){
+                var $this=$(this),type=$this.data('type');
+                $this.siblings().removeClass('active');
+                $this.addClass('active');
+                self.type=type;
+                self.isHasPaged=false;
+                self.getMyNotice(1);
+                
+            });
+            $('.j_setting_wrap').on('click','a',function(){
+                var $this=$(this),value=$this.data('value');
+                if(value=='readall'){
+                    self.batchReadNotice(function(){
+                        mainModule.hasNotice();
+                    });
+                    return;
+                }
+                self.batchClearNotice(function(){
+                    mainModule.hasNotice();
+                    var $wrap=$('.j_notice_content_wrap');
+                    $wrap.html('<li style="text-align:center;line-height:150px;">暂无消息</li>');
+                });
+            });
+            $('.j_notice_content_wrap').on('click','.j_del',function(){
+                var $this=$(this),id=$this.data('id');
+                self.delNoticeById(id,function(result){
+                    $this.closest('li').remove();
+                    var $wrap=$('.j_notice_content_wrap');
+                    if($wrap.children().length<1){
+                        $wrap.html('<li style="text-align:center;line-height:150px;">暂无消息</li>');
+                    }
+                });
+            });
+        },
+        readNoticeById:function(id){
+            $.ajax({
+                type:'get',
+                url:mainModule.uri.readNoticeById+id,
+                success:function(result){
+                    mainModule.log('设置通知已读'+id);
+                    mainModule.hasNotice();
+                }
+            })
+        },
+        delNoticeById:function(id,callback){
+            $.ajax({
+                type:'get',
+                url:mainModule.uri.delNoticeById+id,
+                success:function(result){
+                    mainModule.log('删除通知'+id);
+                    mainModule.httpInterceptor(result,callback);
+                }
+            })
+        },
+        batchClearNotice:function(callback){
+            var data={},self=this;
+            self.type?(data.type=self.type):void 0;
+            $.ajax({
+                type:'get',
+                data:data,
+                url:mainModule.uri.clearNotice,
+                success:function(result){
+                    mainModule.log('批量清空消息接口返回',result);
+                    mainModule.httpInterceptor(result,callback);
+                }
+            })
+        },
+        batchReadNotice:function(callback){
+            var data={},self=this;
+            self.type?(data.type=self.type):void 0;
+            $.ajax({
+                type:'get',
+                data:data,
+                url:mainModule.uri.readNotice,
+                success:function(result){
+                    mainModule.log('批量设置消息已读接口返回',result);
+                    mainModule.httpInterceptor(result,callback);
+                }
+            })
+        },
+        getMyNotice:function(page){
+            $('.j_notice_content_wrap').html('<li style="text-align:center;line-height:150px;">加载数据中...</li>');
+            var data={page:page,rows:20},self=this;
+            self.type?(data.type=self.type):void 0;
+            $.ajax({
+                type:'get',
+                data:data,
+                url:mainModule.uri.getMyNotice,
+                success:function(result){
+                    mainModule.log('我的通知接口返回',result);
+                    mainModule.httpInterceptor(result,self.renderMyNotice);
+                }
+            })
+        },
+        renderMyNotice:function(result){
+            var dom='',ii=result.length;
+            for(var i=0;i<ii;i++){
+                var item=result[i],createDate=noticeModule.formatDate(item.createDate);
+                dom+='<li class="msg-cnt text-overflow" data-id="'+item.id+'">';
+                if(item.status==1){
+                    dom +='<div class="msg-icon">已读</div>'}
+                else if(item.status==0){
+                    dom += '<div class="msg-icon wd">未读</div>'}
+                dom+=' <div class="msg-cnt">'+
+                            '<div class="msg-txt ">'+
+                            item.message+'</div>'+
+                            '<div data-id="'+item.id+'" class="msg-close j_del" title="删除"></div>'+
+                            '<div class="msg-time">'+createDate+'</div>'+
+                        '</div>'+
+                    '</li>';
+            }
+            if(ii==0||!ii){
+                dom='<li style="text-align:center;line-height:150px;">暂无消息</li>';
+            }
+            // result.total=120;
+            var self=noticeModule;
+            mainModule.createPage(self,result.total,$('#j_notice_page_control'),self.getMyNotice);
+            $('.j_notice_content_wrap').html(dom);
+        },
+        formatDate:function(date){
+            var date=new Date(date),
+                year=date.getFullYear(),month=date.getMonth()+1,day=date.getDate(),
+                datetime=year+'年'+month+'月'+day+'日';
+            return datetime;
+        },
+        init:function(){
+            this.bindEvents();
+            this.getMyNotice(1);
+        }
+    };
+    noticeModule.init();
+    console.log('notice module loaded');
+</script>
+</body>
+</html>

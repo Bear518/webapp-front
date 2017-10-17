@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>全部课程_IT/互联网|影视动漫|金融会计|职场能力_极视教育网</title>
+    <meta name="description" content="极视教育作为中国领先的游戏职业在线教育平台之一,国内第一家专注于游戏职业培训与发展的在线 教育平台。平台致力于构建“学习+实战+机遇”三元结构闭环的模式，携手企业与名师一 起帮助有职业培训需求的人才，并为企业提供人才储备的解决方案,拥有海量高清职业课程,涵盖20+个技术领域,如Android,iOS ,Unity3D,Java,Photoshop,Maya,3D MAX,独立游戏等视频教程.根据在线学习特点,极视教育推出职业学院,帮助学习者从零基础起步,结合实战案例演练,系统学习,助你快速成为优秀技术人才！">
+    <meta name="keywords" content="极视教育,职业教育,在线教育平台,在线教育,在线学习,职业培训,android,ios,Unity3D,java,Photoshop,Maya,3D MAX,独立游戏">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/zytp/xb_pay.css">
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div class="" include="/view/module/header.html"></div>
+<div class="top-img-wrap">
+    <div class="content-wrap">职业学院网上实战班服务报名</div>
+</div>
+<div class="content-wrap j_content_wrap">
+    <div class="stepbox step3"></div>
+
+    <div class="div-box">
+        <div class="apply-succeed">
+            <h4>恭喜报名<span class="j_name">...</span>成功！</h4>
+            <p class="hint">(我们客服在24小时内给您来电，请保持电话畅通)</p>
+            <h5>如有疑问，请直接联系 :</h5>
+            <p>电话：021-51134006</p>
+            <!-- <p>QQ：800187260</p> -->
+
+            <input onclick="sModule.locationToJobMapPage()" type="button" class="but-sure btn btn-s" value="确认">
+        </div>
+    </div>
+</div>
+<div include="../module/footer.html"></div>
+<script src="/js/vendor/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript">
+    var sModule={
+        getOrderInfo:function(ordid,callback){
+            $.ajax({
+                type: "get",
+                dataType: "json",
+                url: $._CACHEOBJ.context+"/order/common/orderInfo?rad="+Math.random()*1,
+                data:{"orderId":ordid},
+                success: function (result) {
+                    mainModule.log('订单信息',result);
+                    callback&&callback(result);
+                }
+            })
+        },
+        locationToJobMapPage:function(){
+            var jobMapId=mainModule.getQueryValueByName('jobMapId');
+            window.location.href='/view/zytp/detail.html?id='+jobMapId;
+        },
+        init:function(){
+            $('.zyxy').addClass("active");
+            var orderId=mainModule.getQueryValueByName('orderId');
+            this.getOrderInfo(orderId,function(result){
+                mainModule.httpInterceptor(result,function(result){
+                    $('.j_content_wrap').find('.j_name').html(result.productName);
+                })
+            })
+        }
+    };
+    sModule.init();
+</script>
+</body>
+</html>

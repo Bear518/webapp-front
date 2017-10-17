@@ -1,0 +1,670 @@
+.dk-main {
+  /*  max-width: 1920px;
+    min-width: 1200px;*/
+    height: 4080px;
+    margin: 0px auto;
+    position: relative;
+    background: url(../../img/dk/main-bg.jpg) no-repeat top center;
+    background-size:auto 100%;
+
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box \9
+}
+
+.teacher-v1 {
+    position: relative;
+    margin-bottom: 32px;
+
+}
+.teacher-v1 .video-player{
+    position: relative;
+}
+.teacher-v1 .video-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 540px;
+    height: 303px;
+    cursor: pointer;
+}
+
+.teacher-v1 .teacher-hd {
+    margin-bottom: 10px;
+    padding-right: 20px
+}
+
+.teacher-v1 .hd-left-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%
+}
+
+.teacher-v1 .hd-right-wrap {
+    width: 300px;
+    margin-left: 20px;
+    padding-top: 50px
+}
+
+.teacher-v1 .teacher-content {
+    width: 570px;
+    min-height: 10px
+}
+
+.teacher-v1 .video-content {
+    position: relative;
+    width: 540px;
+    height: 370px;
+}
+
+.teacher-v1 .teacher-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 180px;
+    border: 10px solid #ffffff;
+    border-radius: 50%
+}
+
+.teacher-v1 .teacher-name {
+    font-size: 34px;
+    line-height: 48px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #f2f2f2;
+    cursor: inherit;
+}
+
+.teacher-v1 .teacher-name:hover {
+    color: #88d1de
+}
+
+.teacher-v1 .agency-name {
+    font-size: 20px;
+    line-height: 26px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #dfdfdf;
+    cursor: inherit;
+}
+
+.teacher-v1 .agency-name:hover {
+    color: #88d1de
+}
+
+.teacher-v1 .teacher-intro {
+    font-size: 16px;
+    line-height: 26px;
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: 156px;
+    padding-right: 20px;
+    text-overflow: ellipsis;
+    color: #dfdfdf;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6
+}
+
+.split {
+    max-width: 1400px;
+    height: 5px;
+    background: url("../../img/dk/split.png") no-repeat top center;
+    background-size: 100% 100%;
+}
+
+.dk-introduce {
+    margin-top: 25px;
+}
+
+.dk-mien-tit {
+    width: 136px;
+    height: 46px;
+    background: url("../../img/dk/dk1.png") no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
+
+.dk-mien-cnt {
+    width: 570px;
+    overflow: hidden;
+    margin-top: 25px;
+}
+
+.dk-box-l {
+    width: 570px;
+}
+
+.dk-box-r {
+    width: 550px;
+}
+
+.dk-success {
+   /* width: 557px;
+    height: 266px;*/
+     width: 497px;
+   height: 186px;
+
+    background: url("../../img/dk/dk2.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 60px 30px 20px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #f2f2f2;
+}
+
+.dk-success dt {
+    float: left;
+    width: 70px;
+}
+
+.dk-success dd {
+    width: 415px;
+    float: left;
+}
+
+.dk-success dd a {
+    color: #ff9001;
+}
+
+.dk-report {
+  /*  width: 557px;
+    height: 266px;*/
+    width: 497px;
+    height: 192px;
+    background: url("../../img/dk/dk3.png") no-repeat;
+    background-size: 100% 100%;
+    margin-top: 10px;
+    padding: 60px 30px 14px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #f2f2f2;
+    overflow: hidden;
+}
+.dk-report .dk-report-content{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.dk-report a {
+    font-size: 14px;
+    color: #ff9001;
+    text-decoration: none;
+}
+
+.dk-report a:hover {
+    text-decoration: underline;
+}
+
+.dk-photo {
+    margin-top: 160px;
+}
+
+.dk-photo-tit {
+    width: 916px;
+    height: 72px;
+    background: url("../../img/dk/dk4.png") no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto 60px;
+}
+.imgcard-v1 {
+    position: relative
+}
+
+.imgcard-v1 .imgcard-link {
+    position: relative;
+    overflow: hidden
+}
+.imgcard-v1 .imgcard-big {
+    width: 595px;
+    height: 345px
+}
+
+.imgcard-v1 .imgcard-v1-empty {
+    font-size: 20px;
+    height: 50px;
+    text-align: center
+}
+
+.imgcard-v1 .imgcard-small1 {
+    width: 290px;
+    height: 165px;
+    margin-bottom: 15px
+}
+
+.imgcard-v1 .imgcard-small {
+    width: 285px;
+    height: 165px;
+    margin-bottom: 15px
+}
+
+.imgcard-v1 .imgcard-0, .imgcard-v1 .imgcard-1 {
+    margin-right: 15px
+}
+.dk-course {
+    margin-top: 220px;
+}
+
+.dk-course-tit {
+    width: 916px;
+    height: 72px;
+    background: url("../../img/dk/dk5.png") no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto 65px;
+}
+.course {
+    padding: 20px;
+    background: #e8fcff;
+}
+
+.dk-course {
+    position: relative;
+    overflow: hidden
+}
+
+.dk-course .course-cnt {
+    height: 474px;
+    padding: 20px;
+    background: #ffffff;
+}
+
+.dk-course .course-left {
+    float: left
+}
+
+.dk-course .course-link {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.icon-xs {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px
+}
+
+.dk-course .course-right {
+    width: 550px;
+    margin-left: 560px
+}
+
+.dk-course .course-title {
+    font-size: 30px;
+    line-height: 30px;
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 0 30px;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #333
+}
+
+.dk-course .dis-title {
+    width: 550px;
+    margin-bottom: 32px;
+    padding: 15px 0;
+    background-color: #f2f2f2
+}
+
+.dk-course .dis-title-left {
+    font-size: 20px;
+    line-height: 100px;
+    float: left;
+    width: 120px;
+    height: 100px;
+    text-align: center;
+    color: #333;
+    border-right: 1px solid #ccc
+}
+
+.dk-course .dis-list {
+    overflow: hidden;
+    height: 100px;
+    margin-left: 130px;
+    font-size: 16px;
+    color: #666
+}
+
+.dk-course .dis-item {
+    line-height: 32px
+}
+
+.dk-course .dis-item-index {
+    font-size: 12px;
+    line-height: 12px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    text-align: center;
+    vertical-align: middle;
+    color: inherit;
+    border: 1px solid #666;
+    border-radius: 50%
+}
+
+.dk-course .dis-item-des {
+    margin-left: 6px;
+    color: inherit
+}
+
+.dk-course .course-info {
+    margin-bottom: 15px;
+    line-height: 26px;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #666666;
+}
+
+.dk-course .course-info .course-price {
+    font-size: 24px;
+    vertical-align: middle;
+}
+.dk-course .course-sep {
+    display: inline-block;
+    width: 1px;
+    height: 26px;
+    margin: 0 12px;
+    vertical-align: middle;
+    background-color: #c6c6c6
+}
+.dk-course .course-btns {
+    margin-top: 170px;
+}
+
+.dk-course .course-btns .course-btn {
+    font-size: 16px;
+    line-height: 50px;
+    display: inline-block;
+    width: 205px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 6px;
+    border-bottom: 4px solid #d77900;
+}
+
+.dk-course .course-btns .course-get {
+    color: #fff;
+    background: #ff9001;
+}
+
+.dk-course .course-btns .course-get:hover {
+    border-bottom: 0;
+    margin-top: 3px;
+    -webkit-box-shadow: inset 0 0 0 0 rgba(0,0,0,.02);
+    box-shadow: inset 0 0 0 0 rgba(0,0,0,.02);
+}
+
+
+.dk-others-course {
+    margin-top: 300px;
+}
+
+.dk-others-course-tit {
+    width: 916px;
+    height: 72px;
+    background: url("../../img/dk/dk6.png") no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto 60px;
+}
+
+.kenchen-list-item {
+    width: 275px;
+    /* height: 336px;*/
+    cursor: pointer;
+}
+
+.kechen-img-wrap {
+    width: 275px;
+    height: 208px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mianfei-i {
+    background: url(../../img/dk/icon.png) no-repeat;
+    background-position: -118px -45px;
+    height: 59px;
+    width: 50px;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 13px;
+    z-index: 1;
+}
+
+.huiyuan-i {
+    background: url(../../img/index/icon.png) no-repeat;
+    background-position: -52px -45px;
+    height: 59px;
+    width: 50px;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 13px;
+    z-index: 1;
+}
+
+.img-hover-bigger img {
+    transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transform-origin: center;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    -moz-transform-origin: center;
+    width: 100%;
+    height: 100%;
+}
+
+.img-hover-bigger img:hover {
+    transform: scale(1.2, 1.2);
+    -webkit-transform: scale(1.2, 1.2);
+    -moz-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+}
+
+.kechen-detail-wrap {
+    padding: 0 18px 15px;
+    border: 1px solid #ccc;
+}
+
+.kechen-detail-wrap > .name {
+    font-size: 17px;
+    padding: 23px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.i-time {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: url(../../img/index/icon.png) no-repeat;
+    background-position: -72px -292px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.i-chapter {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: url(../../img/index/icon.png) no-repeat;
+    background-position: -111px -292px;
+    vertical-align: middle;
+    margin-right: 15px;
+    margin-left: 24px;
+}
+
+.kenchen-like-wrap {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 40px;
+    line-height: 40px;
+}
+
+.i-like {
+    display: inline-block;
+    height: 35px;
+    width: 20px;
+    background: url(../../img/index/icon.png) no-repeat;
+    background-position: -172px -289px;
+    vertical-align: middle;
+    margin-left: 16px;
+    vertical-align: middle;
+    margin-right: 13px;
+}
+
+.mrg-r20 {
+    margin-right: 20px;
+}
+
+.mask {
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: .5;
+    background-color: #000;
+    filter: alpha(opacity=50)
+}
+
+.mrg-r33 {
+    margin-right: 33px;
+}
+
+.dk-others-course .course-btns {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.course-btns .course-get {
+    color: #fff;
+    background: #ff9001;
+}
+
+.dk-others-course .course-btns .course-btn {
+    font-size: 16px;
+    line-height: 50px;
+    display: inline-block;
+    width: 205px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 6px;
+    border-bottom: 4px solid #d77900;
+}
+
+.course-btns .course-get:hover {
+    border-bottom: 0;
+    margin-top: 3px;
+    -webkit-box-shadow: inset 0 0 0 0 rgba(0,0,0,.02);
+    box-shadow: inset 0 0 0 0 rgba(0,0,0,.02);
+}
+
+.kenchen-list-item a:hover {
+    color: inherit;
+}
+
+.dk-mien-cnt {
+    position: relative;
+    text-align: center;
+    line-height: 0px;
+}
+
+/*µ×²¿Ð¡Í¼±ê*/
+.dk-mien-cnt .slide {
+    position: relative;
+}
+
+.dk-mien-cnt .caption {
+    padding: 13px 16px 12px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dk-mien-cnt .caption p {
+    padding-bottom: 0px;
+    font-size: 11px;
+    color: #dedede;
+    text-shadow: 0px -1px #000000;
+    line-height: 17px;
+}
+.dk-mien-cnt .caption p.title {
+    padding-bottom: 6px;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.dk-mien-cnt .flex-direction-nav a {
+    width: 42px;
+    height: 55px;
+    margin-top: -23px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    text-indent: -9000px;
+}
+.dk-mien-cnt .flex-direction-nav a.flex-prev {
+    left: 0;
+    background: url("../../img/dk/prev.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.dk-mien-cnt .flex-direction-nav a.flex-next {
+    right:0;
+    background: url("../../img/dk/next.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.flexslider {
+    margin: 0;
+    padding: 0;
+    border: 15px solid #f8f8f8;
+}
+
+.flexslider .slides > li {
+    display: none;
+    -webkit-backface-visibility: hidden;
+    list-style-type: none;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {
+    width: 100%;
+    display: block;
+}
+

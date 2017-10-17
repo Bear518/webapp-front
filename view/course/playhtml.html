@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>极视教育－课程播放</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="/css/main.css">
+        <style type="text/css">
+html,body{width: 100%;height: 100%;overflow: hidden;}.content-wrap{width: 100%;height: 93%;}
+.bg-icon{background:url('/img/course/icon.png') no-repeat;}
+.ba-icon:after,.ba-icon:before{background:url('/img/course/icon.png') no-repeat;content: '';display: inline-block;}
+.header-wrap{background: #393f4a;height:60px;color: #fff;position:relative}.header-wrap .vc{position: absolute;top: 50%;margin-top: -14px;}
+.left-wrap,.midden-wrap,.right-wrap{height: 100%;}
+.left-wrap{width: 70%;height: 100%; min-width:600px}
+.right-wrap ul>li{width: 100%;padding: 9px 0;cursor: pointer;}
+.midden-wrap{position: relative;width: 26%;}
+.right-wrap{width: 4%;background: #393f4a;text-align: center;color: #fff;}
+.shrink{position: absolute;left: -30px;top: 5px;background: #abaeb0;cursor: pointer;}
+.shrink i{background-position: -98px -49px;display: inline-block;width: 30px;height: 30px;}
+.f-l{float: left;}
+.keshi-name{margin-left: 105px;}
+.i-home{width: 61px;height: 45px;background-position: 2px -40px;display: inline-block;margin-right: 28px;}
+.i-arrow-r:after{display: inline-block;content: '';width: 18px;height: 28px;background-position: -164px -256px;margin-left: 10px;vertical-align: middle;}
+.title-wrap{height: 5%;background: #d2d6da;text-align: center;font-size: 16px;position: relative;}.title-wrap .vc{position: absolute;left: 0;right: 0;top: 50%;margin-top: -10px;}
+.zhangjie-item:before{background-position: -31px -219px;width: 25px;height: 25px;display: inline-block;content: '';vertical-align: bottom;margin-left: 14px;margin-right: 8px;}
+.kcml-list-wrap .y-none-line:after{display: none;}
+.kcml-list-wrap dt{margin-top: -4px;}
+.kcml-list-wrap dd li{margin-top: -5px;}
+.kcml-list-wrap dd li:hover{cursor: pointer;color: #ff9001;}
+.kcml-list-wrap dd li:hover .k_time{color: #666;}
+.y-line:after{background-position: -22px -265px;width: 25px;height: 24px;display: block;content: '';margin-left: 14px;}
+.keshi-item:before{background-position: -80px -220px;height: 14px;width: 36px;vertical-align: middle;margin-right: 7px;}
+.learned:before{background-position:-80px -262px;}
+.name-wrap{display: inline-block;width: 49%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;vertical-align: bottom;margin-left: 2%;}
+.i-molu{background-position: -30px -127px;display: block;width: 22px;height: 20px;margin:0 auto;margin-bottom: 4px;}
+.active .i-molu{background-position: -30px -168px;}
+.active .i-biji{background-position: -98px -166px;}
+.i-biji{background-position: -98px -127px;display: block;width: 22px;height: 20px;margin:0 auto;margin-bottom: 4px;}
+.active .i-pinglun{background-position: -168px -166px;}
+.right-wrap ul>li:hover{background: #ff9001;}
+.right-wrap ul>li:hover .i-molu{background-position: -30px -168px;}
+.right-wrap ul>li:hover .i-biji{background-position: -98px -166px;}
+.right-wrap ul>li:hover .i-pinglun{background-position: -168px -166px;}
+.i-pinglun{background-position: -169px -127px;display: block;width: 22px;height: 20px;margin:0 auto;margin-bottom: 4px;}
+.right-wrap .active{background: #ff9001;}
+.list-wrap{height: 95%;overflow: auto;}
+.user-photo-wrap{display: inline-block;width: 35px;height: 35px;overflow: hidden;border-radius:50%;background: #eee;vertical-align: middle;}
+.user-photo-wrap img{width: 100%;height: 100%;}
+.pinglun-dt{padding: 14px 9px 0px 15px;border-top: 1px solid #dfdfdf;}
+.pinglun-dd{background: #efefef;margin:0 9px 14px 15px;padding: 5px;border-left: 1px solid #dfdfdf;border-right: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf;}
+.pinglun-header-wrap{padding: 15px;}
+.btn-pinglun{background: #ff9001;padding: 7px 15px;color: #fff;float: right;border-radius: 4px;margin-top: 8px;cursor: pointer;}
+.pinglun-header-wrap textarea,.bj-header-wrap textarea,.bj-content-wrap textarea{
+width: 98%;
+height: 89px;
+resize:none;
+border: 1px solid #dfdfdf;
+-webkit-box-shadow:1px 1px 1px #999 inset,-1px -1px 1px #999 inset;/* For Chrome5+, Safari5+ */
+-moz-box-shadow:1px 1px 1px #999 inset,-1px -1px 1px #999 inset; /* For Firefox3.6+ */
+box-shadow: 1px 1px 1px #999 inset,-1px -1px 1px #999 inset; /* For Latest Opera */
+/*margin-bottom: 14px;*/
+}
+.pinglun-header-wrap p.error,.bj-header-wrap p.error,.bj-content-wrap p.error{color: red;height: 20px;}
+.f-r{float: right;}
+.pinglun-dt .user-name{color: #5e898e;margin: 0 8px;}
+.pinglun-dt .time{font-size: 12px;color: #999;}
+.pinglun-dt:after{display:block;content: '';width: 0;height: 0;border-left: 8px solid transparent;border-right: 8px solid transparent;border-bottom: 8px solid #efefef;margin-left: 10px;margin-top: 5px;}
+.midden-wrap .bj-list-wrap{overflow: hidden;display: none;}
+.add-pointtime{font-size: 12px;color: #999999;margin-right: 20px;margin-left: 5px;display: inline-block;position: relative;width: 80px;left: -16px;padding-left: 16px;cursor: pointer;}
+.pointtime:before{background-position: -171px -50px;width: 21px;height: 19px;vertical-align: top;}
+.pointtime{display: inline-block;border: 1px solid #dfdfdf;cursor: pointer;}
+.bj-btn-save{background: #ff9001;color: #fff;padding: 3px 18px;border-radius: 4px;font-size: 14px;cursor: pointer;}
+.mrg-r20{margin-right: 20px;}
+.c9{color: #999999;}
+.f12{font-size: 12px;}
+.bj-header-wrap{padding: 13px 15px;}
+.bj-content-wrap{height: 65%;overflow: auto;width: 91%;padding: 13px 15px;}
+.bj-list-wrap .bj-item{padding-top: 19px;margin-bottom: 11px;border-top: 1px solid #dfdfdf;margin-top: 20px;}
+.active .i-edit{background-position: -234px -124px;}
+.i-edit{background-position: -230px -48px;width: 24px;height: 26px;display: inline-block;margin-right: 12px;cursor: pointer;}
+.i-del:hover{background-position: -325px -126px;}
+.i-del{background-position: -322px -50px;width: 30px;height: 26px;display: inline-block;cursor: pointer;}
+.bj-content-wrap textarea,.bj-content-wrap input.bj-btn-save{display: none;}
+.bj-list-wrap .active  textarea,.bj-list-wrap .active  input.bj-btn-save{display: block;}
+.bj-list-wrap .active p{display: none;}.bj-list-wrap .bj-content-wrap p.error{display: none;}
+.bj-list-wrap .active p.error{display: block;}
+.pl-list-wrap{display: none;overflow: hidden;}
+.pl-list-wrap dl{height: 68%;overflow: auto;}
+.midden-list-wrap{height: 95%;}
+.kcml-list-wrap{padding-top: 5%;height: 95%;}
+.a-home-wrap{width: 150px;padding-left: 20px;}
+.cf{color: #fff;}
+.left-wrap div.video-wrap{height:100%;background: #010101;}.left-wrap div.video-wrap div{height: 100%;width: 100%;}
+.left-wrap .yxx{display: inline-block;}
+.left-wrap div.custom-wrap {height:36px;padding: 12px 10px;background: #242424;position: relative;}
+.left-wrap div.custom-wrap .vc{position: absolute;top: 50%;margin-top: -14px;right: 0;margin-right: 10px;}
+.left-wrap .i-learned-wrap{height: auto;padding: 4px;width: 80px;text-align: center;background: #fe8f12;border-radius:5px;color: #fff;margin-right: 20px;cursor: pointer;}
+.left-wrap .i-learned-wrap i{background-position: -327px -219px;width: 21px;height: 17px;display: inline-block;vertical-align: top;}
+.left-wrap .i-learn-wrap{height: 25px;padding: 4px;width: 80px;text-align: center;background: #858585;border-radius:5px;margin-right: 25px;}
+.left-wrap .i-learn-wrap i{background-position: -326px -167px;width: 26px;height: 17px;display: inline-block;vertical-align:top;}
+.left-wrap .i-like-wrap{cursor: pointer;position: relative;}
+.left-wrap .i-liked-wrap i{background-position: -230px -220px;width: 35px;height: 28px;display: inline-block;vertical-align: bottom;}
+.left-wrap .i-like-wrap i{background-position: -230px -169px;width: 35px;height: 28px;display: inline-block;vertical-align: bottom;}
+.left-wrap div.custom-wrap div{height: auto;}
+.dis_none{display: none;}
+.header-wrap a{color: #fff;}
+.header-wrap a:hover{color: #ff9001;}
+.kcml-list-wrap span.k_time {background: url(/img/lessonintro/bf.png) no-repeat 1px 4px;padding-left: 20px;margin-right: 20px;color: #666;}.j_playing_item_class {color:#ff9001;}
+.left-wrap .i-learned-wrap:hover .cancel-learned{display: block;cursor: pointer;}
+.left-wrap .i-learned-wrap:hover .learn-i-wrap{display: none;}
+.left-wrap .i-learned-wrap:hover{background: #858585;}
+.left-wrap .i-learn-wrap:hover{background: #fe8f12;color: #fff;}
+.left-wrap .i-learn-wrap:hover .set-learned{display: block;cursor: pointer;}
+.left-wrap .i-learn-wrap:hover .learn-i-wrap{display: none;}
+/*.left-wrap .i-like-wrap:hover .like-i-wrap{display: none;}*/
+.left-wrap .i-like-wrap .set-liked{display: none;z-index: 2;position: absolute;top: 8px;color: #fff;left: 14px;font-size: 12px;}
+.left-wrap .i-like-wrap:hover .set-liked{display: block;}
+.left-wrap .i-like-wrap:hover i{background-position: -230px -220px;}.bj-content-wrap .pointtime:hover{border:1px solid #ff9001;}.i-edit:hover{background-position: -234px -124px;}
+.bj-header-wrap .add-pointtime:hover{color: #ff9001;}
+@media all and (min-height:300px) and (max-height:600px){
+   /* .kcml-list-wrap {padding-top: 20px;height: 81%;}
+    .pl-list-wrap dl {height: 63%;overflow: auto;}
+    .bj-content-wrap {height: 61%;}*/
+}
+/*@media all and (min-height:700px) and (max-height:1000px){
+    .kcml-list-wrap {padding-top: 20px;height: 81%;}
+    .pl-list-wrap dl {height: 63%;overflow: auto;}
+    .bj-content-wrap {height: 61%;}
+}*/
+
+
+.video-progress{ height:12px; width:100%; background-color:#555555;}
+.video-progress span{ float:left;height:12px;width:10%;background-color:#ff9001; position:relative; z-index:1000}
+.video-progress span i{ display:block; height:17px; width:17px;background: url(/img/course/rr.png) no-repeat; position:absolute; top:-2px; right:-7px }
+.video_max { float:right;width:45px;}
+.video_max a{background: url(/img/course/bfq4.png) no-repeat; height:21px; width:21px; display:block; margin:5px 5px 0 10px;}
+.video_max a:hover{ background: url(/img/course/bfq4_h.png) no-repeat;}
+.video_definit{ float:right;width:60px;}
+.video_definit a{ display:block; height:23px; width:40px; line-height:22px; background-color:#9b9a9a; color:#fff; line-height:23px; border-radius:4px; text-align:center; margin:2px 5px 0 8px}
+.video_definit a:hover{ background-color:#ff9001;}
+.video_voice{ height:5px; width:75px; background-color:#434343; float:right; position:relative ; margin:10px 20px 0 60px;cursor:pointer}
+.video_voice span{height:5px; width:10%; background-color:#f06e00; position:relative; display:block; }
+.video_voice span i{ display:block; height:10px; width:10px;background: url(/img/course/rr.png) no-repeat; position:absolute; top:-2px; right:-5px; background-size:10px 10px; background:none #fff\9; border-radius:5px}
+.video_voice .icon{ position:absolute; height:28px; width:28px; display:block; top:-10px; left:-34px;background: url(/img/course/bfq3.png) no-repeat; cursor:pointer;}
+.vc_lft{ position:absolute; left:20px; top:18px;}
+.vc_lft .video_play{ float:left; height:28px; width:28px;}
+.vc_lft .video_play a{ display:block;height:28px; width:28px;background: url(/img/course/bfq1.png) no-repeat;}
+.vc_lft .video_play a:hover{background: url(/img/course/bfq1_h.png) no-repeat;}
+.video_time{ float:left; line-height:20px; margin:2px 0 0 10px; padding-left:10px; border-left:1px solid #484747; font-size:12px}.video_time span{ color:#fff}
+        </style>
+    </head>
+    <body>
+    
+    
+    	<div class="header-wrap ">
+            <div class="clearfix vc">
+                <div class="a-home-wrap f-l">
+                    <a href="/" class="cf"><!-- <i class="bg-icon i-home f-l"></i> -->
+                        <span class="ba-icon i-arrow-r">首页</span></a>
+                    <a href="/view/seek/course.html" class="cf">
+                        <!-- <i class="bg-icon i-home f-l"></i> -->
+                        <span class="ba-icon i-arrow-r">寻找课程</span></a>
+                </div>
+                <div class="f-l">
+                    <a id="j_bread_indus" class="ba-icon i-arrow-r" href="/view/seek/course.html"></a>
+                    <a id="j_bread_dir" class="ba-icon i-arrow-r" href="/view/seek/course.html"></a>
+                    <a id="j_bread_sort" class="" href="/view/seek/course.html"></a>
+                </div>
+                <div id="j_keshi_name" class="f-l keshi-name"></div>
+            </div>
+        </div>
+        <div class="clearfix content-wrap">
+            <div id="j_left_wrap" class="left-wrap f-l">
+                <div id="j_video_wrap" class="video-wrap"></div>
+                <div id="j_video_progress" class="video-progress"><span><i></i></span></div>
+                <div id="j_custom_wrap" class="custom-wrap clearfix">
+                    <div class="vc">
+                    	<div class="video_max"><a href="#"></a></div>
+                        <div class="video_definit"><a href="#">清晰</a></div>
+                        <div class="video_voice"><i class="icon"></i><span class="pro"><i></i></span></div>
+                        <div id="j_like_item" class="f-r i-like-wrap">
+                            <div class="like-i-wrap"><i class="bg-icon"></i><span id="j_likes"></span></div>
+                            <div id="j_set_liked" class="set-liked dis_none"></div>
+                        </div>
+                        <div id="j_class_plan_item" class="f-r i-learn-wrap">
+                            <div class="learn-i-wrap"><i class="bg-icon"></i>已学习</div>
+                            <div id="j_cancel_learned" class="cancel-learned dis_none">取消已学习</div>
+                            <div id="j_set_learned" class="set-learned dis_none">标为已学习</div>
+                        </div>
+                    </div>
+                    <div class="vc_lft">
+                    	<div class="video_play"><a href="#"></a></div>
+                        <div class="video_time"><span>00:11</span> / 27:35</div>
+                    </div>
+                </div>
+            </div>
+            <div id="j_midden_wrap" class="midden-wrap f-l">
+                <div id="j_shrink_midden_wrap" class="shrink"><i class="bg-icon"></i></div>
+                <div  class="title-wrap"><div id="j_title_wrap" class="vc">课程目录</div></div>
+                <div class="j_midden_list_wrap midden-list-wrap">
+                    <dl id="j_molu_list_wrap" class="list-wrap kcml-list-wrap">
+                        
+                    </dl>
+                    <div id="j_pinglun_list_wrap" class="list-wrap pl-list-wrap">
+                        <div class="pinglun-header-wrap clearfix">
+                            <textarea class="txt-pinglun"></textarea>
+                            <p class="error"></p>
+                            <input id="j_add_comment" type="button" class="btn-pinglun f-r" value="发表评论">
+                        </div>
+                        <dl>
+                            
+                        </dl>
+                    </div>
+                    <div id="j_biji_list_wrap" class="list-wrap bj-list-wrap">
+                        <div class="bj-header-wrap">
+                            <textarea id="j_biji_textarea" class="txt-pinglun"></textarea>
+                            <p class="error"></p>
+                            <div>
+                                <input type="checkbox" checked><span id="j_add_pointtime" class="add-pointtime">添加时间驻点</span>
+                                <span class="ba-icon pointtime">00.00</span>
+                                <input id="j_biji_add" type="button" class="bj-btn-save f-r" value="保存">
+                            </div>
+                        </div>
+                        <div  class="bj-content-wrap">
+                            <dl id="j_bj_content_wrap">
+                               
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-wrap f-l">
+                <ul>
+                    <li class="active j_r_item" data-id="#j_molu_list_wrap" data-title="课程目录"><i class="bg-icon i-molu"></i>目录</li>
+                     <li class="j_r_item" data-id="#j_biji_list_wrap" data-title="我的笔记"><i class="bg-icon i-biji"></i>笔记</li>
+                      <li class="j_r_item" data-id="#j_pinglun_list_wrap" data-title="评论区"><i class="bg-icon i-pinglun"></i>评论</li>
+                </ul>
+            </div>
+        </div>
+
+         <script src="/js/vendor/jquery-1.11.3.min.js"></script>
+         <script src="/js/main.js"></script>
+<script>
+$(function(){
+	var videoheight=$(window).height()-132;
+	$(".video-wrap").height(videoheight);		
+})
+$(window).resize(function() {
+	var videoheight=$(window).height()-132;
+	$(".video-wrap").height(videoheight);
+});
+</script>
+    </body>
+</html>

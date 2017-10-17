@@ -1,0 +1,174 @@
+<link rel="stylesheet" href="/css/topbtn.css">
+<style type="text/css">
+    /*banner头样式*/
+    .top-fixed{position: fixed;top: 0;right: 0;left: 0;z-index: 1200;}
+    .mrg-top62{margin-top: 60px;}
+    .header-container{background: #2e333f;line-height: 60px;}
+    .content-wrapper{width: 1200px;margin:0 auto;}
+    .header-container  .f-wrap a{font-size: 16px;color: #fff;margin-left: 40px;}
+    .header-container  .f-wrap a.active{ color: #ff9001 }
+    .i-icon{display: inline-block;}
+    .i-header-icon{background: url('/img/common/icon.png');display: inline-block;width: 32px;height: 27px;vertical-align: middle;}
+    .header-container .content-wrapper .i-logo{background-position: -16px -32px;width: 142px;height: 42px;}
+    .header-container .content-wrapper .input-search-wrap{position: relative;margin-right: 10px;}
+    .header-container .content-wrapper .input-search{width: 40px;height: 30px;background: #52565c;padding-left: 20px;opacity: 0;}
+    .header-container .content-wrapper .input-slider{width: 160px;opacity: 1;}
+    .header-container .content-wrapper .i-search{background-position: -165px -51px;position: absolute;top: -1px;right: -12px;cursor: pointer;}
+    .header-container .content-wrapper .i-slider{right: 10px;}
+    .header-container .content-wrapper .i-click-search{background-position: -165px -49px;z-index: 11;}
+    .header-container .content-wrapper .i-email{background-position: -204px -52px; position: relative}
+    .header-container .content-wrapper .i-vip-a{background-position:-249px -50px;margin:0;}
+    .header-container .content-wrapper .i-question{background-position:-290px -50px;margin-right: 10px;}
+    .header-container .content-wrapper .i-vip-a:hover{background-position: -335px -50px;}
+    .header-container .content-wrapper .i-email:hover{background-position: -375px -52px;}
+    .header-container .content-wrapper .i-question:hover{background-position: -418px -50px;}
+    .header-container .login-wrap a{font-size: 14px;margin:0;color: #fff;}
+    .header-container .midden-line{margin:0 6px;color: #fff;}
+    .header-container .photo-wrapper{display: inline-block;vertical-align: middle;}
+    .header-container .logined-wrap>a{border-radius: 50%;display: inline-block;width: 33px;height: 33px;overflow: hidden;vertical-align: middle;}
+    .header-container .photo{width: 100%;height: 100%;display: block;}
+    .header-container .content-wrapper a:hover{color: #ff9001;}
+    .header-container .content-wrapper .i-email .i-email-num {display: inline-block; position: absolute; top: 2px; right: 2px; width: 8px;height: 8px;border-radius: 50%; background: #ff0101; color: #fff;
+    }
+        /*banner头样式*/
+        /*头像下拉列表样式*/
+.header-container .logined-wrap{display: inline-block;vertical-align: middle;position: relative;}
+.shrink-08{transform:scale(0.8,0.3);-ms-transform:scale(0.8,0.3);-moz-transform:scale(0.8,0.3);-webkit-transform:scale(0.8,0.3);-o-transform:scale(0.8,0.3);opacity: 0;visibility: hidden;}
+/*.info-menu-list-wrap:before,.info-menu-list-wrap:after{content: '';display: block;width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 10px solid #4c556b;margin-left: 56px;}
+.info-menu-list-wrap:before,.info-menu-list-wrap:after{position: absolute;top: -8px;right: 10px; border-bottom: 8px solid #4c556b;}
+.info-menu-list-wrap{position: absolute;right: -5px;opacity:1;font-size: 14px; width: 280px; height: 230px; background: #fff}
+.info-menu-list-wrap ul{background: #fff;width: 108px;text-align: center; border-radius:5px; box-shadow:3px 3px 3px rgba(0, 0, 0, 0.1); overflow:hidden;border:1px solid #d1d1d1;}
+.info-menu-list-wrap ul li{padding:0 4px;line-height: 32px;height: 32px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.info-menu-list-wrap ul li:hover{color: #fff;background: #ff9001;}
+.header-container .info-menu-list-wrap ul li:hover a{color: #fff;}*/
+.bd8{border-bottom:1px solid #d8d8d8;}
+.logined-wrap:hover .info-menu-list-wrap{opacity: 1;transform:scale(1);-ms-transform:scale(1);-moz-transform:scale(1);-webkit-transform:scale(1);-o-transform:scale(1);z-index: 9999;visibility: visible;}
+        /*头像下拉列表样式*/
+
+        /*头像下拉列表样式*/
+.info-menu-list-wrap:before,.info-menu-list-wrap:after{content: '';display: block;width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 10px solid #4c556b;margin-left: 56px;}
+.info-menu-list-wrap:before,.info-menu-list-wrap:after{position: absolute;top: -8px;right: 10px; border-bottom: 8px solid #4c556b;}
+.info-menu-list-wrap{position: absolute;right: -5px;opacity:0;font-size: 14px; width: 280px; background: #fff;z-index: 9999}
+.info-menu-list-wrap .info-menu-top{ position: relative; width: 100%;height: 48px; line-height: 48px;background: #4c556b; margin-bottom: 20px; }
+.info-menu-list-wrap .info-menu-top .set{ position: absolute;top:12px; right: 15px; width: 20px;height: 20px; background: url("/img/info/icon-n.png") no-repeat;background-position: -118px -23px;  }
+.info-menu-list-wrap .info-menu-top .set:hover{background-position: -118px 0;  }
+.info-menu-list-wrap .info-menu-img{ position: absolute;top: 10px; left: 20px;width: 50px;height: 50px;}
+.info-menu-list-wrap .info-menu-img .a-photo-wrap{ width: 50px;height: 50px; border-radius: 50%;display: block;}
+.info-menu-list-wrap .info-menu-img .a-photo-wrap img{ width: 50px;height: 50px; border-radius: 50%;display: block;}
+.info-menu-list-wrap .info-menu-img .vip{ position: absolute;bottom: 0px; right: -5px;width: 20px;height: 20px; background: url("/img/info/icon-n.png") no-repeat -145px -23px;;}
+.info-menu-list-wrap .info-menu-name{margin-left: 85px; font-size: 14px; color: #fff;}
+.info-menu-list-wrap .course-history{ display: none }
+.info-menu-list-wrap .course-history .course{ line-height: 24px; position: relative ;height: 60px;border-bottom:1px solid #ededed; padding: 0 60px 0 20px; }
+.info-menu-list-wrap .course-history .course h4{ line-height: 24px; font-size: 14px;color: #333 }
+.info-menu-list-wrap .course-history .course p{ line-height: 24px; font-size: 12px; color: #666 ;padding-left: 20px;}
+ .info-menu-list-wrap .course-history .course .continue{ position: absolute;top: 0; right:20px;color: #ff9001; }
+ .info-menu-list-wrap .course-history .course i{ display: inline-block;margin-right: 5px; width: 14px; height: 14px;background: url("/img/info/icon-n.png") no-repeat -170px 1px;}
+ .info-menu-list-wrap .info-menu-cnt{ padding: 8px 20px 0;  }
+ .info-menu-list-wrap .info-menu-cnt .info-menu-box{width: 100%; height: 30px;line-height: 30px; }
+ .info-menu-list-wrap .info-menu-cnt .info-menu-box a{ color: #666; vertical-align: middle;display: inline-block}
+ .info-menu-list-wrap .info-menu-cnt .info-menu-box a:first-child{ margin-right: 75px;}
+ .info-menu-list-wrap .info-menu-cnt .info-menu-box a:hover{ color: #000}
+ .info-menu-list-wrap .info-menu-cnt .info-menu-box i{ display: inline-block;width: 18px; height: 18px;margin-right: 8px; vertical-align: text-bottom;}
+ .info-menu-list-wrap .info-menu-cnt .info-menu-box i.xxzx{ background: url("/img/info/icon-n.png") no-repeat; background-position: -5px -23px;}
+ .info-menu-list-wrap .info-menu-cnt .info-menu-box i.qzgl{ background: url("/img/info/icon-n.png") no-repeat; background-position:-30px -23px;}
+ .info-menu-list-wrap .info-menu-cnt .info-menu-box i.ddgl{ background: url("/img/info/icon-n.png") no-repeat; background-position:-58px -23px;}
+ .info-menu-list-wrap .info-menu-cnt .info-menu-box i.wdvip{ background: url("/img/info/icon-n.png") no-repeat; background-position:-88px -23px;}
+  .info-menu-list-wrap .info-menu-cnt .info-menu-box i.coupon{ background: url("/img/info/icon-n.png") no-repeat; background-position:-198px -25px;}
+
+.info-menu-list-wrap .info-menu-cnt .info-menu-box a:hover i.xxzx{ background-position:-5px 0 ;}
+.info-menu-list-wrap .info-menu-cnt .info-menu-box a:hover i.qzgl{ background-position:-30px 0 ;}
+.info-menu-list-wrap .info-menu-cnt .info-menu-box a:hover i.ddgl{ background-position:-58px 0;}
+.info-menu-list-wrap .info-menu-cnt .info-menu-box a:hover i.wdvip{background-position:-88px 0 ;}
+.info-menu-list-wrap .info-menu-cnt .info-menu-box a:hover i.coupon{background-position:-198px 0 ;}
+.info-menu-list-wrap .info-menu-exit{ width: 100%;height: 35px;line-height: 35px;text-align: center;color: #666666; margin-top: 5px; vertical-align: middle;cursor: pointer}
+.info-menu-list-wrap .info-menu-exit i{display: inline-block;width:15px;height: 15px;background: url("/img/info/icon-n.png") no-repeat;background-position:-148px -2px;vertical-align: middle }
+.info-menu-list-wrap .info-menu-exit:hover {color: #ff9001}
+.info-menu-list-wrap .info-menu-exit:hover i{background-position:-171px -28px}
+.box-shadow {-webkit-box-shadow: 0 5px 5px 4px rgba(0,0,0,0.1); -moz-box-shadow: 0 5px 5px 4px rgba(0,0,0,0.1);box-shadow: 0 5px 5px 4px rgba(0,0,0,0.1);}
+.text-ellipsis { overflow: hidden;  text-overflow: ellipsis; white-space: nowrap; }
+        /*头像下拉列表样式*/
+
+
+
+</style>
+<div class="header-container top-fixed">
+    <div class="content-wrapper clearfix">
+        <div class="f-wrap f-l">
+            <i class="i-header-icon i-logo"></i>
+            <a  href="/?version=1.5.1">首页</a>
+            <!-- <a target="_blank" href="/view/seek/course.html">全部课程</a> -->
+            <a  href="/view/zytp/list.html?version=1.5.1" class="zyxy">职业学院</a>
+            <a style="display:none;"  href="/" class="xlkc">系列课程</a>
+            <a  href="/view/xzjy/list.html?version=1.5.1" class="gzjy">工作机遇</a>
+        </div>
+        <div class="f-r">
+            <span class="input-search-wrap" style="display:none;"><input type="text" class="input-search animation"><i class="i-header-icon i-search animation j_click_search"></i></span>
+            <!-- <a class="j_click_search" href="javascript:;"><i class="i-header-icon i-click-search"></i></a> -->
+            <a title="系统消息" style="display:none;"href="/view/system/notice.html"  id="j_login_email" ><i class="i-header-icon i-email"><i class="i-email-num j_has_notice" style="display:none;"></i></i></a>
+            <a title="VIP"  href="/view/vip/vipintro.html"><i class="i-header-icon i-vip-a"></i></a>
+            <a title="帮助中心"  href="/view/info/help_center.html"><i class="i-header-icon i-question"></i></a>
+            <span id="j_reg_login_wrap" class="login-wrap mrg-l10" style="display:none;"><a class="login" href="javascript:;">登录</a><i class="midden-line">|</i><a class="register" href="javascript:;">注册</a></span>
+            <span id="j_logined_wrap" class="photo-wrapper logined-wrap mrg-l10" style="display:none;">
+                <a class="a-photo-wrap" href="/view/info/setinfo.html">
+                    <img class="photo j_user_photo" src="">
+                </a>
+               <!-- <div class="info-menu-list-wrap animation shrink-08" >
+                    <ul>
+                        &lt;!&ndash; <li class="lgnamebox bd8"></li> &ndash;&gt;
+                        <li class="bd8"><a class="lgnamebox" href="/view/info/index.html?type=0"></a></li>
+                        <li class="bd8 dis_none">普通用户</li>
+                        <li class="logout">退出登录</li>
+                    </ul>
+                </div>-->
+                <div class="info-menu-list-wrap box-shadow animation shrink-08" >
+                    <div class="info-menu-top">
+                        <div class="info-menu-img">
+                            <a class="a-photo-wrap" href="/view/info/setinfo.html">
+                                <img class="photo j_user_photo" src="">
+                            </a>
+                            <i class="vip j_isvip" style="display:none;"></i>
+                        </div>
+                        <p class="info-menu-name j_username"></p>
+                        <a href="/view/info/setinfo.html" class="set"></a>
+                    </div>
+                    <div  class="course-history j_menu_course_history">
+                        <div class="course">
+                            <h4 class="text-ellipsis j_menu_course_name"></h4>
+                            <p class="text-ellipsis j_menu_chapterName_name"></p>
+                            <a href="#" class="continue j_menu_course_continue">继续</a>
+                        </div>
+                    </div>
+                    <div class="info-menu-cnt">
+                        <div class="info-menu-box clearfix">
+                            <a  href="/view/info/mycourse.html" class="float_l" ><i class="xxzx"></i>学习中心</a>
+                            <a  href="/view/info/job_info.html" class="float_l" ><i class="wdvip"></i>求职管理</a>
+                        </div>
+                        <div class="info-menu-box clearfix">
+                            <a  href="/view/info/order.html" class="float_l"><i class="qzgl"></i>订单管理</a>
+                            <a href="/view/vip/myvip.html" class="float_l"><i class="ddgl"></i>我的VIP </a>
+                        </div>
+                         <div class="info-menu-box clearfix">
+                            <a  href="/view/info/coupon.html" class="float_l"><i class="coupon"></i>我的优惠券</a>
+                        </div>
+                    </div>
+                    <div class="info-menu-exit logout">
+                        <i></i>退出
+                    </div>
+                </div>
+
+            </span>
+        </div>
+    </div>
+</div>
+<div class="mrg-top62"></div>
+<script type="text/javascript">
+// $(function(){
+    $('.header-container').on('click','.j_click_search',function(){
+        // $(this).hide();
+        $('.input-search').addClass('input-slider');
+        $(this).addClass('i-slider');
+    }) 
+// })
+   
+    console.log('header loaded');
+</script>

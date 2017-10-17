@@ -1,0 +1,168 @@
+<style type="text/css">
+.upload-img-wrap .txt-sp{padding-left: 20px;position: relative;left: -20px;cursor: pointer;}
+.intro-p{white-space: pre-wrap;}.mrg-t5{margin-top: 5px;}
+.shade-wrap{position: absolute;top: 0;bottom: 0;width: 100%;background:#fff;opacity: 0.5;z-index: 12;}
+</style>
+<!-- 基本信息 -->
+	    		<div id="j_info_wrap" class="info-wrap">
+	    			<div ng-if="shadeInfo.basicInfoShow" class="shade-wrap"></div>
+	    			<div class="clearfix header-wrap">
+	    				<div class="f-l title-wrap">
+		    				<i class="i-sprite i-info"></i>
+		    				<div class="item-txt">基本信息</div>
+	    				</div>
+	    				<div class="f-r"><i ng-click="copyInfoForEdit('basicInfo')" data-id="#j_info_wrap" class="i-sprite i-edit"></i></div>
+	    			</div>
+	    			<div class="upload-img-wrap">
+	    				<div ng-click="showPhotoUploadPopbox()" class="img-wrap">
+	    					<img ng-src="{{photoInfo.photo||'/img/wdjl/photo.jpg'}}">
+	    					<div>上传头像</div>
+	    					<!-- <input jj-file-on-change="fileOnChange"  class="upload-file dis_none" type="file"> -->
+	    				</div>
+	    				<div><input ng-model="photoInfo.show" class="cb" type="checkbox"><span class="txt-sp" ng-click="togglePhotoShowInResume()">在简历中显示</span></div>
+	    			</div>
+	    			<div class="detail-wrap ">
+	    				<ul>
+	    					<li class="clearfix">
+								<div class="f-l l-wrap l28"><i class="i-sprite i-require mrg-t5"></i>姓名：</div>
+	    						<div class="f-l">
+	    							<span class="default-wrap l28"><span ng-bind="userInfo.name"></span><span ng-bind="userInfo.gender|genderFormat"></span></span>
+	    							<div class="edit-wrap"><input ng-model="userInfo.name" type="text" class="input-default"><span class="mrg-l10 err" ng-show="userInfoErr.name" ng-bind="userInfoErr.name"></span></div>
+	    						</div>
+	    					</li>
+	    					<li class="clearfix">
+								<div class="f-l l-wrap"><i class="i-sprite i-require"></i>性别：</div>
+	    						<div class="f-l">
+	    							<span class="default-wrap"></span>
+	    							<div class="edit-wrap">
+	    								<input type="radio" ng-init="" ng-model="userInfo.gender" class="mrg-r5" value="M">男
+	    								<input type="radio" ng-model="userInfo.gender" class="mrg-l20 mrg-r5" value="F">女
+	    								<span class="mrg-l10 err" ng-show="userInfoErr.gender" ng-bind="userInfoErr.gender"></span>
+	    							</div>
+	    						</div>
+	    					</li>
+	    					<li class="clearfix">
+								<div class="f-l l-wrap"><i class="i-sprite i-require"></i>现居地：</div>
+	    						<div class="f-l">
+	    							<span ng-bind="userInfo.presentAddress" class="default-wrap"></span>
+	    							<div class="edit-wrap">
+	    								<select  ng-change="changeSelectedAddress1(selectedAddress.selectedAddress1,'0')" ng-model="selectedAddress.selectedAddress1" ng-options="x.name for x in cityData" ></select>
+	    								<select  ng-model="selectedAddress.selectedAddress2" ng-options="x.name for x in cityChildData[selectedAddress.selectedAddress1.code]"   class="mrg-l10"></select>
+	    								<span class="mrg-l10 err" ng-show="userInfoErr.presentAddress" ng-bind="userInfoErr.presentAddress"></span>
+	    							</div>
+	    						</div>
+	    					</li>
+	    					<li class="clearfix">
+								<div class="f-l l-wrap"><i class="i-sprite i-require"></i>户口地：</div>
+	    						<div class="f-l">
+	    							<span ng-bind="userInfo.domicileAddress" class="default-wrap"></span>
+	    							<div class="edit-wrap">
+	    								<select ng-change="changeSelectedAddress1(selectedAddress.selectedAddress3,'1')"  ng-model="selectedAddress.selectedAddress3" ng-options="x.name for x in cityData"></select>
+	    								<select ng-model="selectedAddress.selectedAddress4" ng-options="x.name for x in cityChildData[selectedAddress.selectedAddress3.code]" class="mrg-l10"></select>
+	    								<span class="mrg-l10 err" ng-show="userInfoErr.domicileAddress" ng-bind="userInfoErr.domicileAddress"></span>
+	    							</div>
+	    						</div>
+	    					</li>
+	    					<li class="clearfix">
+								<div class="f-l l-wrap"><i class="i-sprite i-require"></i>出生日期：</div>
+	    						<div class="f-l">
+	    							<span ng-bind="userInfo.birthdate|birthdateFormat" class="default-wrap"></span>
+	    							<div class="edit-wrap">
+	    								<select ng-model="userInfo.infoYear" ng-options="x for x in years" class="mrg-r5"></select>年
+	    								<select ng-model="userInfo.infoMonth" ng-options="x for x in months" class="mrg-l5 mrg-r5"></select>月
+	    								<select ng-model="userInfo.infoDay" ng-options="x for x in days" class="mrg-l5 mrg-r5"></select>日
+	    								<span class="mrg-l10 err" ng-show="userInfoErr.birthdate" ng-bind="userInfoErr.birthdate"></span>
+	    							</div>
+	    						</div>
+	    					</li>
+	    					<li class="clearfix">
+								<div class="f-l l-wrap l28">民族：</div>
+	    						<div class="f-l">
+	    							<span ng-bind="userInfo.nation" class="default-wrap l28"></span>
+	    							<div class="edit-wrap"><input ng-model="userInfo.nation" type="text" class="input-default"></div>
+	    						</div>
+	    					</li>
+	    					<li class="clearfix">
+								<div class="f-l l-wrap">政治面貌：</div>
+	    						<div class="f-l">
+	    							<span ng-bind="userInfo.politicalStatus" class="default-wrap"></span>
+	    							<div class="edit-wrap">
+	    								<input ng-model="userInfo.politicalStatus" class="mrg-r5" type="radio" value="党员">党员
+	    								<input ng-model="userInfo.politicalStatus" class="mrg-l20 mrg-r5" type="radio" value="团员">团员
+	    								<input ng-model="userInfo.politicalStatus" class="mrg-l20 mrg-r5" type="radio" value="群众">群众
+	    								<input ng-model="userInfo.politicalStatus" class="mrg-l20 mrg-r5" type="radio" value="民主党派">民主党派
+	    								<input ng-model="userInfo.politicalStatus" class="mrg-l20 mrg-r5" type="radio" value="其他">其他
+	    							</div>
+	    						</div>
+	    					</li>
+	    					<li class="clearfix">
+								<div class="f-l l-wrap">婚姻状态：</div>
+	    						<div class="f-l">
+	    							<span ng-bind="userInfo.maritalStatus" class="default-wrap"></span>
+	    							<div class="edit-wrap">
+	    								<input ng-model="userInfo.maritalStatus" class="mrg-r5" type="radio" value="未婚">未婚
+	    								<input ng-model="userInfo.maritalStatus" class="mrg-l20 mrg-r5" type="radio" value="已婚">已婚
+	    								<input ng-model="userInfo.maritalStatus" class="mrg-l20 mrg-r5" type="radio" value="离异">离异
+	    							</div>
+	    						</div>
+	    					</li>
+	    					<li class="clearfix">
+								<div class="f-l l-wrap">工作经验：</div>
+	    						<div class="f-l">
+	    							<span ng-bind="userInfo.workExperience|filterField" class="default-wrap"></span>
+	    							<div class="edit-wrap">
+	    								<select ng-init="userInfo.workExperience=workExperienceData[0]" ng-model="userInfo.workExperience" ng-options="o for o in workExperienceData"></select>
+	    							</div>
+	    						</div>
+	    					</li>
+	    					<li class="clearfix">
+								<div class="f-l l-wrap">目前状态：</div>
+	    						<div class="f-l">
+	    							<span ng-bind="userInfo.situation|filterField" class="default-wrap"></span>
+	    							<div class="edit-wrap">
+	    								<select ng-init="userInfo.situation=personalStateData[0]" ng-model="userInfo.situation" ng-options="o for o in personalStateData"></select>
+	    							</div>
+	    						</div>
+	    					</li>
+	    					<li class="clearfix">
+								<div class="f-l l-wrap">到岗时间：</div>
+	    						<div class="f-l">
+	    							<span ng-bind="userInfo.postTime|filterField" class="default-wrap"></span>
+	    							<div class="edit-wrap">
+	    								<select ng-init="userInfo.postTime=workTimeData[0]" ng-model="userInfo.postTime" ng-options="o for o in workTimeData"></select>
+	    							</div>
+	    						</div>
+	    					</li>
+	    					<li class="clearfix">
+								<div class="f-l l-wrap">个人标签：</div>
+	    						<div class="f-l">
+	    							<span ng-bind="userInfo.individualTag" class="default-wrap"></span>
+	    							<div class="edit-wrap">
+	    								<label ng-repeat="item in infoPersonalLabels" class="personal-label mrg-r10 mrg-b5"><span ng-bind="item"></span><span class="mrg-l5 cursor-pointer" ng-click="delPersonalLabel(item)">x</span></label>
+	    								<input type="text"  ng-model="infoPersonalLabel" class="input-default j-personal-label-input w135" placeholder="请输入个人标签">
+	    								<input type="button" ng-click="infoAddPersonalLabel(infoPersonalLabel)" class="personal-label-addbtn mrg-l5" value="添加">
+	    							</div>
+	    						</div>
+	    					</li>
+	    					<li class="clearfix">
+								<div class="f-l l-wrap">自我描述：</div>
+	    						<div class="f-l">
+	    							<p ng-bind="userInfo.selfDescription" class="default-wrap intro-p"></p>
+	    							<div class="edit-wrap">
+	    								<textarea ng-model="userInfo.selfDescription" class="textarea" placeholder="最多输入400字"></textarea>
+	    							</div>
+	    						</div>
+	    					</li>
+	    					<li class="clearfix">
+								<div class="f-l l-wrap"></div>
+	    						<div class="f-l">
+	    							<p class="default-wrap"></p>
+	    							<div class="edit-wrap clearfix">
+	    								<div class="f-l"><input ng-disabled="disabledInfo.basicInfoUpdateBtnDisabled" type="button" class="but but-shadow but-animation w95" value="保存" ng-click="saveBasicInfo('#j_info_wrap')"></div>
+	    								<div class="f-l"><input ng-click="cancelInfoUpdate('basicInfo')" type="button" data-id="#j_info_wrap" class="but but-cancel but-shadow but-animation mrg-l80 w95" value="取消"></div>
+	    							</div>
+	    						</div>
+	    					</li>
+	    				</ul>
+	    			</div>
+	    		</div>

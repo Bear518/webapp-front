@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>选择支付方式</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/vip/buy.css">
+</head>
+<body>
+<div include="../module/header.html"></div>
+<div class="warpper clearfix">
+	<div class="stepbox step2"></div>
+	<div class="membuybox">
+    	<h4>订单信息</h4>
+        
+        <div class="buyinfo payinfo"><span class="ordno">编号：<i>132123554580</i></span>
+           <table width="100%" border="0" class="courtable" cellspacing="0">
+              <tr>
+                <th width="28%">商品名称</th>
+                <th width="13%">有效期</th>
+                <th width="13%">单价（元）</th>
+                <th width="13%">数量</th>
+                <th width="20%">优惠（元）</th>
+                <th width="13%">合计（元）</th>
+              </tr>
+              <tr class="proinfo">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="yel">￥</span></td>
+              </tr>
+            </table>
+			<div class="goback"><a href="coursebuy.html"><< 返回修改订单</a></div>
+        </div>
+        <p class="line"></p>
+        <h4>选择支付方式</h4>
+        <ul class="choslist">
+        <li class=" on"><a class="zfb"  href="javascript:;"><i></i></a></li>
+        <li><a class="wx"  href="javascript:;"><i></i></a></li>
+        </ul>
+        <div class="but-wrap"><a class="but but-preview but-shadow but-animation"  id="step2but" href="javascript:;">确认支付</a></div>
+    </div>
+</div>
+
+<div class="tk_dl" id="tk_dl1" style="display:none">
+    <div class="loginbg"></div>
+    <div class="tk_box ">
+        <h3>您选择了<i class="zfb"></i>付款</h3>
+        <div class="tk_main">
+        <h4>购买商品信息：</h4>
+        <p class="line"></p>
+        <dl class="buyinfo buyinfo2">
+            <dt>名称：</dt><dd></dd>
+            <dt>单价：</dt><dd></dd>
+            <dt>时长：</dt><dd></dd>
+            <dt>优惠：</dt><dd></dd>
+            <dt>总计：</dt><dd></dd>            
+        </dl>
+        <p style="display:none" class="red j_nopay_error">未支付成功，请重新完成支付</p>
+        <div class="tk_btn"><a href="javascript:" id="cancelbtn" class="on">付款失败</a><a href="javascript:" id="okbtn" class="">付款成功</a></div>
+        </div>
+    </div>
+</div>
+<div class="tk_dl" id="tk_dl2"   style="display:none">
+    <div class="loginbg"></div>
+    <div class="tk_box tdbox">
+        <h3><i class="iconfont tkcls2">&#xe604;</i>您选择了<i class="wx"></i>付款</h3>
+        <div class="tk_main">
+        <h4>微信扫描支付：</h4>
+        <p class="line"></p>
+        <span class="ewm_pay"><img/></span>
+        <div class="je_wx"><p>扫描二维码完成支付</p>
+        金额：<i class="yel">￥<span class="wx_prc"></span></i></div>
+        </div>
+    </div>
+</div>
+<div include="../module/footer.html"></div>
+</body>
+<script src="../../js/vendor/jquery-1.9.0.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/vip/buy.js"></script>
+<script>var ordid=mainModule.getQueryValueByName('ordid'),ordno,
+	id=mainModule.getQueryValueByName('id'),
+	jobMapId=mainModule.getQueryValueByName('jobMapId'),
+	classId=mainModule.getQueryValueByName('classId'),buyType=1;
+	if(jobMapId){
+		buyType=2;
+	}
+$(function() {
+	
+	
+	pinfo(ordid);
+	
+})
+function pinfo(ordid){
+	$.ajax({
+		type: "get",
+		dataType: "json",
+		url: $._CACHEOBJ.context+"/order/common/orderInfo",
+		data:{"orderId":ordid},
+		success: function (pl) {
+			mainModule.log('订单信息接口返回：',pl);
+            var htmlcmt = "",htmlbuy = "";
+			if(pl.status== "SUCCESS"){
+				var item=pl.content;
+				htmlcmt += '<td>' + pl.content.productName + '</td><td>永久有效</td><td>' + pl.content.price + '</td><td>X1</td><td>'+(item.cutMoney||0)+'元</td><td><span class="yel">￥' + pl.content.orderMoney + '</span></td>';
+				htmlbuy += '<dt>商品名称：</dt><dd>' + pl.content.productName + '</dd><dt>有效期：</dt><dd>永久有效</dd><dt>单价：</dt><dd>' + pl.content.price + '</dd><dt>数量：</dt><dd>X1</dd><dt style="display:none">优惠：</dt><dd style="display:none">-4元</dd><dt>总计：</dt><dd>￥' + pl.content.orderMoney + '</dd>';
+				ordno=pl.content.orderNo;
+				$(".ordno i").text(ordno);
+				$(".buyinfo2").html(htmlbuy);
+				var basePayUri='/view/vip/coursebuy.html?',
+					payuri=basePayUri+'id='+id;
+				buyType==2?(payuri=basePayUri+'jobMapId='+jobMapId+'&classId='+classId):void(0);
+				$(".goback a").attr("href",payuri);
+				$(".wx_prc").text(pl.content.orderMoney);
+				$("#step2but").click(function(){
+					var on=$(".choslist .on a")
+					if(on.hasClass("zfb")){
+					pay(ordno)	
+					}
+					if(on.hasClass("wx")){
+					pay2(ordno);
+					loopCheckIsPaid(ordid);
+					}
+				})
+				$("#okbtn").click(function(){
+					ptype(ordid,function(result){
+						var $j_nopay_error=$('.j_nopay_error')
+						var st=setTimeout(function(){
+							$j_nopay_error.hide();
+							clearTimeout(st);
+						},3000);
+						$j_nopay_error.show();
+					});
+				})
+				
+			}
+			else{
+				if(pl.content!=null){alert(pl.content[0].message); }
+		  		else{alert(pl.message); }
+			}
+			$(".proinfo").html(htmlcmt);
+			
+		}
+	})
+}
+function ptype(ordid,callback){
+	$.ajax({
+		type: "get",
+		dataType: "json",
+		url: $._CACHEOBJ.context+"/order/common/orderInfo?rad="+Math.random()*1,
+		data:{"orderId":ordid},
+		success: function (pl) {
+			if(pl.status== "SUCCESS"){
+				var result=pl.content;
+				var ordtype=pl.content.statue;
+
+				if(ordtype==0||ordtype==3){
+					callback&&callback(result);
+				}
+				else if(ordtype==1){
+					if(result.orderType==3){
+						window.location.href="/view/zytp/xb_pay3.html?orderId="+result.id;
+						return;
+					}
+					window.location.href="/view/vip/success.html?ordid="+ordid;
+				}
+			}
+			else{
+				if(pl.content!=null){alert(pl.content[0].message); }
+		  		else{alert(pl.message); }
+			}
+			
+		}
+	})
+}
+function pay(no){
+	var url;
+	$.ajax({
+		type: "get",
+		dataType: "json",
+		async:false,
+		url: $._CACHEOBJ.context+"/order/common/alipay",
+		data:{"orderNo":no},
+		success: function (pl) {
+			if(pl.status== "SUCCESS"){
+				url=pl.content;
+				// openwin(pl.content);
+				//window.location.href=pl.content;
+			}
+			else{
+				if(pl.content!=null){alert(pl.content[0].message); }
+		  		else{alert(pl.message); }
+			}
+		}
+	});
+	if(url){
+		window.open(url,'_blank');
+	}
+}
+function pay2(no){
+	
+			$(".ewm_pay img").attr("src",$._CACHEOBJ.context+"/order/common/weixinPay?orderNo="+no);
+		
+
+}
+</script>
+
+</html>

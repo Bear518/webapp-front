@@ -1,0 +1,104 @@
+<style type="text/css">
+	.r-wrap .internship-txt-wrap{width: 105px;text-align: right;white-space: nowrap;}
+	.r-wrap .internship-wrap ul>li{margin-bottom: 16px;}
+	.r-wrap .internship-detail-wrap .multi-select{width: 296px;height: 28px;border:1px solid #ededed;line-height: 22px;padding:3px;color: #999;}
+</style>
+<div id="j_internship_wrap" class="item-wrap internship-wrap">
+	<div ng-if="shadeInfo.internshipInfoShow" class="shade-wrap"></div>
+	<div class="clearfix header-wrap">
+		<div class="f-l title-wrap">
+			<i class="i-sprite i-internship"></i>
+			<div class="item-txt">实习经历</div>
+		</div>
+		<div class="f-r"><i ng-click="changeShade('internshipInfo')" data-id="#j_internship_wrap" class="i-sprite i-add"></i></div>
+	</div>
+	<div class="detail-wrap internship-detail-wrap">
+		<table class="default-wrap">
+			<thead><tr><th>公司名称</th><th>在职时间</th><th>职位名称</th><th></th></tr></thead>
+			<tbody>
+				<tr ng-repeat="item in internshipList"><td ng-bind="item.company"></td><td><label ng-bind="item.startDate|dateFormatToMonth"></label><span ng-bind="item.endDate|isShowZhi"></span><label ng-bind="item.endDate|dateFormatToMonth"></label></td><td ng-bind="item.jobTitle"></td><td><span class="mrg-r10 mrg-l20" ng-click="infoEdit(item,'internship_edit')">编辑</span><span ng-click="infoDel(item,'internship_del',$index)">删除</span></td></tr>
+			</tbody>
+		</table>
+		<div class="edit-wrap">
+			<ul>
+				<li class="clearfix">
+					<div class="mrg-r38 internship-txt-wrap f-l"><i class="i-sprite i-require"></i>公司名称</div>
+					<div class="f-l"><input ng-model="internshipInfo.company" type="text" class="input-default w228 mrg-r5"><span class="err mrg-l5" ng-bind="internshipInfoErr.company"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 internship-txt-wrap f-l"><i class="i-sprite i-require"></i>在职时间</div>
+					<div class="f-l"><input ng-model="internshipInfo.startYear" type="text" class="input-default w70 mrg-r5">年
+						<input type="text" ng-model="internshipInfo.startMonth" class="input-default w70 mrg-r5 mrg-l5">月
+						<span class="mrg-l5 mrg-r5">至</span>
+					<input type="text" ng-model="internshipInfo.endYear" class="input-default w70 mrg-r5 mrg-l5">年
+					<input type="text" ng-model="internshipInfo.endMonth" class="input-default w70 mrg-r5 mrg-l5">月
+					<input ng-model="internshipInfo.asYet" type="checkbox" class="mrg-l10 mrg-r5"><span ng-click="toNowClick('internship_tonow')">至今</span><span class="err mrg-l5" ng-bind="internshipInfoErr.startDate"></span><span class="err mrg-l5" ng-if="!internshipInfoErr.startDate" ng-bind="internshipInfoErr.endDate"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 internship-txt-wrap f-l">工作城市</div>
+					<div class="f-l"><select ng-model="internshipInfo.citySelected" ng-options="item.name for item in cityData" class="mrg-r10" ng-change="internshipCityChange(internshipInfo.citySelected)"></select><select ng-model="internshipInfo.cityChildSelected" ng-options="item.name for item in internshipCityChildData"></select><span class="err mrg-l5" ng-bind="internshipInfoErr.city"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 internship-txt-wrap f-l">所在部门</div>
+					<div class="f-l"><input ng-model="internshipInfo.department" type="text" class="input-default w228"></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 internship-txt-wrap f-l"><i class="i-sprite i-require"></i>所属行业</div>
+					<!-- <div class="f-l"><select></select></div> -->
+					<div class="f-l ">
+						<span ng-repeat="item in internshipIndustrys" ng-bind="item.name" class="default-wrap mrg-r5"></span>
+						<div class="edit-wrap clearfix">
+							<div class="multi-select clearfix f-l" ng-click="selectIndustry('internship_industry_select')"><div class="multi-wrap f-l"><span  ng-if="internshipIndustrys.length==0">请选择</span><span class="mrg-r5" ng-repeat="item in internshipIndustrys" ng-bind="item.name"></span></div><i class="f-r i-sprite i-multi"></i></div>
+							<div class="mrg-l10 err f-l" ng-bind="internshipInfoErr.industry"></div>
+						</div>
+					</div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 internship-txt-wrap f-l"><i class="i-sprite i-require"></i>职位名称</div>
+					<div class="f-l"><input ng-model="internshipInfo.jobTitle" type="text" class="input-default w228"><span class="err mrg-l5" ng-bind="internshipInfoErr.jobTitle"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 internship-txt-wrap f-l"><i class="i-sprite i-require"></i>职位类别</div>
+					<div class="f-l ">
+						<span ng-repeat="item in internshipJobTypes" ng-bind="item.name" class="default-wrap"></span>
+						<div class="edit-wrap clearfix">
+							<div ng-click="showJobTypeSelect('internship_jobtype_select')" class="multi-select clearfix f-l"><span ng-if="internshipJobTypes.length==0">请选择</span><div class="multi-wrap f-l" ng-if="internshipJobTypes.length>0"><span ng-repeat="item in internshipJobTypes" class="mrg-r5" ng-bind="item.name"></span></div><i class="f-r i-sprite i-multi"></i></div>
+							<div class="mrg-l10 err f-l" ng-bind="internshipInfoErr.jobCategory"></div>
+
+						</div>
+					</div>
+				</li>
+				<li class="clearfix dis_none">
+					<div class="mrg-r38 internship-txt-wrap f-l">职位级别</div>
+					<div class="f-l"><select ng-init="internshipInfo.positionLevel=positionLevelData[0]" ng-model="internshipInfo.positionLevel" ng-options="item for item in positionLevelData"></select><span class="err mrg-l5" ng-bind="internshipInfoErr.positionLevel"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 internship-txt-wrap f-l">薪水(税前)</div>
+					<div class="f-l"><input ng-model="internshipInfo.salary" type="text" class="input-default w228 mrg-r10">RMB/月</div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 internship-txt-wrap f-l">汇报对象</div>
+					<div class="f-l"><input ng-model="internshipInfo.superior" type="text" class="input-default w116"></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 internship-txt-wrap f-l">工作描述</div>
+					<div class="f-l"><textarea ng-keydown="enterToNewLine(this)" ng-model="internshipInfo.jobDescription" class="textarea w545"></textarea></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 internship-txt-wrap f-l h20"></div>
+					<div class="f-l">
+						<div class="clearfix mrg-t20 h34">
+							<div class="f-l">
+								<input ng-disabled="disabledInfo.internshipInfoUpdateBtnDisabled" ng-click="saveinternshipInfo('#j_internship_wrap')" type="button" class="but but-shadow but-animation w95" value="保存">
+							</div>
+							<div class="f-l">
+								<input ng-click="cancelUpdate('internship_update_cancel')" type="button" data-id="#j_internship_wrap" class="but but-cancel but-shadow but-animation mrg-l80 w95" value="取消">
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+	</div>
+</div>

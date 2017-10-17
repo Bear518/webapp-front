@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>联系我们_极视教育网</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/aboutus/aboutusN.css">
+    <!--引用百度地图API-->
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+<body>
+<div class="content">
+<div class="banner">
+	<a class="logo" href="/"></a>
+	<h1>联系我们</h1>
+    <p>极视教育是由上海极视文化传播股份有限公司创立，国内第一家专注于游戏职业培训的在线教育平台。我们致力于构建“学习+实战+机遇”三元结构闭环的模式，携手知名游戏企业与一线资深讲师共同帮助学员实现游戏设计开发的梦想，并为企业提供人才储备的解决方案。</p>
+	<div class="btnbox">
+     <a href="aboutusN.html">关于我们</a>
+     </div>
+     <div class="cnttype">
+     	<a href="javascript:" id="wx">
+            <i><img src="../../img/aboutus/ewmwx.png"/></i></a>
+         <a href="javascript:" id="qq"><i>
+             <img src="../../img/aboutus/ewmqq.png"/></i>
+         </a>
+     </div>
+</div>
+<div class="cntway">	
+ 	<h2>联系我们<span></span></h2>
+    <div class="cntway_l">        
+        <ul>
+        <li><span class="titt">不服来辩 <span>赵同学</span></span>
+        <span class="ico"><i class="tx1"><img src="../../img/aboutus/1.png"/></i></span>
+        <div class="intro">什么？我们呕心沥血制作的网站，不眠不休精选的课程，千辛万苦找到的公司岗位，你竟然不满意？ 少年，你到底有什么nice的想法，建议，指教来来来~我们来谈谈！
+        <a class="sujj" href="javascript:">谈谈建议>></a>    </div> </li>
+        <li>
+        <span class="titt">讲师招募 <span>王同学</span></span>
+        <span class="ico"><i class="tx2"><img src="../../img/aboutus/2.png"/></i></span>
+        <div class="intro">你说你身怀绝技，笑傲群雄又想要兼济天下？那还等什么？快来做我们的宗师吧！<br>
+        <dl>
+        <dt>微信：lmaxbear</dt><dd>Q Q：525203447</dd>
+        <dt>手机：18251568800</dt><dd>邮箱： wang_cy@skillbridge.cn </dd>
+        </dl>
+        </div>
+        </li>
+        <li>
+        <span class="titt">商务合作 <span>谢同学</span></span>
+        <span class="ico"><i class="tx3"><img src="../../img/aboutus/3.png"/></i></span>
+        <div class="intro">听说强强联手才能屹立世界之巅，来来来，我们一起携手，体会下无敌的寂寞吧！<br>
+        <dl>
+        <dt>微信：edxie001 </dt><dd>Q Q：120779939</dd>
+        <dt>手机：13671874840  </dt><dd>邮箱： edward_xie@skillbridge.cn</dd>
+        </dl>
+        </div>
+        </li>
+        <li>
+        <span class="titt">人才招募 <span>沈同学</span></span>
+        <span class="ico"><i class="tx4"><img src="../../img/aboutus/4.png"/></i></span>
+        <div class="intro">想要跟我们一起改变这个世界吗？少年，加入我们吧~ <br>
+        <dl>
+        <dt>微信：richard_cong</dt><dd>Q Q：401121131</dd>
+        <dt>手机：18516628989 </dt><dd style="width:234px">邮箱： richard_shen@skillbridge.cn  </dd>
+        </dl>
+        </div>
+        </li>
+        </ul>
+    </div>
+        
+        
+	
+    <div class="mapbox">
+        <div class="map">
+        <!--百度地图容器-->
+        <div style="width:414px;height:266px;border:#ccc solid 1px;" id="dituContent"></div>
+        <script type="text/javascript">
+            //创建和初始化地图函数：
+            function initMap(){
+                createMap();//创建地图
+                setMapEvent();//设置地图事件
+                addMapControl();//向地图添加控件
+                addMarker();//向地图中添加marker
+            }
+            
+            //创建地图函数：
+            function createMap(){
+                var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+                var point = new BMap.Point(121.634221,31.213804);//定义一个中心点坐标
+                map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+                window.map = map;//将map变量存储在全局
+            }
+            
+            //地图事件设置函数：
+            function setMapEvent(){
+                map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+                map.disableScrollWheelZoom();//禁用地图滚轮放大缩小，默认禁用(可不写)
+                map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+                map.enableKeyboard();//启用键盘上下左右键移动地图
+            }
+            
+            //地图控件添加函数：
+            function addMapControl(){
+                //向地图中添加缩放控件
+            var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+            map.addControl(ctrl_nav);
+                //向地图中添加缩略图控件
+            var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:0});
+            map.addControl(ctrl_ove);
+                //向地图中添加比例尺控件
+            var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+            map.addControl(ctrl_sca);
+            }
+            
+            //标注点数组
+            var markerArr = [{title:"极视教育",content:"上海浦东新区盛夏路560号501室",point:"121.633134|31.214066",isOpen:1,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+                 ];
+            //创建marker
+            function addMarker(){
+                for(var i=0;i<markerArr.length;i++){
+                    var json = markerArr[i];
+                    var p0 = json.point.split("|")[0];
+                    var p1 = json.point.split("|")[1];
+                    var point = new BMap.Point(p0,p1);
+                    var iconImg = createIcon(json.icon);
+                    var marker = new BMap.Marker(point,{icon:iconImg});
+                    var iw = createInfoWindow(i);
+                    var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                    marker.setLabel(label);
+                    map.addOverlay(marker);
+                    label.setStyle({
+                                borderColor:"#808080",
+                                color:"#333",
+                                cursor:"pointer"
+                    });
+                    
+                    (function(){
+                        var index = i;
+                        var _iw = createInfoWindow(i);
+                        var _marker = marker;
+                        _marker.addEventListener("click",function(){
+                            this.openInfoWindow(_iw);
+                        });
+                        _iw.addEventListener("open",function(){
+                            _marker.getLabel().hide();
+                        })
+                        _iw.addEventListener("close",function(){
+                            _marker.getLabel().show();
+                        })
+                        label.addEventListener("click",function(){
+                            _marker.openInfoWindow(_iw);
+                        })
+                        if(!!json.isOpen){
+                            label.hide();
+                            _marker.openInfoWindow(_iw);
+                        }
+                    })()
+                }
+            }
+            //创建InfoWindow
+            function createInfoWindow(i){
+                var json = markerArr[i];
+                var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+                return iw;
+            }
+            //创建一个Icon
+            function createIcon(json){
+                var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+                return icon;
+            }
+            
+            initMap();//创建和初始化地图
+        </script>
+        </div>
+        <div class="busline">
+        <h4><i class="dt"></i>地铁2号线</h4>
+        广兰路（2号口）东南方向步行约1公里至北大上海微电子研究院，盛夏路560号501室，即可到达公司呦！
+		<h4><i class="bus"></i>公交路线</h4>
+        1014路、1097路、1104路、1105路、浦东11路、浦东1路、张江1路、张江环线，都可以达到哦！
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+
+<div class="tk_dl" id="tk1" style="display:none">
+<div class="loginbg"></div>
+	<div class="tk_box">
+        <h3><i id="tkcls" class="iconfont">&#xe604;</i>提示</h3>
+        <div class="tk_main">
+        <span class="tk_wd">
+        恭喜！您的反馈提交成功！<br>
+        请耐心等待我们的回访！
+        </span>
+        <a href="javascript:" class="tk_btn">确 定</a>
+        </div>
+    </div>
+</div>
+
+<div class="tk_dl" id="tk2" style="display:none">
+	<div class="loginbg"></div>
+	<div class="tk_box">
+    	<h3><i id="tkcls2" class="iconfont">&#xe604;</i>联系表</h3>
+        <div class="cntfrom">
+        <ul>
+         <li>
+         <span class="info_l">姓名<span class="yel"> *</span></span>
+         <span class="info_r"><input id="cnt_name" name="" type="text" placeholder="请输入您的姓名"><span class="err err1">提示<i></i></span></span>
+         </li>
+         
+         <li>
+         <span class="info_l">电子邮箱<span class="yel"> *</span></span>
+         <span class="info_r"><input id="cnt_mail" name="" type="text" placeholder="请输入电子邮箱"><span class="err err2">提示<i></i></span></span>         
+         </li>
+         
+         <li>
+         <span class="info_l">主题<span class="yel"> *</span></span>
+         <span class="info_r"><input id="cnt_tyle" name="" type="text" placeholder="请输入主题"><span class="err err3">提示<i></i></span></span>         
+         </li>
+         
+     	</ul> 
+        <div class="cntfrom_r">
+         <span class="info_l">消息内容</span>
+         <span class="info_r"><textarea id="cnt_txt" name="" cols="" rows="" placeholder="请输入消息内容"></textarea><span class="err err4">提示<i></i></span></span>
+         </div>
+     	<div class="btnbox2">
+         <a href="javascript:" id="cntbtn">提交</a>
+         </div>
+    
+		</div>
+    </div>
+</div>
+
+
+</body>
+
+<link rel="stylesheet" href="/css/login/tck.css">
+<script src="../../js/vendor/jquery-1.9.0.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/gb.js"></script>
+<script src="../../js/aboutus/aboutusN.js"></script>
+
+
+</html>

@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>注册</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../../css/main.css">    
+	<link rel="stylesheet" href="../../css/login/register.css">
+</head>
+<body>
+<div include="../module/header.html"></div>
+
+<div class="loginbg"></div>
+<div class="zcbox">
+    <form method="post" action="#" id="RegFrm">
+        <input type="hidden" name="RegFlag" id="RegFlag" value="0">
+        <h3><i class="iconfont cls">&#xe604;</i>欢迎登录极视教育</h3>
+        <div class="zc_tab">
+            <a id="zcbox_phone" href="javascript:" class="on">手机注册</a>
+            <a id="zcbox_mail" href="javascript:" class="">邮箱注册</a>
+        </div>
+        <div>
+            <!--手机注册-->
+            <div id="regPhonePanel" class="zcbox_main zcbox_phone">
+                <span class="err">密码与用户名不符合</span>
+                <ul>
+                    <li>
+                        <span class="rt">
+                            <input type="text" data-checkphoneurl="#" data-notice="" maxlength="11" name="RegPhone" id="RegPhone" placeholder="11位手机号码" class="input"><i class="yhm"></i>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="rt">
+                            <input type="password" maxlength="16" name="RegistPassword" id="RegistPasswordPhone" class="input" placeholder="8-16个字符"><i class="mm"></i>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="rt">
+                            <input type="password" maxlength="16" name="ConfirmPassword" id="ConfirmPasswordPhone" class="input" placeholder="请再次填写密码"><i class="mm"></i>
+                        </span>
+                    </li>
+                    <li><span class="rt yzm">  
+                            <input type="text" maxlength="4" class="input" name="CheckCode1" id="CheckCode1" placeholder="请填写验证码">
+                            <img align="absmiddle" src="http://127.0.0.1:800/skillbridge-customer/base/captcha" id="imgCC1" class="yzm_img" alt="">
+                            <a data-url="#" id="changepic_btn1" href="javascript:" style="color: Gray" class="yzm_a"><img  src="../../img/login/refls.png"  alt=""></a>
+                        </span> 
+                    </li>                    
+                    <li>
+                        <span class="rt  yzm">
+                            <input type="text" maxlength="6" name="CheckCode" id="ValidatorCode" class="input" placeholder="请查收手机短信，并填写"><a data-url="#" href="javascript:" disabledclass="yzm_phone" class="yzm_phoneDisEnable hui" id="btnSendSmsCode">获取验证码</a>
+                        </span>
+                    </li>
+                    
+                </ul>
+                <div class="wjma">
+                    <label>
+                        <input type="checkbox" value="" name="ckbPhone" id="ckbPhone">接受
+                        <a href="javascript:void(0);" target="_blank" class="clause">极视教育用户协议</a>
+                    </label>
+                    <span class="lg_zc">已有账号&nbsp;&nbsp;<a href="#">立即登录</a></span>
+                </div>
+                <a data-success="#" data-url="#" href="javascript:" id="regPhoneBtn" class="lg_btn">注 册</a>
+                
+            </div>
+            <!--邮箱注册-->
+            <div style="display:none" id="regMailPanel" class="zcbox_main zcbox_mail">
+                <span class="err" style="display: none">密码与用户名不符合<i></i></span>
+                <ul>
+                    <li>
+                        <span class="rt">
+                            <input type="text" data-checkphoneurl="http://my.springtour.com/Member/CheckNameIsRegister" maxlength="50" name="RegEmail" id="RegEmail" class="input" placeholder="请填写邮箱地址"><i class="yx"></i>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="rt">
+                                            <input type="password" maxlength="16" name="RegistPassword" id="RegistPassword" class="input" placeholder="请填写密码"><i class="mm"></i>
+                                            
+                        </span>
+                    </li>
+                    <li>
+                        <span class="rt">
+                            <input type="password" maxlength="16" name="ConfirmPassword" id="ConfirmPassword" class="input" placeholder="请再次填写密码"><i class="mm"></i>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="rt yzm">
+                            <input type="text" maxlength="4" name="CheckCode" id="CheckCode" class="input" placeholder="请填写验证码">
+                            <img align="absmiddle" src="http://127.0.0.1:800/skillbridge-customer/base/captcha" id="imgCC1" class="yzm_img" alt="">
+                            <a data-url="#" id="changepic_btn" href="javascript:" style="color: Gray" class="yzm_a"><img  src="../../img/login/refls.png"  alt=""></a>
+                        </span>
+                    </li>
+                </ul>
+                <div class="wjma">
+                    <label>
+                        <input type="checkbox" value="" name="ckbEmail" id="ckbEmail">接受
+                        <a href="javascript:void(0);" target="_blank" class="clause">春秋旅游网服务条款</a>
+                    </label><span class="lg_zc">已经注册？<a href="#">马上登录</a></span>
+                </div>
+                <a data-success="#" data-url="#" href="javascript:" id="regEmailBtn" class="lg_btn">注 册</a>
+                
+            </div>
+        </div>
+	</form>
+</div>
+
+
+
+
+<div include="../module/footer.html"></div>
+</body>
+<script src="../../js/vendor/jquery-1.9.0.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/gb.js"></script>
+<script src="../../js/login/register.js"></script>
+
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>我的VIP_极视教育网</title>
+    <meta name="description" content="极视教育作为中国领先的游戏职业在线教育平台之一,国内第一家专注于游戏职业培训与发展的在线 教育平台。平台致力于构建“学习+实战+机遇”三元结构闭环的模式，携手企业与名师一 起帮助有职业培训需求的人才，并为企业提供人才储备的解决方案,拥有海量高清职业课程,涵盖20+个技术领域,如Android,iOS ,Unity3D,Java,Photoshop,Maya,3D MAX,独立游戏等视频教程.根据在线学习特点,极视教育推出职业图谱,帮助学习者从零基础起步,结合实战案例演练,系统学习,助你快速成为优秀技术人才！">
+    <meta name="keywords" content="极视教育,职业教育,在线教育平台,在线教育,在线学习,职业培训,android,ios,Unity3D,java,Photoshop,Maya,3D MAX,独立游戏">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" type="text/css"  href="../../css/main.css">
+    <style type="text/css">
+
+        .item-container .i-icon{background: url('/img/info/coupon/icon.png') no-repeat;display: inline-block;width: 19px;height: 18px;vertical-align: middle;margin:0 10px;}
+        .item-container .i-userscope{background-position: 0px -4px;}
+        .item-container .i-expiretime{background-position: -20px -4px;}
+        ul.item-content-wrap.canuse li{width: 240px;height: 210px;margin-right: 60px;margin-bottom: 20px;background: url('/img/info/coupon/canuse.png') center center no-repeat;}
+        ul.item-content-wrap.used li{width: 240px;height: 210px;margin-right: 60px;margin-bottom: 20px;background: url('/img/info/coupon/used.png') center center no-repeat;}
+        ul.item-content-wrap.expired li{width: 240px;height: 210px;margin-right: 60px;margin-bottom: 20px;background: url('/img/info/coupon/expired.png') center center no-repeat;}
+        ul.item-content-wrap li:nth-child(4n+0){margin-right: 0px;}
+
+        .item-content-wrap .title{color: #fff;line-height: 45px;}
+        .t-wrap{position: relative;text-align: center;}
+        .item-content-wrap .type{color: #fffd6b;position: absolute;right: 8px;top: 13px;padding: 2px 6px;background: #ff5a4d;border-radius: 12px;font-size: 13px;}
+        .item-content-wrap .m{color: #fff;margin-left: 33px;font-size: 20px;}
+
+        .item-content-wrap .money{color: #fff;font-size: 32px;}
+        .item-content-wrap .scope{color: #fff;margin-left: 20px;font-size: 13px;}
+        .item-content-wrap .midden{line-height: 76px;height: 100px;}
+        .item-content-wrap .f13-c6{font-size: 13px;color: #666;}
+
+        .body-container{background: url('/img/info/coupon/big-bg.png') no-repeat center bottom;background-size: cover;height: 830px;}
+        .midden-wrapper{width: 252px;height: 380px;margin:0 auto;background: #f8f8f8;border:1px dashed #e5c994;padding:0 122px;}
+        .but-wrapper{width: 496px;height: 380px;margin:25px auto 0;}
+        .midden-wrapper h5{font-size: 28px;color: #333;line-height: 85px;text-align: center;}
+        .but-wrapper .btn-blue{width: 135px;height: 45px;border-radius: 5px;color: #fff;background: #3286fe;text-align: center;}
+        .but-wrapper .btn-c3e{background: #3286fe;margin-left: 93px;cursor: pointer;}
+        .but-wrapper .btn-c8f{background: #3284ff;margin-left: 30px;cursor: pointer;}
+        body .warpper{padding-top: 50px;}
+    </style>
+</head>
+<body>
+<div class="" include="/view/module/header.html"></div>
+
+<div class="body-container">
+    <div class="warpper">
+        <div class="midden-wrapper item-container">
+                <h5>正在加载中...</h5>
+                <ul id="j_content_wrap" class="item-content-wrap clearfix canuse">
+                   <div style="line-height:230px;text-align:center;">正在加载中...</div>
+                </ul>
+                
+        </div>
+        <div id="j_but_wrapper" class="but-wrapper">
+            <input type="button" class="btn btn-blue btn-c3e btn-get" value="立即领取">
+            <input type="button" onclick="window.location.href='/view/info/coupon.html'" class="btn btn-blue btn-c8f btn-look" value="查看我的优惠券">
+        </div>
+    </div>
+</div>
+<div include="../module/footer.html"></div>
+<script src="/js/vendor/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript">
+    var couponModule={
+        bindEvents:function(){
+            var self=this;
+            $('#j_but_wrapper').on('click','.btn-get',function(){
+                var $this=$(this);
+                if(mainModule.isLogined(true)){
+                    $this.removeAttr('style').attr('disabled',false).val('立即领取');
+                    self.getCoupon(function(){
+                        mainModule.showGlobalHintBarFast('恭喜您成功领取优惠券!');
+                        // $this.hide();
+                    },function(result){
+                        mainModule.showGlobalHintBarFast(result.message);
+                        $this.css({'background':'#bbbbbb','cursor':'default'}).attr('disabled',true).val('已经领取');
+                    });
+                }
+            });
+        },
+        getCoupon:function(callback,failFunc){
+            var self=this;
+            $.ajax({
+                type:'get',
+                data:{couponId:self.id},
+                url:mainModule.uri.obtainCoupon,
+                success:function(result){
+                    mainModule.log('领取优惠券接口返回：',result);
+                    mainModule.httpInterceptor(result,function(result){
+                        callback&&callback();
+                        console.log(result);
+                    },failFunc)
+                }
+            })
+        },
+        getMyCouponInfo:function(id,callback){
+            var self=this;
+            $.ajax({
+                type:'get',
+                data:{id:id},
+                url:mainModule.uri.getCouponInfo,
+                success:function(result){
+                    mainModule.log('优惠券详情接口返回：',result);
+                    mainModule.httpInterceptor(result,function(result){
+                        callback&&callback();
+                        console.log(result);
+                        self.renderMyCouponsDom(result);
+                    },function(result){
+                        mainModule.showGlobalHintBarFast(result.message);
+                    })
+                }
+            })
+        },
+        renderMyCouponsDom:function(result){
+            var dom='',typeStr='';
+            // for(var i=0,ii=result.length;i<ii;i++){
+                var item=result;
+                item.type==1?(typeStr='立减'):(item.type==2?(typeStr='满减'):typeStr='空');
+                item.validDateStart=mainModule.formatToDotSplitDate(item.validDateStart);
+                item.validDateEnd=mainModule.formatToDotSplitDate(item.validDateEnd);
+                item.conditionMoney=item.type==1?('立减 ¥ '+item.cut):('满 ¥ '+item.conditionMoney+' 可用');
+
+                dom+='<li class="f-l">'+
+                        '<div class="t-wrap"><span class="title">'+item.name+'</span><span class="type">'+typeStr+'</span></div>'+
+                        '<div class="midden">'+
+                            '<span class="m">¥</span><span class="money">'+item.cut+'</span>'+
+                            '<span class="scope">'+item.conditionMoney+'</span></div>'+
+                        '<div class="f13-c6"><i class="i-icon i-userscope"></i>'+item.remark+'</div>'+
+                        '<div class="f13-c6"><i class="i-icon i-expiretime"></i>'+item.validDateStart+'至'+item.validDateEnd+'</div>'+
+                    '</li>';
+            // }
+            if(result.total==0||result.length<1){
+                dom='<div class="fs16-c6 no-result-wrap">'+
+                        '<div><img src="/img/info/coupon/empty.png"></div>'+
+                        '<div class="pl45">你还没有优惠券</div>'+
+                    '</div>';
+            }
+            $('#j_content_wrap').html(dom);
+            // var titStr=typeStr+''+item.cut;
+            $('#j_content_wrap').prev().html(item.conditionMoney);
+            if(!item.canRecive){
+                $('.btn-get').css({'background':'#bbbbbb','cursor':'default'}).attr('disabled',true).val('已经领取');
+            }
+        },
+        init:function(){
+            this.bindEvents();
+            var id=this.id=mainModule.getQueryValueByName('id');
+            this.getMyCouponInfo(id);
+        }
+    };
+    couponModule.init();
+</script>
+
+</body>
+</html>

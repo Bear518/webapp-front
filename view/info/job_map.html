@@ -1,0 +1,267 @@
+<!DOCTYPE html><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>我的课程</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/info/mycourse.css">
+    <style type="text/css">
+    .cf1{color: #ff9001;}.f12{font-size: 12px;}.mrg-l12{margin-left: 12px;}.lt{text-decoration: line-through;}
+    .ce2 {color: #e30202;}.mrg-l25{margin-left: 25px;}.mrg-l6{margin-left: 6px;}
+    /*body .les_jd{display: inline;}*/
+    body .lesson-info{line-height: 22px;overflow: hidden;}
+    </style>
+</head>
+<body>
+<div include="../module/header.html"></div>
+
+<div include="../module/info-banner.html"></div>
+<div class="infobar warpper clearfix">  	
+    <div class="left-wrap">
+    	<h4><i></i>学习中心</h4>     
+        <ul class="menu-wrap">
+            <a href="/view/info/mycourse.html"><li id="fwtk" class="id1"> 我的课程</li></a>
+             <a href="/view/info/job_map.html"><li id="cjwt" class="id2 on">我的职业</li> </a>           
+        </ul>
+        <span class="menuicon"></span>
+    </div>
+    <div class="right-wrap">
+    	<div class="fwtk">
+            <h3 class="fwtk_title">职业</h3>
+            <div class="info_content">
+                <div class="infotab j_switch_tab"><a id="learning" data-type="1" class="on">正在学习</a><a data-type="2" id="mycollect">我的收藏</a></div>
+                <div>
+                <div class="learning j_learning_wrap" >
+                    <ul class="clist ">
+                        <!-- <div style="line-height:150px;text-align:center;">正在努力加载中...</div> -->
+                    	<!-- <li><a class="nowlesimg" href="#"><img src="../../img/dk/img-4.jpg"></a>
+                        <a class="nowlesname" href="#">3dsMax建模精品课程<label class="f14 mrg-l12">含小班服务</label></a>
+                        <span class="les_jd">更新至：课程10 &nbsp;&nbsp;&nbsp;&nbsp; 学习进度：<i class="yel">20%</i></span>
+                        学至：<a class="" href="#">课时3 模型建造综合案例......</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                         <i class="iconfont tkcls">&#xe604;</i>
+                        </li> -->
+                        
+                    </ul>
+                    <div class="pagination page-control"></div>
+             	</div>
+                <div class="mycollect j_collection_wrap" style="display:none">
+                    <ul class="clist ">
+                    	<!-- <li>
+                            <a class="nowlesimg" href="#"><img src="../../img/dk/img-4.jpg"></a>
+                            <div class="mycol_info">
+                                <a class="nowlesname mar_t_10" href="#">3dsMax建模精品课程
+                                    <label class="f14 mrg-l12">含小班服务</label></a>
+                                <div>
+                                    <span class="les_jd">已完结</span>
+                                    <span class="ce2 mrg-l25">¥ 2500</span>
+                                    <span class="lt f12 mrg-l6">¥ 6500</span>
+                                </div>
+                                <div class="lesson-info">
+                                   使用Unity3D引擎进行移动平台游戏开发，在IOS和Android平台中整合第三方SDK，在现有开发完成的游戏上进行二次功能的开发，根据工作需要学习新的游戏引擎技术。
+                                </div>
+                            </div>
+                             <i class="iconfont tkcls j_del">&#xe604;</i>
+                        </li>   -->              
+                    </ul>
+                    <div class="pagination2 page-control j_collection_page_control"></div>
+             	</div>               
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tk_dl popbox" id="j_del_map_popbox" style="display:none">
+    <div class="loginbg"></div>
+    <div class="tk_box tdbox">    	
+        <h3>提示</h3>
+        <div class="tk_main">
+        <h4><i></i>确定放弃学习？</h4>
+        <p>放弃学习将删除该图谱所有相关数据</p>
+        <div class="tk_btn">
+            <a href="javascript:" class="courbtn j_sure but-sure">确定</a>
+            <a href="javascript:" class="j_cancel hui but-false" class="">取消</a>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div include="../module/footer.html"></div>
+</body>
+<script src="../../js/vendor/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/js/common/jquery.page.js"></script>
+<script src="../../js/main.js"></script>
+<script type="text/javascript">
+var mapModule={
+    bindEvents:function(){
+        var self=this;
+        $('.j_switch_tab').on('click','a',function(){
+            var $this=$(this),type=$this.data('type');
+            
+            $this.siblings().removeClass('on');
+            $this.addClass('on');
+            if(type==1){
+                $('.j_learning_wrap').show();
+                $('.j_collection_wrap').hide();
+                return;
+            }
+            $('.j_learning_wrap').hide();
+            $('.j_collection_wrap').show();
+
+        })
+        $('#j_del_map_popbox').on('click','.j_cancel',function(){
+            var $this=$(this);
+            $this.closest('.popbox').hide();
+        });
+        $('#j_del_map_popbox').on('click','.j_sure',function(){
+            var $this=$(this),id=$this.data('id');
+            if(self.delType==2){
+                // 删除图谱收藏
+                self.delMapCollection(id,function(){
+                    $this.closest('.popbox').hide();
+                    $('#j_collection_item_'+id).remove();
+                });
+            }else{
+                //取消图谱学习
+                self.cancelZytpPlan(id,function(){
+                    $this.closest('.popbox').hide();
+                    $('#j_learning_item_'+id).remove();
+                })
+            }
+        });
+        $('.j_collection_wrap').on('click','.j_del',function(){
+            var $this=$(this),id=$this.data('id');
+            // var $popbox=$('#j_del_map_popbox');
+            // $popbox.find('.j_sure').data('id',jobMapId);
+            // $popbox.show();
+            // self.delType=2;
+            // 删除图谱收藏
+            self.delMapCollection(id,function(){
+                // $this.closest('.popbox').hide();
+                $('#j_collection_item_'+id).remove();
+            });
+        });
+        $('.j_learning_wrap').on('click','.j_del',function(){
+            var $this=$(this),jobMapId=$this.data('id');
+            var $popbox=$('#j_del_map_popbox');
+            $popbox.find('.j_sure').data('id',jobMapId);
+            $popbox.show();
+            self.delType=1;
+        })
+    },
+    delMapCollection:function(jobMapId,callback){
+        $.ajax({
+            type:'get',
+            data:{jobMapId:jobMapId},
+            url:mainModule.uri.delMapCollection,
+            success:function(result){
+                mainModule.log('删除该图谱',result);
+                mainModule.httpInterceptor(result,callback);
+            }
+        })
+    },
+    getMapLearningList:function(page){
+        var self=this;
+        $.ajax({
+            type:'get',
+            data:{page:page,rows:20},
+            url:mainModule.uri.getMapLearningList,
+            success:function(result){
+                mainModule.log('正在学习的图谱列表',result);
+                mainModule.httpInterceptor(result,self.renderMapLearningListDom,function(result){
+                    var  dom='<div style="text-align:center;line-height:150px;">'+result.message+'</div>';
+                    $('.j_learning_wrap ul').html(dom);
+                });
+            }
+        })
+    },
+    renderMapLearningListDom:function(result){
+        var dom='';
+        for(var i=0,ii=result.length;i<ii;i++){
+            var item=result[i];
+            item.updateStatus==1?(item.updateStatus='更新至：'+item.updateRouteName):(item.updateStatus='已完结');
+            dom+='<li id="j_learning_item_'+item.id+'"><a class="nowlesimg" href="/view/zytp/detail.html?id='+item.id+'"><img src="'+item.picture+'"></a>'+
+                        '<a class="nowlesname" href="/view/zytp/detail.html?id='+item.id+'">'+(item.name||'无');
+                        // if(item.type==1){
+                        //     dom+='<label class="f14 mrg-l12">含实战班服务</label>';
+                        // }
+                        dom+='</a>'+
+                        '<span class="les_jd">'+item.updateStatus+' &nbsp;&nbsp;&nbsp;&nbsp; 学习进度：<i class="yel">'+item.speedProgress+'</i></span>'+
+                        '学至：'+(item.routeName||'暂无')+'&nbsp;&nbsp;&nbsp;&nbsp;'+
+                        ' <i data-id="'+item.id+'" class="iconfont tkcls j_del">&#xe604;</i>'+
+                        '</li>';
+        }
+        if(result.total==0){
+            dom='<div style="text-align:center;line-height:150px;">暂无学习的图谱</div>';
+        }
+        $('.j_learning_wrap ul').html(dom);
+    },
+    getMapCollectionList:function(page){
+        var self=this;
+        $.ajax({
+            type:'get',
+            data:{page:page,rows:20},
+            url:mainModule.uri.getMapCollectionList,
+            success:function(result){
+                mainModule.log('我的图谱收藏列表',result);
+                mainModule.httpInterceptor(result,self.renderMapCollectionDom,function(result){
+                    var  dom='<div style="text-align:center;line-height:150px;">'+result.message+'</div>';
+                   $('.j_collection_wrap ul').html(dom);
+                });
+            }
+        })
+    },
+    renderMapCollectionDom:function(result){
+        var dom='';
+        for(var i=0,ii=result.length;i<ii;i++){
+            var item=result[i];
+            item.updateStatus=item.updateStatus==1?(item.updateStatus='连载中'):(item.updateStatus='已完结');
+            dom+='<li id="j_collection_item_'+item.jobMapId+'">'+
+                    '<a class="nowlesimg" href="/view/zytp/detail.html?id='+item.jobMapId+'"><img src="'+item.picture+'"></a>'+
+                    '<div class="mycol_info">'+
+                        '<a class="nowlesname mar_t_10" href="/view/zytp/detail.html?id='+item.jobMapId+'">'+(item.jobMapName||'无');
+                        // if(item.type==1){
+                        //     dom+='<label class="f14 mrg-l12">含实战班服务</label>';
+                        // }
+                            dom+='</a>'+
+                        '<div>'+
+                            '<span class="les_jd">'+item.updateStatus+'</span>';
+                        if(item.price&&item.originalPrice){
+                            dom+='<span class="ce2 mrg-l25">¥ '+item.price+'</span>'+
+                            '<span class="lt f12 mrg-l6">¥ '+item.originalPrice+'</span>';
+                        }
+                        dom+='</div>'+
+                        '<div class="lesson-info">'+item.description+
+                        '</div>'+
+                    '</div>'+
+                     '<i data-id="'+item.jobMapId+'" class="iconfont tkcls j_del">&#xe604;</i>'+
+                '</li>';
+        }
+        if(result.total==0){
+            dom='<div style="text-align:center;line-height:150px;">暂无收藏的图谱</div>';
+        }
+        $('.j_collection_wrap ul').html(dom);
+        mainModule.createPage(mapModule,result.total,$('.j_collection_page_control'),mapModule.getMapCollectionList);
+    },
+    cancelZytpPlan:function(jobMapId,succFun){
+        var self=this;
+        $.ajax({
+            type:'get',
+            data:{jobMapId:jobMapId},
+            url:mainModule.uri.cancelZytpPlan,
+            success:function(result){
+                mainModule.log('取消计划接口数据',result);
+                mainModule.httpInterceptor(result,succFun);
+            }
+        });
+    },
+    init:function(){
+        this.bindEvents();
+        this.getMapCollectionList(1);
+        this.getMapLearningList(1);
+    }
+};
+mapModule.init();
+</script>
+
+</html>

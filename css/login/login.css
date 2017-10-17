@@ -1,0 +1,37 @@
+@charset "utf-8";
+.input{ border:1px solid #cacaca; height:40px; font:14px/40px "微软雅黑"; width:248px; padding:0 3px;}
+.input:hover{ border:1px solid #ff8f15; box-shadow:0px 0px 5px #ff8f15;}
+.loginbg{ position:absolute; width:100%; opacity:0.5; filter:alpha(opacity=50); background-color:#000; height:1000px; left:0; top:0;z-index:1000}
+.loginbox{z-index:1100; background-color:#FFF;width:396px; height: 512px; text-align:left; margin-left:-200px;box-shadow:0px 2px 2px rgba(0, 0, 0, 0.1); position:fixed; left:50%;top:50%;margin-top:-256px;/*margin-top:-215px*/}
+.loginbox .bottom-wrap{padding: 0 30px;}
+.loginbox *{box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;}
+.loginbox h3{ line-height:50px; height:56px; font-size:20px;border-bottom:1px solid #dcdcdc; text-align:center; font-weight:normal ;margin: 0 20px;}
+.loginbox h3 i{cursor: pointer;display: block;height: 24px;line-height: 24px;
+position: absolute;right: 10px;top: 10px;width: 20px;}
+.loginbox li{ height:42px; padding-top:25px; position:relative}
+.loginbox .input{ padding:0 40px; background-color:#FFF}
+.loginbox li i{display:block; height:22px; width:22px; position:absolute; top:35px; left:10px;background:url(../../img/login/zc_ic.png) no-repeat 0px 0px;}
+.loginbox li i.mm{ background-position: 0px -28px;}
+.loginbox li.focus i.mm{}
+.loginbox .focus .input{ border-color:#db8a83}
+.wjma{ line-height:70px; height:70px; clear:both}
+.wjma label{ float:left; line-height:70px;}
+.wjma label,.wjma input{ vertical-align:middle; margin-right:5px}
+.wjma a{ float:right; color:#62aeb8}
+a.lg_btn{  height:40px;background-color:#ff8f15; color:#fff; font:18px/40px "微软雅黑"; text-align:center; border-radius:3px; display:block; position:relative;}
+a.lg_btn span {letter-spacing: 10px;position: absolute;top: -2px;padding-left: 6px;font-size: 16px; font-weight:bold;}
+a.lg_btn:hover{background-color:#f48204; color:#fff; text-decoration:none}
+.lg_zc{ text-align:right; display:none;margin-bottom:15px; border-bottom:1px solid #dcdcdc} .lg_zc a{ color:#62aeb8}
+.zc_hz{ height:50px;}.zc_hz dt{ margin-bottom:16px; width:160px; float:left; text-align:right; margin-right:5px; margin-top:3px}
+.zc_hz dd{ float:left; height:28px; width:28px; margin-right:10px}
+.zc_hz dd a{ display:block;height:28px; width:28px;background:url(../../img/login/dl.png) no-repeat;}
+.zc_hz dd.wx a{background-position:0 0px}
+.zc_hz dd.sina a{ background-position:-38px 0}
+.zc_hz dd.qq a{ background-position:-76px 0}
+.loginbox .lerr{ display:none;background-color: #db8a83;color: #fff;font-weight: normal;height: 24px;right:10px;line-height: 24px;padding-right: 10px;position: absolute;
+top:34px; padding:0 7px; float:left;}
+
+.placeholder{ display:block; position:absolute; top:35px;left:40px; color:#999; font-size:14px}
+
+
+

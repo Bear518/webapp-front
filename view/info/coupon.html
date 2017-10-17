@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>我的VIP_极视教育网</title>
+    <meta name="description" content="极视教育作为中国领先的游戏职业在线教育平台之一,国内第一家专注于游戏职业培训与发展的在线 教育平台。平台致力于构建“学习+实战+机遇”三元结构闭环的模式，携手企业与名师一 起帮助有职业培训需求的人才，并为企业提供人才储备的解决方案,拥有海量高清职业课程,涵盖20+个技术领域,如Android,iOS ,Unity3D,Java,Photoshop,Maya,3D MAX,独立游戏等视频教程.根据在线学习特点,极视教育推出职业图谱,帮助学习者从零基础起步,结合实战案例演练,系统学习,助你快速成为优秀技术人才！">
+    <meta name="keywords" content="极视教育,职业教育,在线教育平台,在线教育,在线学习,职业培训,android,ios,Unity3D,java,Photoshop,Maya,3D MAX,独立游戏">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" type="text/css"  href="../../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../css/vip/myvip.css">
+    <style type="text/css">
+        .vip-privilege .tit{line-height: 70px;}
+        .input-txt{width: 254px;padding-left:12px;height: 44px;font-size: 14px;color: #333;border:1px solid #cecece;border-radius: 5px;margin-right: 25px;}
+        .btn-default{font-size: 16px;background: #ff9001;color: #fff;text-align: center;width: 112px;height: 40px;border-radius: 5px;vertical-align: middle;}
+        .item-container{padding: 0px 28px 30px;background: #f8f8f8;margin-top: 28px;}
+        .item-container .i-icon{background: url('/img/info/coupon/icon.png') no-repeat;display: inline-block;width: 19px;height: 18px;vertical-align: middle;margin:0 10px;}
+        .item-container .i-userscope{background-position: 0px -4px;}
+        .item-container .i-expiretime{background-position: -20px -4px;}
+
+        .item-tab-wrap{border-bottom:1px solid #dbdbdb;height: 55px;margin-bottom: 30px;}
+        ul.item-tab-wrap li{line-height: 52px;color: #333;font-size: 16px;margin-right: 55px;cursor: pointer;}
+        ul.item-tab-wrap li.active{color: #ff9001;border-bottom:3px solid #ff9001;}
+        ul.item-tab-wrap li:hover{color: #ff9001;border-bottom:3px solid #ff9001;}
+        ul.item-content-wrap.canuse li{width: 240px;height: 210px;margin-right: 60px;margin-bottom: 20px;background: url('/img/info/coupon/canuse.png') center center no-repeat;}
+        ul.item-content-wrap.used li{width: 240px;height: 210px;margin-right: 60px;margin-bottom: 20px;background: url('/img/info/coupon/used.png') center center no-repeat;}
+        ul.item-content-wrap.expired li{width: 240px;height: 210px;margin-right: 60px;margin-bottom: 20px;background: url('/img/info/coupon/expired.png') center center no-repeat;}
+        ul.item-content-wrap li:nth-child(4n+0){margin-right: 0px;}
+
+        .item-content-wrap .title{color: #fff;line-height: 45px;}
+        .item-content-wrap .type{color: #fffd6b;position: absolute;top: 13px;right: 8px;padding: 2px 6px;background: #ff5a4d;border-radius: 12px;font-size: 13px;}
+        .t-wrap{position: relative;text-align: center;}
+        .item-content-wrap .m{color: #fff;margin-left: 33px;font-size: 20px;}
+
+        .item-content-wrap .money{color: #fff;font-size: 32px;}
+        .item-content-wrap .scope{color: #fff;margin-left: 20px;font-size: 13px;}
+        .item-content-wrap .midden{line-height: 76px;height: 100px;}
+        .item-content-wrap .f13-c6{font-size: 13px;color: #666;}
+        .no-result-wrap{width: 360px;margin:0 auto;text-align: center;}
+        .fs16-c6{font-size: 16px;color: #666;}
+        .pl45{padding-left: 45px;}
+        .relative-wrap{position: relative;display: inline-block;}
+        .relative-wrap .err-code{right: 35px;top:12px;}
+    </style>
+</head>
+<body>
+<div class="" include="/view/module/header.html"></div>
+
+<div class="myvip-info">
+    <div class="warpper">
+        <div class="info-img">
+            <img class="j_user_photo" src="">
+        </div>
+        <div class="inforight">
+            <p class="infoname j_username"></p>
+            <div class="vip-box">
+                <div class="vip-time ">
+                    <p class="remaining-time"></p>
+                    <div class="vip-progress-bg">
+                        <div class="vip-icon"></div>
+                        <div class="vip-progress">
+                            <div  class="vip-progress-bar" style="width: 0%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="renew" href="/view/vip/memberbuy.html">充值</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="body-container j_content_wrap">
+    <div class="warpper">
+        <div class="vip-privilege">
+            <h3 class="tit">我的优惠券</h3>
+            <div >
+                <span class="relative-wrap">
+                    <input type="text" class="input-txt fs14 j_exchange_code" placeholder="请输入兑换码">
+                    <span class="err err-code">兑换码为空</span>
+                </span>
+                <input type="button" class="btn btn-default but-sure" value="兑换">
+            </div>
+        </div>
+        <div class="item-container">
+            <div id="j_item_tab_wrap">
+                <ul class="clearfix item-tab-wrap">
+                    <li data-type="1" class="f-l active">未使用</li>
+                    <li data-type="3" class="f-l ">已使用</li>
+                    <li data-type="2" class="f-l">已过期</li>
+                </ul>
+            </div>
+            <div>
+                <ul id="j_content_wrap" class="item-content-wrap clearfix canuse">
+                    <!-- <li class="f-l">
+                        <div><span class="title">课程优惠券</span><span class="type">满减券</span></div>
+                        <div class="midden"><span class="m">¥</span><span class="money">250</span><span class="scope">满¥500可用</span></div>
+                        <div class="f13-c6"><i class="i-icon i-userscope"></i>所有编程语言课程通用</div>
+                        <div class="f13-c6"><i class="i-icon i-expiretime"></i>2016.12.01至2016.12.25</div>
+                    </li>
+                    <li class="f-l"></li>
+                    <li class="f-l"></li>
+                    <li class="f-l"></li>
+                    <li class="f-l">
+                        <div><span class="title">课程优惠券</span><span class="type">满减券</span></div>
+                        <div class="midden"><span class="m">¥</span><span class="money">250</span><span class="scope">满¥500可用</span></div>
+                        <div class="f13-c6"><i class="i-icon i-userscope"></i>所有编程语言课程通用</div>
+                        <div class="f13-c6"><i class="i-icon i-expiretime"></i>2016.12.01至2016.12.25</div>
+                    </li>
+                    <li class="f-l">
+                        <div><span class="title">课程优惠券</span><span class="type">满减券</span></div>
+                        <div class="midden"><span class="m">¥</span><span class="money">250</span><span class="scope">满¥500可用</span></div>
+                        <div class="f13-c6"><i class="i-icon i-userscope"></i>所有编程语言课程通用</div>
+                        <div class="f13-c6"><i class="i-icon i-expiretime"></i>2016.12.01至2016.12.25</div>
+                    </li> -->
+                    <div style="line-height:345px;text-align:center;">
+                        <!-- <div><img src="/img/info/coupon/empty.png"></div>
+                        <div class="pl45">你还没有优惠券</div> -->
+                        正在努力加载中...
+                    </div>
+                </ul>
+            </div>
+             <div id="j_coupon_page_control" class="page-control page-wrap">
+                
+            </div>
+        </div>
+       
+    </div>
+</div>
+<div include="../module/footer.html"></div>
+<script src="/js/vendor/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/js/common/jquery.page.js"></script>
+<script type="text/javascript">
+    var couponModule={
+        bindEvents:function(){
+            var self=this;
+            $('#j_item_tab_wrap').on('click','li',function(){
+                var $this=$(this),type=$this.data('type'),
+                    className='';
+                $this.siblings().removeClass('active');
+                $this.addClass('active');
+                switch(type){
+                    case 1:
+                        className='canuse';
+                    break;
+                    case 3:
+                        className="used";
+                    break;
+                    case 2:
+                        className="expired";
+                    break;
+                }
+                self.type=type;
+                self.isHasPaged=false;
+                
+                var loadingDom='<div style="line-height:345px;text-align:center;">正在努力加载中...</div>';
+                var $j_content_wrap=$('#j_content_wrap').html(loadingDom);
+                self.getMyCoupons(1,function(){
+                    $j_content_wrap.attr('class','item-content-wrap clearfix '+className);
+                })
+                
+            });
+            $('.j_content_wrap').on('click','.but-sure',function(){
+                var $code_input=$('.j_exchange_code'),val=$code_input.val(),
+                    $err_sp=$code_input.next();
+                if(val.trim()==''){
+                    $err_sp.show();
+                    return;
+                }
+                self.exchangeCoupon(val,function(){
+                    $code_input.val('');
+                    $err_sp.hide();
+
+                    mainModule.showGlobalHintBar('兑换成功');
+                    self.getMyCoupons(1);
+                },function(result){
+                    $err_sp.html(result.message).show();
+                })
+            });
+            $('.j_content_wrap').on('focus','input',function(){
+                var $this=$(this);
+                mainModule.inputFocusHide($this);
+            });
+        },
+        exchangeCoupon:function(couponCode,callback,failFunc){
+            $.ajax({
+                type:'get',
+                data:{couponCode:couponCode},
+                url:mainModule.uri.exchangeCoupon,
+                success:function(result){
+                    mainModule.log('兑换码兑换优惠券接口返回');
+                    mainModule.httpInterceptor(result,function(result){
+                        callback&&callback();
+                    },failFunc)
+                }
+            })
+        },
+        userVipInfo:function(){
+            var self=this;
+            $.ajax({
+                type:'get',
+                url:mainModule.uri.userVipInfo,
+                success:function(result){
+                    mainModule.log('我的个人信息',result);
+                    if(result.status=='SUCCESS'){
+                        var content=result.content;
+                        if(content.vip){ //是VIP
+                            var dom='',ii=content.rightList&&content.rightList.length;
+                            var expireDate=mainModule.remainDays(content.vipEndDate);
+                            var vipDays=content.vipDays;
+                            for(var i=0;i<ii;i++){
+                                var item=content.rightList[i];
+                                $("#j_user_scope_"+item.id).addClass('mark');
+                            }
+                            $('.vip-icon').addClass("mark");
+                            if(expireDate<10 ){
+                                $('.vip-progress-bar').css('width','5%');
+                            }else{
+                                $('.vip-progress-bar').css('width',Math.floor((expireDate/vipDays)*100)+'%');
+                            }
+                            $('.remaining-time').html('VIP剩余'+expireDate+'天');
+                            $('.renew').html('续费');
+                        }else{ //不是VIP
+                            $('.remaining-time').html('快快加入VIP大家庭');
+                        }
+                        $('.renew').show();
+                    }
+                }
+            })
+        },
+        getMyCoupons:function(page,callback){
+            var self=this;
+            var type=self.type||1;
+            var page=page||self.page||1;
+            $.ajax({
+                type:'get',
+                data:{type:type,page:page,rows:8},
+                url:mainModule.uri.getMyCoupons,
+                success:function(result){
+                    mainModule.log('我的优惠券接口返回：',result);
+                    mainModule.httpInterceptor(result,function(result){
+                        callback&&callback();
+                        console.log(result);
+                        self.renderMyCouponsDom(result);
+                    })
+                }
+            })
+        },
+        renderMyCouponsDom:function(result){
+            var dom='',typeStr='';
+            for(var i=0,ii=result.length;i<ii;i++){
+                var item=result[i];
+                item.typeStr=item.type==1?('立减'):(item.type==2?'满减':'空');
+                item.conditionMoney=item.type==1?('立减 ¥ '+item.cut):('满 ¥ '+item.conditionMoney+' 可用');
+                item.validDateStart=mainModule.formatToDotSplitDate(item.validDateStart);
+                item.validDateEnd=mainModule.formatToDotSplitDate(item.validDateEnd);
+                dom+='<li class="f-l">'+
+                        '<div class="t-wrap"><span class="title">'+item.name+'</span><span class="type">'+item.typeStr+'</span></div>'+
+                        '<div class="midden">'+
+                            '<span class="m">¥</span><span class="money">'+item.cut+'</span>'+
+                            '<span class="scope">'+item.conditionMoney+'</span></div>'+
+                        '<div class="f13-c6"><i class="i-icon i-userscope"></i>'+item.remark+'</div>'+
+                        '<div class="f13-c6"><i class="i-icon i-expiretime"></i>'+item.validDateStart+'至'+item.validDateEnd+'</div>'+
+                    '</li>';
+            }
+            if(result.total==0||result.length<1){
+                dom='<div class="fs16-c6 no-result-wrap">'+
+                        '<div><img src="/img/info/coupon/empty.png"></div>'+
+                        '<div class="pl45">你还没有优惠券</div>'+
+                    '</div>';
+            }
+            var self=this;
+            mainModule.createPage(self,result.total,$('#j_coupon_page_control'),self.getMyCoupons,8);
+            // createPage:function(self,total,$page_wrap,invokeFunc,rows)
+            $('#j_content_wrap').html(dom);
+
+        },
+        init:function(){
+            this.bindEvents();
+            this.userVipInfo();
+            this.getMyCoupons(1);
+        }
+    };
+    couponModule.init();
+    console.log('vip-center module loaded');
+</script>
+
+
+</body>
+</html>

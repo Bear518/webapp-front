@@ -1,0 +1,56 @@
+@charset "utf-8";
+.warpper h2{ text-align:center; padding:60px 0; font-weight:normal}
+/*banner*/
+.banner{ background:url(../../img/join/tearz1.jpg) center 0; height:357px; padding-top:1px}
+.banner a,.banner2 a{ margin:233px 0 0 523px; height:41px; width:173px; line-height:40px;
+    background-color:#ff9001; color:#fff; display:block; text-align:center; border-radius:3px;
+    font-size:16px;}
+.banner2{ background:url(../../img/join/corz1.jpg) center 0; height:357px; padding-top:1px}
+.banner2 a{ margin:238px 0 0 848px;}
+.banner a:hover{background: #ffad43}
+.banner2 a:hover{ background: #ffad43}
+
+.whyjoin{ padding:80px 0;}
+.whyjoin .whyjoin_l,.whyjoin .whyjoin_r{ border:1px solid #ff9001; width:360px; padding:66px 76px 40px; float:left; height:300px; position:relative}
+.whyjoin .whyjoin_l{ margin-right:170px}
+.whyjoin h3{ position:absolute;top:-14px; left:127px; background-color:#FFF; padding:0 30px; font-size:24px; color:#666}
+.whyjoin li,.whyjoin p{ font-size:16px; line-height:26px; margin-bottom:20px}
+.whyjoin i{ display:inline-block; height:14px; width:14px; background-color:#ff9001; border-radius:7px; margin-right:50px}
+.whyjoin p{ text-align:right; padding-top:15px}
+.whyjoin2 li{ height:80px; width:460px; line-height:80px; float:left; font-size:16px; margin-bottom:100px}
+.whyjoin2 li i{ display:inline-block; height:80px; width:80px; background:url(../../img/join/corz2.png) no-repeat; vertical-align:middle; margin-right:40px;}
+.whyjoin2 li.icon2 i{ background-position:-86px 0;}
+.whyjoin2 li.icon3 i{ background-position:0 -85px;}
+.whyjoin2 li.icon4 i{ background-position:-86px -85px;}
+.whyjoin2 li.icon1,.whyjoin2 li.icon3{ margin-right:280px;}
+
+.joinpro{ padding:20px 0; background-color:#f2f2f2;}
+.joinpro .warpper{ height:1105px;background:url(../../img/join/tearz3.png) no-repeat center 180px; position:relative}
+.joinpro dl{ width:280px; position:absolute}
+.joinpro dt{ font-size:24px; line-height:60px; text-align:center}
+.joinpro dd{ font-size:16px; line-height:26px; color:#999}
+.joinpro2{ height:443px;background:url(../../img/join/jg.jpg) center 0; }
+.joinpro2 .warpper{ position:relative}
+.joinpro2 dl{ width:232px; position:absolute; color:#fff;}
+.joinpro2 dt{ font-size:20px; line-height:60px; text-align:center}
+.joinpro2 dd{ font-size:16px; line-height:26px;}
+
+/*menshow*/
+.menshow{ position:relative}
+.menshow .warpper {  height:516px;}
+.menshowbox{ width:1200px; overflow:hidden; position:relative; height:300px}
+.menshow_ul{  position:absolute; left:0;top:0; width:6000px}
+.menshow li{ width:285px; float:left; margin-right:20px; height:300px;}
+.menshow li img{ height:230px; width:230px; border-radius:115px;margin:0 18px 0 0px ; border:1px solid #ff9001}
+.menshow .menshow_ul2 li img{ border-radius:0; border:0;}
+.menshow .lft_arr,.menshow .rt_arr{ height:49px; width:20px; background-color:#d5d3d3;  display:block; position:absolute;top:240px; left:0px; padding:9px 10px 0}.menshow .rt_arr{ left:auto; right:0;}
+.menshow .lft_arr i,.menshow .rt_arr i{height:40px; width:20px;background:url(../../img/vip/vmenarr.png) no-repeat; display:block}
+.menshow li p{ height:30px; overflow:hidden; font-size:16px; line-height:30px; text-align:center; width:232px; margin-top:10px; font-weight:bold}
+.menshow .rt_arr i{background:url(../../img/vip/vmenarr.png) no-repeat -20px 0;}
+
+
+
+
+
+
+

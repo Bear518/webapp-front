@@ -1,0 +1,372 @@
+<style type="text/css">
+.i-ls {background-position: -45px -316px;width: 23px;height: 27px;vertical-align: middle;}
+.i-hs{background-position: -88px -316px;width: 23px;height: 27px;vertical-align: middle;}
+.account-safe-containter .left-as-wrap{width: 49.5%;margin-right: 1%;background: #fff;height: 503px;padding: 0 28px;}
+.account-safe-containter .right-as-wrap{width: 49.5%;background: #fff;height: 503px;padding: 0 28px;}
+.account-safe-containter .left-as-wrap .header-wrap{border-bottom: 2px solid #5aceaf;height: 68px;line-height: 68px;color: #5aceaf;font-size: 16px;}
+.account-safe-containter .right-as-wrap .header-wrap{border-bottom: 2px solid #ffa600;height: 68px;line-height: 68px;color: #ffa600;font-size: 16px;}
+.account-safe-containter .left-as-wrap .content-wrap{padding: 45px 0;}
+.account-safe-containter .i-m{background-position: -446px -142px;height: 80px;width: 83px;margin-right: 43px;}
+.account-safe-containter .i-email{background-position: -297px -142px;height: 80px;width: 83px;margin-right: 43px;}
+.account-safe-containter .mrg-t50{margin-top: 50px;}
+.lh40{line-height: 40px;}.cf5{color: #ff8f15;}.c57{color: #5dacb7;cursor: pointer;}
+.account-safe-containter .fs16{font-size: 16px;}.mrg-l30{margin-left:30px; }
+.cb3{color: #b3b3b3;}.c85{color: #858585;}
+.i-unbind{background-position: -238px -313px;height: 30px;width: 33px;}
+.i-bind{background-position: -198px -313px;height: 30px;width: 33px;}
+.account-safe-containter .txt-wrap{padding-top: 30px;border-top: 1px solid #e0e0e0;text-align: center;margin-top: 45px;}
+.account-safe-containter .right-as-wrap .content-wrap{padding: 49px 0 49px 20px;}
+.account-safe-containter .right-as-wrap .set-pwd-wrap .content-wrap{padding: 0;}
+.account-safe-containter .name-wrap{width: 92px;height: 36px;line-height: 36px;text-align: right;padding-right: 28px;}
+.account-safe-containter .input-txt{border: 1px solid #b5b5b5;color: #bdbdbd;padding-left: 18px;background: #f5f5f5;height: 36px;width: 40%;}.mrg-t48{margin-top: 48px;}.mrg-t70{margin-top: 70px;}
+.account-safe-containter .btn-save{color: #fff;text-align: center;width: 40%;height: 40px;font-size: 18px;line-height: 40px;background: #ff9015;border:1px solid #e07707;border-radius: 5px;cursor: pointer;}.mrg-t13{margin-top: 13px;}.mrg-t92{margin-left: 92px;}
+/*手机修改第一步*/
+.account-safe-containter .tel-update-wrap{width: 80%;margin:0 auto;margin-top: 45px;}
+.account-safe-containter .tel-update-wrap .input-txt{background: #fff;}
+.account-safe-containter .step-number-wrap{width: 40px;height: 40px;line-height: 40px;color: #fff;font-weight: bold;}
+.tac{text-align: center;}
+.account-safe-containter .rac{background: #e2e2e2;border-radius: 50%;}
+.account-safe-containter .step-active{background: #71cbd7;width: 30px;height: 30px;line-height: 30px;border-radius: 50%;margin:5px;}
+.mrg-t40{margin-top: 40px;}.bc{display: block;margin:0 auto;}
+.bg-progress{text-align: center;}
+.line-c{width: 33%;height: 12px;background: #e2e2e2;margin-top: 15px;}
+.mrg-t60{margin-top: 60px;}
+.pwd-update-error-wrap{color: red;margin-left: 92px;line-height: 36px;visibility: visible;}
+.account-safe-containter  img{width: 100%;}
+.mrg-t12{margin-top: 12px;}
+.account-safe-containter .step-txt-wrap{position: relative;}
+.account-safe-containter .step-txt-wrap .f{position: absolute;left: -5px;}
+.account-safe-containter .step-txt-wrap .r{position: absolute;right: 6px;}
+/*手机修改第二步*/
+.account-safe-containter .perc60{width: 60%;}.mrg-t25{margin-top: 25px;}.mrg-t16{margin-top: 16px;}.mrg-t6{margin-top: 6px;}
+.btn-get-veri{width: 38%;height: 36px;line-height: 36px;color: #fff; background-color:#ff9015;margin-left: 2%;border-radius:4px; cursor:pointer}
+/*手机修改第三步*/
+.i-lg{background-position: -138px -318px;width: 30px;height: 30px;}.c9{color: #999;}.c4c{color: #42a98c;}
+.error-txt-wrap{color: red;visibility: visible;line-height: 30px;}.mrg-t20{margin-top: 20px;}
+/*邮箱限定宽度*/
+.as_email_sp{max-width: 140px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;display: inline-block;vertical-align: top;}
+.setpwd-warnmsg{font-size: 20px;color: #77c2ae;margin-top: 68px;margin-bottom: 40px;padding-left: 92px;font-weight: normal;}
+/**********************************绑定账户样式*********************************/
+ .bind-thaccount-wrap{width: 49.5%;background: #fff;padding: 0 28px 58px;margin-top: 20px;}
+ .bind-thaccount-wrap .header-wrap{border-bottom: 2px solid #a6a6a6;height: 68px;line-height: 68px;color: #a6a6a6;font-size: 16px;}
+ .bind-thaccount-wrap .content-wrap{padding:0 0 42px;border-bottom: 1px solid #e0e0e0;}
+ .bind-thaccount-wrap  p.hint{width: 278px;margin:0 auto;line-height: 27px;margin-top: 20px;}
+ .bind-thaccount-wrap li{padding:48px 4% 0;}
+.bind-thaccount-wrap li .img-wrap{height: 110px;width: 110px;background-color: #ededed;border-radius: 50%;}
+.bind-thaccount-wrap li .active-img-wrap{background-color: #f6d188;}
+.bind-thaccount-wrap p.bind{color: #666;font-size: 13px;margin:20px 0;text-align: center;}
+.bind-thaccount-wrap p.unbind{color: #999;}
+.bind-thaccount-wrap .btn{width: 85px;height: 30px;color: #fff;font-size: 14px;text-align: center;background: #ff9001;border-radius: 5px;line-height: 30px;display: inline-block;}
+.bind-thaccount-wrap .btn-wrap{height: 33px;width: 85px;margin:0 auto;}
+.bind-thaccount-wrap .btn-unbind{color: #b4b4b4;background: #cecece;padding-bottom: 2px solid #b4b4b4;}
+.i-warn{background-position: -692px -47px;}
+.active-img-wrap .i-qq{background-position: -802px -47px;}
+.active-img-wrap .i-weixin{background-position: -1035px -47px;}
+.active-img-wrap .i-sina{background-position: -1333px -47px;}
+
+.i-qq{background-position: -802px -214px;width: 110px;height: 110px;}
+.i-weixin{background-position: -1035px -213px;width: 110px;height: 110px;}
+.i-sina{background-position: -1333px -213px;width: 110px;height: 110px;}
+.i-bindac{background-position: -738px -44px;margin-right: 20px;width: 33px;height: 27px;}
+/*-----------------------------------------------------------------------------*/
+/************************************解绑弹框样式**********************************/
+.unbind-thac-popbox{position:fixed;top: 50%;left: 50%;margin-top: -152.5px;margin-left: -184.5px;z-index: 168;background: #fff;width: 369px;height: 305px;}
+.unbind-thac-popbox h3{font-size: 24px;line-height: 57px;background: #6a6a6a;margin-bottom: 40px;text-align: center;color: #fff;font-weight: normal;}
+.unbind-thac-popbox .i-close{background-position: -683px -94px;width: 32px;height: 23px;position: relative;top: -16px;right: -120px;cursor: pointer;}
+.unbind-thac-popbox .content-wrap{padding: 0 30px;}
+.unbind-thac-popbox p{font-size: 14px;color: #999;text-align: center;margin-bottom: 13px;}
+.unbind-thac-popbox p.ac-wrap{text-align: left;padding-left: 55px;}
+.unbind-thac-popbox .input-pwd{width: 198px;height: 33px;border:1px solid #dbdbdb;font-size: 12px;color: #b4b3b3;display: block;margin: 0 auto;padding-left: 10px;}
+.unbind-thac-popbox .btn-wrap{width: 200px;margin:0 auto;height: 38px;}
+.unbind-thac-popbox .btn-sure{width: 200px;display: inline-block;}
+.unbind-thac-popbox .err-wrap p{padding: 5px 0 0 84px;
+  color: red;visibility: hidden;height: 30px;overflow: hidden;text-align: left;}
+.bind-sp:hover{color: #ff9001;}
+/************************************解绑弹框样式**********************************/
+</style>
+<div class="account-safe-containter clearfix">
+	<div class="left-as-wrap f-l">
+        <div class="header-wrap"><i class="i-icon i-ls"></i>绑定手机/邮箱</div>
+        <div id="j_content_wrap" class="content-wrap">
+        	<div class="clearfix">
+	        	<div class="f-l"><i class="i-icon i-m"></i></div>
+	        	<div class="f-l">
+	        		<div class="fs16">绑定手机：<span class="cf5 j_as_tel"></span>
+                        <span id="j_bind_tel_btn" class="c57 mrg-l30 bind-sp"></span></div>
+	        		<div id="j_as_tel_isbind_wrap" class="mrg-t20"><i class="i-icon i-unbind"></i></div>
+	        	</div>
+	        </div>
+	        <div class="clearfix mrg-t50">
+	        	<div class="f-l"><i class="i-icon i-email"></i></div>
+	        	<div class="f-l">
+	        		<div class="fs16">绑定邮箱：<span class="cf5 j_as_email as_email_sp"></span>
+                        <span id="j_bind_email_btn" class="c57 mrg-l30 bind-sp"></span></div>
+	        		<div id="j_as_email_isbind_wrap" class="mrg-t20"><i class="i-icon i-bind"></i></div>
+	        	</div>
+	        </div>
+	        <div class="txt-wrap">
+	        	<p>手机和邮箱可以用来登陆极视教育所有产品</p>
+	        	<p class="mrg-t13">请勿泄露账号信息，避免造成账户损失</p>
+	        </div>
+        </div>
+        <div id="j_tel_update_wrap" class="tel-update-wrap dis_none">
+            <div class="clearfix bg-progress">
+                <!-- <div class="f-l step-number-wrap rac">
+                    <div class="step-active">1</div>
+                </div>
+                <div class="f-l line-c"></div>
+                <div class="f-l step-number-wrap rac">
+                    <div>2</div>
+                </div>
+                <div class="f-l line-c"></div>
+                <div class="f-l step-number-wrap rac">
+                    <div>3</div>
+                </div> -->
+                <img id="j_as_progress" src="/img/info/001.png">
+            </div>
+            <div class="tac step-txt-wrap mrg-t12"><span class="f">身份验证</span><span id="j_as_update_type_txt">输入手机号</span><span class="r">完成</span></div>
+            <div id="j_as_first_step" class="first-step ">
+                <div class="tac mrg-t60 c9">为了保障用户身份安全，我们需要验证您的身份</div>
+                <div class="mrg-t40"><input id="j_as_confirmpwd" type="password" class="input-txt bc perc60" placeholder="请输入账号密码"></div>
+                <div class="bc perc60"><p id="j_as_confirmpwd_err" class="error-txt-wrap"></p></div>
+                <div class="mrg-t40"><input id="j_as_btn_next_one" type="button" class="btn-save bc perc60" value="下一步"></div>
+            </div>
+            <div id="j_as_two_step" class="two-step mrg-t60 dis_none">
+                <div><input id="j_as_account_input" type="text" class="input-txt bc perc60" placeholder="请输入您的手机号"></div>
+                <div class="mrg-t25 bc perc60 clearfix">
+                    <input id="j_as_imgvericode_input" type="text" class="input-txt perc60 f-l" placeholder="请输入验证码">
+                    <img align="absmiddle" src="" id="imgCC2" class="yzm_img j_vericode_img" alt="">
+                        <a data-url="#" href="javascript:" style="color: Gray" class="yzm_a j_refresh_imgcode"><img src="../../img/login/refls.png" style="margin:0;width: auto;" alt=""></a>
+                </div>
+                <div class="mrg-t25 bc perc60 clearfix">
+                    <input id="j_as_vericode_input" type="text" class="input-txt perc60 f-l" placeholder="请输入手机验证码">
+                    <input id="j_as_get_vericode_btn" type="button" class="btn-get-veri f-l" value="获取验证码">
+                </div>
+                <div class="bc perc60"><p id="j_as_two_error_p" class="mrg-t6 msg-wrap c4c"></p></div>
+                <div class="mrg-t16"><input id="j_as_btn_next_two" type="button" class="btn-save bc perc60" value="下一步"></div>
+            </div>
+            <div id="j_as_three_step" class="three-step tac mrg-t60 dis_none">
+                <div class=""><i class="i-icon i-lg"></i><span class="j_response_msg">手机号修改完成</span></div>
+                <div class="c9">
+                    <div class="mrg-t25"><span class="j_response_msg">手机号修改完成</span>，您以后可以使用</div>
+                    <div class="j_account"></div>
+                    <div>登陆极视教育所有产品</div>
+                </div>
+                <div class="mrg-t40"><input id="j_as_three_confirm_btn" type="button" class="btn-save bc perc60" value="确认"></div>
+            </div>
+        </div>
+	</div>
+	<div class="right-as-wrap f-l">
+        <div id="j_as_updatepwd_wrap" class="update-pwd-wrap dis_none">
+            <div class="header-wrap"><i class="i-icon i-hs"></i>修改密码</div>
+            <div class="content-wrap">
+            	<form>
+            		<div class="clearfix">
+            			<div class="name-wrap f-l fs16">
+            				旧密码
+            			</div>
+        				<input id="j_as_oldpwd" type="password" class="input-txt f-l" placeholder="请输入旧密码">
+            		</div>
+            		<div class="clearfix mrg-t48">
+            			<div class="name-wrap f-l fs16">
+            				新密码
+            			</div>
+        				<input id="j_as_newpwd" type="password" class="input-txt f-l" placeholder="请输入新密码">
+            		</div>
+            		<div class="clearfix mrg-t48">
+            			<div class="name-wrap f-l fs16">
+            				确认密码
+            			</div>
+        				<input id="j_as_confirm_newpwd" type="password" class="input-txt f-l" placeholder="请再次输入新密码">
+            		</div>
+                    <div class=""><p id="j_as_updatepwd_err" class="pwd-update-error-wrap"></p></div>
+            		<div class="mrg-t40 clearfix">
+            			<input id="j_as_updatepwd_btn" type="button" class="btn-save f-l mrg-t92 but-animation but-shadow" value="保存">
+            		</div>
+            	</form>
+            </div>
+        </div>
+        <div id="j_as_setpwd_wrap" class="set-pwd-wrap dis_none">
+            <div class="header-wrap"><i class="i-icon i-hs"></i>设定密码</div>
+            <p class="setpwd-warnmsg"><i class="i-icon i-warn"></i>您还没有设定密码，请先设定密码</p>
+            <div class="content-wrap">
+                <form>
+                    <div class="clearfix mrg-t48">
+                        <div class="name-wrap f-l fs16">
+                            密码
+                        </div>
+                        <input type="password" class="input-txt f-l pwd" placeholder="请输入密码">
+                    </div>
+                    <div class="clearfix mrg-t48">
+                        <div class="name-wrap f-l fs16">
+                            确认密码
+                        </div>
+                        <input  type="password" class="input-txt f-l confirmpwd" placeholder="请再次输入密码">
+                    </div>
+                    <div class=""><p id="j_as_setpwd_err" class="pwd-update-error-wrap"></p></div>
+                    <div class="mrg-t40 clearfix">
+                        <input  type="button" class="btn-save f-l mrg-t92 but-animation but-shadow" value="保存">
+                    </div>
+                </form>
+            </div>
+        </div>
+	</div>
+    <div id="j_bind_thaccount_wrap" class="bind-thaccount-wrap f-l">
+        <div class="header-wrap"><i class="i-icon i-bindac"></i>绑定第三方账户</div>
+        <div class="content-wrap">
+            <ul class="clearfix">
+                <li class="f-l">
+                    <div class="img-wrap img-wrap"><i class="i-icon i-qq"></i></div>
+                    <p class="bind unbind">未绑定</p>
+                    <div class="btn-wrap"><input type="button" data-type="qq" data-name="QQ" class="btn btn-bind but-animation but-shadow j_as_qq" value="立即绑定"></div>
+                </li>
+                <li class="f-l">
+                    <div class="img-wrap "><i class="i-icon i-weixin"></i></div>
+                    <p class="bind unbind">未绑定</p>
+                    <div class="btn-wrap"><input type="button" data-type="wx" data-name="微信" class="btn btn-bind but-animation but-shadow j_as_wx" value="立即绑定"></div>
+                </li>
+                <li class="f-l dis_none">
+                    <div class="img-wrap"><i class="i-icon i-sina"></i></div>
+                    <p class="bind unbind">未绑定</p>
+                    <div class="btn-wrap"><input type="button" data-type="sina" data-name="新浪" class="btn btn-bind but-animation but-shadow j_as_sina" value="立即绑定"></div>
+                </li>
+
+            </ul>
+        </div>
+        <p class="hint">绑定第三方账号，可以直接登录，还可以将内容同步到以上平台，与更多好友分享</p>
+    </div>
+</div>
+<div id="j_unbind_thac_popbox" class="unbind-thac-popbox dis_none">
+    <h3>解除绑定<i class="i-icon i-close"></i></h3>
+    <div>
+        <div class="content-wrap ">
+            <p>解绑后将不能再使用<span class="type"></span>账号登陆极视教育网</p>
+            <p class="ac-wrap">账号：<span class="account"></span></p>
+            <div><input type="password" class="input-pwd pwd" placeholder="请输入登录密码"></div>
+        </div>
+        <div class="err-wrap"><p class="error"></p></div>
+        <div class="btn-wrap"><input type="button" class="btn btn-sure but-animation but-shadow" value="确定"></div>
+    </div>
+</div>
+<div id="j_thbind_err_popbox" class="th-popbox thlogin-err-wrap dis_none">
+    <h3><span class="type">微信</span>绑定失败</h3>
+    <div class="clearfix content-wrap">
+        <div class="img-wrap f-l"><img src="/img/login/cry.png"></div>
+        <div class="f-l"><p class="reason">网络错误</p></div>
+    </div>
+    <div><input type="button" onclick="$('#j_thbind_err_popbox').hide();$('#j_thlogin_popbg').hide()" class="but-animation but-shadow but-default btn-goback-login" value="返回继续绑定"></div>
+</div>
+<script type="text/javascript" src="/js/info/as.js"></script>
+<script type="text/javascript">
+    function asCloseTBPopBoxAfterSucc(){
+        var type=asModule.asBindTypeVal;
+        mainModule.A&&mainModule.A.close();
+        var $bind_btn=$('.j_as_'+type);
+        asModule.switchThBindingByBtn($bind_btn);
+    }
+    function asCloseTBPopBoxAfterErr(reason){
+        var $popbox=$('#j_thbind_err_popbox');
+        $popbox.find('.type').html(asModule.asBindTypeName);
+        $popbox.find('.reason').html(reason);
+        $popbox.fadeIn();
+        $('#j_thlogin_popbg').fadeIn();
+        mainModule.A&&mainModule.A.close();
+    }
+    $('#j_bind_thaccount_wrap').on('click','.btn-unbind',function(){
+        var $this=$(this),type=$this.data('name'),$popbox=$('#j_unbind_thac_popbox');
+        $popbox.find('.type').html(type);
+        $popbox.find('.account').html(infoModule.mobilephone);
+        $('#j_unbind_thac_popbox').fadeIn();
+        $('#j_thlogin_popbg').fadeIn();
+        asModule.asBindTypeVal=$this.data('type');
+    });
+    $('#j_unbind_thac_popbox').on('click','.btn-sure',function(){
+        var $popbox=$j_wrap=$('#j_unbind_thac_popbox'),pwd=$popbox.find('.pwd').val(),sourceCode;
+        switch(asModule.asBindTypeVal){
+            case 'qq':
+                sourceCode='QQ';
+            break;
+            case 'wx':
+                sourceCode='WEIXIN';
+            break;
+        }
+        if(pwd==''){$j_wrap.find('.error').html('请输入密码').css('visibility','visible');return;}
+        $.ajax({
+            type:'post',
+            data:{passWord:pwd,sourceCode:sourceCode},
+            url:mainModule.uri.unBindThBind,
+            success:function(result){
+                mainModule.log('解除绑定数据接口返回',result);
+                mainModule.httpInterceptor(result,function(result){
+                    $j_wrap.find('.error').css('visibility','hidden');
+                    $j_wrap.fadeOut();
+                    $('#j_thlogin_popbg').fadeOut();
+                    asModule.switchThUnBindingByBtn($('.j_as_'+asModule.asBindTypeVal));
+                },function(result){
+                    $j_wrap.find('.error').html(result.message).css('visibility','visible');
+                })
+            }
+        })
+    });
+    $('#j_bind_thaccount_wrap').on('click','.btn-bind',function(){
+        var $this=$(this),type=$this.data('type'),name=$this.data('name'),url,title,mm=mainModule;
+        asModule.asBindTypeVal=type;
+        asModule.asBindTypeName=name;
+        switch(type){
+            case 'qq':
+                url=mm.uri.qqBind;
+                title='qqLogin';
+            break;
+            case 'wx':
+                url=mm.uri.wxBind;
+                title='weixinLogin';
+                mm.A=window.open(url,title, "width=450,height=650,top=350,left=450,menubar=0,scrollbars=1,resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+                return;
+            break;
+        }
+        
+        $.ajax({
+            type:'get',
+            url:url,
+            success:function(result){
+                mm.log('绑定'+type+'接口返回结果',result);
+                mm.httpInterceptor(result,function(result){
+                    mm.A=window.open(result,title, "width=450,height=650,top=350,left=450,menubar=0,scrollbars=1,resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+                })
+            }
+        })
+    });
+    $('#j_unbind_thac_popbox').on('click','.i-close',function(){
+        $('#j_unbind_thac_popbox').fadeOut();
+        $('#j_thlogin_popbg').fadeOut();
+    });
+    $('#j_as_setpwd_wrap').on('click','.btn-save',function(){
+        var $j_wrap=$('#j_as_setpwd_wrap'),
+            pwd=$j_wrap.find('.pwd').val(),
+            confirmpwd=$j_wrap.find('.confirmpwd').val(),mm=mainModule;
+        if(pwd==''||!(pwd==confirmpwd)){$('#j_as_setpwd_err').html('密码不能为空或不一致').fadeIn();return;}
+        $.ajax({
+            type:'post',
+            data:{password:pwd,confirmPassword:confirmpwd},
+            url:mm.uri.setPwd,
+            success:function(result){
+                mm.log('设置密码接口返回数据',result);
+                mm.httpInterceptor(result,function(result){
+                    $j_wrap.find('.setpwd-warnmsg').html('密码设置成功！');
+                    $j_wrap.find('.pwd').val('');
+                    $j_wrap.find('.confirmpwd').val('');
+                    setTimeout(function(){
+                        $j_wrap.fadeOut();
+                        $('#j_as_updatepwd_wrap').fadeIn();
+                        window.location.reload();
+                    },2000);
+                    //设置密码后，刷下页面
+                    $(".logout").trigger('click');
+                    
+                },function(result){
+                    $('#j_as_setpwd_err').html(result.message).fadeIn();
+                })
+            }
+        })
+    })
+</script>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta property="qc:admins" content="3742272215633144221475636" />
+        <meta name="renderer" content="webkit">
+        <title>极视教育－首页</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link rel="stylesheet" href="/css/main.css">
+        <style type="text/css">
+body{background-color: #f8f8f8;}
+*{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+body .navbar {
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
+.container{width: 1200px;margin: 20px auto;}
+.l-wrap{width: 750px;margin-right: 20px;padding: 53px 42px;background-color: #fff;}.r-wrap{width: 430px;background-color: #fff;}
+.l-wrap h1{font-size: 30px;color: #333;margin-bottom: 12px;font-weight: normal;}.l-wrap h4{font-size: 14px;color: #333;margin-bottom: 26px;font-weight: normal;}
+.l-wrap .content-wrap{padding-top: 32px;border-top: 2px solid #ededed;}
+.content-wrap .xs{font-size: 26px;color: #e38928;vertical-align: middle;}.content-wrap .bq{padding:5px 16px;background: #ff5d6b;color: #fff;font-size: 12px;margin-left: 46px;}.c5f{color: #5ba4af;font-size: 12px;}.c6{font-size: 12px;color: #666;}
+.i-icon{background: url('/img/xzjy/sprite.png') no-repeat;height: 20px;width: 20px;display: inline-block;vertical-align: top;}
+.content-wrap .i-address{background-position:-14px -98px;}
+.content-wrap .i-time{background-position:-52px -97px;margin-left: 30px;}
+.content-wrap .i-collect{background-position:-88px -96px;}
+.content-wrap .yq-item{font-size: 14px;color: #666;padding-right: 16px;border-right: 1px solid #666;margin-right: 16px;}
+.content-wrap .yq-wrap{}
+.content-wrap .yq-wrap span:last-child{border-right: none;}
+.but-td{font-size: 13px;width: 96px;height: 29px;border:1px solid #ff9001;color: #ff9001;text-align: center;background: #fff;border-radius: 5px; cursor:pointer}
+.but-td:hover{background: #ff9001;color: #fff;}
+.content-wrap .i-sc{background-position: ;}.zwms-txt{padding-left: 26px;border-left: 8px solid #5ba4af;height: 33px;line-height: 33px;font-size: 20px;color: #333;margin-top: 30px;margin-bottom: 15px;}
+p.content{white-space: pre-wrap;font-size: 14px;color: #999; margin-bottom:10px}.content-wrap .collect{border-bottom: 1px solid #cacaca;font-size: 12px;color: #999;}
+.r-wrap .img-wrap{width: 320px;height: 160px;margin: 50px auto 21px;background: #eee;} .r-wrap .img-wrap img{width: 320px;height: 160px;display: block;}
+.r-wrap h2{font-size: 18px;color: #333;width: 315px;margin:0 auto;}
+.r-wrap .qy-intro-wrap{width: 315px;margin:0 auto;color: #999;padding-bottom: 68px;}.mrg-tb16{margin:16px 0;}
+.collect-wrap,.collected-wrap{cursor: pointer;}
+.collect-wrap label{color: #999;cursor: pointer;}
+.collected-wrap label{color: #ff9001;cursor: pointer;}
+.collect-wrap:hover label{color: #ff9001;}
+.collected-wrap:hover label{color: #999;}
+.collect-wrap:hover .collect{color: #ff9001;border-bottom: 1px solid #ff9001;}
+.collected-wrap .collect{color: #ff9001;border-bottom: 1px solid #ff9001;}
+.collected-wrap .i-collect{background-position: -259px -96px;}
+.collected-wrap:hover .collect{color: #999;border-bottom: 1px solid #cacaca;}
+.content-wrap h5{font-size: 16px;color: #666;margin-bottom: 8px;}
+.collect-wrap:hover .i-collect{background-position: -259px -96px;}
+.collected-wrap:hover .i-collect{background-position:-88px -96px;}
+.collected-wrap .txt-cancel-collect{display: none;}
+.collected-wrap:hover .txt-collect{display: none;}
+.collected-wrap:hover .txt-cancel-collect{display: inline;}
+
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div include="/view/module/header.html"></div>
+        <div ng-app="jobDetailApp" ng-controller="jobDetailCtrl" class="container clearfix">
+            <div class="l-wrap f-l">
+                <h1 ng-bind="data.jobName"></h1>
+                <h4 ng-bind="data.companyName"></h4>
+                <div class="content-wrap">
+                    <div class="clearfix">
+                        <span ng-if="data.incomeTop>0" ng-bind="'¥'+data.incomeBottom+' - '+data.incomeTop" class="xs"></span>
+                        <span ng-if="data.incomeTop==0">薪资面议</span>
+                        <span ng-bind="data.jobType" class="bq"></span>
+                        <input type="button" class="but-td f-r" value="投递简历">
+                    </div>
+                    <div class="c5f mrg-tb16 clearfix">
+                        <i class="i-icon i-address"></i><span ng-bind="data.areaCode"></span>
+                        <i class="i-icon i-time"></i>发布于：<span ng-bind="data.createDate|timeFormat"></span>
+                        <div class="f-r " ng-class="{'collect-wrap':!data.collection,'collected-wrap':data.collection}" ng-click="jobCollect(data.jobId)"><i class="i-icon i-collect"></i><span class="collect"><label ng-if="!data.collection">收藏</label><label class="txt-collect" ng-if="data.collection">已收藏</label><label ng-if="data.collection" ng-click="cancelCollect()" class="txt-cancel-collect">取消收藏</label></span></div></div>
+                    <div class="yq-wrap">
+                        <span ng-if="data.education" ng-bind="data.education" class="yq-item"></span>
+                        <span ng-if="data.experience" ng-bind="data.experience" class="yq-item"></span>
+                        <span ng-if="data.language" ng-bind="data.language" class="yq-item"></span>
+                        <span ng-if="data.ageBottom" data-ng-bind="data.ageBottom+' - '+data.ageTop" class="yq-item"></span>
+
+                        <span ng-if="data.major" ng-bind="data.major" class="yq-item"></span>
+
+                    </div>
+                    <div class="zwms-txt">职位描述</div>
+                    <h5>岗位职责：</h5>
+                    <p class="content zwms-content" ng-bind="data.responsibility"></p>
+                    <h5>职位要求：</h5>
+                    <p class="content zwms-content" ng-bind="data.jobRequirement"></p>
+                    <div class="zwms-txt">企业介绍</div>
+                    <p class="content qyjs-content" ng-bind="data.companyDescription"></p>
+                </div>
+            </div>
+            <div class="r-wrap f-l">
+                <div class="img-wrap"><img ng-src="{{data.companyLogo}}"></div>
+                <h2 ng-bind="data.companyName"></h2>
+                <div class="qy-intro-wrap">
+                    <ul>
+                        <li>规模：<span ng-if="data.range" ng-bind="data.range+'人'"></span></li>
+                        <li>性质：<span ng-bind="data.companyType"></span></li>
+
+                        <li>地址：<span data-ng-bind="data.address"></span></li>
+                        <li>网址：<span ng-bind="data.webSite"></span></li>
+
+                    </ul>
+                </div>
+                <div></div>
+            </div>
+            
+            <div class="tk_dl" id="tk_dl1" style=" display:none">
+            <div class="loginbg"></div>
+            <div class="tk_box tdbox">
+                <h3><i class="iconfont tkcls1">&#xe604;</i>创建简历提示</h3>
+                <div class="tk_main">
+                <div class="jobtab">
+                    <div class="jobcard clearfix">
+                    
+                        <span class="com_img"><img ng-src="{{data.companyLogo}}" alt=""></span>
+                        <div class="jobinfo">
+                        <div class="jobtitle"><a href="#">{{data.jobName}}</a><span class="sx">{{data.jobType}}</span></div>
+                        <span class="ico company"><i></i>{{data.companyName}}</span>
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="tk_wd">
+                亲，您还没有属于自己的简历，快去创建吧！
+                </div>
+                <div class="tk_btn"><a href="javascript:" id="cancelbtn" class="on">取 消</a><a href="/view/wdjl/edit.html" id="okbtn" class="">确 定</a></div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div include="/view/module/footer.html"></div>
+        
+        
+        <link rel="stylesheet" href="/css/login/tck.css">
+         <script src="/js/vendor/jquery-1.11.3.min.js"></script>
+         <script src="/js/main.js"></script>
+         <script type="text/javascript" src="/js/common/angular.js"></script>
+         <script type="text/javascript" src="/js/jquery.timeago.js"></script>
+         <script type="text/javascript">
+         // $('.but-td').click(function(){
+         //     var A=window.open("/view/xzjy/detail.html","TencentLogin", "width=450,height=320,menubar=0,scrollbars=1,resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+         //    setTimeout(function(){
+         //        // console.log(wo);
+         //        A.close();
+         //    },1000*60*1)
+         // })
+            // var wo=window.open('about:blank','_self');
+            // setTimeout(function(){
+            //     console.log(wo);
+            //     window.close(wo);
+            // },3000)
+            var mm=mainModule,id=mm.getQueryValueByName('id')||'56fb41d1471e49f8bd9fbe44683e4271';
+            var app = angular.module('jobDetailApp', []);
+            app.controller('jobDetailCtrl', function($scope,$http,mm) {
+                $http.get(mm.uri.getJobDetail, {
+                    params :{id:id},
+                    cache : true
+                }).then(function(result){
+                    mm.log('职位详情数据',result);
+                    $scope.data=result.data.content;
+                    var content=result.data.content;
+                    document.title='【'+content.jobName+'】'+content.companyName+'最新机遇信息_极视教育网';
+                });
+                $scope.jobCollect=function(jobId){
+                    $http.get(mm.uri.jobCollect,{
+                        params:{jobId:jobId},
+                        cache:false
+                    }).then(function(result){
+                        mm.log('职位收藏',result);
+                        if(result.data.status=='SUCCESS'||/已收藏/.test(result.data.message)){
+                            $scope.data.collection=true;
+                        }
+                        mm.httpInterceptor(result.data,function(result){
+
+                        })
+                    })
+                }
+                $scope.cancelCollect=function(jobId){
+                    $http.get(mm.uri.cancelMyJobCollection,{
+                        params:{jobId:$scope.data.jobId}
+                    }).then(function(result){
+                        if(result.data.status=='SUCCESS'){
+                            $scope.data.collection=false;
+                        }
+                    })
+                }
+            });
+            app.service('mm', function() {
+                return mm;
+            });
+            app.filter('timeFormat',['mm', function(mm) {
+                return function(x) {
+                    return $.timeago(x||Date.now());
+                };
+            }]);
+            // var jobDetailModule={
+            //     bindEvents:function(){
+
+            //     },
+            //     getJobDetail:function(id){
+            //         var self=this,mm=self.mm;
+            //         $.ajax({
+            //             type:'get',
+            //             data:{id:id},
+            //             url:mm.uri.getJobDetail,
+            //             success:function(result){
+            //                 mm.log('我的职位详情数据',result);
+            //                 mm.httpInterceptor(result,self.renderJobDetailDom);
+            //             }
+            //         })
+            //     },
+            //     renderJobDetailDom:function(result){
+            //         // var dom='';
+            //         // for(var i=0,ii=result.length;i<ii;i++){
+            //         //     dom+=
+            //         // }
+            //     },
+            //     init:function(){
+            //         this.mm=mainModule;
+            //         var jobId=this.mm.getQueryValueByName('id');
+            //         this.getJobDetail(jobId);
+            //     }
+            // }
+            // jobDetailModule.init();
+         </script>
+<script type="text/javascript">
+$(function() {
+    $('.gzjy').addClass("active");
+	$('.but-td').click(function(){
+		if(mainModule.getCookie('islogin')){
+						
+			 resumeinfo();	
+			}
+		else{
+			var jr=$(this).data("jr");					
+			$('.login_dl').show();  
+			$('.loginbg').height($(document).height())
+		}
+	})
+	$('.tkcls1').click(function(){	
+		$('#tk_dl1').hide();      
+	})
+	$('#cancelbtn').click(function(){	
+		$('#tk_dl1').hide();      
+	})
+
+})
+function  resumeinfo(){
+	$.ajax({
+		type: "get",
+		dataType: "json",
+		url: $._CACHEOBJ.context+"/user/archive/detail",
+		beforeSend:function(){
+		  $(".but-td").text("请稍等");			 
+		  },
+		success: function (lgn) {
+			if(lgn.status== "SUCCESS"){
+				if(lgn.content.basicInfo!==null&&lgn.content.jobIntension!==null&&lgn.content.contactInfo!==null){
+				   $(".but-td").text("投递简历");		
+				   window.location.href="../wdjl/confirm.html?id="+id;		
+					}
+				else{
+					$('#tk_dl1').show();
+			  		$(".but-td").text("投递简历");	
+					}
+			}
+			else{   
+			  alert("投递失败")
+			}
+		}
+	});
+}
+function openwin(url) {
+    var a = document.createElement("a");
+    a.setAttribute("href", url);
+    a.setAttribute("target", "_blank");
+    a.setAttribute("id", "openwin");
+    document.body.appendChild(a);
+    a.click();
+}
+		 </script>
+    </body>
+
+</html>

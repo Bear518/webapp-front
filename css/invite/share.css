@@ -1,0 +1,93 @@
+@charset "utf-8";
+.banner { height:473px;background:#2ebacf url(../../img/invite/banner.jpg) center 64px no-repeat;}
+.banner .warpper{ padding-top:386px; position:relative; text-align:center}
+.banner .day{ position:absolute; font:bold 60px/70px ""; top:283px; right:305px; color:#fff996}
+.banner .word{ color:#fff; font-size:20px;}.banner .word .yel{ color:#fff996}
+.registerbox{ width:550px; margin:0 auto; background-color:#d5f1f6; height:383px; border-radius:5px; overflow:hidden}
+.fx1{ height:631px;background:#2ebacf url(../../img/invite/fx1.png) center bottom no-repeat;}
+.fx2{ height:656px;background:#2ebacf url(../../img/invite/fx2.png) center 0 no-repeat;}
+.fx3{ height:639px;background:#2ebacf url(../../img/invite/fx3.png) center bottom no-repeat;}
+.fx3 ul{ width:1210px; padding-top:53px;}
+.fx3 li{ height:215px; width:396px; float:left; margin:0 6px 6px 0;}
+.fx3 li.c1{background:#c1ebf1 url(../../img/invite/c1.png) center center no-repeat;}
+.fx3 li.c2{background:#c1ebf1 url(../../img/invite/c2.png) center center no-repeat;}
+.fx3 li.c3{background:#c1ebf1 url(../../img/invite/c3.png) center center no-repeat;}
+.fx3 li.c4{background:#c1ebf1 url(../../img/invite/c4.png) center center no-repeat;}
+.fx3 li.c5{background:#c1ebf1 url(../../img/invite/c5.png) center center no-repeat;}
+.fx3 li.c6{background:#c1ebf1 url(../../img/invite/c6.png) center center no-repeat;}
+.fx4{ height:514px; background-color:#58c9d9; padding-top:26px;}
+.fx4 ul{width:1212px; }
+.fx4 li{ height:147px; width:294px; float:left; margin:0 8px 8px 0; overflow:hidden}
+.butt{ clear:both}
+.butt a{ margin:33px 0 0 523px; height:41px; width:173px; line-height:40px; background-color:#ff9001; color:#fff; display:block; text-align:center; border-radius:5px; font-size:16px; box-shadow:0px 3px 0 #d77900;transition:0.2s;}
+.butt a:hover{margin-top:36px; box-shadow:0 0 0 #d77900;}
+
+.input{ border:1px solid #bfbfbf; height:46px; font:14px/46px "微软雅黑"; width:346px; padding:0 3px; border-radius:4px}
+.input:hover{ border:1px solid #ff8f15; box-shadow:0px 0px 5px #ff8f15;}
+.loginbg{min-width: 1200px; position:absolute; width:100%; opacity:0.5; filter:alpha(opacity=50);  background-color:#000; height:1000px; left:0; top:0; z-index:1000}
+.zcbox{text-align:left;box-sizing:content-box}
+.zcbox *{box-sizing:content-box}
+.zcbox h3{ line-height:50px; height:56px; font-size:20px;border-bottom:1px solid #dcdcdc; text-align:center; font-weight:normal ;}
+.zcbox h3 i{cursor: pointer;display: block;height: 24px;line-height: 24px;
+position: absolute;right: 10px;top: 10px;width: 20px;}
+.zcbox li{ height:48px; padding-top:10px; position:relative;_padding-top:10px; }
+.zcbox .input{ padding:0 20px ; background-color:#FFF; width:270px}
+.zcbox .focus .input{ border-color:#db8a83}
+.zcbox li.lab{ height:20px; padding-top:10px}
+.zc_tab{ height:57px;}
+.zc_tab a{ float:left; height:57px; width:50%; color:#333; font:normal 20px/57px "微软雅黑";text-align:center; position:relative; background-color:#fff}
+.zc_tab a:hover{ text-decoration:none;}
+.zc_tab a.on{ color:#fff; background-color:#ff9001;width: 100%;}
+.zc_tab a.on:hover{ cursor:default }     
+.zcbox_main{ position:relative; padding:15px 100px 0 120px;}
+.zcbox_main li span{ float:left; width:89px;font:14px/40px "微软雅黑"; text-align:right; padding-right:5px;}
+.zcbox_main li span.rt{ width:360px; text-align:left}.zcbox_main li span.rt label{ color:#999}
+.zcbox_main li i{display:block; height:24px; width:24px; position:absolute; top:23px; left:-37px;background:url(../../img/invite/zc_ic.png) no-repeat -5px -4px;}
+.zcbox_main li i.mm{ background-position: -5px -36px;}
+.zcbox_main li i.yx{ background-position: -5px -68px;}
+
+.wjma{ line-height:47px; height:47px; clear:both;}
+.wjma label{ float:left; line-height:47px;}
+.wjma label,.wjma input{ vertical-align:middle; margin-right:5px}
+.wjma label a{ float:none}
+a.lg_btn{  height:40px;background-color:#ff8f15; color:#fff; font:18px/40px "微软雅黑"; text-align:center; border-radius:3px; display:block; margin:20px 0 5px 0px; }
+a.lg_btn:hover{background-color:#ff8f15; color:#fff; text-decoration:none}
+.lg_zc{ display:block; font-size:16px} .lg_zc a{ color:#62aeb8}
+a.yzm_phone{ display:inline-block; line-height:38px; text-decoration:none; border:1px solid #ffd1b2; padding:0 10px; background-color:#ffefe5; margin-right:10px; border-radius:3px; color:#f60; vertical-align:middle}
+.zcbox .yzm input.yzm_phoneDisEnable { background:#ff8f15; color:#fff; border:1px solid #ff8f15; display:inline-block; line-height:38px; text-decoration:none;padding:0 10px;margin-right:10px; border-radius:3px; width:70px; cursor:pointer}
+.zcbox .yzm input.hui{color:#aaaaaa; border:1px solid #e5e5e5;background-color:#f5f5f5; }
+.zcbox .yzm input{ width:178px; padding:0 20px; vertical-align:middle; margin-right:10px}
+.yzm img{ display:inline-block;  vertical-align:middle; margin:0 5px 0 0; }
+#imgCC1,#imgCC2{ width:65px; height:38px}
+
+
+.zcbox_main span.err{ display:none;background-color: #db8a83;color: #fff;font-weight: normal;height: 24px;right:28px;line-height: 24px;padding-right: 10px;position: absolute;
+top:22px; padding:0 7px; float:left; width:auto}
+.zcbox_main span.err4,.zcbox_main span.err5,.zcbox_main span.err9,.zcbox_main span.err10,.zcbox_main span.err11{ right:118px }
+.zcbox_main .placeholder{top:31px}
+.inputli4 .placeholder,.inputli5 .placeholder,.inputli9 .placeholder{left:20px;}
+
+
+.loginbg{ position:absolute; width:100%; opacity:0.5; filter:alpha(opacity=50); background-color:#000; height:1000px; left:0; top:0;z-index:1000}
+.tk_box{z-index:1100; background-color:#FFF;width:368px; text-align:center; margin-left:-180px;box-shadow:0px 2px 2px rgba(0, 0, 0, 0.1); position:fixed; left:50%;box-sizing:content-box;top:50%;margin-top:-195px}
+.tk_box h3 i{cursor: pointer;display: block;height: 24px;line-height: 24px;position: absolute;right: 10px;top: 10px;width: 20px;}
+.tk_main{ padding:40px 20px 40px;background:#fbcf2d url(../../img/invite/tbg.png) no-repeat center 20px; height:320px}
+.tk_wd{ font-size:18px; line-height:36px; display:block; height:120px; margin-top:150px}
+.tk_wd h4{ font-size:24px; color:#333; line-height:34px}
+.tk_wd p{ font-size:16px; color:#333; line-height:24px; margin-top:10px}
+.tk_btn a{ height:48px; width:242px;background:#ff9001; line-height:48px; color:#fff; text-align:center; font-size:18px; transition:0.2s;box-shadow:0px 2px 0 #d77900; border-radius:4px; display:block; margin-left:52px}
+.tk_btn a:hover{margin-top:2px; box-shadow:0 0 0 #d77900; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

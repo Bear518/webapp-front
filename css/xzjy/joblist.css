@@ -1,0 +1,91 @@
+@charset "utf-8";
+/*banner*/
+.banner { height:175px;background:url(../../img/xzjy/banner.jpg) center 0 no-repeat;color:#fff; padding-top:35px; margin-bottom:37px; min-width:1200px;}
+.banner h2{ color:#fff; font-size:42px; line-height:80px; font-weight:normal}
+.banner h3{color:#fff; font-size:20px; font-weight:normal}
+
+/*jobbar_info*/
+.jobbar{ margin-bottom:40px; }
+.jobbar_main{ width:750px; float:left}
+.jobbar_site{ width:386px; margin-left:34px; float:left; border:1px solid #e0e0e0; padding:0 14px;background-color: #fbfbfb;}
+.jobbar_tab{ height:36px; line-height:36px; padding:11px; border:1px solid #e0e0e0;margin-bottom:37px; background-color:#fbfbfb;}
+.jobnum{ float:left; padding-left:20px}.jobnum i{ color:#ff9001}
+.textbar{ float:right; border:1px solid #e0e0e0; height:30px; margin-left:10px; width:120px; padding:4px 5px 0; position:relative; background-color:#fff; cursor:pointer}
+.textbar input{ width:100px;height:26px; float:left; cursor:pointer}
+#industrybox{ width:160px;}#industrybox input{ width:140px}#industrybox .option{ width:170px}
+
+.clkarea{ height:26px}
+.clkarea i{ float:left; display:block; height:15px;width:15px;background
+:url(../../img/xzjy/sprite.png) no-repeat -15px -36px; margin:8px 0 0 3px}
+.textbar .option{ border:1px solid #e0e0e0; width:130px; position:absolute; top:34px; left:-1px; background-color:#fff; font-size:14px}
+.textbar .option a,.selbar .option a{ line-height:34px; display:block; padding:0 5px; z-index:1000}
+.textbar .option a:hover,.selbar .option a:hover{ color:#666; background-color:#ffead0}
+.jobbar_content{ border-top:1px solid #e0e0e0}
+.jobbar_content .nols{ display:block; text-align:center; margin-top:30px}
+.jobbar_content li{ padding:35px 10px; border-bottom:1px solid #e0e0e0;}
+.jobbar_content li:hover{ background-color:#fbfbfb}
+.jobbar_content li img{ height:60px; width:120px; float:left; margin:5px 30px 0 0}
+.jobinfo{ float:left; width:570px;}.jobinfo span{ font-size:14px}
+.jobtitle{ font-size:16px; color:#333; line-height:26px; height:52px; overflow:hidden}
+.jobtitle span{ display:inline-block; padding:0 15px; background-color:#ff5d6c; color:#fff; margin-left:20px; font-size:12px}
+.jobtitle span.qz{ background-color:#4791ff; }
+.jobtitle span.zy{ background-color:#6dc6d2; }
+.jobtitle span.jz{ background-color:#ffa23b; }.jobtitle span.ls{background-color:#956dfc}
+.jobtitle span.qt{background-color:#82cdfd}
+.jobinfo .ico{ float:left; line-height:30px; margin:0 20px 0 0px;}
+.jobinfo .ico i{ display:inline-block; height:25px; width:25px; background-image:url(../../img/xzjy/sprite.png); vertical-align:middle; margin-right:5px;}
+.jobinfo .company i{ background-position:-50px -36px}
+.jobinfo .address i{ background-position:-95px -36px}
+.jobinfo .price i{ background-position:-140px -36px}
+.jobbar_site h4{ line-height:55px; font-size:18px; font-weight:normal}
+.jobbar_site .sitebar{ margin-bottom:15px}
+.areabar{ border:1px solid #e0e0e0; height:29px; width:370px; padding:5px 5px 0; position:relative;background-color: #fff; cursor:pointer}
+.areabar .icon{ position:absolute;top:6px; right:6px; height:22px;width:25px;background
+:url(../../img/xzjy/sprite.png) no-repeat -201px -37px; cursor:pointer }
+.areaitem{ margin-right:5px;}.areaitem i{ cursor:pointer}
+.areachosedbox{ position:relative}.areachosed_abs2{ display:inline-block}
+.areachosedbox .areachosed_abs{ position:absolute; top:-44px; left:13px;}
+.checkbar input{ margin-right:5px; vertical-align:middle}.checkbar label{ margin-right:54px; line-height:30px; width:54px; display:inline-block}
+.selbar{ border:1px solid #e0e0e0; height:30px; margin-left:10px; width:220px; padding:4px 5px 0; position:relative;background-color: #fff; cursor:pointer}
+.selbar i{ position:absolute; display:block; height:35px;width:38px;background
+:url(../../img/xzjy/sprite.png) no-repeat -263px -37px;top:0px ;right:0px; margin:0}
+.selbar .option{ border:1px solid #e0e0e0; width:230px; position:absolute; top:34px; left:-1px; background-color:#fff; font-size:14px}
+.selbar input{ width:184px;height:26px; float:left; cursor:pointer}
+.option{ display:none}
+.qk_btn{ text-align:center; padding:30px 0}
+.qk_btn a{ height:39px; width:209px;border-radius: 3px; background-color:#ff9001; color:#fff; display:inline-block; line-height:39px; box-shadow:3px 3px 3px rgba(0,0,0,0.1)}
+.qk_btn a:hover{ background-color:#ffad43;border-radius: 3px;}
+.page-control{margin-top: 68px;margin-bottom: 88px;text-align: center;}
+.page-control a{color: #666;display: inline-block; padding: 0 12px;vertical-align: middle;}
+.page-control span.current{display: inline-block;padding: 0 7px;color:#999999;vertical-align: middle;background:#ff9001;color: #fff;margin-left: 10px;}
+.page-control span.disabled{  display: inline-block;padding: 0 7px;color: #bfbfbf;vertical-align: middle;}
+.page-control span.next-disabled{display: inline-block;padding: 0 12px;color: #bfbfbf;vertical-align: middle;}
+.icon-ba:before,.icon-ba:after{
+    background: url('/img/index/icon.png') no-repeat;
+}
+.next-disabled:after {
+  display: inline-block;
+  content: '';
+  background-position: -541px -470px;
+  height: 20px;
+  width: 40px;
+  vertical-align: middle;
+}
+.disabled:before,.prevPage:before{
+    display: inline-block;
+    content: '';
+    background-position: -462px -470px;
+    height: 20px;
+    width: 40px;
+    vertical-align: middle;
+}
+.nextPage:after{
+  display: inline-block;
+  content: '';
+  background-position: -541px -470px;
+  height: 20px;
+  width: 40px;
+  vertical-align: middle;
+}
+
+

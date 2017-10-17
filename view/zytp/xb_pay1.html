@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>全部课程_IT/互联网|影视动漫|金融会计|职场能力_极视教育网</title>
+    <meta name="description" content="极视教育作为中国领先的游戏职业在线教育平台之一,国内第一家专注于游戏职业培训与发展的在线 教育平台。平台致力于构建“学习+实战+机遇”三元结构闭环的模式，携手企业与名师一 起帮助有职业培训需求的人才，并为企业提供人才储备的解决方案,拥有海量高清职业课程,涵盖20+个技术领域,如Android,iOS ,Unity3D,Java,Photoshop,Maya,3D MAX,独立游戏等视频教程.根据在线学习特点,极视教育推出职业学院,帮助学习者从零基础起步,结合实战案例演练,系统学习,助你快速成为优秀技术人才！">
+    <meta name="keywords" content="极视教育,职业教育,在线教育平台,在线教育,在线学习,职业培训,android,ios,Unity3D,java,Photoshop,Maya,3D MAX,独立游戏">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/zytp/xb_pay.css">
+    <style type="text/css">
+    .q-link-wrap{position: absolute;left: 0;top: 0;opacity: 0;}
+    </style>
+</head>
+<body>
+<div class="" include="/view/module/header.html"></div>
+<div class="top-img-wrap">
+    <div class="content-wrap">职业学院网上实战班服务报名</div>
+</div>
+<div class="content-wrap j_content_wrap">
+    <div class="stepbox step1"></div>
+
+    <div class="div-box">
+        <form action="" method="get" class="order-info">
+            <p>为保障您的正当权益，请如实填写！</p>
+            <ul class="">
+                <li class="clearfix">
+                    <div class="f-l l-wrap">姓名：</div>
+                    <div class="f-l r-wrap">
+                        <input class="j_name" type="text" value="" placeholder="请输入你的姓名">
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <div class="f-l l-wrap">联系电话<span>*</span>：</div>
+                    <div class="f-l r-wrap pos-r">
+                        <input data-type="tel" class="j_tel" type="text" value="" placeholder="请输入你的电话号码" maxlength="11">
+                        <span class="err" style="display:none"></span>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <div class="f-l l-wrap">QQ：</div>
+                    <div class="f-l r-wrap">
+                        <input class="j_qq" type="text" value="" placeholder="请输入你的常用QQ号码">
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <div class="f-l l-wrap">常用邮箱：</div>
+                    <div class="f-l r-wrap pos-r">
+                        <input data-type="email" class="j_email" type="text" value="" placeholder="请输入你的常用邮箱">
+                        <span class="err j_email_err" style="display:none"></span>
+                    </div>
+                </li>
+            </ul>
+            <a id="Js_QQWPA" href="javascript:;" class="zx f-r pos-r">
+                <span>有疑问，要咨询!</span>
+                <span class="q-link-wrap">
+                </span>
+            </a>
+            <div class="xy">
+                <input class="j_agreement_cb" type="checkbox" checked="checked">
+                <span>我已同意<a href="/view/info/serv_info.html?id=7" target="_blank">《职业学院网上服务协议》</a></span>
+            </div>
+
+            <input type="button" class="but-sure btn btn-bm j_applay" value="立即报名">
+        </form>
+    </div>
+</div>
+<div include="../module/footer.html"></div>
+<script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
+        <script>
+            BizQQWPA.addCustom({
+                aty: '0',
+                nameAccount: '800187260',
+                selector: 'Js_QQWPA'
+            });
+        </script>
+<script src="/js/vendor/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript">
+    var applyModule={
+        bindEvents:function(){
+            $('.zyxy').addClass("active");
+            var self=this,$wrap=$('.j_content_wrap');
+            $('.j_content_wrap').on('click','.j_agreement_cb',function(){
+                self.checkAgreementCheckbox();
+            });
+            $('.j_content_wrap').on('click','.j_applay',function(){
+                var $this=$(this);
+                var $j_email=$('.j_email'),email=$j_email.val();
+                if(email&&!self.checkInput($j_email)){
+                    return;
+                }
+                if(self.checkAgreementCheckbox()&&self.checkInput($('.j_tel'))){
+                    var classId=self.classId,
+                        jobMapId=self.jobMapId,
+                        email=$wrap.find('.j_email').val(),
+                        mobile=$wrap.find('.j_tel').val(),
+                        name=$wrap.find('.j_name').val(),
+                        qq=$wrap.find('.j_qq').val();
+                    self.applyClass({classId:classId,jobMapId:jobMapId,email:email,mobile:mobile,name:name,qq:qq});
+                }
+            });
+            $('body').on('focus','input',function(){
+                var $this=$(this);
+                mainModule.inputFocusHide($this);
+            });
+            $('body').on('blur','input',function(){
+                var $this=$(this);
+                self.checkInput($this);
+                mainModule.inputBlurShow($this);
+            });
+        },
+        checkInput:function($input){
+            var $this=$input,type=$this.data('type'),
+                val=$this.val(),$err=$this.next('.err');
+            switch(type){
+                case 'tel':
+                     return mainModule.testTel(val,$err);
+                break;
+                case 'email':
+                     return val&&mainModule.testEmail(val,$err);
+                break;
+            }
+        },
+        checkAgreementCheckbox:function($wrap){
+            var $wrap=$('.j_content_wrap'),
+                $checkbox=$wrap.find('.j_agreement_cb'),
+                checked=$checkbox.prop('checked');
+            if(!checked){
+                $checkbox.next().find('a').css('color','red');
+                return;
+            }
+            $checkbox.next().find('a').removeAttr('style');
+            return true;
+        },
+        applyClass:function(data){
+            var self=this;
+            mainModule.log('要提交的报名信息',data);
+            $.ajax({
+                type:'post',
+                data:data,
+                url:mainModule.uri.applyClass,
+                success:function(result){
+                    mainModule.log('申请小班接口',result);
+                    mainModule.httpInterceptor(result,function(result){
+                        // self.placeOrder(self.classId,function(result){
+                        //     window.location.href='/view/zytp/xb_pay2.html?orderId='+result.id;
+                        // })
+                        window.location.href='/view/vip/coursebuy.html?jobMapId='+self.jobMapId+'&classId='+self.classId;
+                    })
+                }
+            })
+        },
+        placeOrder:function(productId,callback){
+            $.ajax({
+                type: "get",
+                dataType: "json",
+                async:false,
+                url:mainModule.uri.placeOrderByClass,
+                data:{"productId":productId},
+                success: function (pl) {
+                    mainModule.log('生成订单',pl);
+                    if(pl.status== "SUCCESS"){
+                        result=pl.content;
+                        callback&&callback(result);
+                    }
+                    else{
+                        if(pl.content!=null){mainModule.showGlobalHintBar(pl.content[0].message); }
+                        else{mainModule.showGlobalHintBar(pl.message); }
+                    }
+                }
+            });
+        },
+        init:function(){
+            this.bindEvents();
+            this.classId=mainModule.getQueryValueByName('classId');
+            this.jobMapId=mainModule.getQueryValueByName('jobMapId');
+        }
+    };
+    applyModule.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+/*个人信息*/
+.infotopbox{ height:165px; background:url(../../img/info/mycoursebg.png) no-repeat; padding-top:36px;}
+.infotopbox img{ height:120px; width:120px; border:5px solid #fff; border-radius:65px; float:left; margin-right:30px; }
+.infotopright{ float:left; color:#fff; line-height:24px; padding-top:13px; font-size:14px; width:1020px;}
+.infotopright span.infotopuname{ font-size:30px; line-height:44px;}
+.infotopuname i{ display:inline-block; height:18px; width:18px;background:url(../../img/info/icon2.png) no-repeat -2px -2px; }
+/*订单*/
+.order-container{
+    margin: 20px auto;
+    width: 1200px;
+    min-height: 400px;
+}
+.order-container h2{
+    font-size: 24px;
+    line-height: 46px;
+    border-bottom: 2px solid #ff9001;
+    padding-left: 20px;
+}
+.order-tit{
+    border-bottom: 1px solid #ededed;
+    height: 50px;
+}
+.order-tit li{
+    margin:0 20px ;
+    font-size: 16px;
+    line-height: 46px;
+    color: #666;
+    float: left;
+    cursor: pointer;
+}
+.order-tit li:hover{
+      color: #ff9001;
+  }
+.order-tit li.active{
+    color: #ff9001;
+    border-bottom: 4px solid #ff9001;
+}
+.order-con{
+    margin:25px 20px;
+}
+.order-list{
+    border: 1px solid #ececec;
+    text-align: center;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.order-list:hover{
+    border: 1px solid #BABABA;
+}
+.order-list table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+
+}
+.order-list .order-col1{
+    width: 370px;
+    text-align: left;
+}
+.order-list .order-col2{
+    width: 260px;
+    text-align: center;
+}
+.order-list-tit{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #f5f5f5;
+    color: #666;
+}
+.order-list-tit .order-id{
+    margin-left: 25px;
+}
+.order-list-cnt{
+    width: 100%;
+}
+.order-list-cnt td{
+    padding: 10px;
+    line-height: 60px;
+    vertical-align: middle;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    border-color: #ececec;
+}
+.order-list-cnt td.order-list-td{
+    padding: 10px;
+    text-align: left;
+}
+.order-list-cnt .order-name{
+    line-height: 20px;
+}
+.order-list-cnt .price{
+    font-size: 16px;
+    color: #ff0000;
+}
+.order-list-cnt .original-price{
+    margin-left: 6px;
+    font-size: 12px;
+    color: #999;
+}
+.pdl-10{
+    padding-left: 10px;
+}
+.pay .orange-btn {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: #ff9001;
+    border-radius: 4px;
+    color: #fff;
+    margin-right:6px;
+    line-height: 16px;
+}
+.pay .orange-btn:hover{
+    background: #ffad43;
+}
+.pay .link {
+    color: #999999;
+    text-decoration: underline;
+}
+.pay .link:hover{
+    color: #ff9001;
+}

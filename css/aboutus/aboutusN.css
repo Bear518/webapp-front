@@ -1,0 +1,68 @@
+@charset "utf-8";
+.content{min-width:1160px}
+.banner { width:24%;background: url('/img/aboutus/bg.jpg') no-repeat ;  height:100%; padding:116px 3% 0; position:fixed; float:left; background-size:cover}
+.banner .logo{ height:130px; width:130px;background: url('/img/aboutus/icon2.png') no-repeat -8px -8px; display:block; margin:0 auto 20px}
+.banner h1{ font-size:44px; text-align:center; line-height:83px; color:#FFF}
+.banner p{ font-size:14px; line-height:26px; color:#fff}
+.btnbox{}
+.btnbox a{ display:block; height:48px; width:168px; border:1px solid #fff; color:#fff; text-align:center; font-size:18px; line-height:48px; border-radius:4px;margin:20px auto 0}
+.btnbox a:hover{ background-color:#ff9001; border-color:#ff9001}
+.cnttype{ width:148px; margin:20px auto 0}
+.cnttype a{ height:54px; width:54px;background: url('/img/aboutus/icon2.png') no-repeat ; display:block;   position:relative}
+.cnttype a#wx{ float:left; background-position:-166px -8px}
+.cnttype a#qq{ float:right; background-position:-242px -8px}
+.cnttype a i{ display:none; height:129px; width:128px;background: url('/img/aboutus/tm.png') no-repeat; position:absolute; top:60px; left:-43px; padding:22px 0 0 12px;}
+.cnttype a:hover i{ display:block}
+
+
+.cntway{ background-color:#fff; padding:24px 2%; position:relative; float:left; width:66%; margin-left:30%}
+.cntway h2{ line-height:60px; font-size:30px; color:#666; font-weight:normal}
+.cntway h2 span{ display:block; height:2px; border-bottom:1px solid #dbdbdb;border-top:1px solid #dbdbdb}
+.cntway_l{ margin-right:487px; padding-top:46px}
+.cntway_l li{ height:114px; background-color:#f5f5f5; margin-bottom:80px; padding:20px 0; line-height:24px}
+.cntway_l li:hover{ background-color:#FFF; box-shadow:1px 0px 5px rgba(0,0,0,0.1)}
+.titt{ width:17%; font-size:24px; line-height:30px; float:left; text-align:right}
+.titt span{font-size:16px; display:block; line-height:50px}
+.ico{width:28%; float:left; text-align:center }
+.ico i{ display:inline-block; height:147px; width:147px; background-color:#FFF; border-radius:85px; border:12px solid #FFF; margin-top:-27px}
+.cntway_l li:hover .ico i{ border-color:#f5f5f5}
+.intro{ width:52%; padding-right:3%; float:left}
+.intro a{ display:block; text-decoration:underline; color:#63b6c1}
+.intro dt{ width:39%; float:left;}.intro dd{ width:61%; float:left;}
+
+.mapbox{ width:430px; position:absolute; right:45px; top:133px}
+.busline{ padding-left:30px; color:#999; line-height:24px}
+.busline h4{ font-size:16px; line-height:30px; margin-top:20px; font-weight:normal; color:#666; position:relative}
+.busline h4 i{ display:block; height:17px; width:17px;background: url('/img/aboutus/icon2.png') no-repeat -310px -8px; top:8px; left:-30px; position:absolute}
+.busline h4 i.bus{ background-position: -344px -8px;}
+
+@media screen and (max-width:1812px) {
+.cntway_l{ margin:0}
+.mapbox{ position:static;}
+}
+@media screen and (max-width:1414px) {
+.banner { width:340px; padding:43px 36px 0}
+.cntway{ margin-left:412px; width:auto;}
+.banner .logo{ margin:0 0 5px 31%}
+.banner p{ line-height:22px}
+.btnbox a{ margin-top:15px; height:38px; line-height:38px}
+
+.cntway_l li{ margin-bottom:40px}
+.banner h1{ font-size:30px; line-height:60px}
+.cnttype a i{ top:54px}
+}
+#tk2 .tk_box{ width:780px; margin-left:-390px; text-align:left}
+.cntfrom{padding:15px 0; }
+.cntfrom h2{ text-align:center; font-weight:normal;color:#666}
+.cntfrom ul{ float:left; width:313px; padding-left:40px}
+.cntfrom .cntfrom_r{ float:left; width:307px;padding-left:40px}
+.info_l{ display:block; font-size:18px; line-height:50px; margin-top:10px}
+.info_l .yel{ color:#c90e0e}
+.cntfrom input,.cntfrom textarea{ height:33px; width:247px; border:1px solid #b5b5b5; padding:0 5px;border-radius:3px;}
+.cntfrom textarea{ height:220px; width:317px; padding:5px}
+.btnbox2{ background-color:#ffffff; padding:30px 0 30px 325px; clear:both; height:34px }
+.btnbox2 a{height:34px; width:136px;background:#ff9001; display:block;box-shadow:0 2px 0 #b06300;border-radius:5px; color:#fff; line-height:34px; text-align:center; font-size:16px;transition:0.2s;}
+.btnbox2 a:hover{margin-top:2px; box-shadow:0 0 0 #d77900; }
+.cntfrom .info_r .err{ color:#F00; margin-left:10px; font-size:14px; display:none}
+
+

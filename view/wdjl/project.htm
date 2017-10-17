@@ -1,0 +1,65 @@
+<style type="text/css">
+	.r-wrap .project-txt-wrap{width: 105px;text-align: right;white-space: nowrap;}
+	.r-wrap .project-wrap ul>li{margin-bottom: 16px;}
+</style>
+<div id="j_project_wrap" class="item-wrap project-wrap">
+	<div ng-if="shadeInfo.projectInfoShow" class="shade-wrap"></div>
+	<div class="clearfix header-wrap">
+		<div class="f-l title-wrap">
+			<i class="i-sprite i-project"></i>
+			<div class="item-txt">项目经验</div>
+		</div>
+		<div class="f-r"><i ng-click="changeShade('projectInfo')" data-id="#j_project_wrap" class="i-sprite i-add"></i></div>
+	</div>
+	<div class="detail-wrap project-detail-wrap">
+		<table class="default-wrap">
+			<thead><tr><th>项目名称</th><th>参与时间</th><th>担任职务</th><th></th></tr></thead>
+			<tbody>
+				<tr ng-repeat="item in projectList"><td ng-bind="item.name"></td><td><label ng-bind="item.startDate|dateFormatToMonth"></label><span ng-bind="item.endDate|isShowZhi"></span><label ng-bind="item.endDate|dateFormatToMonth"></label></td><td ng-bind="item.role"></td><td><span ng-click="infoEdit(item,'project_edit')" class="mrg-r10 mrg-l20">编辑</span><span ng-click="infoDel(item,'project_del',$index)">删除</span></td></tr>
+			</tbody>
+		</table>
+		<div class="edit-wrap">
+			<ul>
+				<li class="clearfix">
+					<div class="mrg-r38 project-txt-wrap f-l"><i class="i-sprite i-require"></i>参与时间</div>
+					<div class="f-l"><input ng-model="projectInfo.startYear" type="text" class="input-default w70 mrg-r5">年
+						<input ng-model="projectInfo.startMonth" type="text" class="input-default w70 mrg-r5 mrg-l5">月
+						<span class="mrg-l5 mrg-r5">至</span>
+					<input ng-model="projectInfo.endYear" type="text" class="input-default w70 mrg-r5 mrg-l5">年
+					<input ng-model="projectInfo.endMonth" type="text" class="input-default w70 mrg-r5 mrg-l5">月
+					<input ng-model="projectInfo.asYet" type="checkbox" class="mrg-l10 mrg-r5"><span ng-click="toNowClick('project_tonow')">至今</span><span class="err mrg-l5" ng-bind="projectInfoErr.startDate"></span><span ng-if="!projectInfoErr.startDate" class="err mrg-l5" ng-bind="projectInfoErr.endDate"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 project-txt-wrap f-l"><i class="i-sprite i-require"></i>项目名称</div>
+					<div class="f-l"><input ng-model="projectInfo.name" type="text" class="input-default w228 mrg-r5"><span class="err mrg-l10" ng-bind="projectInfoErr.name"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 project-txt-wrap f-l"><i class="i-sprite i-require"></i>项目角色</div>
+					<div class="f-l"><input ng-model="projectInfo.role" type="text" class="input-default w228"><span class="err mrg-l10" ng-bind="projectInfoErr.role"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 project-txt-wrap f-l"><i class="i-sprite i-require"></i>团队规模</div>
+					<div class="f-l"><select ng-init="projectInfo.scale=teamScaleData[0]" ng-model="projectInfo.scale" ng-options="item for item in teamScaleData" class=""></select><span class="err mrg-l10" ng-bind="projectInfoErr.scale"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 project-txt-wrap f-l">项目描述</div>
+					<div class="f-l"><textarea ng-keydown="enterToNewLine(this)" ng-model="projectInfo.description" class="textarea w545"></textarea></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 project-txt-wrap f-l h20"></div>
+					<div class="f-l">
+						<div class="clearfix mrg-t20 h34">
+							<div class="f-l">
+								<input ng-disabled="disabledInfo.projectInfoUpdateBtnDisabled" ng-click="projectInfoSave('#j_project_wrap')" type="button" class="but but-shadow but-animation w95" value="保存">
+							</div>
+							<div class="f-l">
+								<input ng-click="cancelUpdate('project_update_cancel')" type="button" data-id="#j_project_wrap" class="but but-cancel but-shadow but-animation mrg-l80 w95" value="取消">
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+	</div>
+</div>

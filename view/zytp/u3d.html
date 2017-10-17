@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>职业详情</title>
+    <meta name="description" content="极视教育作为中国最大职业在线教育平台之一,国内第一家专注于游戏职业培训与发展的在线 教育平台。平台致力于构建“学习+实战+机遇”三元结构闭环的模式，携手企业与名师一 起帮助有职业培训需求的人才，并为企业提供人才储备的解决方案,拥有海量高清职业课程,涵盖20+个技术领域,如Android,iOS ,Unity3D,Java,Photoshop,Maya,3D MAX,独立游戏等视频教程.根据在线学习特点,极视教育推出职业学院,帮助学习者从零基础起步,结合实战案例演练,系统学习,助你快速成为优秀技术人才！"/>
+    <meta name="keywords" content="极视教育,职业教育,在线教育平台,在线教育,在线学习,职业培训,android,ios,Unity3D,java,Photoshop,Maya,3D MAX,独立游戏"/>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/zytp/zytp.css">
+    <style type="text/css">
+/*课程列表样式*/
+.course-list-wrapper .item-wrap{width: 225.6px;height: 213px;padding: 0;}
+.course-list-wrapper .item-wrap:hover{box-shadow: 0 5px 6px 2px rgba(0,0,0,0.1);-moz-box-shadow: 0 5px 6px 2px rgba(0,0,0,0.1);}
+.course-list-wrapper .item-wrap .name-wrap{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.course-list-wrapper .item-wrap:hover .name-wrap{color: #ff9001;}
+.course-list-wrapper .item-wrap .img-wrap{width:224px;height:126px;background: #eee;overflow: hidden;position: relative;}
+.img-wrap span{position: absolute;padding: 2px 5px;right: 5px;color: #fff;background: #00c570}
+.course-list-wrapper .item-wrap .detail-wrap{padding:12px 6px;}
+.course-list-wrapper .item-wrap .origin-price{text-decoration: line-through;margin-left: 12px;font-size: 12px;color: #999;}
+.mrg-r18{margin-right: 18px;}.mrg-r35{margin-right: 35px;}
+.course-list-wrapper .i-people{background-position: -551px -51px;}
+.fs12{font-size: 12px;color: #666;}
+.fs16{font-size: 16px;}
+.c3{color: #333;}
+.ce2{color: #e30202;}
+.c2d{color: #21a76d}.cf1{color: #ff9001;}.cf1-fs16{color: #ff9001;font-size: 16px;}
+.mrg-b18{margin-bottom: 18px;}
+/*课程列表样式*/
+/*关卡样式*/
+.level-wrap{border-left: 2px solid #ddd;}
+.level-wrap h5{font-weight: bold;color: #333;cursor: pointer;}
+.level-wrap h5:hover{color: #ff9001;}
+
+.level-wrap dt>p{padding: 25px 0;}
+.level-wrap>li{padding:0 0 20px 38px;position: relative;}
+.level-wrap>li.completed{border-left: 2px solid #00c570;margin-left: -2px;}
+.course-list-wrapper{padding-bottom: 20px;border-bottom: 1px solid #eee;}
+.level-wrap .i-state-icon{background: url('/img/zytp/110.png') no-repeat;display: inline-block;width: 20px;height: 20px;position: absolute;left: -11px;top:-1px;}
+.level-wrap .i-finished{background-position: -6px -5px;}
+.level-wrap .i-learning{background-position: -35px -5px;}
+.level-wrap>li.current .i-default{background-position: -35px -5px;}
+.level-wrap>li.completed .i-default{background-position: -6px -5px;}
+.level-wrap>li .course-list-wrapper>ul{height: 0;overflow: hidden;}
+/*.level-wrap>li.active .course-list-wrapper>ul{height: auto;}*/
+.level-wrap>li.active h5{color: #ff9001}
+
+.level-wrap .i-default{background-position: -64px -5px;}
+
+.service-time-wrap{position: absolute;background: #dcf3e9;font-size: 13px;color: #333;left: 385px;padding: 0 16px;border-radius: 41px;white-space: pre-wrap;}
+.work-time-wrap{position: absolute;font-size: 13px;color: #333;left: 250px;background: #ffec05;padding: 0 16px;border-radius: 41px;white-space: pre-wrap;}
+.level-wrap .bg-c01{background: #01c571;}
+/*关卡样式*/
+
+    </style>
+</head>
+<body>
+<div include="/view/module/header.html"></div>
+<div class="banner">
+    <div class="warpper">
+    <div class="crumbs"><a href="/">首页</a>  >  <a href="/view/zytp/list.html">职业学院</a>  >  <span class="tpname"></span></div>
+    </div>
+
+    <div class="warpper tp_top">
+        <div id="j_map_video_wrap" class="videobox"></div>
+        <div class="introbox share-wrap">
+        <!--
+        <h3>测试课程</h3>
+        <div class="kwlist"><ul><li>基础语言</li><li>初级</li></ul>
+        <span><a href="#" class="fx"><i class="ico_fx"></i><b></b><div class="share-wrap2"><span><i data-type="sina" class="i-icon i-size i-sina share-item"></i><i data-type="qqzone" class="i-icon i-size i-qq share-item"></i><i data-type="wx" class="i-icon i-size i-wx share-item wxdj"></i></span></div></a><a href="#" class="sc"><i class="ico_sc on"></i><b>3</b></a></span></div>
+        <div class="intro_wd">自Unity4.6版本开始至今，Unity中新的UGUI系统已经相当成熟，其在功能和易用性上一点也不逊于NGUI（Unity上一款流行的第三方UI插件）。使用最新的UGUI可以方便快速地建立UI界面。本门课程讲解了UGUI功能的实际操作，学员能更容易理解。
+</div>
+        <ul class="infolist"><li class="learn"><i></i><span>66668</span><b></b></li><li class="zan"><i></i><span>8门课程</span><b></b></li><li class="ks"><i></i><span>0课时</span><b></b></li><li class="times"><i></i><span>1小时</span><b></b></li><li class="genx"><i></i><span>已完结</span></li></ul>
+        
+        <div class="dzbox1 hasclass"><span class="sevtime">（班级服务时间：2016/09/20—2017/05/09）</span><a href="javascript:void(0);" class="addclass">报名小班</a><a href="javascript:void(0);" class="addplan">加入学习</a></div>-->
+        </div>
+        <div style="" id="wemcn" class="wemcn">            
+            <div class="ewmDiv clearfix" id="ewm">
+            <div class="rwmtext">
+                    <p>分享至微信</p> 
+                </div>
+                <img src="" class="ewmimg" id="ewmimg">
+                
+            </div> 
+            <a id="ewmkg" href="javascript:void(0)"></a>
+            
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="introinfo_main"> 
+    <div class="warpper">
+        <div class="jobbox clearfix" id="job1" style="display:none">
+        <h4 class="titlebox"><i></i>推荐职位</h4>
+            <ul class="joblist">
+                <!--li>
+                  <a href="#">
+                    <div class="jobtitle">移动社交网站助理</div>
+                    <div class="jobinfo">
+                    <span class="company">宁波极视文化科技有限公司</span>
+                    <span class="address"><i></i>上海</span>
+                    <span class="time">2016-01-01</span>
+                    <span class="price">¥2000-4000</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="jobtitle">移动社交网站助理</div>
+                    <div class="jobinfo">
+                    <span class="company">宁波极视文化科技有限公司</span>
+                    <span class="address"><i></i>上海</span>
+                    <span class="time">2016-01-01</span>
+                    <span class="price">¥2000-4000</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="jobtitle">移动社交网站助理</div>
+                    <div class="jobinfo">
+                    <span class="company">宁波极视文化科技有限公司</span>
+                    <span class="address"><i></i>上海</span>
+                    <span class="time">2016-01-01</span>
+                    <span class="price">¥2000-4000</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="jobtitle">移动社交网站助理</div>
+                    <div class="jobinfo">
+                    <span class="company">宁波极视文化科技有限公司</span>
+                    <span class="address"><i></i>上海</span>
+                    <span class="time">2016-01-01</span>
+                    <span class="price">¥2000-4000</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="jobtitle">移动社交网站助理</div>
+                    <div class="jobinfo">
+                    <span class="company">宁波极视文化科技有限公司</span>
+                    <span class="address"><i></i>上海</span>
+                    <span class="time">2016-01-01</span>
+                    <span class="price">¥2000-4000</span>
+                    </div>
+                  </a>
+                </li-->
+            </ul>
+        </div>
+        <div class="introinfo_tab">
+            <div class="center clearfix">
+          <a id="wiki" class="" href="javascript:void(0);" >详情介绍</a>
+          <a id="catlog" href="javascript:void(0);">学习路径</a>
+          <a style="display:none;" id="j_live_list_wrap"  href="javascript:;">实战直播</a>
+          <a id="sclass" href="javascript:void(0);">作业考核</a>
+          </div>
+        </div>
+        <div class="introinfo_content">
+            <style type="text/css">
+            .bd-e{border:1px solid #eeeeee;}
+            .introinfo_content .tc{text-align: center;}
+            .introinfo_content .bar-bg{background: url('/img/zytp/1.1.1/104.jpg') no-repeat;font-size: 18px;color: #fff;width: 1200px;height: 40px;line-height: 40px;}
+
+            .introinfo_content .img-wrap{width: 320px;height: 178px;overflow: hidden;background: #ccc;margin-right: 60px;}
+            .introinfo_content .img-wrap img{width: 100%;height: auto;}
+            .introinfo_content .s-header{padding: 38px 160px 36px;}
+            .introinfo_content .rc-wrap h5{font-size: 24px;color: #333;}
+            .introinfo_content .rc-wrap p{font-size: 14px;color: #333;width: 442px;max-height: 42px;overflow: hidden;}
+            .introinfo_content .rc-wrap .time{font-size: 16px;color: #f10000;padding: 16px 0;}
+            .mrg-t16{margin-top: 16px;}.mrg-t12{margin-top: 12px;}
+            .introinfo_content .rc-wrap .btn-go-live{width: 140px;height: 38px;background: #dcdcdc;font-size: 16px;line-height: 38px;border-radius: 5px;text-align: center;cursor: pointer;}
+            .introinfo_content .rc-wrap .btn-go-live:hover{background: #ff9001;color: #fff;}
+            .mrg-r50{margin-right: 50px;}
+            .introinfo_content .tab-wrap{display: flex;justify-content:center;cursor: pointer;}
+            .introinfo_content .tab-wrap .active{border-bottom: 4px solid #ff9001;height: 36px;}
+            .introinfo_content .tab-wrap li:hover{border-bottom: 4px solid #ff9001;height: 36px;}
+
+
+            .live-data-grid table{border-spacing: 0;width: 100%;padding:20px 0 40px;color: #666;}
+            .live-data-grid table tr{line-height: 33px;margin-top: 20px;}
+            .live-data-grid table tr:hover{background: #feecd8;}
+            .live-data-grid table tr:hover .btn-playback{display: inline-block;}
+
+
+            .live-data-grid table .td1{width: 133px;text-align: center;padding-left: 155px;}
+            .live-data-grid table .td2{width: 530px;}
+            .live-data-grid table .td3{color: #b2b2b2;}
+            .live-data-grid .btn-playback{display: none;width: 73px;height: 28px;line-height: 28px;background: #ff9001;color: #fff;text-align: center;border-radius: 5px;cursor: pointer;}
+            .live-data-grid .time-wrap{margin-left: 32px;position: relative;}
+            .live-data-grid .time-wrap .btn-playback{position: absolute;top: -5px;left: 0;}
+
+            .downld .nodata{ display:block; text-align:center; padding:100px 0; color:#666;}
+            .downld li{ line-height:30px; padding:9px 0 9px 180px;}
+            .downld li .dicon{ float:left; height:30px; width:30px; background: url(../../img/lessonintro/couricon.png) no-repeat -376px -89px; margin: 0 30px;}
+            .downld li .dname{ float:left; width:500px}
+            .downld li .dif{float:left; width:150px}
+            .downld li a i{ display:inline-block; height:30px; width:20px;background: url(../../img/lessonintro/couricon.png) no-repeat -437px -88px; vertical-align:middle}
+            .downld li a:hover i{background: url(../../img/lessonintro/couricon.png) no-repeat -413px -88px;}
+            .hidden{visibility: hidden;}
+            </style>
+            <div style="display:none;" id="j_live_list_wrap" class="bd-e j_live_list_wrap">
+                <div class="tc bar-bg">最近直播</div>
+                <div class="s-header clearfix">
+                    <div class="f-l img-wrap"><img src=""></div>
+                    <div class="f-l rc-wrap">
+                        <h5>上独领风骚老骥伏枥是觉得冯绍峰</h5>
+                        <p class="mrg-t12">ajdl三六九等放辣椒失联飞机阿里健康受到粉丝的见风使舵发ajdl三六九等放辣椒失联飞机阿里健康受到粉丝的见风使舵发</p>
+                        <div class="time">直播时间：12月22日 19:00-20:00</div>
+                        <div><input type="button" class="btn-false btn-go-live" value="进入直播"></div>
+                    </div>
+                </div>
+                <div class="bar-bg"><ul class="clearfix tab-wrap"><li class="f-l active mrg-r50">直播目录</li><li class="f-l">资料下载</li></ul></div>
+                <div class="live-data-grid c_live_list">
+                    <table>
+                        <tr><td class="td1">直播一</td>
+                            <td class="td2">阿娇分手了就放手的见风使舵发</td>
+                            <td class="td3">2017-02-25 18:00<span class="time-wrap">
+                                <span><i></i>17:56</span>
+                                <span class="btn-playback">回放</span>
+                            </span></td>
+                        </tr>
+                        <tr><td class="td1">直播一</td>
+                            <td class="td2">阿娇分手了就放手的见风使舵发</td>
+                            <td class="td3">2017-02-25 18:00<span class="time-wrap">
+                                <span><i></i>17:56</span>
+                                <span class="btn-playback">回放</span>
+                            </span></td>
+                        </tr>
+                        <tr><td class="td1">直播一</td>
+                            <td class="td2">阿娇分手了就放手的见风使舵发</td>
+                            <td class="td3">2017-02-25 18:00<span class="time-wrap">
+                                <span><i></i>17:56</span>
+                                <span class="btn-playback">回放</span>
+                            </span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="display:none;" class="c_download">
+                    <ul class="downld">
+                        <li><i class="dicon"></i><span class="dname">索朗多吉谁的风景</span><span class="dif">2323mb</span><a id="" href="javascript:;"><i></i>下载</a></li>
+                    </ul>
+                </div>
+            </div>
+          <div class="catlog clearfix" style="display:none">
+            <ul class="level-wrap j_level_wrap img-hover-bigger">
+
+            </ul>
+            <ul class="gqul">
+            <li>
+
+            </li>            
+            <!--li class="gqli float_l over"><i class="gqarr"></i><a class="gqlia" href="#"><span class="mul">1</span><span class="title">IOS应用程序</span></a><span class="zb_info">最近直播：8-30 18:30~20:00</span>
+            <div class="gq_info"><i class="arr"></i>
+                <h5>简介</h5>
+                <p>自Unity4.6版本开始至今，Unity中新的UGUI系统已经相当成熟。</p>
+                <h5>课程</h5>
+                <ul>
+                <li class="pas"><i></i><a href="#">课程发送到发送</a></li>
+                <li><i></i><a href="#">课程发送到发送</a></li>
+                <li><i></i><a href="#">课程发送到发送</a></li>
+                <li><i></i><a href="#">课程发送到发送</a></li>
+                </ul>
+                <div class="zhibo">
+                <span>辅导时间:2016-8-30至2016-9-30</span>
+                <span>直播时间:2016-8-30 18:30~20:00</span>
+                <span>直播时间:2016-9-30 18:30~20:00</span>
+                </div>
+            </div>
+            </li>
+            <li class="gqli float_l over"><i class="gqarr"></i><a class="gqlia" href="#"><span class="mul">2</span><span class="title">IOS应用程应用程序</span></a><span class="zb_info">最近直播：8-30 18:30~20:00</span></li>
+            <li class="gqli float_l on"><i class="gqarr"></i><a class="gqlia" href="#"><span class="mul">3</span><span class="title">IOS应用程序</span></a><span class="zb_info">最近直播：8-30 18:30~20:00</span></li>
+            <li class="gqli float_l"><i class="gqarr"></i><a class="gqlia" href="#"><span class="mul">4</span><span class="title">IOS应用程应用程序</span></a><span class="zb_info">最近直播：8-30 18:30~20:00</span></li>
+            <li class="gqli float_l"><i class="gqarr site"></i><a class="gqlia" href="#"><span class="mul">5</span><span class="title">IOS应用程序</span></a><span class="zb_info">最近直播：8-30 18:30~20:00</span></li>
+            <li class="gqli float_r"><i class="gqarr"></i><a class="gqlia" href="#"><span class="mul">6</span><span class="title">IOS应用程应用程序</span></a><span class="zb_info">最近直播：8-30 18:30~20:00</span></li>
+            <li class="gqli float_r"><i class="gqarr"></i><a class="gqlia" href="#"><span class="mul">7</span><span class="title">IOS应用程序</span></a><span class="zb_info">最近直播：8-30 18:30~20:00</span></li>
+            <li class="gqli float_r"><i class="gqarr"></i><a class="gqlia" href="#"><span class="mul">8</span><span class="title">IOS应用程应用程序</span></a><span class="zb_info">最近直播：8-30 18:30~20:00</span></li>
+            <li class="gqli float_r"><i class="gqarr"></i><a class="gqlia" href="#"><span class="mul">9</span><span class="title">IOS应用程序</span></a><span class="zb_info">最近直播：8-30 18:30~20:00</span></li>
+            <li class="gqli float_r"><i class="gqarr site"></i><a class="gqlia" href="#"><span class="mul">10</span><span class="title">IOS应用程应用程序</span></a><span class="zb_info">最近直播：8-30 18:30~20:00</span></li>
+            <li class="gqli float_l"><i class="gqarr"></i><a class="gqlia" href="#"><span class="mul">11</span><span class="title">IOS应用程序</span></a><span class="zb_info">最近直播：8-30 18:30~20:00</span></li>
+            <li class="gqli float_l"><i class="gqarr"></i><a class="gqlia" href="#"><span class="mul">12</span><span class="title">IOS应用程应用程序</span></a><span class="zb_info">最近直播：8-30 18:30~20:00</span></li-->
+            </ul>
+          </div>
+          <div class="wiki" style="display:none">
+            
+          </div> 
+          <div class="sclass" style="display:none">
+            <div class="class_kh dis_none j_class_kh">
+                <h5>考核成绩</h5>
+                <div class="sc_con testlist clearfix">
+                  <ul>
+                    <!-- <li class="tg">
+                        <div class="testitem-wrap">
+                            <div class="testitem">
+                                <h6>3是地方</h6>
+                                <div class="t-wrap"><div>善良的肌肤设计的发上的浪费精神的</div></div>
+                                <div class="a-wrap"><a href="javascript;" >前往考核</a></div>
+                            </div>
+                        </div>
+                        <div class="fs12 tc l14">提交截止时间：2017-02-24 10:13</div>
+                        <div class="fs12 tc l14">成绩公布时间：2017-02-24 10:13</div>
+                    </li> -->
+                    <!--li>
+                        <div class="testitem"><i>关卡<br>1</i> 
+                        <h6>未提交</h6>                        
+                        <span>提交截止时间：2016-9-20 13:10</span>
+                        <span>成绩公布时间：2016-9-27 13:10</span>
+                        </div>
+                    </li>
+                    <li class="tg">
+                        <div class="testitem"><i>关卡<br>2</i> 
+                        <h6>得分：98</h6>
+                        <span>（满分100分）</span>
+                        <span>提交截止时间：2016-9-20 13:10</span>
+                        <span>成绩公布时间：2016-9-27 13:10</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="testitem"><i>关卡<br>1</i> 
+                        <h6>未提交</h6>                        
+                        <span>提交截止时间：2016-9-20 13:10</span>
+                        <span>成绩公布时间：2016-9-27 13:10</span>
+                        </div>
+                    </li>
+                    <li class="tg">
+                        <div class="testitem"><i>关卡<br>2</i> 
+                        <h6>得分：98</h6>
+                        <span>（满分100分）</span>
+                        <span>提交截止时间：2016-9-20 13:10</span>
+                        <span>成绩公布时间：2016-9-27 13:10</span>
+                        </div>
+                    </li>
+                    <li class="by">
+                        <div class="testitem"><i>毕业<br>考核</i> 
+                        <h6>未提交</h6>                        
+                        <span>提交截止时间：2016-9-20 13:10</span>
+                        <span>成绩公布时间：2016-9-27 13:10</span>
+                        </div>
+                    </li>
+                    <li class="by tg">
+                        <div class="testitem"><i>毕业<br>考核</i> 
+                        <h6>得分：98</h6>
+                        <span>（满分100分）</span>
+                        <span>提交截止时间：2016-9-20 13:10</span>
+                        <span>成绩公布时间：2016-9-27 13:10</span>
+                        </div>
+                    </li-->
+                  </ul>
+                </div>
+                <h5>总成绩</h5>
+                <div class="sc_con lasttest clearfix">
+                  <!--div class="lastt_item">
+                    <h6>未公布</h6>
+                    <span>成绩公布时间：2016-9-27 13:10</span>
+                  </div>
+                  <div class="lastt_item tj">
+                    <h6>98分</h6>
+                    <span>（满分100分）</span>                    
+                    <span class="mf">成绩公布时间：2016-9-27 13:10</span>
+                  </div-->
+                </div>
+            </div>
+          </div>         
+         </div>
+    </div>
+</div>
+<div class="introinfo clearfix" style="display:none" id="job2">
+    <div class="warpper">               
+     <div class="courbagbar clearfix" style="display:none">    
+        <h4 class="titlebox"><i></i>所属课程组合</h4>
+        <div class="courbagcon">
+        <div class="lessonbar">
+            <div class="lessonimg-box img-hover-bigger">
+                <a href="" target="_blank">
+                    <img src="../../img/lessonintro/qy.jpg" class="lessonimg">
+                </a>
+
+                <div class="lesson-class">
+                    <span>9</span><br>课程<br>
+                    <i></i>
+                </div>
+            </div>
+            <div class="lesson-infor">
+                <h2 class="lesson-info-h2"><a href="" target="_blank">LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                
+            </div>
+        </div>
+        <div class="lessonbar">
+            <div class="lessonimg-box img-hover-bigger">
+                <a href="" target="_blank">
+                    <img src="../../img/lessonintro/qy.jpg" class="lessonimg">
+                </a>
+
+               
+            </div>
+            <div class="lesson-infor">
+                <h2 class="lesson-info-h2"><a href="" target="_blank">LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                
+            </div>
+        </div>
+        </div>
+     </div>     
+    <div class="jobbox clearfix">
+    <h4 class="titlebox"><i></i>推荐职位</h4>
+        <ul class="joblist">
+            <!--li>
+              <a href="#">
+                <div class="jobtitle">移动社交网站助理</div>
+                <div class="jobinfo">
+                <span class="company">宁波极视文化科技有限公司</span>
+                <span class="address"><i></i>上海</span>
+                <span class="time">2016-01-01</span>
+                <span class="price">¥2000-4000</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="jobtitle">移动社交网站助理</div>
+                <div class="jobinfo">
+                <span class="company">宁波极视文化科技有限公司</span>
+                <span class="address"><i></i>上海</span>
+                <span class="time">2016-01-01</span>
+                <span class="price">¥2000-4000</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="jobtitle">移动社交网站助理</div>
+                <div class="jobinfo">
+                <span class="company">宁波极视文化科技有限公司</span>
+                <span class="address"><i></i>上海</span>
+                <span class="time">2016-01-01</span>
+                <span class="price">¥2000-4000</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="jobtitle">移动社交网站助理</div>
+                <div class="jobinfo">
+                <span class="company">宁波极视文化科技有限公司</span>
+                <span class="address"><i></i>上海</span>
+                <span class="time">2016-01-01</span>
+                <span class="price">¥2000-4000</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="jobtitle">移动社交网站助理</div>
+                <div class="jobinfo">
+                <span class="company">宁波极视文化科技有限公司</span>
+                <span class="address"><i></i>上海</span>
+                <span class="time">2016-01-01</span>
+                <span class="price">¥2000-4000</span>
+                </div>
+              </a>
+            </li-->
+        </ul>
+    </div>        
+    </div>
+</div>
+<div class="adsite">
+    <span class="adbg2"></span>
+    <span class="adprc">
+    
+    </span>
+    <b class="arr"></b>
+</div>
+<div class="adbottom">
+  <div class="flybox">
+    <span class="adbgcolor"></span>
+    <div class="warpper">
+        <i class="iconfont" id="tkcls">&#xe604;</i>
+        <span class="adbg"></span>
+        <span class="adprc"></span>
+        <p>加入线上实战班免费学习所有课程，还可享受一线资深讲师专门实战指导服务</p>
+        <a href="javascript:;" class="addclass">立即购买</a>
+        <a href="javascript:;" class="zx" id="Js_QQWPA"><i></i>我要咨询</a>
+        
+    </div>
+  </div>
+</div>
+<div include="/view/module/footer.html"></div>
+
+</body>
+
+
+<script src="../../js/vendor/jquery-1.9.0.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/zytp/zytp.js"></script>
+<script src="../../js/jquery.timeago.js" type="text/javascript"></script>
+<script src="../../js/common/share.js"></script>
+<script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
+<script type="text/javascript" src="/js/zytp/live-list.js"></script>
+<script>
+    BizQQWPA.addCustom({
+        aty: '0',
+        nameAccount: '800187260',
+        selector: 'Js_QQWPA'
+    });
+</script>
+<script type="text/javascript" data-main="/view/player/js-built/main.js" src="/js/vendor/require.js"></script>
+</html>

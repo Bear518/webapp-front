@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>全部课程_专注游戏开发_极视教育网</title>
+        <meta name="description" content="极视教育作为中国领先的游戏职业在线教育平台之一,国内第一家专注于游戏职业培训与发展的在线 教育平台。平台致力于构建“学习+实战+机遇”三元结构闭环的模式，携手企业与名师一 起帮助有职业培训需求的人才，并为企业提供人才储备的解决方案,拥有海量高清职业课程,涵盖20+个技术领域,如Android,iOS ,Unity3D,Java,Photoshop,Maya,3D MAX,独立游戏等视频教程.根据在线学习特点,极视教育推出职业图谱,帮助学习者从零基础起步,结合实战案例演练,系统学习,助你快速成为优秀技术人才！">
+        <meta name="keywords" content="极视教育,职业教育,在线教育平台,在线教育,在线学习,职业培训,android,ios,Unity3D,java,Photoshop,Maya,3D MAX,独立游戏">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link rel="stylesheet" href="/css/main.css">
+        <style type="text/css">
+        .header-container{border-bottom: 1px solid #f8f8f8;}
+        .select-wrapper .title-wrap{padding-top: 25px;height: 56px;border-bottom: 2px solid #ff9001;}
+        .select-wrapper .title-wrap label{font-size: 18px;color: #333;font-weight: bold;margin-right: 20px;}
+        .select-wrapper .title-wrap span{color: #333;}
+        .select-wrapper .option-wrap{color: #333;padding: 20px 50px;}
+        .select-wrapper .option-wrap label{font-weight: bold;font-size: 14px;color: #333;}
+        .select-wrapper .option-wrap span{margin-left:42px;padding: 4px 14px;display: inline-block;}
+        .select-wrapper .option-wrap span.active{color: #fff;background: #ff9001;border-radius: 5px;}
+        .select-wrapper .option-wrap span:hover{color: #fff;background: #ff9001;border-radius: 5px;cursor: pointer;}
+        .select-wrapper .direction-wrap,.select-wrapper .sort-wrap{border-bottom: 1px solid #d1d1d1;}
+        .body-container .select-wrapper{background: #f8f8f8;}
+        .select-wrapper .fenglei-r-wrap{width: 940px;height: auto;}
+        /*方向、分类样式*/
+
+        .body-container .level-select-wrapper{padding: 26px 0;}
+        .body-container .level-option-wrapper span{cursor: pointer;}
+        .body-container .level-option-wrapper span:hover .i-checkbox{background-position: -706px -52px;}
+        .body-container .i-checkbox{background-position:-673px -52px;width: 26px;}
+        .body-container .i-active-checkbox{background-position: -706px -52px;}
+
+        .body-container .i-line{background-position: -506px -46px;}
+
+        /*课程列表样式*/
+        .course-list-wrapper .item-wrap{width: 225.6px;height: 213px;}
+        .course-list-wrapper .item-wrap:hover{box-shadow: 0 5px 6px 2px rgba(0,0,0,0.1);-moz-box-shadow: 0 5px 6px 2px rgba(0,0,0,0.1);}
+        .course-list-wrapper .item-wrap .name-wrap{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+        .course-list-wrapper .item-wrap:hover .name-wrap{color: #ff9001;}
+        .course-list-wrapper .item-wrap .img-wrap{width:224px;height:126px;background: #eee;overflow: hidden;position: relative;}
+        .course-list-wrapper .item-wrap .detail-wrap{padding:12px 6px;}
+        .course-list-wrapper .item-wrap .origin-price{text-decoration: line-through;margin-left: 12px;font-size: 12px;color: #999;}
+        .mrg-r18{margin-right: 18px;}.mrg-r35{margin-right: 35px;}
+        .course-list-wrapper .i-people{background-position: -551px -51px;}
+        .fs12{font-size: 12px;color: #666;}
+        .fs16{font-size: 16px;}
+        .c3{color: #333;}
+        .ce2{color: #e30202;}
+        .c2d{color: #21a76d}.cf1{color: #ff9001;}.cf1-fs16{color: #ff9001;font-size: 16px;}
+        .mrg-b18{margin-bottom: 18px;}
+        /*课程列表样式*/
+        #j_order_wrap span:hover{color: #ff9001;cursor: pointer;}
+        </style>
+    </head>
+    <body>
+        <div class="" include="/view/module/header.html"></div>
+        <div class="body-container">
+            <div class="select-wrapper">
+                <div class="content-wrapper">
+                    <div class="title-wrap"><label>全部课程</label><span id="j_course_total"></span></div>
+                    <div id="j_direction_wrap" class="option-wrap direction-wrap clearfix">
+                        <!-- <div class="f-l"><label>方向：</label><span>全部</span></div>
+                        <div class="f-l fenglei-r-wrap"><span class="active">程序</span></div> -->
+                        <div>加载数据中...</div>
+                    </div>
+                    <div id="j_sort_wrap" style="display:none;" class="option-wrap sort-wrap clearfix">
+                        <!-- <div class="f-l"><label>分类：</label><span>全部</span></div>
+                        <div class="f-l fenglei-r-wrap"></div> -->
+                        <div>加载数据中...</div>
+                    </div>
+                    <div id="j_level_wrap" class="option-wrap"><label>难度：</label><span id="j_level_all">全部</span>
+                        <span data-value="1">初级</span><span data-value="2">中级</span><span data-value="3">高级</span></div>
+                </div>
+            </div>
+            <div class="level-select-wrapper">
+                <div class="content-wrapper clearfix">
+                    <div id="j_type_wrap" class="f-l level-option-wrapper">
+                        <span class="mrg-r35"><i class="i-header-icon i-checkbox i-active-checkbox"></i>全部</span>
+                        <span data-type="0" class="mrg-r35"><i class="i-header-icon i-checkbox"></i>免费</span>
+                        <span data-type="1" class="mrg-r35"><i class="i-header-icon i-checkbox"></i>会员</span>
+                        <span data-type="2"><i class="i-header-icon i-checkbox"></i>付费</span>
+                    </div>
+                    <div id="j_order_wrap" class="f-r"><span data-value="createDate" class="cf1-fs16">最新</span><i class="i-header-icon i-line"></i><span data-value="watchedNum">最热</span></div>
+                </div>
+            </div>
+            <div class="course-list-wrapper ">
+                <div class="content-wrapper ">
+                    <ul id="j_kechen_list_wrap" class="img-hover-bigger clearfix">
+                        <li style="line-height:600px;text-align:center;">加载数据中...</li>
+                        <!-- <li class="item-wrap f-l mrg-r18">
+                            <div class="img-wrap"><img src=""></div>
+                            <div class="detail-wrap">
+                                <div class="c3">unity开发</div>
+                                <div class="fs12"><i class="i-header-icon i-people"></i>234234</div>
+                                <div class="clearfix"><div class="ce2 f-l">$ 600</div><div class="fs12 f-r">初级</div></div>
+                            </div>
+                        </li>
+                       <li class="item-wrap f-l mrg-r18">
+                            <div class="img-wrap"><img src=""></div>
+                            <div class="detail-wrap">
+                                <div class="c3">unity开发</div>
+                                <div class="fs12"><i class="i-header-icon i-people"></i>234234</div>
+                                <div class="clearfix"><div class="c2d f-l">免费</div><div class="fs12 f-r">初级</div></div>
+                            </div>
+                        </li>
+                        <li class="item-wrap f-l mrg-r18">
+                            <div class="img-wrap"><img src=""></div>
+                            <div class="detail-wrap">
+                                <div class="c3">unity开发</div>
+                                <div class="fs12"><i class="i-header-icon i-people"></i>234234</div>
+                                <div class="clearfix"><div class="cf1 f-l">会员</div><div class="fs12 f-r">初级</div></div>
+                            </div>
+                        </li>
+                        <li class="item-wrap f-l mrg-r18">
+                            <div class="img-wrap"><img src=""></div>
+                            <div class="detail-wrap">
+                                <div class="c3">unity开发</div>
+                                <div class="fs12"><i class="i-header-icon i-people"></i>234234</div>
+                                <div class="clearfix"><div class="ce2 f-l">$ 600</div><div class="fs12 f-r">初级</div></div>
+                            </div>
+                        </li>
+                        <li class="item-wrap f-l">
+                            <div class="img-wrap"><img src=""></div>
+                            <div class="detail-wrap">
+                                <div class="c3">unity开发</div>
+                                <div class="fs12"><i class="i-header-icon i-people"></i>234234</div>
+                                <div class="clearfix"><div class="ce2 f-l">$ 600</div><div class="fs12 f-r">初级</div></div>
+                            </div>
+                        </li> -->
+                    </ul>
+                    <div id="j_kechen_page_control" class="page-control page-wrap">
+                        <!-- <a href="view/more.html">查看更多</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    	<!-- <div include="../module/header.html"></div>
+    	<div class="container-one">
+    		<div class="content-wrapper">
+	    		<div class="content-one-wrap">
+					<h1 class="cf">寻找课程</h1>
+					<p>全面涵盖游戏职业课程体系，知识点清晰、个性化学习</p>
+	    		</div>
+    		</div>
+    	</div>
+    	<div include="../module/seek-course.html"></div> -->
+    	<div include="../module/footer.html"></div>
+        <script src="/js/vendor/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="/js/main.js"></script>
+        <script type="text/javascript" src="/js/store.js"></script>
+        <script type="text/javascript" src="/js/common/jquery.page.js"></script>
+        <script type="text/javascript">
+        var courseModule={
+            bindEvents:function(){
+                var self=this;
+                $('#j_direction_wrap').on('click','span',function(){
+                    var $this=$(this),directionId=$this.data('id');
+                    $('#j_direction_wrap').find('span').removeClass('active');
+                    $this.addClass('active');
+                    self.isHasPaged=false;
+                    self.isClickPage=false;
+                    if(directionId){
+                        var sortsArr=self.sortHashList[directionId];
+                        console.log(sortsArr);
+                        self.renderSortListDom(sortsArr);
+                    }else{
+                        // self.searchCourse();
+                        $('#j_sort_wrap').hide();
+                        self.sortId=undefined;
+                    }
+                    self.directionId=directionId;
+                    self.sortId=undefined;
+                    self.searchCourse(1);
+                    
+                });
+                $('#j_sort_wrap').on('click','span',function(){
+                    var $this=$(this),sortId=$this.data('id');
+                    $('#j_sort_wrap').find('span').removeClass('active');
+                    $this.addClass('active');
+                    self.isHasPaged=false;
+                    self.isClickPage=false;
+                    self.sortId=sortId;
+                    self.searchCourse(1);
+                });
+                $('#j_level_wrap').on('click','span',function(){
+                    var $this=$(this),value=$this.data('value');
+                    $('#j_level_wrap').find('span').removeClass('active');
+                    $this.addClass('active');
+                    self.isHasPaged=false;
+                    self.isClickPage=false;
+                    self.hard=value;
+                    self.searchCourse(1);
+                });
+                $('#j_type_wrap').on('click','span',function(){
+                    var $this=$(this),type=$this.data('type');
+                    $('#j_type_wrap').find('i').removeClass('i-active-checkbox');
+                    $this.find('i').addClass('i-active-checkbox');
+                    self.isHasPaged=false;
+                    self.isClickPage=false;
+                    self.type=type;
+                    self.searchCourse(1);
+                });
+                $('#j_order_wrap').on('click','span',function(){
+                    var $this=$(this),orderBy=$this.data('value');
+                    $('#j_order_wrap').find('span').removeClass('cf1-fs16');
+                    $this.addClass('cf1-fs16');
+                    self.isHasPaged=false;
+                    self.isClickPage=false;
+                    self.orderBy=orderBy;
+                    self.searchCourse(1);
+                })
+            },
+            getDirectionList:function(){
+                var self=this;
+                $.ajax({
+                    type:'get',
+                    url:mainModule.uri.getDirectionList,
+                    success:function(result){
+                        mainModule.log('课程列表查询接口返回',result);
+                        mainModule.httpInterceptor(result,self.renderDirectionListDom);
+                    }
+                })
+            },
+            renderDirectionListDom:function(result){
+                var dom='<div class="f-l"><label>方向：</label><span id="j_direction_all">全部</span></div>'+
+                '<div class="f-l fenglei-r-wrap">';
+                for(var i=0,ii=result.length;i<ii;i++){
+                    var item=result[i];
+                    courseModule.sortHashList=courseModule.sortHashList||[];
+                    courseModule.sortHashList[item.id]=item.sorts;
+                    dom+='<span id="j_direction_'+item.id+'" data-id="'+item.id+'">'+item.name+'</span>';
+                }
+                dom+='</div>';
+                $('#j_direction_wrap').html(dom);
+               courseModule.dealWithQuery();
+            },
+            renderSortListDom:function(result){
+                var dom=' <div class="f-l"><label>分类：</label><span id="j_sort_all" class="active">全部</span></div>'+
+                        '<div class="f-l fenglei-r-wrap">';
+                for(var i=0,ii=result.length;i<ii;i++){
+                    var item=result[i];
+                    dom+='<span id="j_sort_'+item.id+'" data-id="'+item.id+'">'+item.name+'</span>';
+                }
+                 dom+='</div>';
+                $('#j_sort_wrap').html(dom).show();
+            },
+            renderKeChenDom:function(result){
+                var dom='',
+                    len=result.length,total=result.total;
+                // console.log(result.total+'total');
+                for(var i=0;i<len;i++){
+                    var item=result[i];
+                    item.hard==1?(item.hard='初级'):(item.hard==2?(item.hard='中级'):(item.hard==3?(item.hard='高级'):(item.hard='等级无')));
+                    item.updateStatue==1?(item.updateStatueStr='连载中'):(item.updateStatueStr='已完结');
+                    if((i+1)%5==0){
+                        dom+='<a target="_blank" href="/view/lesson/lessonintro.html?courseid='+item.id+'&version='+mainModule.version+'"> <li class="item-wrap mrg-b18 f-l">';
+                    }else
+                    {
+                        dom+='<a target="_blank" href="/view/lesson/lessonintro.html?courseid='+item.id+'&version='+mainModule.version+'">  <li class="item-wrap mrg-b18 mrg-r18 f-l">';
+                    }
+                    dom+='<div class="img-wrap"><img src="'+item.picture+'"><span class="c-st c-st'+item.updateStatue+'">'+item.updateStatueStr+'</span></div>'+
+                            '<div class="detail-wrap">'+
+                                '<div title="'+item.name+'" class="c3 name-wrap">'+item.name+'</div>'+
+                                '<div class="fs12"><i class="i-header-icon i-people"></i>'+item.watchedNum+'</div>';
+                        switch(item.type){
+                            case 0:
+                                dom+='<div class="clearfix"><div class="c2d f-l">免费</div><div class="fs12 f-r">'+item.hard+'</div></div>';
+                            break;
+                            case 1:
+                                dom+='<div class="clearfix"><div class="cf1 f-l">会员</div><div class="fs12 f-r">'+item.hard+'</div></div>';
+                            break;
+                            case 2:
+                                dom+='<div class="clearfix"><div class="ce2 f-l">¥ '+item.price;
+                                if(item.originalCost){
+                                    dom+='<span class="origin-price">¥ '+item.originalCost+'</span>';
+                                }
+                                dom+='</div><div class="fs12 f-r">'+item.hard+'</div></div>';
+                            break;
+                        }
+                // }
+                     dom+='</div></li></a>';
+                }
+                if(total==0){
+                    dom='<li style="line-height:600px;text-align:center;">该查询条件暂无课程，试试其他选项吧</li>';
+                }
+                $('#j_kechen_list_wrap').html(dom);
+                $('#j_course_total').html('（共'+total+'门课程）');
+                var self=courseModule;
+                if(!self.isHasPaged){
+                    $('#j_kechen_page_control').hide();
+                }
+
+                if(total>20&&!self.isHasPaged){
+                    var pageCount=(total%20)==0?(total/20):Math.floor(total/20)+1;
+                    $('#j_kechen_page_control').off('click');
+                    $('#j_kechen_page_control').createPage({
+                          pageCount:pageCount,
+                          current:1,
+                          isHasGoto:true,
+                          backFn:function(p){
+                              //单击回调方法，p是当前页码
+                              console.log(p);
+                              courseModule.searchCourse(p);
+                              self.isClickPage=true;
+                          }
+                    });
+                    self.isHasPaged=true;
+                    $('#j_kechen_page_control').show();
+                }
+                self.isClickPage?(window.scrollTo(0,103)):(self.isClickPage=false);
+            },
+            searchCourse:function(page){
+                var self=this,paramsObj={page:page};
+                this.directionId?(paramsObj.directionId=this.directionId):void 0;
+                this.sortId?(paramsObj.sortId=this.sortId):void 0;
+                this.hard?(paramsObj.hard=this.hard):void 0;
+                (this.type==0||this.type)?(paramsObj.type=this.type):void 0;
+                this.orderBy?(paramsObj.orderBy=this.orderBy):(paramsObj.orderBy='createDate');
+                var data={
+                    // directionId:,
+                    // hard:,//难度,1:初２：中３：高
+                    // orderBy:,//createDate：创建时间倒序，watchedNum：热度
+                    page:1,
+                    rows:20,
+                    // sortId:,
+                    // type:,//类型，0免费，1会员，2单独付费，
+                };
+                $.extend(data,paramsObj||{});
+                mainModule.log('课程查询条件数据',data);
+                $('#j_kechen_list_wrap').html('<li style="line-height:600px;text-align:center;">加载数据中...</li>');
+                // $('#j_kechen_page_control').hide();
+                $.ajax({
+                    type:'get',
+                    data:data,
+                    url:mainModule.uri.searchCourse,
+                    success:function(result){
+                        mainModule.log('课程查询接口返回',result);
+                        mainModule.httpInterceptor(result,self.renderKeChenDom);
+                    }
+                })
+            },
+            dealWithQuery:function(){
+                var self=this;
+                var directionId=self.directionId,sortId=self.sortId,hard=self.hard,type=self.type,orderBy=self.orderBy;
+                if(directionId){
+                    $('#j_direction_'+directionId).addClass('active');
+                    var sortsArr=self.sortHashList[directionId];
+                    self.renderSortListDom(sortsArr);
+                }else{
+                    $('#j_direction_all').addClass('active');
+                }
+                if(sortId){
+                    $('#j_sort_all').removeClass('active');
+                    $('#j_sort_'+sortId).addClass('active');
+                }
+                if(hard){
+                    $('#j_hard_'+hard).addClass('active');
+                }else{
+                    $('#j_level_all').addClass('active');
+                }
+                if(type){
+                    $('#j_type_'+type).find('i').addClass('i-active-checkbox');
+                }
+                if(orderBy){
+                    $('#j_order_'+orderBy).addClass('cf1');
+                }
+                if(directionId||sortId||hard||type||orderBy){
+                    self.searchCourse(1);
+                }
+            },
+            isDefaultQuery:function(){
+                this.directionId=mainModule.getQueryValueByName('directionId');
+                this.sortId=mainModule.getQueryValueByName('sortId');
+                this.hard=mainModule.getQueryValueByName('hard');
+                this.type=mainModule.getQueryValueByName('type');
+                this.orderBy=mainModule.getQueryValueByName('orderBy');
+                if(!(this.directionId||this.sortId||this.hard||this.type||this.orderBy)){
+                    return true;
+                }
+            },
+            init:function(){
+                this.bindEvents();
+                this.getDirectionList();
+                var isDefaultQuery=this.isDefaultQuery();
+                isDefaultQuery&&this.searchCourse(1);
+            }
+        };
+        courseModule.init();
+        console.log('courseModule loaded');
+        </script>
+    </body>
+ </html>

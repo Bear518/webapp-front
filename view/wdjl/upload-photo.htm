@@ -1,0 +1,78 @@
+<style type="text/css">
+.uploadImg-popbox{width: 484px;min-height: 394px;top: 50%;left: 50%;position: fixed;margin-top: -197px;margin-left: -242px;background: #fff;z-index: 1124;padding-bottom: 26px;}
+.uploadImg-popbox h5{line-height: 40px;height: 40px;text-align: center;font-size: 16px;color: #333;background: #ededed;font-weight: normal;}
+.uploadImg-popbox .content-wrap{padding:22px 28px 0;}
+.uploadImg-popbox .content-wrap label{padding:4px 8px;background: #cecece;color: #fff;margin:4px 4px 0 0;display: inline-block;}
+.uploadImg-popbox h5 span{}
+.uploadImg-popbox .title-wrap{background: #fafafa;color: #999;text-align: center;height: 30px;line-height: 30px;width: 244px;border:1px solid #e6e6e6;}
+.uploadImg-popbox .upload-img-wrap{width: 258px;height: 264px;background: #f0feff;border:1px solid #ededed;margin:20px 26px 0 0;background-image: url('/img/wdjl/001.png');cursor: pointer;}
+.upload-before-img-wrap{width: 258px;height: 264px;background: #ededed;border:1px solid #ededed;overflow: hidden;}
+.f12{font-size: 12px;}
+.img-wrap-3{width: 130px;height: 130px;overflow: hidden;}
+.img-wrap-2{width: 60px;height: 60px;overflow: hidden;}
+.img-wrap-1{width: 30px;height: 30px;overflow: hidden;}
+/*.img-wrap img{width: 100%;}*/
+.upload-file-input{width: 260px;height: 260px;opacity: 0;}
+.i-left-turn{background-position: -385px -193px;vertical-align: middle;}
+.i-right-turn{background-position: -435px -193px;vertical-align: middle;}
+.mrg-r26{margin-right: 26px;}.mrg-t20{margin-top: 20px;}
+.uploadImg-popbox .bottom-wrap{padding:10px 0;border-top: 1px solid #ededed;}
+.uploadImg-popbox .bottom-wrap .but-wrap{margin:0 auto;width: 270px;}
+/*.img-wrap img.default{width: 100%;}*/
+.uploadImg-popbox img.preview{width: 100%;display: block;}
+.uploadImg-popbox .active-first .bottom-wrap{display: none;}
+.uploadImg-popbox .active-first .second-step{display: none;}
+.uploadImg-popbox .active-second .bottom-wrap{display: block;}
+.uploadImg-popbox .active-second .second-step{display: block;}
+.uploadImg-popbox .active-second .first-step{display: none;}
+.uploadImg-popbox #j_photo_turn_left,.uploadImg-popbox #j_photo_turn_right{cursor: pointer;}
+</style>
+<div  ng-class="{'dis_block':uploadImgPopboxShow}" class="popbox uploadImg-popbox dis_none">
+	<h5 class="clearfix">上传头像<span class="f-r i-sprite i-close" ng-click="closeuploadImgSelect()"></span></h5>
+	<div id="j_photojcrop_steps_wrap" class="active-first">
+        <div style="padding:6px 22px;" class="err dis_none">上传图片的大小不能超过3M，请换张图片或压缩下该图片后再试</div>
+        <div class="content-wrap clearfix">
+            <div class="f-l">
+    	         <div ng-click="upload('j_file_input')"  class="upload-img-wrap img-wrap first-step"></div>
+               <input id="j_file_input" type="file" class="upload-file-input dis_none" onchange="editModule.fileOnChange(this)" >
+               <div  class="mrg-t20 mrg-r26 second-step dis_none">
+                    <!-- <div class=""> -->
+                        <div class="upload-before-img-wrap img-wrap"><img id="img_target" src=""></div>
+                    <!-- </div> -->
+                     <div class="clearfix"><span id="j_photo_turn_left" class="f-l"><i class="i-sprite i-left-turn"></i>向左转</span>
+                        <span id="j_photo_turn_right" class="f-r"><i class="i-sprite i-right-turn"></i>向右转</span></div>
+                </div>
+            </div>
+            <div id="preview-pane" class="f-l preview-img-wrap">
+                <ul>
+                    <li>
+                        <div class="f12 c9">130*130</div>
+                        <div class="img-wrap-3 img-wrap preview-3x-container"><img class="preview" src="/img/wdjl/photo.jpg"></div>
+                    </li>
+                    <li>
+                        <div class="f12 c9">60*60</div>
+                        <div class="img-wrap-2 img-wrap preview-2x-container"><img class="preview" src="/img/wdjl/photo.jpg"></div>
+                    </li>
+                    <li>
+                        <div class="f12 c9">30*30</div>
+                        <div class="img-wrap-1 img-wrap preview-container"><img class="preview" src="/img/wdjl/photo.jpg"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div  class="bottom-wrap">
+            <div class="clearfix but-wrap h34">
+                <div class="f-l">
+                    <input type="button" ng-disabled="disabledInfo.photoUpdateBtnDisabled" ng-click="photoUpdate()" class="but but-shadow but-animation w95" value="保存">
+                </div>
+                <div class="f-l">
+                    <input type="button" data-id="#j_contact_wrap" onclick="editModule.switchToFirstStep()" class="but but-cancel but-shadow but-animation mrg-l80 w95" value="取消">
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+
+
+

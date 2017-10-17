@@ -1,0 +1,223 @@
+.myvip-info{
+    width: 100%;
+    height: 200px;
+    background: url("../../img/vip/myvip/myvip-bg.jpg") no-repeat;
+    background-size: cover;
+}
+.myvip-info .warpper{
+    width: 1200px;
+    margin: 0px auto;
+    padding: 35px 0;
+}
+.myvip-info .warpper .info-img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    overflow: hidden;
+    float: left;
+}
+.myvip-info .warpper .info-img img{
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+}
+.myvip-info .warpper .inforight{
+    float: left;
+    margin-left: 28px;
+}
+.myvip-info .warpper .inforight .infoname{
+    margin-top: 24px;
+    line-height: 36px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.myvip-info .warpper .inforight .vip-box{
+    vertical-align: middle;
+}
+.myvip-info .warpper .inforight .vip-time{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.myvip-info .warpper .inforight .vip-progress-bg{
+    position: relative;
+    width: 240px;
+    height: 30px;
+    background: url("../../img/vip/myvip/progressbar.png") no-repeat -82px -15px;
+}
+.myvip-info .warpper .inforight .vip-progress-bg .vip-icon{
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    width: 20px;
+    height: 20px;
+    background: url("../../img/vip/myvip/progressbar.png") no-repeat -16px -19px;
+}
+.myvip-info .warpper .inforight .vip-progress-bg .vip-icon.mark{
+    width: 20px;
+    height: 20px;
+    background: url("../../img/vip/myvip/progressbar.png") no-repeat -50px -19px;
+}
+.myvip-info .warpper .inforight .vip-time .vip-progress{
+    position: absolute;
+    top: 9px;
+    left: 28px;
+    width: 206px;
+    height: 13px;
+}
+.myvip-info .warpper .inforight .vip-time .vip-progress .vip-progress-bar{
+   /* width: 30px;
+    max-width: 206px;*/
+    height: 13px;
+    border-radius: 13px;
+   /* filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=red,endcolorstr=blue,gradientType=0);
+    -ms-filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=red,endcolorstr=blue,gradientType=0);/!*IE8*!/
+*/
+    background:#ffdc52; /* 一些不支持背景渐变的浏览器 */
+    background:-moz-linear-gradient(top, #ffdc52,#e47a1b);
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#ffdc52), to(#e47a1b));
+    background:-o-linear-gradient(top, #ffdc52, #e47a1b);
+}
+.myvip-info .warpper .inforight .vip-time .remaining-time{
+    text-align: center;
+    font-size: 12px;
+    color: #fffe9e;
+}
+.myvip-info .warpper .inforight .vip-box  .renew{
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 28px;
+    font-size: 16px;
+    margin-left: 20px;
+}
+.myvip-info .warpper .inforight .vip-box  .renew:hover{
+    background: #ff9001;
+    border-color:#ff9001;
+}
+
+
+/*vip权限*/
+.myvip-container{
+    margin: 0 auto;
+}
+.vip-privilege{
+    border: 1px solid #ededed;
+    background: #f8f8f8;
+    padding:10px 25px 25px;
+    margin-top: 40px;
+}
+.vip-privilege .tit{
+    font-size: 20px;
+    color: #333333;
+    line-height: 40px;
+}
+
+.vip-privilege-list{}
+.vip-privilege-box{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-right: 14px;
+    background: #fff;
+    -webkit-box-shadow: 0 3px 6px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 3px 6px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.1);
+}
+.vip-privilege-box .vip-privilege-cnt {
+    width: 132px;
+    height: 132px;
+    border: 3px solid #dfdfdf;
+    margin: 6px auto;
+}
+
+.vip-privilege-box .true-icon{
+    position: absolute;
+    top: 0;right: 2px;
+    width: 31px;
+    height: 31px;
+    background: url("../../img/vip/myvip/true-icon.png") no-repeat;
+    display: none;
+}
+
+.vip-privilege-box .vip-privilege-cnt p{
+    text-align: center;
+    font-size: 14px;
+    color: #999999;
+    padding-top: 10px;
+}
+
+.vip-privilege-box.mark .vip-privilege-cnt {
+    border: 3px solid #ff9001;
+}
+.vip-privilege-box.mark .true-icon{
+    display: block;
+}
+.vip-privilege-box .vip-privilege-cnt .icon-img{
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 30px auto 0;
+}
+.vip-privilege-box.mark .vip-privilege-cnt p{
+    color: #333;
+}
+/*vip记录*/
+.vip-record{
+    border: 1px solid #ededed;
+    background: #f8f8f8;
+    padding:10px 25px 25px;
+    margin: 50px 0;
+}
+.vip-record .tit{
+    font-size: 20px;
+    color: #333333;
+    line-height: 40px;
+}
+.vip-record .tit span{
+    font-size: 14px;
+    color: #666;
+    margin-left: 10px;
+}
+.vip-record-list table{
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+    border-collapse:   separate;
+    border-spacing:0 10px;
+}
+.vip-record-list .col1{
+    width: 210px;
+}
+.vip-record-list .col2{
+    width: 300px;
+    text-align: center;
+}
+.vip-record-list thead{
+    background: #d1d1d1;
+}
+.vip-record-list thead{
+    line-height: 70px;
+    font-size: 16px;
+    color: #fff;
+}
+.vip-record-list tbody{}
+.vip-record-list tbody tr{
+    margin-top: 5px;
+    border:1px solid #e5e5e5;
+    color: #333;
+}
+.vip-record-list tbody td{
+    line-height: 54px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border:1px solid #eeeeee;
+    background: #ffffff;
+}
+.vip-record-list tbody td.time{
+    color: #ff9001;
+}

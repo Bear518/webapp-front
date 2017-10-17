@@ -1,0 +1,338 @@
+@charset "utf-8";
+.infobar {
+    margin: 40px auto
+}
+
+body {
+}
+
+.infotopbox {
+    height: 165px;
+    background: url(../../img/info/mycoursebg.png) no-repeat;
+    padding-top: 36px;
+}
+
+.infotopbox img {
+    height: 120px;
+    width: 120px;
+    border: 5px solid #fff;
+    border-radius: 65px;
+    float: left;
+    margin-right: 30px;
+}
+
+.infotopright {
+    float: left;
+    color: #fff;
+    line-height: 24px;
+    padding-top: 13px;
+    font-size: 14px
+}
+
+.infotopright span.infotopuname {
+    font-size: 30px;
+    line-height: 44px;
+}
+
+.infotopuname i {
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    background: url(../../img/info/icon2.png) no-repeat -2px -2px;
+    margin-left: 10px;
+}
+
+.left-wrap {
+    width: 240px;
+    margin-bottom: 40px;
+    float: left;
+    position: relative
+}
+
+.left-wrap h4 {
+    height: 56px;
+    background: url(../../img/info/mycoursebg2.png) no-repeat;
+    color: #fff;
+    text-align: center;
+    font: 18px/56px "微软雅黑";
+}
+
+.left-wrap h4 i {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: url(../../img/info/icon2.png) no-repeat -50px -2px;
+    margin-right: 15px;
+    vertical-align: middle;
+    margin-top: -3px
+}
+
+.menu-wrap {
+    border: 1px solid #ededed;
+    border-top: 0;
+    padding-bottom: 180px;
+}
+
+.menuicon {
+    background: url(../../img/info/mcicon.png) no-repeat;
+    height: 104px;
+    width: 104px;
+    display: block;
+    position: absolute;
+    left: 68px;
+    bottom: 40px
+}
+
+.menu-wrap li {
+    line-height: 69px;
+    border-bottom: 1px solid #e4e2e2;
+    height: 69px;
+    text-align: center;
+    cursor: pointer
+}
+
+.menu-wrap li:hover, .menu-wrap li.on {
+    color: #ff9001
+}
+
+.right-wrap {
+    width: 917px;
+    margin: 0 0 40px 43px;
+    float: left;
+}
+.right-wrap .job-box{
+    position: relative;
+}
+.right-wrap h3 {
+    line-height: 56px;
+    border-bottom: 2px solid #ffa634;
+    color: #333;
+    font-size: 24px;
+    font-weight: normal;
+}
+.right-wrap .job-box .myresume{
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    width: 110px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*job-list*/
+.jobbar_content {
+    margin-top: 20px;
+}
+
+.jobbar_content .jobinfo-box {
+    position: relative;
+    padding: 20px 10px;
+    background: #fcfcfc;
+    border: 1px solid #f9f9f9;
+    margin-bottom: 20px;
+}
+.jobbar_content .jobinfo-box .close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    width:12px;
+    height: 12px;
+    background-image: url(../../img/info/job/icon2.png);
+    background-position: -99px 0;
+    cursor: pointer;
+
+}
+.jobbar_content li:hover .close{
+    background-position: -124px 0;
+}
+.jobbar_content .nols {
+    display: block;
+    text-align: center;
+    margin-top: 30px
+}
+
+.jobbar_content li:hover {
+    background-color: #ffffff;
+    border: 1px solid #dfdfdf;
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);
+}
+.jobbar_content li img {
+    height: 72px;
+    width: 114px;
+    float: left;
+    margin: 5px 30px 0 0
+}
+.jobinfo {
+    float: left;
+    width: 700px;
+}
+.jobinfo span {
+    font-size: 12px
+}
+
+.jobbox {
+    font-size: 16px;
+    color: #666;
+    line-height: 26px;
+    height: 40px;
+    overflow: hidden
+}
+.jobbox a{
+    font-size: 16px;
+    color: #333;
+    max-width: 400px;
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}/*
+.jobbox span {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 12px
+}*/
+.jobbox span.qz, .jobbox span.zy, .jobbox span.jz, .jobbox span.ls ,.jobbox span.sx , .jobbox span.qt {
+    color: #fff;
+    border-radius: 3px;
+    padding: 0 15px;
+    display: inline-block;
+    margin:0 20px 0 20px;
+    font-size: 12px
+}
+/* zy">自由 qz">全职  sx">实习jz">兼职 ls">临时工qt">其他*/
+.jobbox span.qz {
+    background-color: #4791ff;
+}
+.jobbox span.sx {
+    background-color: #ff5d6c;
+}
+.jobbox span.zy {
+    background-color: #6dc6d2;
+}
+
+.jobbox span.jz {
+    background-color: #ffa23b;
+}
+.jobbox span.ls {
+    background-color: #956dfc
+}
+.jobbox span.qt {
+    background-color: #82cdfd
+}
+.jobinfo .ico {
+    float: left;
+    line-height: 30px;
+    margin: 0 20px 0 0px;
+}
+.jobinfo .company{
+    max-width: 215px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.jobinfo .ico i {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-image: url(../../img/info/job/icon2.png);
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.jobinfo .company i {
+    background-position: -4px 3px
+}
+.jobinfo .address i {
+    background-position: -26px 3px
+}
+.jobinfo .price i {
+    background-position: -60px 3px
+}
+
+.icon-collect{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #cdcdcd;
+    cursor: pointer;
+}
+
+.icon-collect:hover{
+    border-top: 8px solid #8d8d8d;
+
+}
+
+.collect-box{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 130px;
+    padding:10px 6px ;
+    border: 1px solid #e0e4e8;
+    background: #fff;
+    border-radius: 4px;
+    display: none;
+    transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transform-origin: center;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    -moz-transform-origin: center;
+}
+.icon-collect:hover .collect-box{
+    display: block;
+}
+.collect-box a{
+    font-size: 14px;
+    color: #666;
+    line-height: 16px;
+    padding: 0 4px;
+    cursor: pointer;
+}
+.collect-box a:hover{
+    color: #ff9001;
+}
+.nojob-wrap{
+    font-size: 14px;
+    margin-top: 100px;
+    text-align: center;
+}
+.nojob-wrap a{
+    color: #ff9001;
+    text-decoration: underline;
+}
+
+/*弹窗*/
+.tk_dl{display: none}
+.loginbg{ position:absolute; width:100%; opacity:0.5; filter:alpha(opacity=50); background-color:#000; height:1000px; left:0; top:0;z-index:1300}
+.tk_box{z-index:1400; background-color:#FFF;width:400px; text-align:center; margin-left:-150px;box-shadow:0px 2px 2px rgba(0, 0, 0, 0.1); position:fixed; left:50%;box-sizing:content-box;top:50%;margin-top:-95px}
+.tk_box h3{ line-height:40px; height:40px; text-align:center; font-weight:normal ; color:#fff; background-color:#636874; font-size:16px; }
+.tk_main{ padding:0px 35px 10px; height:220px; text-align:left; font-size:14px;line-height:24px;}
+.tk_btn a{ height:26px; width:70px; line-height:26px; color:#fff; text-align:center; font-size:14px;  border-radius:3px; display:block;}
+.tk_dl .tdbox .tk_btn { padding-left:58px}
+.tk_dl .tdbox .tk_btn a{ margin-left:21px; float:left}
+.tk_wd{
+    background: url(../../img/wdjl/ic1.png) no-repeat center 10px;
+    padding: 120px 0 0px 0;
+    height: 50px;
+    font-size: 16px;
+    text-align: center;
+}

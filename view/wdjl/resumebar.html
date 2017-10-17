@@ -1,0 +1,187 @@
+﻿
+    	<h3 class="res_name" ng-if="data.basicInfo"><i ng-bind="data.basicInfo.name"></i><span>（<i  ng-bind="data.basicInfo.gender|genderFormat"></i>，<i ng-bind="data.basicInfo.birthdate|dateToBirthYear"></i>）</span></h3>
+        <div class="clear"></div>
+        <div class="resumeitem basic_info" id="basic_info">
+        	<div class="titicon"><i></i>基本信息</div><i class="arr"></i>
+            <div class="resume_content">
+               <div class="menpic"><img src="{{data.photo.photo}}"/></div>
+               <ul class="clearfix">
+               <li><span class="info_tit">现居地：</span><span class="info_nr" ng-bind="data.basicInfo.presentAddressText">上海</span></li>
+               <li><span class="info_tit">户口地：</span><span class="info_nr" ng-bind="data.basicInfo.domicileAddressText">上海</span></li>
+               <li><span class="info_tit">民族：</span><span class="info_nr" ng-bind="data.basicInfo.nation"></span></li>
+               <li><span class="info_tit">政治面貌：</span><span class="info_nr" ng-bind="data.basicInfo.politicalStatus"></span></li>
+               <li><span class="info_tit">婚姻状态：</span><span class="info_nr" ng-bind="data.basicInfo.maritalStatus"></span></li>
+               <li><span class="info_tit">工作经验：</span><span class="info_nr" ng-bind="data.basicInfo.workExperience"></span></li>
+               <li><span class="info_tit">目前状态：</span><span class="info_nr" ng-bind="data.basicInfo.situation"></span></li>
+               <li><span class="info_tit">到岗时间：</span><span class="info_nr" ng-bind="data.basicInfo.postTime"></span></li>
+               <li class="long_style"><span class="info_tit">个人标签：</span><span class="info_nr" ng-bind="data.basicInfo.individualTag"></span></li>
+               <li class="long_style"><span class="info_tit">自我描述：</span><span class="info_nr" ng-bind="data.basicInfo.selfDescription"></span></li>               
+               </ul>
+            </div>
+        </div>
+        <div class="resumeitem job_obj" id="job_obj">
+        	<div class="titicon"><i></i>求职意向</div><i class="arr"></i>
+            <div class="resume_content">
+               <ul class="clearfix">
+               <li><span class="info_tit">期望行业：</span><span class="info_nr"><i ng-repeat="honor in jobInts.industryList" ng-bind="honor.name"> </i> </span></li>
+               <li><span class="info_tit">期望职位：</span><span class="info_nr"><i ng-repeat="honor in jobInts.categoryList" ng-bind="honor.name"> </i></span></li>
+               <li><span class="info_tit">期望地点：</span><span class="info_nr"><i ng-repeat="honor in jobInts.citysList" ng-bind="honor.name"> </i></span></li>
+               <li class="clear" style="height:0; float:none"></li>
+               <li><span class="info_tit">期望月薪：</span><span ng-if="!data.jobIntension.showNegotiable"  class="info_nr" ng-bind="data.jobIntension.expectSalary"></span>
+               <span ng-if="data.jobIntension.showNegotiable" class="info_nr">面议</span>
+               </li>
+               <li><span class="info_tit">目前月薪：</span><span ng-if="!data.jobIntension.showPrivacy" class="info_nr" ng-bind="data.jobIntension.currentSalary"></span>
+               <span ng-if="data.jobIntension.showPrivacy" class="info_nr">保密</span>
+               </li>
+                           
+               </ul>
+            </div>
+        </div>
+        <div class="resumeitem contact_info" id="contact_info">
+        	<div class="titicon"><i></i>联系方式</div><i class="arr"></i>
+            <div class="resume_content">
+               <ul class="clearfix">
+               <li><span class="info_tit">手机：</span><span class="info_nr" ng-bind="data.contactInfo.mobilePhone"></span></li>
+               <li><span class="info_tit">QQ：</span><span class="info_nr" ng-bind="data.contactInfo.qqNum"></span></li>
+               <li><span class="info_tit">邮箱：</span><span class="info_nr" ng-bind="data.contactInfo.email"></span></li>
+               <li><span class="info_tit">微信：</span><span class="info_nr" ng-bind="data.contactInfo.weixin"></span></li>
+               
+                           
+               </ul>
+            </div>
+        </div>
+        <div class="resumeitem languagebox" id="languagebox" ng-if="langs[0].name">
+        	<div class="titicon"><i></i>语言能力</div><i class="arr"></i>
+            <div class="resume_content">
+            <dl class="clearfix" ng-repeat="lang in langs">
+              <dt ng-bind="lang.name"></dt>
+              <dd>
+               <span class="td">听说：<i ng-bind="lang.listeningAndSpeaking"></i></span>
+               <span class="td">读写：<i ng-bind="lang.readingAndWriting"></i></span>
+               <span class="td" style=" width:450px"><span ng-repeat="lang in lang.gradeExaminations"><i ng-bind="lang.name">IELTS</i> ：<i ng-bind="lang.score">7分</i>&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+               
+              </dd>
+            </dl>
+            
+            </div>
+        </div>
+        <div class="resumeitem skillbox" id="skillbox" ng-if="skill.userId">
+        	<div class="titicon"><i></i>掌握技能</div><i class="arr"></i>
+            <div class="resume_content">
+            <dl class="clearfix">
+              <dt>精通的技能</dt>
+              <dd>
+               <span ng-repeat="skilljt in skill.masterSkillChosenList"><i ng-bind="skilljt.name">JSP</i></span>            
+              </dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>熟练的技能</dt>
+              <dd>
+               <span ng-repeat="skillsl in skill.practisedSkillChosenList"><i ng-bind="skillsl.name">JSP</i></span> 
+              </dd>
+            </dl>
+            </div>
+        </div>        
+        <div class="resumeitem cert" id="cert" ng-if="certs.certificateChosenList">
+        	<div class="titicon"><i></i>证书</div><i class="arr"></i>
+            <div class="resume_content">            
+              <div class="cert_con clearfix">
+               <span><i ng-bind="certs.name"></i><i ng-repeat="cert in certs.certificateChosenList" ng-bind="cert.name">JSP</i></span> 
+
+              </div>    
+            </div>
+        </div>
+        <div class="resumeitem edu_exp" id="edu_exp" ng-if="edus[0]">
+        	<div class="titicon"><i></i>教育经历</div><i class="arr"></i>
+            <div class="resume_content">
+               <ul class="clearfix">
+               <li ng-repeat="edu in edus"><i class="icon"></i>
+               <div class="info_top"><span class="info_time"><i ng-bind="edu.startDate|birthdateFormat"></i> 至 <i ng-bind="edu.endDate|birthdateFormat"></i></span><span class="info_name" ng-bind="edu.schoolName"></span></div>
+               <span class="info_xw"><i ng-bind="edu.education"></i> | <i ng-bind="edu.majorName"></i></span>               
+               <div class="info_nr" ng-bind="edu.majorDescription"></div>
+               </li>
+               
+               
+               </ul>
+            </div>
+        </div>
+        <div class="resumeitem edu_exp train_exp" id="train_exp" ng-if="trains[0]">
+        	<div class="titicon"><i></i>培训经历</div><i class="arr"></i>
+            <div class="resume_content">
+               <ul class="clearfix">
+               <li ng-repeat="train in trains"><i class="icon"></i>
+               <div class="info_top"><span class="info_time"><i ng-bind="train.startDate|birthdateFormat"></i> 至 <i ng-bind="train.endDate|birthdateFormat"></i></span><span class="info_name" ng-bind="train.institution"></span></div>
+               <span class="info_xw" ng-bind="train.title"></span>               
+               <div class="info_nr" ng-bind="train.content"></div>
+               </li>
+               </ul>
+            </div>
+        </div>
+        <div class="resumeitem edu_exp train_exp" id="edu_job" ng-if="camps[0]">
+        	<div class="titicon"><i></i>校内职务</div><i class="arr"></i>
+            <div class="resume_content">
+               <ul class="clearfix">
+               <li ng-repeat="camp in camps"><i class="icon"></i>
+               <div class="info_top"><span class="info_time"><i ng-bind="camp.startDate|birthdateFormat"></i> 至 <i ng-bind="camp.endDate|birthdateFormat"></i></span><span class="info_name" ng-bind="camp.duty"></span></div>
+               <span class="info_xw" ng-bind="camp.campus"></span>               
+               <div class="info_nr" ng-bind="camp.responsible"></div>
+               </li>               
+               </ul>
+            </div>
+        </div>
+        <div class="resumeitem edu_exp honor" id="honor" ng-if="honors[0]">
+        	<div class="titicon"><i></i>获得荣誉</div><i class="arr"></i>
+            <div class="resume_content">
+               <ul class="clearfix">
+               <li ng-repeat="honor in honors"><i class="icon"></i>
+               <div class="info_top"><span class="info_time"><i ng-bind="honor.obtainDate|birthdateFormat"></i></span><span class="info_name" ng-bind="honor.title"></span></div>
+               <span class="info_xw" ng-bind="honor.unit"></span>               
+               <div class="info_nr" ng-bind="honor.description"></div>
+               </li>
+               
+               </ul>
+            </div>
+        </div>
+        <div class="resumeitem edu_exp job_exp" id="job_exp" ng-if="works[0]">
+        	<div class="titicon"><i></i>工作经历</div><i class="arr"></i>
+            <div class="resume_content">
+               <ul class="clearfix">
+               <li ng-repeat="work in works"><i class="icon"></i>
+               <div class="info_top"><span class="info_time"><i ng-bind="work.startDate|birthdateFormat"></i> 至 <i ng-bind="work.endDate|birthdateFormat"></i></span><span class="info_name"><i ng-bind="work.jobTitle"></i><span>（<i ng-bind="work.industryData.name"></i>）</span></span></div>
+               <span class="info_xw"><i ng-bind="work.company"></i><span>（<i ng-bind="work.cityText">上海</i>）</span></span>     
+               <span class="info_xw">所在部门：<i ng-bind="work.department"></i>  |  汇报对象：<i ng-bind="work.superior"></i>|  下属人数：<i ng-bind="work.subordinate"></i>   | 薪水：￥<i ng-bind="work.salary"></i>/月</span>               
+               <div class="info_nr" ng-bind="work.jobDescription"></div>
+               </li>
+                         
+               </ul>
+            </div>
+        </div>
+        <div class="resumeitem edu_exp pro_exp" id="sx_exp" ng-if="inters[0]">
+        	<div class="titicon"><i></i>实习经历</div><i class="arr"></i>
+            <div class="resume_content">
+               <ul class="clearfix">
+               <li ng-repeat="inter in inters"><i class="icon"></i>
+               <div class="info_top"><span class="info_time"><i ng-bind="inter.startDate|birthdateFormat"></i> 至 <i ng-bind="inter.endDate|birthdateFormat"></i></span><span class="info_name"><i ng-bind="inter.jobTitle"></i><span>（<i ng-bind="inter.industryData.name"></i>）</span></span></div>
+               <span class="info_xw"><i ng-bind="inter.company"></i><span>（<i ng-bind="inter.cityText">上海</i>）</span></span>     
+               <span class="info_xw">所在部门：<i ng-bind="inter.department"></i>  |  汇报对象：<i ng-bind="inter.superior"></i>   | 薪水：￥<i ng-bind="inter.salary"></i>/月</span>               
+               <div class="info_nr" ng-bind="inter.jobDescription"></div>
+               </li>
+                          
+               </ul>
+            </div>
+        </div>
+        <div class="resumeitem edu_exp pro_exp" id="pro_exp" ng-if="pros[0]">
+        	<div class="titicon"><i></i>项目经验</div><i class="arr"></i>
+            <div class="resume_content">
+               <ul class="clearfix">
+               <li ng-repeat="pro in pros"><i class="icon"></i>
+               <div class="info_top"><span class="info_time"><i ng-bind="pro.startDate|birthdateFormat"></i> 至 <i ng-bind="pro.endDate|birthdateFormat"></i></span><span class="info_name" ng-bind="pro.name"></span></div>
+               <span class="info_xw"><i ng-bind="pro.role"></i> | <i ng-bind="pro.scale"></i>团队</span>               
+               <div class="info_nr" ng-bind="pro.description"></div>
+               </li>
+               
+               
+               </ul>
+            </div>
+        </div>
+

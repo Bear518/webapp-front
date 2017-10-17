@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>会员购买页面</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/vip/buy.css">
+</head>
+<body>
+<div include="../module/header.html"></div>
+<div class="warpper clearfix">
+	<div class="stepbox step1"></div>
+	<div class="membuybox">
+    	<h4>购买信息</h4>
+        <p class="line"></p>
+        <dl class="buyinfo">
+            <dt>商品名：</dt><dd class="pname">月会员</dd>
+            <dt>单价：</dt><dd class="prc"><i></i>元/月</dd>
+            <dt>时长：</dt><dd class="howl">个月</dd>
+            <dt>总计：</dt><dd class="allprc">￥<i></i></dd>
+            <dt>优惠：</dt><dd>
+            	<div class="yhq"><select><option>暂无优惠券</option></select>
+                <a class="qh qh1" href="javascript:">我有优惠码</a></div>
+                <div class="yhm" style="display:none"><input type="text" id="" class="input" placeholder="请输入优惠码"><a class="use" href="#">使用</a>
+                <a class="qh qh2" href="javascript:">我有优惠券</a></div>
+            </dd>
+        </dl>
+        <div class="arrbox"><span>购买<i>3个月</i><br><b></b></span></div>
+        <div class="chosmonth">
+        <span data-code="0" class="on">1</span>
+        <span data-code="1" class="on">2</span>
+        <span data-code="2" class="on">3</span>
+        <span data-code="3">4</span>
+        <span data-code="4">5</span>
+        <span data-code="5">6</span>
+        <span data-code="6">7</span>
+        <span data-code="7">8</span>
+        <span data-code="8">9</span>
+        <span data-code="9">10</span>
+        <span data-code="10">11</span>
+        <span data-code="11">1年<i class="red">(有优惠)</i></span>
+        <span data-code="12">2年</span>
+        <span data-code="13">3年</span>
+        </div>
+        <p class="tips"><i></i>会员时间将累加计算，请放心购买 </p>
+        <div class="qy">享受权益<span data-qy="0" class="on">观看免费课程</span><span data-qy="1" class="on">申请职位</span><span data-qy="2" class="on">观看VIP课程</span><span data-qy="3" class="on">资料下载</span><span data-qy="4">技术问答</span><span data-qy="5">1对1”伴读书童“</span></div>
+        <div class="priceinfo">
+        	<div style="display:none">已优惠：<span>-￥4</span></div>
+            实付金额：<span class="yel">￥<i class="zprice"></i></span><br>
+            <p>有效期至：<label id="j_vip_time"></label></p>
+        </div>
+        <div class="but-wrap"><a class="but " href="javascript:">确认购买</a></div>
+    </div>
+</div>
+
+
+<div include="../module/footer.html"></div>
+</body>
+<script src="../../js/vendor/jquery-1.9.0.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/vip/buy.js"></script>
+<script>
+var co=mainModule.getQueryValueByName('code'),code;
+if(co==null){ code =0;}
+else{code=co-1}
+
+$(function() {
+	var lid,nub;	
+	$(".but-wrap .but").click(function(){
+		scorder()
+	})	
+	$.ajax({
+		type: "get",
+		dataType: "json",
+		url: $._CACHEOBJ.context+"/vip/rightList",
+		success: function (rl) {
+			var htmlrl = "";
+			if(rl.status== "SUCCESS"){
+				var rl=rl.content;htmlrl += '享受权益';
+				htmlrl += '<span class="on">免费课程</span><span class="on">申请职位</span><div class="qylb">'
+				for(var i=0;i<rl.length; i++){					
+					htmlrl += '<span data-qy="'+rl[i].id+'">'+rl[i].name+'</span>'
+				}			
+				htmlrl += '</div>';
+			}
+			else{
+				if(rl.content!=null){alert(rl.content[0].message); }
+		  		else{alert(rl.message); }
+			}
+			$(".qy").html(htmlrl);
+		}
+	})	
+	$.ajax({
+		type: "get",
+		dataType: "json",
+		data:{page:1,rows:20},
+		url: $._CACHEOBJ.context+"/vip/list",
+		success: function (mb) {
+			if(mb.status== "SUCCESS"){
+				var mb=mb.content;
+				month(mb);				
+			}
+			else{
+				if(mb.content!=null){alert(mb.content[0].message); }
+		  		else{alert(mb.message); }
+
+			}
+		}
+	})	
+	
+});
+
+/*前台月份进度条*/
+function month(mb){
+	$.ajax({
+	type:"GET",
+	url:"../../js/vip/mon.json",
+	dataType:"json",
+	success:function(data){ 
+		init(code,data,mb);
+		/*点击月份效果*/
+		$(".chosmonth span").click(function(){
+			var code=$(this).data("code");	
+			init(code,data,mb)
+		})
+		/*移动月份效果*/
+		var _move=false;//移动标记  
+		$(".arrbox b").click(function(e){  //点击（松开后触发）
+			$(".chosmonth span").removeClass("on");
+			$(".qylb span").removeClass("on");
+        	for(var i=0;i<14;i++){
+				var widthlow=parseInt(data[i].widthlow);
+				var widthhigh=parseInt(data[i].widthhigh);
+				var monthtext=data[i].monthtext;	
+				//var quanyi=data[i].quanyi;
+				var x=e.pageX-$(".arrbox").offset().left;
+				if(x>widthlow && x<=widthhigh){
+					gminfo(i,mb);
+					aaa(i);
+					$(".arrbox span").css({left:widthlow+"px",top:"-36px"});
+					$(".arrbox i").text(monthtext);
+					$(".howl").text(monthtext);
+					
+					console.log(monthtext);
+				}
+				else if(x<0){
+					gminfo(0,mb);
+					aaa(0);
+					$(".arrbox span").css({left:"0px",top:"-36px"});
+					$(".arrbox i").text(data[0].monthtext);
+					$(".howl").text(data[0].monthtext);
+					}
+				else if(x>1200){
+					gminfo(13,mb);
+					aaa(13);
+					$(".arrbox span").css({left:"1119px",top:"-36px"});
+					$(".arrbox i").text(data[13].monthtext);
+					$(".howl").text(data[13].monthtext);
+					}
+			}			  
+        }).mousedown(function(e){  //鼠标按下瞬间
+			_move=true; 
+			$(".arrbox span").fadeTo(20, 0.5);//点击后开始拖动并透明显示  
+		});  		
+		$(document).mousemove(function(e){
+			if(_move){ 
+			var pleft= $(".arrbox").offset().left; 
+			var ptop= $(".arrbox").offset().top; 
+			var x=e.pageX-pleft-41;//移动时根据鼠标位置计算控件左上角的绝对位置  
+			var y=e.pageY-ptop-36;
+				if(x<1158){
+					$(".arrbox span").css({left:x,top:y});//控件新位置  
+				}
+			}  
+		}).mouseup(function(){  
+			_move=false;  
+			$(".arrbox span").fadeTo("fast", 1);//松开鼠标后停止移动并恢复成不透明  
+		});  
+	}
+	})
+}
+function init(code,data,mb){
+	var monthtext=data[code].monthtext;	
+	var widthlow=parseInt(data[code].widthlow);		
+	var panme=data[code].monthtext+'会员';		
+	//var quanyi=data[code].quanyi;		
+	$(".chosmonth span").removeClass("on");
+	$(".qylb span").removeClass("on");
+	aaa(code);
+	$(".arrbox span").css("left",widthlow+"px")
+	$(".arrbox i").text(monthtext);
+	$(".howl").text(monthtext);
+	$(".pname").text(panme);
+	//$('#j_vip_time').html(calculateVipTime(code));
+	console.log(code);
+	gminfo(code,mb);
+}
+
+
+/*循环*/
+function aaa(e){
+	for(var j=0;j<e+1;j++){
+		$(".chosmonth span[data-code='"+j+"']").addClass("on");				
+		}	
+	/*for(var j=0;j<=qy;j++){
+		$(".qy span[data-qy='"+j+"']").addClass("on");				
+		}*/
+}
+/*后台取价格*/
+function gminfo(code,mb){
+	var list=mb.rows;				
+	for(var i=0;i<list.length; i++){
+		if(code<12){
+			nub=code+1;
+		}
+		else if(code==12){
+			nub=24;
+		}
+		else if(code==13){
+			nub=36;
+		}
+		$('#j_vip_time').html(calculateVipTime(nub));
+		if(nub>=list[i].areaBottom&&nub<list[i].areaTop){
+			var price=list[i].price;
+			$(".prc i").text(price);			
+			var allprc=price*10000*nub/10000;
+			$(".allprc i").text(allprc);
+			$(".zprice").text(allprc);
+			lid=list[i].id;		
+			var rightList=list[i].rightList;	
+			for(var j=0;j<rightList.length; j++){
+				var qid=rightList[j].id;				
+				$(".qylb span[data-qy='"+qid+"']").addClass("on")				
+				
+			}
+		}			
+	}	
+}
+/*生成订单*/
+function scorder(){
+	console.log("scorder");
+	$.ajax({
+		type: "get",
+		dataType: "json",
+		url: $._CACHEOBJ.context+"/order/common/generateVipOrder?"+new Date(),
+		data:{"number":nub},
+		success: function (pl) {
+            var htmlcmt = "";
+			if(pl&&pl.status&&pl.status== "SUCCESS"){
+				console.log("success");
+				var ordid=pl.content.id;
+				//openwin("/view/vip/paychos_m.html?ordid="+ordid);
+				window.location.href="/view/vip/paychos_m.html?ordid="+ordid;
+			}
+			else{
+				if(pl.content!=null){alert(pl.content[0].message); }
+		  		else{alert(pl.message); }
+			}
+		}
+	})
+}
+function dtime(){
+	$.ajax({
+		type: "get",
+		dataType: "json",
+		url: $._CACHEOBJ.context+"/user/currentuser",
+		success: function (result) {
+			mainModule.log('我的个人信息接口返回',result);
+			if(result.status== "SUCCESS"){
+				mainModule.vipEndDate=result.content.vipEndDate||(Date.parse(new Date()));
+				mainModule.isVip=result.content.vip;
+				$('#j_vip_time').html(calculateVipTime(3));
+			}
+			else{
+				if(/未登录/.test(result.message)){
+	            	mainModule.popLoginBox();
+	        	}
+			}
+		}
+	})
+}
+dtime();
+var formatDateToStr=function(date){
+    var year=date.getFullYear(),month=date.getMonth()+1,day=date.getDate();
+    month<10&&(month='0'+month);
+    day<10&&(day='0'+day);
+    datetime=year+'-'+month+'-'+day;
+    return datetime;
+};
+var calculateVipTime=function(i){
+	var date=new Date(mainModule.vipEndDate||Date.now());
+	if(i&&i<12){
+		var month=date.getMonth()+i;
+		date.setMonth(month);
+	}else if(i){
+		var y=i/12
+		var year=date.getFullYear()+y;
+		date.setYear(year);
+	}
+	return formatDateToStr(date);
+};
+</script>
+
+</html>

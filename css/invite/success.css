@@ -1,0 +1,17 @@
+@charset "utf-8";
+.banner { height:800px;background:#2ebacf url(../../img/invite/succ1.png) center 0px no-repeat;}
+.banner .warpper{ text-align:center}
+.banner .logo img{ margin:124px 0 76px 0;}
+.succbox{ width:862px; background-color:#d5f1f6; border-radius:5px; margin:0 auto; padding:20px 40px; height:380px; position:relative}
+.succbox h1{ font-size:35px;  line-height:100px; font-weight:normal}
+.succbox h2{ font-size:26px;  line-height:40px; font-weight:normal; color:#666}
+.succbox h2 span{ color:#2ebbd0}
+.succbox p{font-size:18px; margin-top:15px}
+.succbox p a{ color:#ff9001; text-decoration:underline}
+.fx1 {height:279px;background:#2ebacf url(../../img/invite/succ2.png) center 0px no-repeat;
+}
+.butt{ clear:both; height:101px; }
+.butt a{ margin:43px 0 50px 330px; height:49px; width:217px; line-height:48px; background-color:#ff9001; color:#fff; display:block; text-align:center; border-radius:5px; font-size:18px; box-shadow:0px 3px 0 #d77900;transition:0.2s;}
+.butt a:hover{margin-top:46px; box-shadow:0 0 0 #d77900;}
+.word{ color:#fff; line-height:30px}
+.succbox .vip{ position:absolute; height:99px; width:99px; top:10px; right:10px;background:#2ebacf url(../../img/invite/succ4.png) center 0px no-repeat;}

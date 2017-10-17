@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>全部课程_IT/互联网|影视动漫|金融会计|职场能力_极视教育网</title>
+    <meta name="description"
+          content="极视教育作为中国领先的游戏职业在线教育平台之一,国内第一家专注于游戏职业培训与发展的在线 教育平台。平台致力于构建“学习+实战+机遇”三元结构闭环的模式，携手企业与名师一 起帮助有职业培训需求的人才，并为企业提供人才储备的解决方案,拥有海量高清职业课程,涵盖20+个技术领域,如Android,iOS ,Unity3D,Java,Photoshop,Maya,3D MAX,独立游戏等视频教程.根据在线学习特点,极视教育推出职业学院,帮助学习者从零基础起步,结合实战案例演练,系统学习,助你快速成为优秀技术人才！">
+    <meta name="keywords" content="极视教育,职业教育,在线教育平台,在线教育,在线学习,职业培训,android,ios,Unity3D,java,Photoshop,Maya,3D MAX,独立游戏">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/zytp/xb_pay.css">
+    <style type="text/css">
+        /*.content-wrap .buybox h4.lh30{line-height: 30px;}*/
+        .content-wrap .orderno{line-height: 32px;}
+    </style>
+</head>
+<body>
+<div class="" include="/view/module/header.html"></div>
+<div class="top-img-wrap">
+    <div class="content-wrap">职业学院网上实战班服务报名</div>
+</div>
+<div class="content-wrap j_content_wrap">
+    <div class="stepbox step2"></div>
+
+    <div class="div-box">
+        <div class="buybox">
+            <h4 class="lh30">购买信息</h4>
+            <div class="orderno"></div>
+            <div class="buyinfo-box clearfix">
+                <a class="buyinfo-img f-l" href="" target="_blank">
+                    <img class="j_picture" src="">
+                </a>
+                <div class="buyinfo">
+                    <p class="tit j_name"></p>
+                    <p class="time j_time"></p>
+                    <div class="money j_price"></div>
+                </div>
+            </div>
+            <p class="line"></p>
+            <h4>选择支付方式</h4>
+            <ul class="choslist">
+                <li class="j_pay_type" data-type="alipay"><a class="zfb" href="javascript:;"><i></i></a></li>
+                <li class="j_pay_type" data-type="wxpay"><a class="wx" href="javascript:;"><i></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="tk_dl" id="j_alipay_wrap" style="display: none">
+    <div class="loginbg"></div>
+    <div class="tk_box ">
+        <h3>提示</h3>
+        <div class="tk_main">
+            <h4>购买商品信息：</h4>
+            <p class="line"></p>
+            <div class="buyinfo">
+                <p>名称：<span class="j_name"></span></p>
+                <p class="j_time"><!-- 服务有效期：<span >2016/09/20——2017/09/19</span> --></p>
+                <p>总计：<span class="j_price"></span></p>
+            </div>
+            <p class="line"></p>
+            <p class="tips ">请在新打开的页面完成支付，支付完成前，请不要关闭此窗口。支付完成后请根据您的情况点击下面按钮：</p>
+            <p class="j_err" style="color:red;padding-left:10px;display:none;">支付未完成！</p>
+            <!-- <p class="red worn" style="display:none">未支付成功，请重新完成支付</p>-->
+            <div class="tk_btn clearfix"><a href="javascript:" id="cancelbtn" class="on">付款失败</a>
+                <a href="javascript:" id="okbtn" class="">付款成功</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tk_dl" id="j_wxpay_wrap"  style="display: none">
+    <div class="loginbg"></div>
+    <div class="tk_box tdbox">
+        <h3><i class="iconfont tkcls2 j_close">&#xe604;</i>您选择了<i class="wx"></i>付款</h3>
+        <div class="tk_main">
+            <h4>微信扫描支付：</h4>
+            <p class="line"></p>
+            <span class="ewm_pay"><img class="j_qrcode" src=""/></span>
+            <div class="je_wx"><p>扫描二维码完成支付</p>
+                金额：<i class="yel">￥<span class="wx_prc j_price"></span></i></div>
+        </div>
+    </div>
+</div>
+
+
+<div include="../module/footer.html"></div>
+<script src="/js/vendor/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript">
+var paychosModule={
+    bindEvents:function(){
+        var self=this;
+        $('.zyxy').addClass("active");
+        $('.j_content_wrap').on('click','.j_pay_type',function(){
+            var $this=$(this),type=$this.data('type');
+            $this.siblings().removeClass('on');
+            $this.addClass('on');
+            self.placeOrder(self.classId,type);
+        });
+        $('#j_alipay_wrap').on('click','#okbtn',function(){
+            self.getOrderInfo(self.orderId,function(pl){
+                if(pl.statue==0||pl.statue){
+                    var ordtype=pl.statue;
+                    if(ordtype==0){
+                        // alert("未付费")
+                        $('#j_alipay_wrap').find('.j_err').show();
+                    }
+                    else if(ordtype==1){
+                        self.locationToSuccessedPage();
+                    }
+                    else if(ordtype==3){
+                        // alert("已取消")
+                    }
+                }
+                else{
+                    if(pl.content!=null){alert(pl.content[0].message); }
+                    else{alert(pl.message); }
+                }
+            });
+        });
+        $('#j_alipay_wrap').on('click','#cancelbtn',function(){
+            $('.j_content_wrap').find('.j_pay_type').removeClass('on');
+            var $alipay_popbox=$('#j_alipay_wrap');
+            $alipay_popbox.find('.j_err').hide();
+            $alipay_popbox.hide();
+        });
+        $('#j_wxpay_wrap').on('click','.j_close',function(){
+            $('.j_content_wrap').find('.j_pay_type').removeClass('on');
+            $('#j_wxpay_wrap').hide();
+            self.si&&clearInterval(self.si);
+        })
+    },
+    locationToSuccessedPage:function(){
+        window.location.href="/view/zytp/xb_pay3.html?orderId="+this.orderId+'&jobMapId='+this.jobMapId;
+    },
+    getOrderInfo:function(ordid,callback){
+        $.ajax({
+            type: "get",
+            dataType: "json",
+            url: $._CACHEOBJ.context+"/order/common/orderInfo?rad="+Math.random()*1,
+            data:{"orderId":ordid},
+            success: function (result) {
+                mainModule.httpInterceptor(result,callback);
+            }
+        })
+    },
+    placeOrder:function(productId,type){
+        var result,self=this;
+        //有订单就用该订单
+        if(!self.orderNo){
+            $.ajax({
+                type: "get",
+                dataType: "json",
+                async:false,
+                url:mainModule.uri.placeOrderByClass,
+                data:{"productId":productId},
+                success: function (pl) {
+                    mainModule.log('生成订单',pl);
+                    if(pl.status== "SUCCESS"){
+                        result=pl.content;
+                    }
+                    else{
+                        if(pl.content!=null){mainModule.showGlobalHintBar(pl.content[0].message); }
+                        else{mainModule.showGlobalHintBar(pl.message); }
+                    }
+                }
+            });
+        }
+        if(result){
+            self.orderId=result.id;
+            self.orderNo=result.orderNo;
+        }
+        if(self.orderNo&&self.orderId){
+            if(type=='alipay'){
+                var payUri=self.alipay(self.orderNo);
+                window.open(payUri,'_blank');
+                $('#j_alipay_wrap').show();
+                return;
+            }
+            self.wxpay(self.orderNo);
+            $('#j_wxpay_wrap').show();
+            self.si&&clearInterval(self.si);
+            self.si=setInterval(function(){
+                self.getOrderInfo(self.orderId,function(result){
+                    if(result.statue==1){
+                        self.locationToSuccessedPage();
+                    }
+                })
+            },2000);
+        }
+    },
+    alipay:function(no){
+        var url;
+        $.ajax({
+            type: "get",
+            dataType: "json",
+            async:false,
+            url: mainModule.uri.alipay,
+            data:{"orderNo":no},
+            success: function (pl) {
+                 mainModule.log('alipay返回',pl);
+                if(pl.status== "SUCCESS"){
+                    url=pl.content;
+                    // openwin(pl.content);
+                    //window.location.href=pl.content;
+                }
+                else{
+                    if(pl.content!=null){alert(pl.content[0].message); }
+                    else{alert(pl.message); }
+                }
+            }
+        });
+        if(url){
+            return url;
+        }
+    },
+    wxpay:function(orderNo){
+        $(".ewm_pay img").attr("src",mainModule.uri.wxpay+"?orderNo="+orderNo);
+    },
+    getProductInfo:function(jobMapId){
+        var self=this;
+        $.ajax({
+            type:'get',
+            data:{jobMapId:jobMapId},
+            url:mainModule.uri.getClassInfo,
+            success:function(result){
+                mainModule.log('根据jobMapId查小班信息',result);
+                mainModule.httpInterceptor(result,self.renderProductDom);
+            }
+        })
+    },
+    renderProductDom:function(result){
+        var data=result,
+            $wrap=$('.j_content_wrap');
+        data.price=paychosModule.orderMoney;
+        data.serviceStartDate=this.formatDate(data.serviceStartDate).date;
+        data.serviceEndDate=this.formatDate(data.serviceEndDate).date;
+        var dateStr='服务有效期：'+data.serviceStartDate+'至'+data.serviceEndDate,
+            priceStr='￥'+data.price;
+        data.originalPrice&&(priceStr=priceStr+'<s>原价：￥'+data.originalPrice+'</s>');
+        $wrap.find('.j_name').html(data.name);
+        $wrap.find('.j_time').html(dateStr);
+        $wrap.find('.j_price').html(priceStr);
+        $wrap.find('.j_picture').attr('src',data.jobMapPic);
+        $wrap.find('.orderno').html('编号：'+paychosModule.orderNo);
+
+        var $alipay_popbox=$('#j_alipay_wrap');
+        $alipay_popbox.find('.j_name').html(data.name);
+        $alipay_popbox.find('.j_time').html(dateStr);
+        $alipay_popbox.find('.j_price').html('￥'+data.price);
+
+        var $j_wxpay_wrap=$('#j_wxpay_wrap');
+        $j_wxpay_wrap.find('.j_price').html(data.price);
+    },
+    getMapInfoByClassId:function(classId,callback){
+        $.ajax({
+            type:'get',
+            data:{classId:classId},
+            url:mainModule.uri.getMapInfoByClassId,
+            success:function(result){
+                mainModule.log('根据classId查图谱信息',result);
+                mainModule.httpInterceptor(result,callback);
+            }
+        })
+    },
+    init:function(){
+        this.bindEvents();
+        var jobMapId=mainModule.getQueryValueByName('jobMapId'),
+            classId=mainModule.getQueryValueByName('classId'),
+            orderId=this.orderId=mainModule.getQueryValueByName('orderId');
+        if(orderId){
+            var self=this;
+            self.orderId=orderId;
+            this.getOrderInfo(orderId,function(result){
+                mainModule.log('订单信息',result);
+                self.orderNo=result.orderNo;
+                self.orderMoney=result.orderMoney;
+                // self.getProductInfo(result.productId);
+                self.getMapInfoByClassId(result.productId,function(result){
+                    self.jobMapId=result.jobMapId;
+                    self.getProductInfo(result.jobMapId);
+                });
+            });
+            return;
+        }
+        this.getProductInfo(jobMapId);
+        this.classId=classId;
+        this.jobMapId=jobMapId;
+    }
+};
+paychosModule.init();
+</script>
+</body>
+</html>

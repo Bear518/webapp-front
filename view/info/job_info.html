@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>学习中心_极视教育网</title>
+    <meta name="description" content="极视教育作为中国领先的游戏职业在线教育平台之一,国内第一家专注于游戏职业培训与发展的在线 教育平台。平台致力于构建“学习+实战+机遇”三元结构闭环的模式，携手企业与名师一 起帮助有职业培训需求的人才，并为企业提供人才储备的解决方案,拥有海量高清职业课程,涵盖20+个技术领域,如Android,iOS ,Unity3D,Java,Photoshop,Maya,3D MAX,独立游戏等视频教程.根据在线学习特点,极视教育推出职业图谱,帮助学习者从零基础起步,结合实战案例演练,系统学习,助你快速成为优秀技术人才！">
+    <meta name="keywords" content="极视教育,职业教育,在线教育平台,在线教育,在线学习,职业培训,android,ios,Unity3D,java,Photoshop,Maya,3D MAX,独立游戏">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" type="text/css"  href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/info/job_info.css">
+
+</head>
+<body>
+<div include="../module/header.html"></div>
+
+<div include="../module/info-banner.html"></div>
+<div class="infobar warpper clearfix">
+    <div class="left-wrap">
+        <h4><i></i>求职管理</h4>
+        <ul class="menu-wrap">
+            <li  class="on id1" data-type="1"> 申请职位</li>
+            <li  class="id2" data-type="0">收藏职位</li>
+        </ul>
+        <span class="menuicon"></span>
+    </div>
+    <div class="right-wrap">
+        <div class="job-box">
+            <h3 class="job-box-tit">申请职位</h3>
+            <div class="myresume but-sure">我的简历</div>
+            <div class="jobbar_content">
+                <ul>
+                  <!--  <li class="clearfix jobinfo-box">
+                        <span class="com_img"><img src="/uploadfiles/company/288.png" alt=""></span>
+                        <div class="jobinfo">
+                            <div class="jobbox clearfix">
+                                <a href="" target="_blank">U3D开发工程师</a>
+                                <span class="qt">其他</span>
+                                <span class="sq">已申请</span>
+                                <span class="fb-time f-r">申请时间：2016-08-30</span>
+                            </div>
+                            <div class="jobbox clearfix">
+                                <span class="ico company"><i></i>湖北睛彩视讯科技有限公司</span>
+                                <span class="ico address"><i></i>武汉</span>
+                                <span class="ico price"><i></i>¥8000-12000</span>
+                                <span class="sq-time f-r">申请时间：2016-08-30</span>
+                            </div>
+                        </div>
+                        <i class="close"></i>
+                        <div class="icon-collect">
+                            <div class="collect-box">
+                                <a href="#">申请职位</a>
+                                <a href="#">取消收藏</a>
+                            </div>
+                        </div>
+                    </li>-->
+                </ul>
+                <div id="j_job_page_control" class="page-control page-wrap"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tk_dl"  >
+    <div class="loginbg"></div>
+    <div class="tk_box tdbox">
+        <h3>创建简历提示</h3>
+        <div class="tk_main">
+            <div class="tk_wd">
+                亲，您还没有属于自己的简历，快去创建吧！
+            </div>
+            <div class="tk_btn"><a href="/view/wdjl/edit.html" class="courbtn but-sure">确定</a><a href="javascript:" id="j_qx" class="hui but-false">取消</a></div>
+        </div>
+    </div>
+</div>
+
+<div include="../module/footer.html"></div>
+</body>
+<script src="../../js/vendor/jquery-1.9.0.min.js"></script>
+<script src="../../js/main.js"></script>
+<script type="text/javascript" src="/js/common/jquery.page.js"></script>
+
+
+<script type="text/javascript">
+    var jobModule={
+        bindEvents:function(){
+            var self=this;
+            $('.menu-wrap').on('click','li',function(){
+                var $this=$(this),type=$this.data('type');
+                $('.job-box-tit').html($this.text());
+                $this.siblings().removeClass('on');
+                $this.addClass('on');
+                self.isHasPaged=false;
+                document.title=$(this).html()+'_极视教育网';
+                switch(type){
+                    case 0:
+                        self.getMyJobCollection(1);
+                        break;
+                    case 1:
+                        self.getMyJobApply(1);
+                        break;
+                }
+                console.log(type);
+            });
+            $('.jobbar_content').on('click','.del',function(){
+                var $this=$(this),id=$this.data('id'),$li=$this.closest('li'),type=$this.data('type');
+                switch(type){
+                    case 0:
+                        self.cancelMyJobCollection(id,function(){
+                            var num=$li.siblings().length;
+                            $li.remove();
+                            if(num==0){
+                                var dom='<div class="nojob-wrap">暂无职位收藏，<a href="/view/xzjy/list.html">立即前往?</a></div>';
+                                $('.jobbar_content ul').html(dom);
+                            }
+                        });
+                        break;
+                    case 1:
+                        self.cancelMyJobApplyed(id,function(){
+                            var num=$li.siblings().length;
+                            $li.remove();
+                            if(num==0){
+                                var dom='<div class="nojob-wrap">暂无职位申请，<a href="/view/xzjy/list.html">立即前往?</a></div>';
+                                $('.jobbar_content ul').html(dom);
+                            }
+                        });
+                        break;
+                }
+            });
+            $('.jobbar_content').on('click','.apply-job',function(){
+                var $this=$(this)
+                var id=$this.data('id'),$li=$this.closest('li'),type=$this.data('type');
+                if(mainModule.getCookie('islogin')){
+                    self.resumeinfo(id);
+                }
+            });
+            $('.myresume').on('click',function(){
+                window.location.href="/view/wdjl/edit.html";
+            });
+            $('#j_qx').on('click',function(){
+                $(".tk_dl").hide();
+            });
+
+        },
+        getMyJobApply :function(page){
+            var self=this;
+            $.ajax({
+                type: "get",
+                dataType: "json",
+                url:mainModule.uri.getjobList,
+                data:{page:page,rows:5},
+                beforeSend:function(){
+                    $(".jobbar_content ul").html('<span class="nols"><i>查找中，请稍后...</i></span>');
+                },
+                success: function (result) {
+                    mainModule.log('我申请的职位',result);
+                    //mainModule.httpInterceptor(result,self.MyJobApplyDom,undefined,callback);
+                    mainModule.httpInterceptor(result,function(result,total){
+                        self.MyJobApplyDom(result,total);
+                    })
+                },
+                error:function(result){
+                    console.log('可能网速原因加载失败，请稍后再试');
+                    $(".jobbar_content ul").html('<span class="nols">error:' + job.message + '</i></span>');
+                }
+            });
+        },
+        MyJobApplyDom:function(result,total){
+            var htmljob = "",self=this;
+            if(result.length>0){
+                for(var i=0; i<result.length; i++){
+                    var item=result[i],
+                            createDate =mainModule.formatFulldate(item.createDate),publishDate =mainModule.formatFulldate(item.publishDate);
+                    htmljob +=' <li class="clearfix jobinfo-box">' +
+                            ' <span class="com_img"><img src="' + item.companyLogo + '" alt=""/></span> ' +
+                            '<div class="jobinfo"><div class="jobbox clearfix"><a title="'+item.jobName+'" href="/view/xzjy/detail.html?id='+item.applyId+'" target="_blank">' + item.jobName + '</a>' ;
+                    var jobtp=item.jobType;
+                    if(jobtp=="自由职业"){
+                        htmljob += '<span class="zy">自由</span>'}
+                    else if(jobtp=="全职"){
+                        htmljob += '<span class="qz">全职</span>'}
+                    else if(jobtp=="实习"){
+                        htmljob += '<span class="sx">实习</span>'}
+                    else if(jobtp=="兼职"){
+                        htmljob += '<span class="jz">兼职</span>'}
+                    else if(jobtp=="临时工"){
+                        htmljob += '<span class="ls">临时工</span>'}
+                    else {
+                        htmljob += '<span class="qt">其他</span>'
+                    }
+                    htmljob += '<span class="sq">已申请</span>' ;
+                    if( item.publishDate!==null&& item.publishDate!==""){
+                        htmljob += '<span class="fb-time f-r">发布时间：' + publishDate.date + '</span>';
+                    }
+                    htmljob += '</div>' ;
+                    htmljob += '<div class="jobbox clearfix"><span class="ico company"><i></i>' + item.companyName + '</span>';
+
+                    if(item.areaCode!==null&&item.areaCode!==""){
+                        htmljob += '<span class="ico address"><i></i>' + item.areaCode + '</span>'
+                    }
+                    if(result[i].incomeBottom==0&&result[i].incomeTop==0){
+                        // htmljob += '<span class="ico price"><i></i>面议</span></div></li>';
+                        htmljob += '<span class="ico price"><i></i>面议</span>';
+                    }
+                    else{
+                        htmljob += '<span class="ico price"><i></i>¥' + item.incomeBottom + '-' + item.incomeTop + '</span>';
+                    }
+                    htmljob+='<span class="sq-time f-r">申请时间：'+ createDate.date + '</span></div></div><i class="close del" data-type="1" data-id="'+item.applyId+'"></i></li>';
+                }
+            }
+            else{//没有job
+                htmljob += '<div class="nojob-wrap">暂无职位申请，<a href="/view/xzjy/list.html">立即前往?</a></div>';
+            }
+            // total=40;
+            mainModule.createPage(self,result.total,$('#j_job_page_control'),self.getMyJobApply ,5);
+            $(".jobbar_content ul").html(htmljob);
+        },
+        getMyJobCollection:function(page){
+            var self=this;
+            $.ajax({
+                type:'get',
+                data:{page:page,rows:5},
+                url:mainModule.uri.getMyJobCollection,
+                success:function(result){
+                    mainModule.log('我的职位收藏列表数据',result);
+                    //mainModule.httpInterceptor(result,self.MyJobCollectionDom,undefined,callback);
+                    mainModule.httpInterceptor(result,function(result,total){
+                        self.MyJobCollectionDom(result,total);
+                    })
+
+                },
+                error:function(result){
+                    console.log('可能网速原因加载失败，请稍后再试');
+                    $(".jobbar_content ul").html('<span class="nols">error:' + job.message + '</i></span>');
+                }
+            })
+        },
+        MyJobCollectionDom:function(result,total){
+            var htmljob = "",self=this;
+            if(result.length>0){
+                for(var i=0; i<result.length; i++){
+                    var item=result[i],
+                            createDate =mainModule.formatFulldate(item.createDate),updateDate =mainModule.formatFulldate(item.updateDate);
+                    htmljob +=' <li class="clearfix jobinfo-box">' +
+                            ' <span class="com_img"><img src="' + item.companyLogo + '" alt=""></span> ' +
+                            '<div class="jobinfo"><div class="jobbox clearfix"><a title="'+item.jobName+'" href="/view/xzjy/detail.html?id='+item.jobId+'" target="_blank">' + item.jobName + '</a>' ;
+                    var jobtp=item.jobType;
+                    if(jobtp=="自由职业"){
+                        htmljob += '<span class="zy">自由</span>'}
+                        else if(jobtp=="全职"){
+                            htmljob += '<span class="qz">全职</span>'}
+                        else if(jobtp=="实习"){
+                            htmljob += '<span class="sx">实习</span>'}
+                        else if(jobtp=="兼职"){
+                            htmljob += '<span class="jz">兼职</span>'}
+                        else if(jobtp=="临时工"){
+                            htmljob += '<span class="ls">临时工</span>'}
+                        else {
+                            htmljob += '<span class="qt">其他</span></div>'
+                        }
+                        if(item.isApply){
+                            htmljob += '<span class="sq">已申请</span>' ;
+                        }
+                        if( item.createDate!==null&& item.createDate!==""){
+                            htmljob += '<span class="fb-time f-r">发布时间：' + updateDate.date + '</span>' ;
+                        }
+                        htmljob += '</div>' ;
+                        htmljob += '<div class="jobbox clearfix"><span class="ico company"><i></i>' + item.companyName + '</span>';
+
+                        if(item.address!==null&&item.address!==""){
+                            htmljob += '<span class="ico address"><i></i>' + item.address + '</span>'
+                        }
+                        if(item.incomeBottom==0&&item.incomeTop==0){
+                            // htmljob += '<span class="ico price"><i></i>面议</span></div></li>';
+                            htmljob += '<span class="ico price"><i></i>面议</span>';
+                        }
+                    else{
+                        htmljob += '<span class="ico price"><i></i>¥' + item.incomeBottom + '-' + item.incomeTop + '</span>';
+                    }
+                    htmljob+='</div></div><div class="icon-collect"><div class="collect-box"><a class="apply-job" href="javascript:;" data-id="'+item.jobId+'">申请职位</a><a class="del" href="javascript:;"data-type="0" data-id="'+item.jobId+'">取消收藏</a> </div></div></li>';
+                }
+            }
+            else{//没有job
+                htmljob += '<div class="nojob-wrap">暂无职位收藏，<a href="/view/xzjy/list.html">立即前往?</a></div>';
+            }
+            // total=40;
+            mainModule.createPage(self,result.total,$('#j_job_page_control'),self.getMyJobCollection ,5);
+
+            $(".jobbar_content ul").html(htmljob);
+        },
+        cancelMyJobApplyed:function(jobId,succFunc){
+            var self=this;
+            $.ajax({
+                type:'get',
+                url:mainModule.uri.delApplyedRecord,
+                data:{id:jobId},
+                success:function(result){
+                    mainModule.log('删除该职位投递',result);
+                    mainModule.httpInterceptor(result,succFunc);
+                }
+            })
+        },
+        cancelMyJobCollection:function(jobId,succFunc){
+            var self=this;
+            $.ajax({
+                type:'get',
+                url:mainModule.uri.cancelMyJobCollection,
+                data:{jobId:jobId},
+                success:function(result){
+                    mainModule.log('取消职位收藏',result);
+                    mainModule.httpInterceptor(result,succFunc);
+                }
+            })
+        },
+        resumeinfo:function(id){
+            var self=this;
+            $.ajax({
+                type: "get",
+                dataType: "json",
+                url:mainModule.uri.applyingJob,
+                success: function (lgn) {
+                    if(lgn.status== "SUCCESS"){
+                        if(lgn.content.basicInfo!==null&&lgn.content.jobIntension!==null&&lgn.content.contactInfo!==null){
+                            window.location.href="../wdjl/confirm.html?id="+id;
+                        }else{
+                            $('.tk_dl').show();
+                        }
+                    }
+                    else{
+                        alert("投递失败")
+                    }
+                }
+            });
+    },
+        formatDateTime:function(timestamp){
+            var date=new Date(timestamp);
+            return date.toLocaleDateString()+'<br>'+date.toLocaleTimeString();
+        },
+        init:function(){
+            this.bindEvents();
+            this.getMyJobApply(1);
+            //this.getMyJobCollection();
+        }
+    };
+    jobModule.init();
+</script>
+</html>

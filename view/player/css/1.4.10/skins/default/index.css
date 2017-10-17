@@ -1,0 +1,286 @@
+/**
+ * @fileoverview 默认皮肤的样式
+ * @author 首作<aloysious.ld@taobao.com>
+ * @date 2015-01-12
+ *
+ * 约定：
+ * 1. 这个文件只定义所有ui组件的尺寸、在prite图中的位置（background、width、height）；
+ * 2. 与layout相关的属性（position、margin等）不在此定义，而交由js的layout模块完成；
+ * 3. 对于复杂的ui组件，其内层的所有样式都可以在这个文件定制（如进度条、音量控制条）；
+ * 4. 在首次迭代中，这个文件开发者会手动编辑，以后与sprite图相关的属性应由代码自动化生成。
+ */
+.prism-player .prism-big-play-btn {
+  width: 90px;
+  height: 90px;
+  background: url("/img/player/icon.png") no-repeat 1px -85px;
+  cursor: pointer;
+  left: -80px
+}
+.s-size-container.prism-player .prism-big-play-btn {
+  width: 50px;
+  height: 50px;
+  background-position:-86px -82px;
+  left: -50px;
+}
+.prism-player:hover .prism-big-play-btn{left: 30px;}
+.prism-player .prism-play-btn {
+  width: 27px;
+  height: 30px;
+  background: url("/img/player/icon.png") no-repeat -9px -10px;
+  cursor: pointer;
+}
+.prism-player .prism-play-btn:hover{background-position: -9px -44px;}
+.prism-player .prism-live-display {
+  width: 56px;
+  height: 19px;
+  background: url("//gw.alicdn.com/tps/TB1YuE3KFXXXXaAXFXXXXXXXXXX-256-512.png") no-repeat -186px -2px;
+}
+.prism-player .prism-play-btn.playing {
+  width: 27px;
+  height: 30px;
+  background: url("/img/player/icon.png") no-repeat -245px -11px;
+  cursor: pointer;
+}
+.prism-player .prism-play-btn.playing:hover{background-position: -246px -45px;}
+.prism-player .prism-fullscreen-btn {
+  width: 30px;
+  height: 30px;
+  background: url("/img/player/icon.png") no-repeat -141px -10px;
+  cursor: pointer;
+}
+.prism-player .prism-fullscreen-btn:hover{background-position: -141px -44px;}
+.prism-player .prism-fullscreen-btn.fullscreen {
+  width: 30px;
+  height: 30px;
+  background: url("/img/player/icon.png") no-repeat -178px -10px;
+  cursor: pointer;
+}
+.prism-player .prism-volume {
+  width: 33px;
+  height: 30px;
+  background: url("/img/player/icon.png") no-repeat -63px -12px;
+  cursor: pointer;
+}
+.prism-player .prism-volume:hover{background-position: -63px -46px;}
+.prism-player .prism-volume.mute {
+  width: 33px;
+  height: 30px;
+  background: url("/img/player/icon.png") no-repeat -262px -11px;
+}
+.prism-player .prism-volume.mute:hover{background-position: -262px -46px;}
+.prism-player {
+  background-color: #000;
+  position: relative;
+  /* bigPlayButton */
+  /* controlBar */
+  /* playButton */
+  /* liveDisplay */
+  /* timeDisplay */
+  /* fullscreenButton */
+  /* volume */
+  /* progress */
+}
+.prism-player .prism-cover {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.prism-player .prism-controlbar {
+  width: 100%;
+  height: 61px;
+  position: relative;
+  z-index: 1;
+  bottom: -61px;
+}
+.prism-player .prism-controlbar .prism-controlbar-bg {
+  background-color: #262626;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.prism-player .prism-time-display {
+  height: 33px;
+  line-height: 33px;
+  color: #5c5b5b;
+}
+.prism-player .prism-time-display .current-time {
+  color: #aeaeae;
+}
+.prism-player .prism-progress {
+  cursor: pointer;
+  width: 100%;
+  height: 6px;
+  margin-top: 5px;
+  background-color: #363636;
+  position: relative;
+}
+.prism-player .prism-progress .prism-progress-loaded {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  /*background-color: #7e2c1f;*/
+  background-color: #878787;
+}
+.prism-player .prism-progress .prism-progress-played {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  /*background-color: #ee2a10;*/
+  background-color: #ff9001;
+}
+.prism-player .prism-progress .prism-progress-cursor {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: -5px;
+  left: 0;
+  margin-left: -8px;
+  background-color: #cfcfcf;
+  border: 4px solid #cfcfcf;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 5px #cfcfcf;
+  box-shadow: 0 0 5px #cfcfcf;
+  overflow: hidden;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  /*position: absolute;
+  width: 8px;
+  height: 8px;
+  top: -5px;
+  left: 0;
+  margin-left: -8px;
+  background-color: #5b5b5b;
+  border: 4px solid #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 5px #000;
+  box-shadow: 0 0 5px #000;
+  overflow: hidden;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;*/
+}
+:-webkit-full-screen {
+  width: 100%!important;
+  height: 100%!important;
+}
+:-moz-full-screen {
+  width: 100%!important;
+  height: 100%!important;
+}
+:-ms-full-screen {
+  width: 100%!important;
+  height: 100%!important;
+}
+:-ms-fullscreen {
+  width: 100%!important;
+  height: 100%!important;
+}
+:fullscreen {
+  width: 100%!important;
+  height: 100%!important;
+}
+body.prism-full-window {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+.prism-fullscreen {
+  position: fixed;
+  overflow: hidden;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+  _position: absolute;
+}
+    .item-wrap{position: relative;/*float: right;color: #fff;right: 120px;top: 25px;*/width: 3em;height: 2.3em;display: inline-block;vertical-align: top;padding-top: 1em;}
+    .item-select-wrap{position: absolute;top: -60px;width: 120px;right: -45px;text-align: center;background: rgba(0,0,0,0.7);cursor: pointer;transform:scale(0.8,0.3);-ms-transform:scale(0.8,0.3);-moz-transform:scale(0.8,0.3);-webkit-transform:scale(0.8,0.3);-o-transform:scale(0.8,0.3);opacity: 0;visibility: hidden;}
+    .item-wrap:hover .item-select-wrap{display: block;opacity: 1;transform:scale(1);-ms-transform:scale(1);-moz-transform:scale(1);-webkit-transform:scale(1);-o-transform:scale(1);z-index: 9999;visibility: visible;}
+    .item-select-wrap:hover{display: block;}
+    .item-select-wrap li.active{color: #ff9001;}
+    .item-select-wrap ul>li:hover{background: #5c5c5c;color: #fff;border:none;}
+
+    .hd-wrap{right: 120px;top: 25px;}
+    .hd-select-wrap{top: -60px;right: -45px;}
+    .provider-switch-wrap{right: 150px;}
+    .provider-select-wrap{line-height: 30px;}
+    .rate-wrap{position: absolute;color: #b4b4b4;top: 1em;right: 20em;}
+    .rate-select-wrap{line-height: 33px;top: -17em;}
+    .rate-select-wrap li{border-bottom: 1px solid #4c4b4b;}
+    .rate-select-wrap li:last-child{border-bottom: none;}
+    .rate-selected{width: 42px;height: 18px;line-height: 18px;border-radius: 5px;color: #aeaeae;/* background: #ff9001; */text-align: center;}
+    .item-wrap:hover .rate-selected{background: #ff9001;color: #fff;}
+    .item-wrap:hover .hd-selected{background: #ff9001;color: #fff;border-radius: 5px;}
+
+    /*.hd-selected*/
+    /*声音slider垂直布局*/
+    /*.videobox*/
+    .prism-controlbar .vertical-layout.volume-slider{display: none;position: relative;float: right;right: 0;top: inherit;margin-right: -32px;padding: 8px;top: -3em;background-color: rgba(33,33,33,0.8);}
+    .prism-controlbar .vertical-layout .slider-wrap{height: 4em;background-color: rgba(255,255,255,0.2);position: relative;width: .25em;cursor: pointer;}
+    .prism-controlbar .vertical-layout .slider-wrap .progress{height: 2em;background: #ff9001;bottom: 0;position: absolute;width: 100%;}
+    .prism-controlbar .vertical-layout .slider-wrap .knob{background-color: #fff;width: .5em;height: .5em;border-radius: .25em;position: absolute;left: -2px;top: inherit;bottom: 2em;cursor: pointer;}
+    /*声音slider水平布局*/
+    .volume-slider{position: absolute;right: 320px;padding: 0px 20px 20px 0;/* background-color: rgba(33,33,33,0.8); */top: 14px;}
+    .volume-slider .title{color: #aeaeae;font-size: 12px;text-align: center;visibility: hidden;}
+    .slider-wrap{height: .25em;background-color: #474747;position: relative;width: 4em;border-radius: 5px;cursor: pointer;}
+    .slider-wrap .progress{width: 2em;background: #ff9001;bottom: 0;position: absolute;height: 100%;}
+    .slider-wrap .knob{cursor: pointer;background-color: #cfcfcf;width: .5em;height: .5em;border-radius: .25em;position: absolute;left: 2em;top: -2px;}
+    /*flash播放器样式*/
+    .prism-player.jx-flag-fullscreen {width: 100% !important;height: 100% !important;top: 0;right: 0;bottom: 0;left: 0;z-index: 1000;margin: 0;position: fixed;}
+    .jx-btn-fullbrowser{position: absolute;right: 100px;color: #fff;}
+    .prism-player{position: relative;}
+    .jx-controls{position: absolute;height: 3.3em;bottom: 0;width: 8em;right: 11em;color: #aeaeae;}
+    .jx-controlbar{display: block;position: absolute;bottom: 0;height: 3.3em;width: 100%;padding: 0 .5em;}
+    .jx-controlbar .item-wrap{width: 3em;height: 2.3em;display: inline-block;vertical-align: top;padding-top: 1em;}
+    .jx-flash-hd-wrap{width: 36px;height: 18px;border-radius: 5px;background: #474747;font-size: 12px;text-align: center;}
+    .jx-hd-select-wrap{font-size: 14px;line-height: 33px;top: -66px;}
+    .jx-controlbar .provider-switch-wrap{}
+    .jx-controlbar .provider-select-wrap{padding: 12px 18px;width: 155px;text-align: left;top: -84px;color: #aeaeae;}
+    .jx-controlbar .provider-select-wrap ul>li{display: inline-block;width: 60px;height: 24px;border-radius: 5px;font-size: 14px;border:1px solid #aeaeae;color: #aeaeae;text-align: center;line-height: 24px;}
+    .jx-controlbar .provider-select-wrap ul>li.active{background: #ff9001;color: #fff;border:1px solid #ff9001;}
+
+    .jx-controlbar .mrg-r22{margin-right: 22px;}
+    .js-player .icon{background: url('/img/player/icon.png');display: inline-block;}
+    .jx-controlbar .i-set{width: 18px;height: 18px;background-position: -110px -15px;}
+    .jx-controlbar .i-set:hover{background-position: -110px -49px;}
+
+    .period-state-wrap{position: absolute;right: 22px;bottom: 0.7em;}
+    .period-state-wrap .state-wrap{cursor: pointer;width: 70px;height: 26px;line-height: 26px;background: #474747;color: #aeaeae;font-size: 14px;position: relative;text-align: center;border-radius: 5px;}
+    .period-state-wrap .state-wrap .i-gray-tick{background-position:-212px -13px;width: 20px;height: 100%;vertical-align: middle;}
+    .period-state-wrap .state-wrap .txt-state{border-radius: 5px;height: inherit;}
+    .video-learned  .period-state-wrap .state-wrap .txt-state{color: #fff;background: #ff9001;}
+    .video-learned  .period-state-wrap .state-wrap .i-gray-tick{background-position: -212px -47px;}
+    .period-state-wrap .state-wrap:hover .state-title-wrap{display: block;}
+    .period-state-wrap .state-wrap .state-title-wrap{position: absolute;left: 0;top: -36px;width: 70px;height: 28px;line-height: 28px;background: inherit;color: #c8c8c8;border-radius: 5px;display: none;}
+    .period-state-wrap .state-wrap .state-title-wrap:before,.period-state-wrap .state-wrap .state-title-wrap:after{content: '';display: block;width: 0;height: 0;border-left: 6px solid transparent;border-right: 6px solid transparent;border-top: 6px solid #474747;margin-left: 56px;}
+    .period-state-wrap .state-wrap .state-title-wrap:before,.period-state-wrap .state-wrap .state-title-wrap:after{position: absolute;top: 28px;right: 26px; border-top: 6px solid #474747;}
+    .next-period-wrap{position: absolute;left: 4.5em;bottom: 0.6em;cursor: pointer;}
+    .next-period-wrap .i-next{background-position: -42px -15px;width: 20px;height: 20px;}
+    .next-period-wrap .i-next:hover{background-position:-42px -49px;}
+    .rightclick-menu{display: none;background: #474747;padding: 5px;color: #fff;border-radius: 5px;}
+    .js-flag-rightclick-open .rightclick-menu{display: block;}
+    .s-size-container{overflow: hidden;}
+    .s-size-container.prism-player .prism-controlbar,.s-size-container.prism-player .prism-controlbar .prism-controlbar-bg{height: 0;visibility: hidden;opacity: 0;}
+    .s-size-container.prism-player:hover .prism-controlbar{height: 61px;visibility: visible;opacity: 1;}
+    .s-size-container.prism-player:hover .prism-controlbar-bg{height: 50px;visibility: visible;opacity: 1;}
+    /*.prism-player:hover*/
+
+

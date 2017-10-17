@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>我的简历_极视教育网</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/css/wdjl/jquery.Jcrop.css">
+        <style type="text/css">
+.i-sprite{background: url('/img/wdjl/sprite.png') no-repeat;width: 44px;height: 40px;display: inline-block;vertical-align: top;}
+.container{width: 1200px;margin:45px auto 50px;}
+*{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+.r-wrap{width: 924px;}
+.r-wrap .info-wrap{background: #fafafa;border-radius: 3px;border: 1px solid #ededed;position: relative;}
+.r-wrap .item-wrap{background: #fafafa;border-radius: 3px;border: 1px solid #ededed;position: relative;}
+.r-wrap  .header-wrap .title-wrap{background: #64b7c2;padding:3px;margin-top: 8px;}
+.r-wrap  .header-wrap .i-info{background-position: -236px -16px;width: 44px;height: 40px;display: inline-block;vertical-align: top;}
+.r-wrap  .header-wrap .i-contact{background-position:-295px -19px;}
+.r-wrap  .header-wrap .i-lang{background-position:-375px -18px;}
+.r-wrap  .header-wrap .i-skill{background-position:-442px -19px;}
+.r-wrap  .header-wrap .i-cert{background-position:-498px -16px;}
+.r-wrap  .header-wrap .i-education{background-position:-546px -17px;}
+.r-wrap  .header-wrap .i-trained{background-position:-601px -18px;}
+.r-wrap  .header-wrap .i-school{background-position:-658px -19px;}
+.r-wrap  .header-wrap .i-honor{background-position:-233px -66px;}
+.r-wrap  .header-wrap .i-work{background-position:-294px -62px;}
+.r-wrap  .header-wrap .i-internship{background-position:-375px -65px;}
+.r-wrap  .header-wrap .i-project{background-position:-448px -65px;}
+.r-wrap  .header-wrap .i-objective{background-position:-504px -63px;}
+.popbox .i-close{background-position:-369px -123px;cursor: pointer;}
+.r-wrap  .header-wrap .item-txt{display: inline-block;width: 109px;height: 40px;line-height: 40px;font-size: 18px;color: #333;background: #fff;text-align: center;}
+.r-wrap .detail-wrap{padding:0 115px 0 100px;}
+.r-wrap .l-wrap{width: 87px;text-align: right;color: #666;white-space: nowrap;}
+.r-wrap .detail-wrap ul>li{margin-top: 18px;}
+.r-wrap .info-wrap .upload-img-wrap{position: absolute;top: 84px;right: 114px;}
+.r-wrap .upload-img-wrap .img-wrap{width: 142px;height: 142px;position: relative;margin-bottom: 8px;cursor: pointer;}
+.r-wrap .upload-img-wrap .img-wrap img{width: 100%;height: 100%;display: block;}
+.r-wrap .upload-img-wrap .img-wrap div{position: absolute;z-index: 2;line-height: 142px;height: 142px;width: 142px;text-align: center;background: rgba(0,0,0,0.3);color: #ff9001;top: 0;}
+.r-wrap .upload-img-wrap .upload-file{opacity: 0;z-index: 3;position: absolute;width: 142px;height: 142px;top: 0;}
+.r-wrap .upload-img-wrap .cb{margin-right: 8px;}
+.r-wrap .i-edit{background-position: -244px -165px;width: 28px;height: 28px;display: inline-block;margin:19px 30px 0 0;cursor: pointer;}
+.r-wrap .i-edit:hover{background-position:-247px -198px;}
+/*状态切换样式封装*/
+.r-wrap .active-edit{background-position:-245px -202px;}
+.r-wrap .detail-wrap .edit-wrap{display: none;}
+.r-wrap .detail-wrap .i-require{display: none;}
+.r-wrap .info-wrap .active-detail-edit .edit-wrap{display: block;margin-left: 30px;max-width: 586px;}
+.r-wrap .active-detail-edit .edit-wrap{display: block;}
+.r-wrap .active-detail-edit .i-require{display: inline-block;}
+.r-wrap .active-detail-edit .default-wrap{display: none;}
+/*状态切换样式封装*/
+.r-wrap .info-wrap li:nth-child(2){display:none;}
+.r-wrap .info-wrap li:last-child{display: none;}
+.r-wrap .info-wrap li:last-child .l-wrap{height: 20px;}
+.r-wrap .info-wrap .active-detail-edit li:last-child{display: block;}
+.r-wrap .info-wrap .active-detail-edit li:nth-child(2){display:block;}
+.r-wrap .input-default{width: 220px;height: 28px;background: #fff;-moz-box-shadow:0px 2px 3px rgba(0,0,0,0.1) inset;-webkit-box-shadow:0px 2px 3px rgba(0,0,0,0.1) inset;box-shadow:0px 2px 3px rgba(0,0,0,0.1) inset;padding-left: 6px;line-height: 24px;}
+.r-wrap select{border:1px solid #ededed;width: 100px;color: #999;height: 25px;cursor: pointer;}
+.r-wrap .textarea{width: 550px;height: 120px;-moz-box-shadow:0px 2px 5px rgba(0,0,0,0.15) inset;-webkit-box-shadow:0px 2px 5px rgba(0,0,0,0.15) inset;box-shadow:0px 2px 5px rgba(0,0,0,0.15) inset;padding:6px 6px;line-height: 18px;border:1px solid #ededed;resize:none;}
+.r-wrap .but-cancel,.popbox .but-cancel{background: #bbb;}
+.r-wrap .but-cancel:hover,.popbox .but-cancel:hover{background: #cecece;}
+.r-wrap .mrg-l80,.popbox .mrg-l80{margin-left: 80px;}
+.r-wrap .mrg-l20{margin-left: 20px;}
+.mrg-l10{margin-left: 10px;}
+.mrg-l5{margin-left: 5px;}
+.mrg-r5{margin-right: 5px;}
+.r-wrap .l28{line-height: 28px;}
+.r-wrap .i-require{background-position:-235px -132px;width: 16px;height: 11px;display: inline-block;}
+.w276{width: 276px;_width:276px;min-height: 691px;}
+.r-wrap .w95{width: 95px;}
+.r-wrap .h20{height: 20px;}
+.r-wrap .w277{width: 277px;}.overflow-hidden{overflow: hidden;}
+.r-wrap .w135{width: 135px;}.r-wrap .personal-label{padding:3px 8px;border:2px solid #dfdfdf;color: #999;display: inline-block;}
+.r-wrap .personal-label-addbtn{padding:5px 11px;background: #dfdfdf;color: #666;border-radius: 3px;cursor: pointer;}
+.r-wrap .personal-label-addbtn:hover{color: #fff;background: #ff9001;}
+.r-wrap .personal-label span{font-size: 16px;}
+.mrg-b5{margin-bottom: 5px;}.err{color: #db8a83;}label{font-size: 14px;color:#666;}
+/*送VIP提示条*/
+.vip-hint-bar-container{background-color: #fffadf;border-bottom: 1px solid #ccd7e8;}
+.vip-hint-bar{width:1200px;margin:0 auto;height: 38px;line-height: 38px;text-align: center;position: relative;position: relative;}
+.vip-hint-bar span{color: #ef6601;}
+.vip-hint-bar a{position: absolute;right: 0;}
+        </style>
+    </head>
+    <body ng-app="app" ng-controller="appCtrl" ng-class="{'overflow-hidden':popboxbgShow}">
+      <div id="j_vip_hint_bar" class="vip-hint-bar-container"><div class="vip-hint-bar">立刻完善简历档案，每完成一项即可<span >免费获赠3天VIP</span><a onclick="$('#j_vip_hint_bar').fadeOut()" href="javascript:;">x</a></div></div>
+    	<div include="/view/module/header.html"></div>
+    	<div class="container clearfix">
+	    	<div id="j_left_wrap" class="f-l w276" ng-include="'left.html'"></div>
+	    	<div id="j_r_wrap" class="r-wrap f-l">
+	    		<div class="" ng-include="'info.htm'"></div>
+	    		<!-- 求职意向 -->
+	    		<style type="text/css">
+	    			.r-wrap .objective-wrap{margin-top: 25px;}
+	    			.r-wrap .objective-detail-wrap{padding:0 100px 35px;}
+	    			.r-wrap .objective-detail-wrap ul>li{margin-top: 20px;}
+	    			/*.r-wrap .contact-detail-wrap .edit-wrap{padding:21px 220px 0 146px;}*/
+	    			.r-wrap .objective-detail-wrap .txt-wrap{width: 86px;text-align: right;white-space: nowrap;}
+	    			.r-wrap .objective-detail-wrap .multi-select{width: 296px;height: 28px;border:1px solid #ededed;line-height: 22px;padding:3px;color: #999;background: #fff;}
+	    			.r-wrap .i-multi{background-position:-346px -204px;width: 22px;height: 22px;cursor: pointer;}
+	    			.r-wrap .i-multi:hover{background-position: -481px -203px;width: 25px;}
+	    			.r-wrap .w136{width: 136px;}
+	    			.r-wrap .mrg-r10{margin-right: 10px;}
+	    			.r-wrap .h34{height: 34px;}
+	    			.r-wrap .mrg-l35{margin-left: 35px;}
+	    			.r-wrap .multi-wrap{width: 266px;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;}
+	    		</style>
+	    		<div id="j_objective_wrap" class="item-wrap objective-wrap">
+	    			<div ng-if="shadeInfo.objectiveInfoShow" class="shade-wrap"></div>
+	    			<div class="clearfix header-wrap">
+	    				<div class="f-l title-wrap">
+		    				<i class="i-sprite i-objective"></i>
+		    				<div class="item-txt">求职意向</div>
+	    				</div>
+	    				<div class="f-r"><i ng-click="copyInfoForEdit('objectiveInfo')" data-id="#j_objective_wrap" class="i-sprite i-edit"></i></div>
+	    			</div>
+	    			<div class="detail-wrap objective-detail-wrap">
+	    				<ul class="">
+	    					<li class="clearfix">
+	    						<div class="f-l txt-wrap" ><i class="i-sprite i-require"></i>期望行业：</div>
+	    						<div class="f-l ">
+	    							<span ng-repeat="item in userObjectiveIndustrys" ng-bind="item.name" class="default-wrap mrg-r5"></span>
+	    							<div class="edit-wrap mrg-l35 clearfix">
+	    								<div class="multi-select clearfix f-l" ng-click="selectIndustry('objective_industry_select')"><div class="multi-wrap f-l"><span  ng-if="userObjectiveIndustrys.length==0">请选择</span><span class="mrg-r5" ng-repeat="item in userObjectiveIndustrys" ng-bind="item.name"></span></div><i class="f-r i-sprite i-multi"></i></div>
+	    								<div class="mrg-l10 err f-l" ng-bind="objectiveInfoErr.industry"></div>
+	    							</div>
+	    						</div>
+
+	    					</li>
+	    					<li class="clearfix">
+	    						<div class="f-l txt-wrap"><i class="i-sprite i-require"></i>期望职位：</div>
+	    						<div class="f-l ">
+	    							<span ng-repeat="item in userObjectiveJobTypes" ng-bind="item.name" class="default-wrap mrg-r5"></span>
+	    							<div class="edit-wrap mrg-l35 clearfix">
+	    								<div ng-click="showJobTypeSelect('objective_jobtype_select')" class="multi-select clearfix f-l"><span ng-if="userObjectiveJobTypes.length==0">请选择</span><div class="multi-wrap f-l" ng-if="userObjectiveJobTypes.length>0"><span ng-repeat="item in userObjectiveJobTypes" class="mrg-r5" ng-bind="item.name"></span></div><i class="f-r i-sprite i-multi"></i></div>
+	    								<div class="mrg-l10 err f-l" ng-bind="objectiveInfoErr.category"></div>
+
+	    							</div>
+	    						</div>
+
+	    					</li>
+	    					<li class="clearfix">
+	    						<div class="f-l txt-wrap"><i class="i-sprite i-require"></i>期望地点：</div>
+	    						<div class="f-l ">
+	    							<span ng-repeat="item in userObjectiveCitys" ng-bind="item.name" class="default-wrap mrg-r5"></span>
+	    							<div class="edit-wrap mrg-l35 clearfix">
+	    								<div ng-click="showCitySelectPopbox('objective_city_select')" class="multi-select clearfix f-l"><span ng-if="userObjectiveCitys.length==0">请选择</span><span  ng-repeat="item in userObjectiveCitys" ng-bind="item.name" class="mrg-r5"></span><i class="f-r i-sprite i-multi"></i></div>
+	    								<div class="mrg-l10 err f-l" ng-bind="objectiveInfoErr.citys"></div>
+
+	    							</div>
+	    						</div>
+
+	    					</li>
+	    					<li class="clearfix">
+	    						<div class="f-l txt-wrap">期望月薪：</div>
+	    						<div class="f-l ">
+	    							<span ng-if="!userObjective.showNegotiable" ng-bind="userObjective.expectSalary|filterField" class="default-wrap"></span>
+	    							<span ng-if="userObjective.showNegotiable" class="default-wrap">面议</span>
+	    							<div class="edit-wrap mrg-l35">
+	    								<input ng-model="userObjective.expectSalary" type="text" class="input-default w136 mrg-r10">RMB/月
+	    								<input ng-model="userObjective.showNegotiable" type="checkbox" class="mrg-r10 mrg-l20">显示为面议
+	    							</div>
+	    						</div>
+
+	    					</li>
+	    					<li class="clearfix">
+	    						<div class="f-l txt-wrap">目前月薪：</div>
+	    						<div class="f-l ">
+	    							<span ng-if="!userObjective.showPrivacy" ng-bind="userObjective.currentSalary|filterField" class="default-wrap"></span>
+	    							<span ng-if="userObjective.showPrivacy" class="default-wrap">保密</span>
+	    							<div class="edit-wrap mrg-l35">
+	    								<input ng-model="userObjective.currentSalary" type="text" class="input-default w136 mrg-r10">RMB/月
+	    								<input ng-model="userObjective.showPrivacy" type="checkbox" class="mrg-r10 mrg-l20">显示为保密
+	    							</div>
+	    						</div>
+
+	    					</li>
+	    					<li class="clearfix edit-wrap h34">
+	    						<div class="f-l txt-wrap h20"></div>
+	    						<div class="f-l clearfix mrg-l35">
+									<div class="f-l">
+		    							<input ng-disabled="disabledInfo.objectiveInfoUpdateBtnDisabled" type="button" ng-click="objectiveUpdate('#j_objective_wrap')" class="but w95" value="保存">
+		    						</div>
+									<div class="f-l">
+										<input ng-click="cancelInfoUpdate('objectiveInfo')" type="button" data-id="#j_objective_wrap" class="but but-cancel mrg-l80 w95" value="取消">
+									</div>
+    							</div>
+
+	    					</li>
+	    				</ul>
+	    			</div>
+	    		</div>
+	    		<!-- 求职意向 -->
+	    		<!-- 联系方式 -->
+	    		<style type="text/css">
+	    			.r-wrap .contact-wrap{margin-top: 25px;}
+	    			.r-wrap .contact-detail-wrap{padding:0 100px 35px;}
+	    			.r-wrap .contact-detail-wrap ul>li{margin-top: 28px;width: 361px;}
+	    			.r-wrap .contact-detail-wrap .edit-wrap{padding:21px 0 0 146px;}
+	    			.r-wrap .contact-wrap .active-detail-edit ul>li{width: auto;}
+	    			.r-wrap .contact-detail-wrap .txt-wrap{width: 45px;text-align: right;margin-right: 30px;}
+	    			.r-wrap .w277{width: 277px;}
+	    		</style>
+	    		<div id="j_contact_wrap" class="item-wrap contact-wrap">
+	    			<div ng-if="shadeInfo.contactInfoShow" class="shade-wrap"></div>
+	    			<div class="clearfix header-wrap">
+	    				<div class="f-l title-wrap">
+		    				<i class="i-sprite i-contact"></i>
+		    				<div class="item-txt">联系方式</div>
+	    				</div>
+	    				<div class="f-r"><i ng-click="copyInfoForEdit('contactInfo')" data-id="#j_contact_wrap" class="i-sprite i-edit"></i></div>
+	    			</div>
+	    			<div class="detail-wrap contact-detail-wrap">
+	    				<ul class="clearfix default-wrap">
+	    					<li class="f-l">手机：<span ng-bind="contactInfo.mobilePhone"></span></li>
+	    					<li class="f-l">QQ：<span ng-bind="contactInfo.qqNum"></span></li>
+	    					<li class="f-l">邮箱：<span ng-bind="contactInfo.email"></span></li>
+	    					<li class="f-l">微信：<span ng-bind="contactInfo.weixin"></span></li>
+
+	    				</ul>
+	    				<div class="edit-wrap">
+	    					<ul>
+	    						<li class="clearfix">
+	    							<div class="f-l txt-wrap"><i class="i-sprite i-require"></i>手机</div>
+	    							<div class="f-l"><input ng-blur="checkInput('contact-tel',contactInfo.mobilePhone)" ng-model="contactInfo.mobilePhone" type="text" class="input-default w277"><span class="mrg-l10 err" ng-show="contactInfoErr.mobilePhone" ng-bind="contactInfoErr.mobilePhone"></div>
+	    						</li>
+	    						<li class="clearfix">
+	    							<div class="f-l txt-wrap"><i class="i-sprite i-require"></i>邮箱</div>
+	    							<div class="f-l"><input ng-blur="checkInput('contact-email',contactInfo.email)" ng-model="contactInfo.email" type="text" class="input-default w277"><span class="mrg-l10 err" ng-show="contactInfoErr.email" ng-bind="contactInfoErr.email"></div>
+	    						</li>
+	    						<li class="clearfix">
+	    							<div class="f-l txt-wrap">QQ</div>
+	    							<div class="f-l"><input ng-model="contactInfo.qqNum" type="text" class="input-default w277"></div></li>
+	    						<li class="clearfix">
+	    							<div class="f-l txt-wrap">微信</div>
+	    							<div class="f-l"><input ng-model="contactInfo.weixin" type="text" class="input-default w277"></div>
+	    						</li>
+	    						<li class="clearfix h34">
+	    							<div class="f-l txt-wrap h20"></div>
+	    							<div class="f-l clearfix">
+										<div class="f-l">
+			    							<input ng-disabled="disabledInfo.contactInfoUpdateBtnDisabled" type="button" ng-click="updateContactInfo('#j_contact_wrap')" class="but  w95" value="保存">
+			    						</div>
+										<div class="f-l">
+											<input ng-click="cancelInfoUpdate('contactInfo')" type="button" data-id="#j_contact_wrap" class="but but-cancel mrg-l80 w95" value="取消">
+										</div>
+	    							</div>
+	    						</li>
+	    						
+	    					</ul>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<!-- 联系方式 -->
+	    		<!-- 语言能力 -->
+	    		<style type="text/css">
+	    			.r-wrap .item-wrap{margin-top: 25px;}
+	    			.r-wrap .detail-wrap{padding:28px 100px 35px;}
+	    			.r-wrap .detail-wrap table{border:1px solid #ededed;background: #fff;}
+	    			.r-wrap .detail-wrap tbody tr:nth-child(odd){background: #fafafa;}
+	    			.r-wrap .detail-wrap table td,.r-wrap .detail-wrap th{width: 150px;padding-left:28px;}
+	    			.r-wrap .detail-wrap table tr>td:nth-child(2){width: 200px;}
+	    			.r-wrap .detail-wrap table tr{height: 37px;}
+	    			.r-wrap .detail-wrap thead tr{color: #333;}
+	    			.r-wrap .detail-wrap tbody span:hover{color: #ff9001;cursor: pointer;}
+	    			.r-wrap .i-add{background-position:-288px -164px; margin: 19px 30px 0 0;width: 28px;height: 28px;cursor: pointer;}
+	    			.r-wrap .i-add:hover{background-position:-290px -198px;}
+	    			.r-wrap .active-add{background-position:-290px -198px;cursor: pointer;}
+	    			.mrg-r38{margin-right: 38px;}
+	    			.mrg-r28{margin-right: 28px;}
+	    			.r-wrap .w82{width: 82px;}
+	    			.r-wrap .w255{width: 255px;}
+	    			.r-wrap .mrg-l110{margin-left: 110px;}
+	    			.r-wrap .lang-txt-wrap{display: inline-block;width: 72px;text-align: right;}
+	    			.nowrap{white-space: nowrap;}.mrg-t10{margin-top: 10px;}
+	    			.w372{width: 372px;}.mrg-b10{margin-bottom: 10px;}
+	    		</style>
+	    		<div id="j_lang_wrap" class="item-wrap lang-wrap">
+	    			<div ng-if="shadeInfo.langInfoShow" class="shade-wrap"></div>
+	    			<div class="clearfix header-wrap">
+	    				<div class="f-l title-wrap">
+		    				<i class="i-sprite i-lang"></i>
+		    				<div class="item-txt">语言能力</div>
+	    				</div>
+	    				<div class="f-r"><i ng-click="changeShade('langInfo')" data-id="#j_lang_wrap" class="i-sprite i-add"></i></div>
+	    			</div>
+	    			<div class="detail-wrap lang-detail-wrap">
+	    				<table class="default-wrap">
+	    					<thead><tr><th>语言</th><th>听说</th><th>读写</th><th>等级考试</th><th></th></tr></thead>
+	    					<tbody>
+	    						<tr ng-repeat="item in langList"><td ng-bind="item.name"></td><td ng-bind="item.listeningAndSpeaking"></td><td ng-bind="item.readingAndWriting"></td><td><span class="mrg-r10" ng-repeat="item in item.gradeExaminations"><label ng-bind="item.name"></label><label ng-if="item.score">(</label><label ng-bind="item.score"></label><label ng-if="item.score">分)</label></span></td><td><span ng-click="editLangInfo($index,'#j_lang_wrap')" class="mrg-r10 mrg-l20">编辑</span><span ng-click="langDel($index)">删除</span></td></tr>
+	    					</tbody>
+	    				</table>
+	    				<div class="edit-wrap">
+	    					<div>
+	    						<span class="mrg-r38 lang-txt-wrap"><i class="i-sprite i-require"></i>语言</span>
+	    						<select ng-init="langLangSelected=langSkillData[0]" ng-options="item.name for item in langSkillData" ng-model="langLangSelected" ng-change="langLangSelectChange(langLangSelected)" ng-class="{'mrg-r38':!(langInfoErr.name||langInfoErr.listeningAndSpeaking||langInfoErr.readingAndWriting)}"></select>
+	    						<span  ng-bind="langInfoErr.name" class="err"></span>
+	    						<span ng-if="!langInfoErr.name&&langInfoErr.listeningAndSpeaking"  ng-bind="langInfoErr.listeningAndSpeaking" class="err"></span>
+	    						<span ng-if="!langInfoErr.listeningAndSpeaking&&langInfoErr.readingAndWriting"  ng-bind="langInfoErr.readingAndWriting" class="err"></span>
+	    						<span class="mrg-r38"><i class="i-sprite i-require"></i>听说</span><select ng-init="langLangListenDegreeSelected=langDegreeData[0]" ng-options="item for item in langDegreeData" ng-model="langInfo.listeningAndSpeaking" class="mrg-r38"></select><span class="mrg-r38"><i class="i-sprite i-require"></i>读写</span><select ng-init="langLangWriteDegreeSelected=langDegreeData[0]" ng-options="item for item in langDegreeData" ng-model="langInfo.readingAndWriting"></select></div>
+	    					<div class="mrg-t20 clearfix">
+	    						<span class="mrg-r38 lang-txt-wrap f-l"><i class="i-sprite i-require"></i>等级考试</span>
+	    						<div class="f-l w372 nowrap"><div class="mrg-b10" ng-repeat="itemx in langLangLevelList">
+	    						<select  ng-options="item.name for item in langSkillChildData" ng-model="itemx.langLangLevelSelected" class="mrg-r28 w255"></select>
+	    						<input type="text" ng-model="itemx.score" class="input-default mrg-r5 w82">分<span class="mrg-l10 c62" ng-if="$index>0" ng-click="delLangLangLevelItem($index)">删除</span></div>
+	    						</div></div>
+	    					<!-- <div ng-repeat="itemx in langLangLevelList" class="mrg-t20 clearfix">
+	    						<span class="mrg-r38 lang-txt-wrap h20 f-l"></span>
+	    						<div class="f-l">
+	    							<select  ng-options="item.name for item in langSkillChildData" ng-model="itemx.langLangLevelSelected" class="mrg-r28 w255 mrg-l5"></select>
+	    							<input type="text" ng-model="itemx.score" class="input-default mrg-r5 w82">分<span class="mrg-l10 c62" ng-click="delLangLangLevelItem($index)">删除</span></div>
+    						</div> -->
+    						<div class="clearfix"><span class="mrg-r38 lang-txt-wrap h20 f-l"></span><div ng-click="addLangLangLevelList()" class="f-l c62">添加一项等级考试</div></div>
+	    					<div class="clearfix mrg-t20 h34">
+	    						<div class="f-l">
+	    							<input ng-disabled="disabledInfo.langInfoUpdateBtnDisabled" type="button" ng-click="langLangAdd('#j_lang_wrap')" class="but w95 mrg-l110" value="保存">
+	    						</div>
+								<div class="f-l">
+									<input ng-click="cancelUpdate('lang_update_cancel')" type="button" data-id="#j_lang_wrap" class="but but-cancel  mrg-l80 w95" value="取消">
+								</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<!-- 语言能力 -->
+	    		<!-- 掌握技能 -->
+	    		<style type="text/css">
+	    			.r-wrap .skill-wrap{margin-top: 25px;}
+	    			.r-wrap .skill-detail-wrap{padding:28px 100px 35px;}
+	    			.c3{color: #333;}.c9{color: #999;}
+	    			.r-wrap .skill-wrap ul{border:1px solid #ededed;background: #fff;}
+	    			.r-wrap .skill-wrap ul>li{line-height: 35px;min-height: 35px;padding-left: 30px;margin: 0;}
+	    			.r-wrap .skill-wrap  ul>li:nth-child(even){background:#fafafa;}
+	    			.label{padding: 4px 8px;background: #cecece;color: #fff;margin: 4px 20px 0 0;display: inline-block;}
+					.multi-select {width: 543px;border: 1px solid #ededed;line-height: 22px;padding: 4px 8px 8px;color: #999;position: relative;background: #fff;}
+					.multi-select .i-multi{position: absolute;top: 3px;right: 4px;}
+					.mrg-t10{margin-top: 10px;}
+					.mrg-b33{margin-bottom: 33px;}
+					.r-wrap .skill-wrap .input-default{width: 100%;}
+					.c62{color:#64b7c2;text-decoration: underline;cursor: pointer;}
+	    			/*.r-wrap .lang-detail-wrap ul>li{margin-top: 28px;width: 361px;}*/
+	    			/*.r-wrap .lang-detail-wrap .edit-wrap{padding:21px 220px 0 146px;}*/
+	    			/*.r-wrap .lang-detail-wrap .txt-wrap{width: 45px;text-align: right;margin-right: 30px;}*/
+	    		</style>
+	    		<div id="j_skill_wrap" class="item-wrap skill-wrap">
+	    			<div ng-if="shadeInfo.skillInfoShow" class="shade-wrap"></div>
+	    			<div class="clearfix header-wrap">
+	    				<div class="f-l title-wrap">
+		    				<i class="i-sprite i-skill"></i>
+		    				<div class="item-txt">掌握技能</div>
+	    				</div>
+	    				<div class="f-r"><i ng-click="changeShade('skillInfo')" data-id="#j_skill_wrap" class="i-sprite i-edit"></i></div>
+	    			</div>
+	    			<div class="detail-wrap  skill-detail-wrap">
+	    				<div class="default-wrap"><ul>
+	    					<li class="clearfix"><div class="f-l c3 mrg-r28">精通的技能：</div><div class="f-l c9"><span ng-repeat="item in skillInfo.masterSkillChosenList" class="mrg-r5" ng-bind="item.name"></span><span ng-bind="skillInfo.master"></span></div></li>
+	    					<li class="clearfix"><div class="f-l c3 mrg-r28">熟练的技能：</div><div class="f-l c9"><span ng-repeat="item in skillInfo.practisedSkillChosenList" class="mrg-r5" ng-bind="item.name+' '"></span><span ng-bind="skillInfo.practised"></span></div></li>
+	    				</ul></div>
+	    				<div class="edit-wrap">
+	    					<div class="clearfix">
+	    						<div class="f-l mrg-r38">精通的技能</div>
+	    						<div class="f-l">
+	    							<div class="multi-select"><span ng-if="userskillskills.length==0">请选择</span><label ng-repeat="item in userskillskills" class="label"><span ng-bind="item.name"></span><span class="mrg-l5 del-label" ng-click="delLabel(userskillskills,$index)">X</span></label><span class="c62 dis_none">可再选择1项</span><i ng-click="skillSelectClick('skill_skill_select')" class="f-r i-sprite i-multi"></i></div>
+	    							<div class="mrg-t10 mrg-b33"><input type="text" ng-model="skillInfo.master" class="input-default" placeholder="在这里直接填写您精通的技能"></div>
+	    						</div>
+	    					</div>
+	    					<div class="clearfix">
+	    						<div class="f-l mrg-r38">熟练的技能</div>
+	    						<div class="f-l">
+	    							<div class="multi-select"><span ng-if="userskilledskills.length==0">请选择</span><label class="label" ng-repeat="item in userskilledskills"><span ng-bind="item.name"></span><span class="mrg-l5 del-label" ng-click="delLabel(userskilledskills,$index)">X</span></label><span class="c62 dis_none">可再选择1项</span><i ng-click="skillSelectClick('skill_skilled_select')" class="f-r i-sprite i-multi"></i></div>
+	    							<div class="mrg-t10"><input type="text" ng-model="skillInfo.practised" class="input-default" placeholder="在这里直接填写您熟练的技能"></div>
+	    							<div class="clearfix mrg-t20 h34">
+			    						<div class="f-l">
+			    							<input ng-disabled="disabledInfo.skillInfoUpdateBtnDisabled" ng-click="skillInfoSave('#j_skill_wrap')" type="button" class="but  w95" value="保存">
+			    						</div>
+										<div class="f-l">
+											<input type="button" ng-click="changeShade('skillInfo',true)" data-id="#j_skill_wrap" class="but but-cancel  mrg-l80 w95" value="取消">
+										</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<!-- 掌握技能 -->
+	    		<!-- 证书 -->
+	    		<style type="text/css">
+	    			.r-wrap .cert-wrap{margin-top: 25px;}
+	    			.r-wrap .cert-detail-wrap{padding:28px 100px 35px;}
+	    			.r-wrap .cert-wrap ul{border:1px solid #ededed;background: #fff;}
+	    			.r-wrap .cert-wrap ul>li{line-height: 35px;padding-left: 30px;margin: 0;min-height: 35px;}
+					.r-wrap .cert-wrap .input-default{width: 100%;}
+					.del-label:hover{color: #ff9001;cursor: pointer;}
+	    		</style>
+	    		<div id="j_cert_wrap" class="item-wrap cert-wrap">
+	    			<div ng-if="shadeInfo.certInfoShow" class="shade-wrap"></div>
+	    			<div class="clearfix header-wrap">
+	    				<div class="f-l title-wrap">
+		    				<i class="i-sprite i-cert"></i>
+		    				<div class="item-txt">证书</div>
+	    				</div>
+	    				<div class="f-r"><i ng-click="changeShade('certInfo')" data-id="#j_cert_wrap" class="i-sprite i-edit"></i></div>
+	    			</div>
+	    			<div class="detail-wrap  skill-detail-wrap">
+	    				<div class="default-wrap"><ul>
+	    					<li class="clearfix"><div class="f-l c3"><span ng-repeat="item in certInfo.certificateChosenList" ng-bind="item.name" class="mrg-r5"></span><span ng-bind="certInfo.name"></span></div></li>
+	    				</ul></div>
+	    				<div class="edit-wrap">
+	    					<div class="clearfix">
+	    						<div class="f-l mrg-r38">证书名称</div>
+	    						<div class="f-l">
+	    							<div class="multi-select"><span ng-if="userCertCerts.length==0">请选择</span><label ng-repeat="item in userCertCerts" class="label"><span ng-bind="item.name"></span><span ng-click="delLabel(userCertCerts,$index)" class="mrg-l5 del-label">X</span></label><span class="c62 dis_none">可再选择1项</span><i ng-click="certSelectClick('cert_cert_select')" class="f-r i-sprite i-multi"></i></div>
+	    							<div class="mrg-t10 mrg-b33"><input ng-model="certInfo.name" type="text" class="input-default" placeholder="在这里直接填写其他证书"></div>
+	    							<div class="clearfix mrg-t20 h34">
+			    						<div class="f-l">
+			    							<input ng-disabled="disabledInfo.certInfoUpdateBtnDisabled" ng-click="certInfoSave('#j_cert_wrap')" type="button" class="but  w95" value="保存">
+			    						</div>
+										<div class="f-l">
+											<input type="button" ng-click="changeShade('skillInfo',true)" data-id="#j_cert_wrap" class="but but-cancel mrg-l80 w95" value="取消">
+										</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<!-- 证书 -->
+	    		<!-- 教育经历 -->
+	    		<div ng-include="'education.htm'"></div>
+	    		<!-- 教育经历 -->
+<!-- 培训经历 -->
+<style type="text/css">
+	.r-wrap .trained-txt-wrap{width: 72px;text-align: right;}
+	.r-wrap .w70{width: 66px;}
+	.r-wrap .w228{width: 228px;}
+	.r-wrap .w545{width: 545px;}
+	/*.r-wrap .trained-detail-wrap ul>li{margin-top: 28px;width: 361px;}*/
+	/*.r-wrap .trained-detail-wrap .edit-wrap{padding:21px 220px 0 146px;}*/
+	/*.r-wrap .trained-detail-wrap .txt-wrap{width: 45px;text-align: right;margin-right: 30px;}*/
+</style>
+<div id="j_trained_wrap" class="item-wrap trained-wrap">
+	<div ng-if="shadeInfo.trainInfoShow" class="shade-wrap"></div>
+	<div class="clearfix header-wrap">
+		<div class="f-l title-wrap">
+			<i class="i-sprite i-trained"></i>
+			<div class="item-txt">培训经历</div>
+		</div>
+		<div class="f-r"><i ng-click="changeShade('trainInfo')" data-id="#j_trained_wrap" class="i-sprite i-add"></i></div>
+	</div>
+	<div class="detail-wrap trained-detail-wrap">
+		<table class="default-wrap">
+			<thead><tr><th>培训名称</th><th>培训时间</th><th>培训机构</th><th></th></tr></thead>
+			<tbody>
+				<tr ng-repeat="item in trainList"><td ng-bind="item.title"></td><td><label ng-bind="item.startDate|dateFormatToMonth"></label><span ng-bind="item.endDate|isShowZhi"></span><label class="" ng-bind="item.endDate|dateFormatToMonth"></label></td><td ng-bind="item.institution"></td><td><span ng-click="infoEdit(item,'train_edit')" class="mrg-r10 mrg-l20">编辑</span><span ng-click="infoDel(item,'train_del',$index)">删除</span></td></tr>
+			</tbody>
+		</table>
+		<div class="edit-wrap">
+			<ul>
+				<li class="clearfix">
+					<div class="mrg-r38 trained-txt-wrap f-l"><i class="i-sprite i-require"></i>培训时间</div>
+					<div class="f-l"><input ng-model="trainInfo.startYear" type="text" class="input-default w70 mrg-r5">年
+						<input type="text" ng-model="trainInfo.startMonth" class="input-default w70 mrg-r5 mrg-l5">月
+						<span class="mrg-l5 mrg-r5">至</span>
+					<input type="text" ng-model="trainInfo.endYear" ng-readonly="trainInfo.asYet" class="input-default w70 mrg-r5 mrg-l5">年
+					<input type="text" ng-model="trainInfo.endMonth" ng-readonly="trainInfo.asYet" class="input-default w70 mrg-r5 mrg-l5">月
+					<input type="checkbox" ng-model="trainInfo.asYet" class="mrg-l10 mrg-r5"><span ng-click="toNowClick('train_tonow')">至今</span><span ng-bind="trainInfoErr.startDate" class="err mrg-l5"></span><span ng-if="!trainInfoErr.startDate" ng-bind="trainInfoErr.endDate" class="err mrg-l10"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 trained-txt-wrap f-l"><i class="i-sprite i-require"></i>培训名称</div>
+					<div class="f-l"><input ng-model="trainInfo.title" type="text" class="input-default w228 mrg-r5"><span ng-bind="trainInfoErr.title" class="err mrg-l10"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 trained-txt-wrap f-l"><i class="i-sprite i-require"></i>培训机构</div>
+					<div class="f-l"><input ng-model="trainInfo.institution" type="text" class="input-default w228 mrg-r5"><span ng-bind="trainInfoErr.institution" class="err mrg-l10"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 trained-txt-wrap f-l">培训内容</div>
+					<div class="f-l"><textarea ng-keydown="enterToNewLine(this)" ng-model="trainInfo.content" class="textarea w545"></textarea></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 trained-txt-wrap f-l h20"></div>
+					<div class="f-l">
+						<div class="clearfix mrg-t20 h34">
+							<div class="f-l">
+								<input ng-disabled="disabledInfo.trainInfoUpdateBtnDisabled" ng-click="trainInfoSave('#j_trained_wrap')" type="button" class="but  w95" value="保存">
+							</div>
+							<div class="f-l">
+								<input ng-click="cancelUpdate('train_update_cancel')" type="button" data-id="#j_trained_wrap" class="but but-cancel mrg-l80 w95" value="取消">
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+	</div>
+</div>
+<!-- 培训经历 -->
+<!-- 校内职务 -->
+<style type="text/css">
+	.r-wrap .school-txt-wrap{width: 105px;white-space: nowrap;text-align: right;}
+</style>
+<div id="j_school_wrap" class="item-wrap school-wrap">
+	<div ng-if="shadeInfo.schoolInfoShow" class="shade-wrap"></div>
+	<div class="clearfix header-wrap">
+		<div class="f-l title-wrap">
+			<i class="i-sprite i-school"></i>
+			<div class="item-txt">校内职务</div>
+		</div>
+		<div class="f-r"><i ng-click="changeShade('schoolInfo')" data-id="#j_school_wrap" class="i-sprite i-add"></i></div>
+	</div>
+	<div class="detail-wrap school-detail-wrap">
+		<table class="default-wrap">
+			<thead><tr><th>职务名称</th><th>任职时间</th><th>学校</th><th></th></tr></thead>
+			<tbody>
+				<tr ng-repeat="item in schoolList"><td ng-bind="item.duty"></td><td><label ng-bind="item.startDate|dateFormatToMonth"></label><span ng-bind="item.endDate|isShowZhi"></span><label ng-bind="item.endDate|dateFormatToMonth"></label></td><td ng-bind="item.campus"></td><td><span ng-click="infoEdit(item,'school_edit')" class="mrg-r10 mrg-l20">编辑</span><span ng-click="infoDel(item,'school_del',$index)">删除</span></td></tr>
+			</tbody>
+		</table>
+		<div class="edit-wrap">
+			<ul>
+				<li class="clearfix">
+					<div class="mrg-r38 school-txt-wrap f-l"><i class="i-sprite i-require"></i>任职时间</div>
+					<div class="f-l"><input ng-model="schoolInfo.startYear" type="text" class="input-default w70 mrg-r5">年
+						<input ng-model="schoolInfo.startMonth" type="text" class="input-default w70 mrg-r5 mrg-l5">月
+						<span class="mrg-l5 mrg-r5">至</span>
+					<input ng-model="schoolInfo.endYear" type="text" class="input-default w70 mrg-r5 mrg-l5">年
+					<input ng-model="schoolInfo.endMonth" type="text" class="input-default w70 mrg-r5 mrg-l5">月
+					<input ng-model="schoolInfo.asYet" type="checkbox" class="mrg-l10 mrg-r5"><span ng-click="toNowClick('school_tonow')">至今</span><span class="err mrg-l10" ng-bind="schoolInfoErr.startDate"></span><span ng-if="!schoolInfoErr.startDate" class="err mrg-l10" ng-bind="schoolInfoErr.endDate"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 school-txt-wrap f-l"><i class="i-sprite i-require"></i>职务</div>
+					<div class="f-l"><input ng-model="schoolInfo.duty" type="text" class="input-default w228 mrg-r5"><span class="err mrg-l10" ng-bind="schoolInfoErr.duty"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 school-txt-wrap f-l"><i class="i-sprite i-require"></i>所属组织</div>
+					<div class="f-l"><input ng-model="schoolInfo.organisation" type="text" class="input-default w228 mrg-r5"><span class="err mrg-l10" ng-bind="schoolInfoErr.organisation"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 school-txt-wrap f-l"><i class="i-sprite i-require"></i>所在学校</div>
+					<div class="f-l"><input ng-model="schoolInfo.campus" type="text" class="input-default w228 mrg-r5"><span class="err mrg-l10" ng-bind="schoolInfoErr.campus"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 school-txt-wrap f-l">职位和业绩</div>
+					<div class="f-l"><textarea ng-keydown="enterToNewLine(this)" ng-model="schoolInfo.responsible" class="textarea w545"></textarea></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 school-txt-wrap f-l h20"></div>
+					<div class="f-l">
+						<div class="clearfix mrg-t20 h34">
+							<div class="f-l">
+								<input ng-disabled="disabledInfo.schoolInfoUpdateBtnDisabled" type="button" ng-click="schoolInfoSave('#j_school_wrap')" class="but  w95" value="保存">
+							</div>
+							<div class="f-l">
+								<input ng-click="cancelUpdate('school_update_cancel')" type="button" data-id="#j_school_wrap" class="but but-cancel mrg-l80 w95" value="取消">
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+	</div>
+</div>
+<!-- 校内职务 -->
+<!-- 获得荣誉 -->
+<style type="text/css">
+	.r-wrap .honor-txt-wrap{width: 105px;text-align: right;white-space: nowrap;}
+</style>
+<div id="j_honor_wrap" class="item-wrap honor-wrap">
+	<div ng-if="shadeInfo.honorInfoShow" class="shade-wrap"></div>
+	<div class="clearfix header-wrap">
+		<div class="f-l title-wrap">
+			<i class="i-sprite i-honor"></i>
+			<div class="item-txt">获得荣誉</div>
+		</div>
+		<div class="f-r"><i ng-click="changeShade('honorInfo')" data-id="#j_honor_wrap" class="i-sprite i-add"></i></div>
+	</div>
+	<div class="detail-wrap honor-detail-wrap">
+		<table class="default-wrap">
+			<thead><tr><th>所获奖项</th><th>获奖时间</th><th>所在学校/单位</th><th></th></tr></thead>
+			<tbody>
+				<tr ng-repeat="item in honorList"><td ng-bind="item.title"></td><td><label ng-bind="item.obtainDate|dateFormatToMonth"></label></td><td ng-bind="item.unit"></td><td><span ng-click="infoEdit(item,'honor_edit')" class="mrg-r10 mrg-l20">编辑</span><span ng-click="infoDel(item,'honor_del',$index)">删除</span></td></tr>
+			</tbody>
+		</table>
+		<div class="edit-wrap">
+			<ul>
+				<li class="clearfix">
+					<div class="mrg-r38 honor-txt-wrap f-l"><i class="i-sprite i-require"></i>获得奖项</div>
+					<div class="f-l"><input ng-model="honorInfo.title" type="text" class="input-default w228 mrg-r5"><span ng-bind="honorInfoErr.title" class="err mrg-l10"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 honor-txt-wrap f-l"><i class="i-sprite i-require"></i>获得时间</div>
+					<div class="f-l"><input ng-model="honorInfo.obtainYear" type="text" class="input-default w70 mrg-r5">年
+						<input type="text" ng-model="honorInfo.obtainMonth" class="input-default w70 mrg-r5 mrg-l5">月<span ng-bind="honorInfoErr.obtainDate" class="err mrg-l10"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 honor-txt-wrap f-l"><i class="i-sprite i-require"></i>所在学校/单位</div>
+					<div class="f-l"><input ng-model="honorInfo.unit" type="text" class="input-default w228 mrg-r5"><span ng-bind="honorInfoErr.unit" class="err mrg-l10"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 honor-txt-wrap f-l">说明</div>
+					<div class="f-l"><textarea ng-keydown="enterToNewLine(this)" ng-model="honorInfo.description" class="textarea w545"></textarea></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 honor-txt-wrap f-l h20"></div>
+					<div class="f-l">
+						<div class="clearfix mrg-t20 h34">
+							<div class="f-l">
+								<input ng-disabled="disabledInfo.honorInfoUpdateBtnDisabled" ng-click="honorInfoSave('#j_honor_wrap')" type="button" class="but  w95" value="保存">
+							</div>
+							<div class="f-l">
+								<input ng-click="cancelUpdate('honor_update_cancel')" type="button" data-id="#j_honor_wrap" class="but but-cancel  mrg-l80 w95" value="取消">
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+	</div>
+</div>
+<!-- 获得荣誉 -->
+<!-- 工作经历 -->
+<div ng-include="'work.htm'"></div>
+<!-- 工作经历 -->
+<!-- 实习经历 -->
+<div ng-include="'internship.htm'"></div>
+<!-- 实习经历 -->
+<!-- 项目经验 -->
+<div ng-include="'project.htm'"></div>
+<!-- 项目经验 -->
+<!-- 上传头像 -->
+<div ng-include="'upload-photo.htm'"></div>
+<!-- 上传头像 -->
+
+
+	    	</div>
+    	</div>
+    	<!-- 行业弹框 -->
+    	<style type="text/css">
+    	.popbox-bg{position: fixed;z-index: 1123;top: 0;bottom: 0;width: 100%;height: 100%;background: #333;opacity: 0.3;}
+    	.industry-popbox{width: 753px;min-height: 505px;top: 50%;left: 50%;position: fixed;margin-top: -252.5px;margin-left: -376px;background: #fff;z-index: 1124;padding-bottom: 26px;}
+    	.industry-popbox h5{line-height: 40px;height: 40px;text-align: center;font-size: 16px;color: #333;background: #ededed;font-weight: normal;}
+    	.industry-popbox .content-wrap{padding:0 10px;}
+    	.industry-popbox .content-wrap label{padding:4px 8px;background: #cecece;color: #fff;margin:4px 4px 0 0;display: inline-block;}
+    	.industry-popbox h5 span{}
+    	.industry-popbox .title-wrap{background: #fafafa;color: #999;text-align: center;height: 30px;line-height: 30px;width: 358px;border:1px solid #e6e6e6;}
+    	.industry-popbox .industry-selected-wrap{padding:16px 0;color: #333;}
+    	.industry-popbox .industry-selected-wrap span{font-size: 16px;margin-left: 6px;}
+    	.industry-popbox .industry-select-wrap .border-left-none{border-left: none;}
+    	.industry-popbox .industry-select-wrap{}
+    	.industry-popbox .industry-select-wrap ul>li{height: 30px;line-height: 30px;border-bottom: 1px solid #e6e6e6;width: 356px;padding-left: 6px;cursor: pointer;}
+    	.industry-popbox .industry-select-wrap ul>li.active{background: #ff9001 right center no-repeat;color: #fff;}
+    	.industry-popbox .industry-select-wrap ul.first-ul>li.active:hover{background: #ff9001 right center no-repeat;color: #fff;  background-image: url("data:image/IFf;base64,R0lGODlhFAALAIABAP///wAAACH5BAEAAAEALAAAAAAUAAsAAAIVRI6pauvbngxxumpZhlt3hG1hNmYFADs=");}
+    	.industry-popbox .industry-select-wrap ul.second-ul>li.active:hover{background: #ff9001 right center no-repeat;color: #fff;background-image: url("data:image/IFf;base64,R0lGODlhFQAIAIABAP///wAAACH5BAEAAAEALAAAAAAVAAgAAAIXjH8AyJ3qolFLBviqpRPbTmkfKI6deRQAOw==");}
+    	.industry-popbox  ul.first-ul>li.active{background-image: url("data:image/IFf;base64,R0lGODlhFAALAIABAP///wAAACH5BAEAAAEALAAAAAAUAAsAAAIVRI6pauvbngxxumpZhlt3hG1hNmYFADs=");}
+    	.industry-popbox  ul.first-ul>li:hover{background: #ffecd8 right center no-repeat;  background-image: url("data:image/IFf;base64,R0lGODlhFAALAIABAP///wAAACH5BAEAAAEALAAAAAAUAAsAAAIVRI6pauvbngxxumpZhlt3hG1hNmYFADs=");}
+    	.industry-popbox  ul.second-ul>li.active{background-image: url("data:image/IFf;base64,R0lGODlhFQAIAIABAP///wAAACH5BAEAAAEALAAAAAAVAAgAAAIXjH8AyJ3qolFLBviqpRPbTmkfKI6deRQAOw==");}
+    	.industry-popbox ul.second-ul>li:hover{background: #ffecd8 right center no-repeat;background-image: url("data:image/IFf;base64,R0lGODlhFQAIAIABAP///wAAACH5BAEAAAEALAAAAAAVAAgAAAIXjH8AyJ3qolFLBviqpRPbTmkfKI6deRQAOw==");}
+    	.industry-popbox .industry-select-wrap ul{border-left: 1px solid #e6e6e6;border-right: 1px solid #e6e6e6;height: 289px;overflow-y: auto;border-bottom: 1px solid #e6e6e6;}
+    	.mrg-t26{margin-top: 26px;}
+    	.but-wrap{width: 342px;margin:26px auto 0;}
+    	body .dis_block{display: block;}
+    	</style>
+    	<div ng-init="popboxbgShow=false" ng-class="{'dis_block':popboxbgShow}" class="popbox-bg dis_none"></div>
+    	<div ng-init="industryPopboxShow=false" ng-class="{'dis_block':industryPopboxShow}" class="popbox industry-popbox dis_none">
+    		<h5 class="clearfix">请选择行业<span class="f-r i-sprite i-close" ng-click="closeIndustryPopbox()"></span></h5>
+    		<div class="content-wrap">
+    			<div class="industry-selected-wrap" ng-init="industrySelectedLabels=[]">已选择：<label ng-repeat="item in industrySelectedLabels track by $index"><span ng-bind="item.name"></span><span class="del-label" ng-click="deleteSelectedLabel(item,'industry')">x</span></label></div>
+    			<div class="industry-select-wrap clearfix">
+    				<div class="f-l">
+    					<div class="title-wrap">行业大类</div>
+    					<ul class="first-ul">
+    						<li ng-class="{'active':item.isActive}" ng-repeat="item in industryData" ng-bind="item.name" ng-click="industryChange(item)"></li>
+    						<!-- <li>it互联网</li>
+    						<li>it互联网</li> -->
+    					</ul>
+    				</div>
+    				<div class="f-l">
+    					<div class="title-wrap border-left-none">行业小类</div>
+    					<ul class="border-left-none second-ul">
+    						<li ng-class="{'active':item.isActive}" ng-repeat="item in industryChildData" ng-bind="item.name" ng-click="industryChildChange(item)"></li>
+    						
+    					</ul>
+    				</div>
+    			</div>
+    			<div>
+    				<div class="clearfix but-wrap">
+	    				<div class="f-l">
+							<input type="button" ng-click="saveSelectedLabels()" class="but w95" value="保存">
+						</div>
+						<div class="f-l">
+							<input type="button" data-id="#j_contact_wrap" ng-click="closeIndustryPopbox()" class="but but-cancel  mrg-l80 w95" value="取消">
+						</div>
+					</div>
+    			</div>
+    		</div>
+    	</div>
+    	<!-- 行业弹框 -->
+    	<!-- 证书弹框 -->
+    	<div ng-include="'cert-popbox.htm'"></div>
+    	<!-- 证书弹框 -->
+		<!-- 技能弹框 -->
+    	<div ng-include="'skill-popbox.htm'"></div>
+    	<!-- 技能弹框 -->
+    	<!-- 职位弹框 -->
+    	<div ng-include="'jobtype-popbox.htm'"></div>
+    	<!-- 职位弹框 -->
+
+    	<!-- 城市弹框 -->
+    	<style type="text/css">
+    	.city-popbox{width: 643px;min-height: 509px;top: 50%;left: 50%;position: fixed;margin-top: -254.5px;margin-left: -321.5px;background: #fff;z-index: 1124;padding-bottom: 24px;}
+    	.city-popbox h5{line-height: 40px;height: 40px;text-align: center;font-size: 16px;color: #333;background: #ededed;font-weight: normal;}
+    	.city-popbox .header-wrap{padding:15px 38px 0;background: #f6fbfa;border-bottom: 1px solid #dedede;}
+    	.city-popbox .label-wrap{color: #333;}
+    	.city-popbox .label-wrap label{padding:3px 8px;background: #c9c9c9;color: #fff;}
+    	.city-popbox .label-wrap span{font-size: 16px;}
+    	.city-popbox .tab-wrap .tab-item{font-size: 13px;color: #333;padding:2px 6px;height: 21px;background: #fff;text-align: center;border:1px solid #dedede;margin-bottom: -1px;margin-top:6px;border-bottom: none;cursor: pointer;}
+    	.city-popbox .city-wrap{padding:0 38px;min-height: 276px;}
+    	.mrg-t20{margin-top: 20px;}
+    	.city-popbox .select-wrap{color: #999;font-size: 13px;}
+    	.city-popbox .select-wrap label{margin:8px 15px;display: inline-block;color: #999;cursor: pointer;}
+    	.city-popbox .select-wrap label:hover{color: #ff9001;}
+    	.city-popbox .tab-wrap .tab-item-gray{color: #666;background: #c9c9c9;}
+    	.cursor-pointer{cursor: pointer;}
+    	</style>
+    	<div ng-class="{'dis_block':cityPopboxShow}" class="popbox city-popbox dis_none">
+    		<h5>请选择城市信息<span ng-click="closeCityPopbox()" class="f-r i-sprite i-close"></span></h5>
+    		<div class="content-wrap">
+    			<div class="header-wrap">
+	    			<div class="label-wrap"><div>最多选3项：<label ng-repeat="item in popSelectedCitys" class="mrg-l10 mrg-r10"><span ng-bind="item.name"></span><span ng-click="delPopSelectedCity(item)" class="mrg-l5 cursor-pointer">x</span></label></div></div>
+	    			<div class="tab-wrap clearfix"><div ng-class="{'tab-item-gray':popCityChildData.length>0}" ng-click="popCitySwitchToAll()" class="tab-item f-l">全部</div><div class="tab-item mrg-l5 f-l" ng-if="popCityChildData.length>0" ng-bind="popCitySelectedName"></div></div>
+    			</div>
+    			<div class="city-wrap">
+    				<div ng-if="popCityChildData.length==0" class="hot-city-wrap mrg-t20">
+    					<div>热门城市</div>
+    					<div class="select-wrap"><label ng-click="popCityLabelClick(item)" ng-repeat="item in hotCity"><span ng-bind="item.name"></span></label></div>
+					</div>
+    				<div ng-if="popCityChildData.length==0" class="province-wrap mrg-t20">
+    					<div>全部省份</div>
+    					<div class="select-wrap"><label ng-click="popProvinceClick(item)" ng-repeat="item in cityData" ng-if="item.code!=='000'"><span  ng-bind="item.name"></span></label></div>
+					</div>
+					<div ng-if="popCityChildData.length>0" class="city-wrap mrg-t20">
+    					<div>城市</div>
+    					<div class="select-wrap"><label ng-click="popCityLabelClick(item)" ng-repeat="item in popCityChildData"><span ng-bind="item.name"></span></label></div>
+					</div>
+    			</div>
+    			<div>
+    				<div class="clearfix but-wrap">
+	    				<div class="f-l">
+							<input type="button" ng-click="savePopSelectedCitys('objective_city_select')" class="but but-shadow but-animation w95" value="保存">
+						</div>
+						<div class="f-l">
+							<input type="button" data-id="#j_contact_wrap" ng-click="closeCityPopbox()" class="but but-cancel but-shadow but-animation mrg-l80 w95" value="取消">
+						</div>
+					</div>
+    			</div>
+    		</div>
+    	</div>
+    	<!-- 城市弹框 -->
+
+    	<div include="/view/module/footer.html"></div>
+        <script src="/js/vendor/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="/js/main.js"></script>
+        <script type="text/javascript" src="/js/common/angular.js"></script>
+        <script type="text/javascript" src="/js/wdjl/edit.js"></script>
+        <script type="text/javascript" src="/js/wdjl/jquery.Jcrop.js"></script>
+    </body>
+
+</html>

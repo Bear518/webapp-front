@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>购买成功页面</title>
+	<meta name="description" content="">
+	<meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/vip/buy.css">
+</head>
+<body>
+<div include="../module/header.html"></div>
+<div class="warpper clearfix">
+	<div class="stepbox step3"></div>
+	<div class="succbar">
+    	<div class="succbox">
+    		<div class="c-wrap">
+            <p>恭喜您成功购买了</p>
+           <span class="yel"><i class="pronub"></i>个月的会员</span>
+            <span class="t">有效期至：<i class="protime"></i></span>
+            </div>
+        	<!-- <h4>购买成功！</h4>
+            <p>恭喜您成功购买了</p>
+            <span class="yel"><i class="pronub"></i>个月的会员</span>
+            <span>欢迎加入极视教育网VIP用户行列，<br>
+祝您早日抵达梦想的彼岸：）<br>
+有效期至：<i class="protime"></i></span> -->
+        </div>
+        <div class="but-wrap"><a class="but but-preview but-shadow but-animation" href="/">返回首页</a></div>
+    </div>
+</div>
+
+
+<div include="../module/footer.html"></div>
+</body>
+<script src="../../js/vendor/jquery-1.9.0.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/vip/buy.js"></script>
+<script>
+var ordid=mainModule.getQueryValueByName('ordid');
+$(function() {
+	$.ajax({
+		type: "get",
+		dataType: "json",
+		url: $._CACHEOBJ.context+"/order/common/orderInfo",
+		data:{"orderId":ordid},
+		success: function (pl) {
+			if(pl.status== "SUCCESS"){
+				var ordnub=pl.content.number;
+				$(".pronub").text(ordnub);
+				dtime(ordnub);
+			}
+			else{
+				if(pl.content!=null){alert(pl.content[0].message); }
+		  		else{alert(pl.message); }
+			}
+			
+		}
+	})
+})
+function dtime(i){
+	$.ajax({
+		type: "get",
+		dataType: "json",
+		url: $._CACHEOBJ.context+"/user/currentuser?rad="+Math.random()*1,
+		success: function (result) {
+			mainModule.log('我的个人信息接口返回',result);
+			if(result.status== "SUCCESS"){
+				var vipEndDate=result.content.vipEndDate||Date.now();
+				var isVip=result.content.vip;
+				var date=new Date(vipEndDate);
+				// if(i&&i<12){
+				// 	var month=date.getMonth()+i;
+				// 	date.setMonth(month);
+				// }else if(i){
+				// 	var y=i/12
+				// 	var year=date.getFullYear()+y;
+				// 	date.setYear(year);
+				// }
+				var year=date.getFullYear(),month=date.getMonth()+1,day=date.getDate();
+					datetime=year+'年'+month+'月'+day+'日';
+				
+				$(".yxq").text(datetime);
+				//protime(datetime)
+				$(".protime").text(datetime);
+			}
+			else{
+				if(/未登录/.test(result.message)){
+	            	mainModule.popLoginBox();
+	        	}
+			}
+		}
+	})
+}
+</script>
+
+
+</html>

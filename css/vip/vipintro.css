@@ -1,0 +1,58 @@
+/*banner*/
+.banner{ background:url(../../img/vip/vipbn.jpg) center 0; height:600px;}
+
+
+/*vipinfo*/
+.vipinfo{ height:435px; }
+.vipinfo ul{ width:1210px}
+.vipinfo li{ height:520px; width:290px; margin-right:10px; float:left; margin-top:-138px; transition:0.6s;-moz-transition:0.6s;	/* Firefox 4 */
+-webkit-transition:0.6s;	/* Safari 和 Chrome */
+-o-transition:0.6s;	position:relative}
+.vipinfo li:hover{margin-top:-168px; box-shadow:5px 5px 5px rgba(0,0,0,0.2)}
+.vipinfo li .vi_title{ height:86px; width:204px; margin-left:43px; background:url(../../img/vip/vintrobg1.png); text-align:center; line-height:35px; padding-top:25px; font-size:18px;}
+.vi_title h3{ color:#333}
+.vi_title i{ font-size:14px;}
+.vipinfo p{ width:186px; margin:35px auto 45px; color:#fff; font-size:16px; line-height:24px; height:46px; overflow:hidden }
+.mon1{ background-color:#63b6c1}
+.year1{ background-color:#5ba5af}
+.mon2{ background-color:#ffa23b}
+.year2{ background-color:#ff8f14}
+.vipinfo .hmday{ color:#c29f0d; text-align:center; display:block; line-height:32px;font-size:12px; position:absolute; top:81px ;left:112px }
+/*.vipinfo .hmday i{ display:inline-block; height:19px; width:19px;background:url(../../img/vip/vintroico.png) no-repeat; vertical-align:middle; margin-right:10px}*/
+.vipinfo .fv{ color:#fff}
+.vipinfo .fv span{ padding:0 40px;display:block; height:40px; line-height:40px;}
+.buy_btn{ height:44px; line-height:44px; width:150px; text-align:center; color:#fff; border-radius:3px; display:block; margin:8px 0 0 67px}
+
+/*servcom*/
+.servcom{ background-color:#edecf0; padding-bottom:86px}
+.warpper h2{ text-align:center; padding:60px 0; font-weight:normal}
+.servcom dd{ border:1px solid #c8c8c8; background-color:#fff; line-height:49px; margin-top:4px;}
+.servcom span{ width:255px; display:inline-block; text-align:center}
+.servcom span.serv_wod{ padding:0 15px; width:400px; text-align:left}
+
+/*menshow*/
+.menshow{ position:relative}
+.menshow .warpper {  height:536px;}
+.menshowbox{ width:1200px; overflow:hidden; position:relative; height:300px}
+.menshow_ul{  position:absolute; left:0;top:0; width:6000px}
+.menshow li{ width:285px; float:left; margin-right:20px; height:300px;}
+.menshow li img{ height:130px; width:130px; border-radius:65px;margin:0 0 45px 75px}
+.menshow .lft_arr,.menshow .rt_arr{ height:49px; width:20px; background-color:#d5d3d3; border-radius:29px; display:block; position:absolute;top:240px; left:0px; padding:9px 19px 0}.menshow .rt_arr{ left:auto; right:0;}
+.menshow .lft_arr i,.menshow .rt_arr i{height:40px; width:20px;background:url(../../img/vip/vmenarr.png) no-repeat; display:block}
+.menshow li p{ height:100px; overflow:hidden}
+.menshow .rt_arr i{background:url(../../img/vip/vmenarr.png) no-repeat -20px 0;}
+
+/*ptcom*/
+.ptcom{background-color:#edecf0;  padding-bottom:86px}
+
+#btn1{background-color:#5ba5af;}
+#btn2{background-color:#4f919a;}
+#btn3{background-color:#fd8f15;}
+#btn4{background-color:#ee820b;}
+#btn1:hover{background-color:#549ba4; color:#FFF}
+#btn2:hover{background-color:#488289; color:#FFF}
+#btn3:hover{background-color:#ee820b; color:#FFF}
+#btn4:hover{background-color:#e07a0b; color:#FFF}
+
+
+

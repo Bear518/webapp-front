@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>职业学院_在线系统学习职业技能_极视教育网</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="/css/main.css">
+    <style type="text/css">
+        .top-img-wrapper{background: url('/img/zytp/1.1.1/100.jpg') no-repeat center center;background-size: cover;height: 360px;color: #fff;min-width: 1200px;}
+        .top-img-two-wrapper{background: url('/img/zytp/1.1.1/101.jpg') no-repeat center center;background-size: cover;height: 253px;color: #fff;min-width: 1200px;}
+        .teacher-list-wrapper{background: url('/img/zytp/1.1.1/103.png') no-repeat center center;background-size: cover;height: 557px;color: #fff;min-width: 1200px;}
+        .top-img-wrapper h1{color: #fff;padding-top: 50px;padding-bottom: 20px; font-weight:normal}
+        .top-img-wrapper p{font-size: 20px;}
+        .content-wrapper{width:1200px;margin:0 auto;}
+        .container{background: #fafaf4;padding: 0 0 20px;background: url('/img/zytp/1.1.1/102.png') no-repeat center bottom;background-size: cover;min-height: 500px;}
+        .content-wrapper ul>li{position: relative;height: 265px;  border-left: 5px solid #eaedf5;margin-bottom: 75px;background: #fff;}
+        .content-wrapper ul>li:hover{background: #fff;}
+        .content-wrapper ul>li:before{width: 5px;height: 0;position: absolute;top:0;left: -4px;content: '';background:#000;-webkit-transition: all 0.5s linear;
+            -moz-transition: all 0.5s linear;
+            -ms-transition: all 0.5s linear;
+            -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;}
+        .content-wrapper .intro-wrap{width: 750px;padding: 28px 30px 23px;height: 265px;  -webkit-transition: all 0.3s linear;
+            -moz-transition: all 0.3s linear;
+            -ms-transition: all 0.3s linear;
+            -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;}
+        .intro-wrap h4{font-size: 24px;color: #333;font-weight: normal;}
+        .intro-wrap p{color: #666;margin-top: 23px;height: 55px;width: 724px;}
+        .time-wrap{color: #62aeb8;font-size: 16px;margin-bottom: 25px;}
+        .c9{color: #999;}.jxxx-a{display: block;width: 135px;height: 40px;color: #ff9001;color: #fff;text-align: center;font-size: 18px;border-radius: 5px;margin:0 auto;background: #ff9001;line-height: 40px;}
+        .content-wrapper .img-wrap{width: 400px;height: 225px;overflow: hidden;margin:20px 0 20px 20px; border: 1px solid #d5d5d5}
+        .content-wrapper .img-wrap img{display: block;/*width: 300px;height: 205px;background:#eee;*/}
+        .content-wrapper .img-wrap .progress-wrap{width: 300px;height:20px;background: #2b2a2a; }
+        .content-wrapper .img-wrap .progress{width: 50%;height: 20px;background: #ff9001;text-align: center;color: #fff;}
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+        .content-wrapper a:hover{color: #fff;}.pad-t20{padding-top: 20px;}
+        /*.content-wrapper ul>li:hover{border-left: 5px solid #000;}*/
+        .content-wrapper ul>li:hover:before{height: 100%;}
+        .content-wrapper ul>li:hover{  box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);-webkit-box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);-moz-box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);}
+        .i-icon{background: url('/img/zytp/icon.png');vertical-align: middle;height: 30px;width: 30px;display: inline-block;}
+        .i-kechen{display: inline-block;background-position: -18px -15px;height: 30px;width: 30px;margin-right: 6px;}
+        .i-keshi{background-position: -55px -15px;margin:0 10px 0 20px;}
+        .i-time{background-position: -105px -15px;margin: 0 10px 0 20px;}
+        /*1.1.1版本新加的样式*/
+        .f38{font-size: 38px;}.c3{color: #333;}.tc{text-align: center;}.l158{line-height: 158px;}
+        .w1200{width: 1200px;}.bc{display: block;margin:0 auto;}
+        .teacher-content-wrapper{width: 1200px;margin:0 auto;}
+        .teacher-list-wrapper ul>li{width: 259px;margin-left: 54px;}
+        .teacher-list-wrapper ul>li:first-child{margin-left: 0;}
+        .teacher-list-wrapper .img-wrap{border-radius: 50%;width: 120px;height: 120px;display: block;margin:0 auto;overflow: hidden;position: relative;}
+        .teacher-list-wrapper img{display: block;width: 100%;height: 100%;}
+        .teacher-list-wrapper .name-wrap{margin:15px 0;font-size: 16px;}.mrg-b12{margin-bottom: 12px;}.mrg-l56{margin-left: 56px;}.fs16{font-size: 16px;}
+        /*合作企业*/
+        .company-list-wrapper{padding-bottom: 62px;}
+        .company-list-wrapper ul>li{width: 223px;height: 135px;margin-left: 21px;}
+        .company-list-wrapper ul>li:first-child{margin-left: 0;}
+        /*常见问题*/
+        .question-list-wrapper{padding-bottom: 62px;background: #f8f8f8;}
+        .question-list-wrapper p{padding: 6px 32px;color: #666;}
+        .question-list-wrapper .i-icon{background: url('/img/zytp/1.1.1/icon.png');vertical-align: bottom;height: 20px;width: 24px;display: inline-block;}
+        .question-list-wrapper li .title-wrap{cursor: pointer;}
+        .question-list-wrapper li.active .i-sub{background-position: -15px -10px;}
+        .question-list-wrapper li.default .i-add{background-position: -55px -10px;}
+        .question-list-wrapper li.default p{display: none;}
+        .question-list-wrapper .i-arrow-r{background-position: -92px -10px;}
+        .question-list-wrapper li{margin-bottom: 12px;}
+        .question-list-wrapper li:hover .title-wrap{color: #ff9001;}
+        .question-list-wrapper li:hover .i-sub{background-position: -15px -38px;}
+        .question-list-wrapper li:hover .i-add{background-position: -55px -38px;}
+        .question-list-wrapper li:hover .i-arrow-r{background-position: -92px -38px;}
+        .question-list-wrapper li:last-child{padding-left: 6px;}
+
+        /*职业学院入口*/
+        .box-shadow { -webkit-box-shadow: 0 3px 6px 0 rgba(0,0,0,0.1);  -moz-box-shadow: 0 3px 6px 0 rgba(0,0,0,0.1);  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.1);  }
+        .zytp-in{ position: fixed; z-index: 999; top: 160px; right: 5px;width: 135px;  border-radius:4px;text-align: center ; }
+        .zytp-in .zytp-top{  text-align: center;  background: #ffb71b;  font-size: 14px;  color: #fff;  padding-top: 8px;  }
+        .zytp-in .zytp-top p{  line-height: 24px;;  }
+        .zytp-in .qqzx{line-height: 32px; background: #f7fcff;vertical-align: middle; color: #37b0ff ;cursor: pointer;position: relative;}
+        .zytp-in .qqzx .qq-wrap{position:absolute;top: 0px;left: 0;bottom: 0;right: 0;opacity: 0;}
+        .zytp-in .qqzx .qq-wrap iframe{width: 100%;height: 100%;}
+        .zytp-in .qqzx i{  display: inline-block;vertical-align: middle;  width: 20px;height: 20px; background: url("../../img/zytp/icon-qq.png") no-repeat;  background-position:-4px -4px}
+        .zytp-in .qqzx:hover{  color: #009aff  }
+        .zytp-in .qqzx:hover i{background-position:-27px -4px}
+        .zytp-in .zytp-tel{  position: relative;  background: #737373;  padding: 12px 8px;  }
+        .zytp-in .zytp-tel input{  width: 100%;  height: 26px;  line-height: 26px;  font-size: 12px;  color: #999999;  padding-left: 5px;  }
+        .zytp-in .zytp-tel .zytp-tel-box .tel-box ,.zytp-in .zytp-tel .zytp-tel-box .tel-box-hint{  display: none;  position: absolute;  bottom: 30px;  border: 4px solid #ffb71b;  border-radius: 4px;  background: #fff;  padding: 8px 10px;  font-size: 14px;  color: #333;  text-align: left;  }
+        .zytp-in .zytp-tel .zytp-tel-box .tel-box{  left: -265px; width: 250px;}
+        .zytp-in .zytp-tel .zytp-tel-box .tel-box-hint{  left: -185px;  width: 170px;  }
+        .zytp-in .zytp-tel .zytp-tel-box .tel-box:after ,.zytp-in .zytp-tel .zytp-tel-box .tel-box-hint:after{  position: absolute;  bottom: 22px;  right: -10px;  content: ''; display: block; width: 0; height: 0;  border-top: 5px solid transparent;  border-left: 10px solid #fff;  border-bottom: 5px solid transparent;  }
+        .zytp-in .zytp-tel .zytp-tel-box .tel-box:before,.zytp-in .zytp-tel .zytp-tel-box .tel-box-hint:before{  position: absolute;  bottom: 18px;  right: -18px;  content: '';  display: block;  width: 0;  height: 0;  border-top: 9px solid transparent;  border-left: 18px solid #ffb71b;  border-bottom: 9px solid transparent;  }
+        .zytp-in .zytp-tel .zytp-tel-box .tel-box span{  color: #ff9001; }
+        .zytp-in .zytp-tel .zytp-tel-box:hover .tel-box{  display: block; }
+        .zytp-in .zytp-tel .zytp-tel-box:hover .tel-box-hint{  display: none; }
+        .zytp-in .zytp-tel .zytp-btn{  margin-top: 10px;  display: inline-block;  color: #ffb71b;  width: 100%;  line-height: 26px;  border-radius: 3px;  border: 1px solid #ffb71b;  }
+        .zytp-in .zytp-tel .zytp-btn:hover{  background: #ffb71b;  color: #fff; }
+        .scale-hide{transform:scale(0);opacity: 0;}
+    </style>
+
+
+
+</head>
+<body>
+<div include="../module/header.html"></div>
+<div class="top-img-wrapper">
+</div>
+<div class="top-img-two-wrapper">
+</div>
+<div class="container">
+    <div class="tc f38 c3 l158">热门职业</div>
+    <div class="content-wrapper">
+        <ul id="j_content_wrapper">
+            <li><div style="line-height:280px;text-align:center;">正在努力加载数据中...</div></li>
+            <!-- <li>
+                <div class="intro-wrap">
+                    <h4>android开发工程师</h4>
+                    <p>首都法律界三闾大夫教科书的见风使舵福建省的开发建设的经费圣诞节富士康的肌肤上的飞机上的纠纷谁的风景首都法律界三闾大夫教科书的见风使舵福建省的开发建设的经费圣诞节富士康的肌肤上的飞机上的纠纷谁的风景</p>
+                    <div class="time-wrap"><i class="i-icon i-kechen"></i>234门课程<i class="i-icon i-keshi"></i>344课时<i class="i-icon i-time"></i>23小时33分钟</div>
+                    <div class="c9">23434正在学习!</div>
+                    <div class="pad-t20"><a class="jxxx-a" href="/view/zytp/detail.html">继续学习</a></div>
+                </div>
+                <div class="img-wrap ">
+                    <img src="/img/zytp/102.png">
+                    <div class="progress-wrap"><div class="progress">50%</div></div>
+                </div>
+            </li>
+            <li>
+                <div class="intro-wrap">
+                    <h4>android开发工程师</h4>
+                    <p>首都法律界三闾大夫教科书的见风使舵福建省的开发建设的经费圣诞节富士康的肌肤上的飞机上的纠纷谁的风景</p>
+                    <div class="time-wrap"><i class="i-icon i-kechen"></i>234门课程<i class="i-icon i-keshi"></i>344课时<i class="i-icon i-time"></i>23小时33分钟</div>
+                    <div class="c9">23434正在学习</div>
+                    <div class="pad-t20"><a class="jxxx-a" href="/view/zytp/detail.html">继续学习</a></div>
+                </div>
+                <div class="img-wrap ">
+                    <img src="/img/zytp/103.png">
+                    <div class="progress-wrap"><div class="progress"></div></div>
+                </div>
+            </li>
+            <li>
+                <div class="intro-wrap">
+                    <h4>android开发工程师</h4>
+                    <p>首都法律界三闾大夫教科书的见风使舵福建省的开发建设的经费圣诞节富士康的肌肤上的飞机上的纠纷谁的风景</p>
+                    <div class="time-wrap"><i class="i-icon i-kechen"></i>234门课程<i class="i-icon i-keshi"></i>344课时<i class="i-icon i-time"></i>23小时33分钟</div>
+                    <div class="c9">23434正在学习</div>
+                    <div class="pad-t20"><a class="jxxx-a" href="/view/zytp/detail.html">开始学习</a></div>
+                </div>
+                <div class="img-wrap ">
+                    <img src="/img/zytp/104.png">
+                    <div class="progress-wrap"><div class="progress"></div></div>
+                </div>
+            </li> -->
+        </ul>
+    </div>
+</div>
+<div class="teacher-list-wrapper">
+    <div class="tc f38 c3 l158">学院导师阵容</div>
+    <div class="teacher-content-wrapper"><ul class="clearfix">
+        <li class="f-l">
+            <div class="img-wrap about"><img src="/img/zytp/1.1.1/t1.png"></div>
+            <div class="tc name-wrap">单鑫</div>
+            <div class="mrg-b12">神古网络创始人、独立游戏制作人，精通VR游戏开发</div>
+            <p>独立游戏《灵魂之门》、《失落之寒》、《巴别塔：抉择》制作人
+                微软创新杯2013年中国区一等奖、2014年中国区特等奖
+                2014年Unity游戏及应用大赛最佳创新创意奖
+                第六届CGDA（中国优秀游戏制作人）最佳创意奖</p>
+        </li>
+        <li class="f-l">
+            <div class="img-wrap about"><img src="/img/zytp/1.1.1/t2.png"></div>
+            <div class="tc name-wrap">陈荣宝</div>
+            <div class="mrg-b12">前盛大高级游戏工程师，10余年Unity开发经验</div>
+            <p>参与《奇迹归来》、《神仙传》、《热血篮球》，《沙巴克传奇》等众多项目开发，精通C、C++、C#、Java等语言，熟悉计算机图形学，DirectX，数据结构、游戏引擎的开发。</p>
+        </li>
+        <li class="f-l">
+            <div class="img-wrap about"><img src="/img/zytp/1.1.1/t3.png"></div>
+            <div class="tc name-wrap">Jackie</div>
+            <div class="mrg-b12">游戏开发主程，精通C、C#、C++等多种编程语言</div>
+            <p>多年游戏行业知名企业工作经验，熟悉Unity的游戏开发流程，曾参与《唤剑幻想》魔兽风ARPG手游、《我是谢文东》混合类弹珠卡牌手游等众多项目开发，主要负责使用NGUI搭建UI界面以及实用C#实现UI逻辑。</p>
+        </li>
+        <li class="f-l">
+            <div class="img-wrap about"><img src="/img/zytp/1.1.1/t4.png"></div>
+            <div class="tc name-wrap">GAO</div>
+            <div class="mrg-b12">EA （Electronic Arts）资深软件工程师， 10余年大型游戏开发经验</div>
+            <p>曾参与知名游戏《极品飞车》、《植物大战僵尸》开发</p>
+        </li>
+    </ul></div>
+</div>
+<div class="company-list-wrapper">
+    <div class="tc f38 c3 l158">合作游戏企业</div>
+    <div class="w1200 bc"><ul class="clearfix">
+        <li class="f-l">
+            <div class="img-wrap "><img src="/img/zytp/1.1.1/c1.png"></div>
+        </li>
+        <li class="f-l">
+            <div class="img-wrap"><img src="/img/zytp/1.1.1/c2.png"></div>
+        </li>
+        <li class="f-l">
+            <div class="img-wrap"><img src="/img/zytp/1.1.1/c3.png"></div>
+        </li>
+        <li class="f-l">
+            <div class="img-wrap"><img src="/img/zytp/1.1.1/c4.png"></div>
+        </li>
+        <li class="f-l">
+            <div class="img-wrap"><img src="/img/zytp/1.1.1/c5.png"></div>
+        </li>
+    </ul></div>
+</div>
+<div class="question-list-wrapper j_question_list_wrapper">
+    <div class="tc f38 c3 l158">常见学习问题</div>
+    <div class="w1200 bc"><ul class="">
+        <li class="active">
+            <div class="title-wrap fs16 c3"><i class="i-icon i-sub"></i>1、课程是录播还是直播？</div>
+            <p >课程采取录播视频+直播互动的形式。
+                课程一旦购买后，需在规定时间内完成学习，然后提交作业并参加考试，平时成绩达到合格后才能进入最后的期末考核。总成绩达到合格后（60分），就可得获得相应职业的证书。
+                简言之，就是你可以自主安排时间学习教学视频；但需注意在规划的学习周期内完成作业，参加考试。</p>
+        </li>
+        <li class="default">
+            <div class="title-wrap fs16 c3"><i class="i-icon i-add"></i>2、课程是不是可以一直看？</div>
+            <p>购买了职业学院的实战班服务后，职业学院课程视频是可以永久观看的。另将赠送1年VIP资格，VIP会员可以随意观看极视教育网站其他会员课程。
+                视频之外的在线服务如考试和在线辅导等仅限于服务期限内。</p>
+        </li>
+        <li class="default">
+            <div class="title-wrap fs16 c3"><i class="i-icon i-add"></i>3、如何与老师进行互动？</div>
+            <p>除观看课程视频之外，报名后有三种方式跟老师互动：
+                讲师在线直播问答指导（定期举行，学习计划内会有详细安排）；
+                2）QQ群日常问答：学习周期内由助教实时提供答疑和咨询服务；
+                3）论坛互动问答区：学员可以在极视教育网站论坛区（即将上线）内以帖子的形式向老师提问，老师一般会在工作日的24小时内回复。</p>
+        </li>
+        <li class="default">
+            <div class="title-wrap fs16 c3"><i class="i-icon i-add"></i>4、作业如何提交与批改？</div>
+            <p>课程开始之后，学员按照实战班的学习计划，在每个学习关卡规定时间内完成作业，并提交给助教，助教会统一将作业收集给到讲师进行批改。讲师完成批改后，助教将批改结果和意见反馈给学员，同时讲师也会通过在线直播对作业进行点评。</p>
+        </li>
+        <li class="default">
+            <div class="title-wrap fs16 c3"><i class="i-icon i-add"></i>5、如果考试通不过怎么办？</div>
+            <p>我们为考试不通过的学员提供一次重修机会。但是学习中途放弃学习和考试的同学，不予以重修机会。希望同学们注意安排学习时间。
+                注：重修请发邮件给客服邮箱op@skillbridge.cn申请重修，邮件正文说明需要重修的课程名称、极视教育账号、昵称。</p>
+        </li>
+        <li><a class="fs16" style="display:none;" href="">查看更多问题<i class="i-icon i-arrow-r"></i></a></li>
+    </ul></div>
+</div>
+<script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
+<script>
+    BizQQWPA.addCustom({
+        aty: '0',
+        nameAccount: '800187260',
+        selector: 'Js_QQWPA'
+    });
+</script>
+<div id="j_marketing_overlays" class="zytp-in box-shadow">
+    <div class="zytp-top">
+        <img src="../../img/zytp/img.png">
+        <p>在线咨询</p>
+        <p>021-51134006</p>
+    </div>
+    <div class="qqzx" id="Js_QQWPA">
+        <i></i>我要咨询
+        <div class="qq-wrap j_qq_wrap">
+            <!-- <iframe src="" style="display: none;"></iframe>
+                  -->
+        </div>
+    </div>
+    <div class="zytp-tel">
+        <div class="zytp-tel-box">
+            <input type="tel" class="j_tel" placeholder="请输入您的电话号" />
+            <div class="tel-box">
+                <p>手机号直接输入：如<span>1340111XXXX</span></p>
+                <p>座机前请加区号：如<span>0108866XXXX</span></p>
+                <div>
+                    请输入你的电话号码点击通话，稍
+                    后您将接到我们的电话，该通话对
+                    您<span>完全免费</span>，请放心接听！
+                </div>
+            </div>
+            <div class="tel-box-hint">
+                <p>请输入正确的号码，手机号码请直接输入，座机请加区号</p>
+            </div>
+        </div>
+
+        <a class="zytp-btn j_btn_call">免费通话咨询</a>
+
+    </div>
+</div>
+
+<div include="../module/footer.html"></div>
+
+<script src="/js/vendor/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" data-main="/view/player/js-built/main.js" src="/js/vendor/require.js"></script>
+<script type="text/javascript">
+    var marketingModule={
+        bindEvents:function(){
+            var self=this;
+            $('.zyxy').addClass("active");
+            $('#j_marketing_overlays').on('click','.j_btn_call',function(){
+                var $this=$(this),$wrap=$('#j_marketing_overlays'),tel=$wrap.find('.j_tel').val();
+                if(checkTel()&&!self.disabledCall){
+                    self.disabledCall=true;
+                    $this.html('正在进行通话');
+                    console.log('正在进行通话');
+                    self.makeCall(tel,$this);
+                    $wrap.find('.j_tel').val('');
+                    var st=setTimeout(function(){
+                        $this.html('免费通话咨询');
+                        self.disabledCall=false;
+                        clearTimeout(st);
+                    },1000*20);
+                }
+            });
+            /*   $('#j_marketing_overlays').on('click','.j_qq_wrap',function(){
+             var $this=$(this),
+             href='tencent://message/?Menu=yes&uin=800187260&Service=58&SigT=675C51B86234D58FCE3F5E8A298087FDAC882EEEF8A76E76C48312F55F496E2A68D0612D6FF83A0E1FF805C0A0A700DEE135539A8F18DEA334A1FFAA0CBB9FE25F521806E4386B56C8987E1D993EAB8C70C14FF3088D3317B7D0D7A463277EE18806EE30F5C1F38099B9FE2F59E6F1589C0544D896E55379&SigU=5469399EFD283D31BC6B69783652AEF8085CA659C74C768750458953518F3883731BB0FAA9B11CD5BFF8A7C58989CB91BF3D406DB1727C6D619E7DB387C38FAFE8F579CE0C17A909'+Date.now();
+             $this.find('iframe').attr('src',href);
+             });*/
+            $('.zytp-btn').on('click',function(){
+                checkTel();
+            });
+            function Timeout(){
+                $(".tel-box-hint").show();
+                setTimeout(function(){
+                    $(".tel-box-hint").hide();
+                },1000);
+            };
+            function checkTel(){
+                var isPhone = /^([0-9]{3,4}-)?[0-9]{7,8}$/;
+                var isMob=/^((\+?86)|(\(\+86\)))?(13[0123456789][0-9]{8}|15[0123456789][0-9]{8}|18[023456789][0-9]{8}|147[0-9]{8}|1349[0-9]{7})$/;
+                var value=$('#j_marketing_overlays').find(".j_tel").val().trim();
+                if(isMob.test(value)||isPhone.test(value)){
+                    return true;
+                }
+                else{
+                    Timeout();
+                    return false;
+                }
+            };
+        },
+        makeCall:function(tel,$this){
+            $.ajax({
+                type:'get',
+                url:'http://121.41.74.120/command?Action=Webcall&Account=N00000010053&PBX=sh.ali.5.3&Timeout=20&ServiceNo=02111110000&Exten='+tel,
+                success:function(result){
+                    mainModule.log('电话接通数据',result);
+                    if(result.Succeed){
+                        $this.html('免费通话咨询');
+                    }
+                }
+            })
+        },
+        init:function(){
+            this.bindEvents();
+        }
+    };
+    marketingModule.init();
+    var lm={
+        bindEvents:function(){
+            $('.j_question_list_wrapper').on('click','.title-wrap',function(){
+                var $this=$(this).parent();
+                $this.toggleClass('active default');
+                $this.find('i').toggleClass('i-sub i-add');
+            });
+            // $('#j_content_wrapper').on('mouseover mouseout','.j_conver',function(){
+            //     var $this=$(this);
+            //     $this.addClass('scale-hide');
+            // })
+        },
+        getPlayCode:function(vedioCode,id,succFunc,picture){
+            $('#j_video_wrap_'+id).html('<div style="text-align: center;line-height: 150px;color: #fff;font-size: 16px;">视频正在努力加载中...</div>');
+            // url+id+'/'+vedioCode,
+            var url=mainModule.uri.getMapPlayCode;
+            var self=this;
+            $.ajax({
+                type:'get',
+                url:url+id,
+                success:function(result){
+                    mainModule.log('获取视频代码接口返回',result);
+                    mainModule.httpInterceptor(result,function(){
+                        var st=setInterval(function(){
+                            if(window.Player){
+                                try{
+                                    var playerThree=new Player({
+                                        id:'j_video_wrap_'+id,
+                                        source:result.content,
+                                        cover:picture,
+                                        type:2,
+                                        width:'402px',
+                                        height:'227px',
+                                        debug:true,
+                                    });
+                                    clearInterval(st);
+                                }catch(e){
+                                    console.log(e);
+                                }
+                            }
+                        },1000);
+
+                        succFunc&&succFunc();
+                    },function(result){
+                        // $('#j_video_wrap').html('<div style="text-align: center;line-height: 150px;color: #fff;font-size: 16px;position: absolute;top: 50%;margin-top: -75px;">未登录！请登录后再试。</div>')
+                    });
+
+                }
+            })
+        },
+        getZytpList:function(){
+            var self=this;
+            $.ajax({
+                type:'get',
+                data:{page:1,rows:50},
+                url:mainModule.uri.getZytpList,
+                success:function(result){
+                    self.mm.log('职业学院列表数据',result);
+                    self.mm.httpInterceptor(result,self.renderZytpList)
+                }
+            });
+        },
+        // joinZytpPlan:function(jobMapId,succFun,failFun){
+        //     var self=this;
+        //     $.ajax({
+        //         type:'post',
+        //         data:{jobMapId:jobMapId},
+        //         url:mainModule.uri.joinZytpPlan,
+        //         success:function(result){
+        //             mainModule.log('加入计划接口数据',result);
+        //         }
+        //     });
+        // },
+        renderZytpList:function(result){
+            var dom='';
+            for(var i=0,len=result.length;i<len;i++){
+                var item=result[i];
+                dom+='<li class="clearfix">'+
+                        '<div id="j_video_wrap_'+item.id+'" class="img-wrap f-l"></div><div class="intro-wrap f-l">'+
+                        '<h4>'+item.name+'</h4>'+
+                        '<p>'+item.description+'</p>';
+                // '<div class="time-wrap">'+
+                // '<i class="i-icon i-kechen"></i>'+item.courseNum+'门课程'+
+                // '<i class="i-icon i-keshi"></i>'+item.chapterNum+'课时'+
+                // '<i class="i-icon i-time"></i>'+this.formattime(item.totalVideoTime||0)+'</div>'+
+                // '<div class="c9">'+item.studyNum+'人正在学习!</div>';
+                if(item.isJoin){
+                    dom+='<div class="pad-t20"><a target="_blank" class="jxxx-a but-sure" href="/view/zytp/detail.html?id='+item.id+'&version=1.2.1">查看详情</a></div>';
+                }else{
+                    dom+='<div class="pad-t20"><a target="_blank" class="jxxx-a but-sure" href="/view/zytp/detail.html?id='+item.id+'&version=1.2.1">查看详情</a></div>';
+                }
+                dom+='</div>'+
+                            // ' <div class="img-wrap ">';
+                            // if(item.speedProgress){
+                            //      dom+='<img  src="'+item.picture+'">'+
+                            //      '<div class="progress-wrap"><div class="progress" style="width:'+item.speedProgress+'"></div></div>';
+                            // }else{
+                            //      dom+='<img style="height:100%;" src="'+item.picture+'">';
+                            // }
+                            //  dom+='</div>'+
+                        '</li>';
+                // lm.joinZytpPlan(item.id);
+            }
+            $('#j_content_wrapper').html(dom);
+            for(var i=0,ii=result.length;i<ii;i++){
+                var item=result[i];
+                lm.getPlayCode(item.promotionalVedio,item.id,'',item.picture);
+            }
+        },
+        init:function(){
+            this.mm=mainModule;
+            this.getZytpList();
+            this.bindEvents();
+        }
+    };
+    lm.init();
+</script>
+</body>
+</html>

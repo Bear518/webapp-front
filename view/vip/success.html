@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>购买成功页面</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/vip/buy.css">
+
+</head>
+<body>
+<div include="../module/header.html"></div>
+<div class="warpper clearfix">
+	<div class="stepbox step3"></div>
+	<div class="succbar">
+    	<div class="succbox">
+        	<!-- <h4>购买成功！</h4> -->
+        	<div class="c-wrap">
+            <p>恭喜您成功购买了</p>
+            <span class="yel"></span>
+            <span class="t">有效期至：永久有效</span>
+            </div>
+        </div>
+        <div class="but-wrap"><a id="j_goback" class="but but-preview but-shadow but-animation" href="/">返回首页</a></div>
+    </div>
+</div>
+
+
+<div include="../module/footer.html"></div>
+</body>
+<script src="../../js/vendor/jquery-1.9.0.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/vip/buy.js"></script>
+<script>
+var ordid=mainModule.getQueryValueByName('ordid');
+$(function() {
+	$.ajax({
+		type: "get",
+		dataType: "json",
+		url: $._CACHEOBJ.context+"/order/common/orderInfo",
+		data:{"orderId":ordid},
+		success: function (pl) {
+			var content=pl.content;
+			if(pl.status== "SUCCESS"){
+				var ordname='《'+pl.content.productName+'》';
+				$(".succbox .yel").text(ordname);
+				if(content.orderType==4){
+					$('#j_goback').attr('href','/view/zytp/detail.html?id='+content.productId).html('返回');
+				}
+			}
+			else{
+				if(pl.content!=null){alert(pl.content[0].message); }
+		  		else{alert(pl.message); }
+			}
+			
+		}
+	})
+})
+</script>
+
+
+</html>

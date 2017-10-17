@@ -1,0 +1,207 @@
+.body-container{
+    background: #eeeeee;
+}
+.notice-container{
+    height: 800px;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top:20px ;
+}
+.notice-l{
+    width: 160px;
+}
+.notice-l ul{
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+}
+.notice-l li{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #efefef;
+    position: relative;
+}
+.notice-l h3.frist{
+    height: 38px;
+    line-height: 38px;
+    background: #ff9001;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 50px;
+}
+.notice-l li:last-child {
+    border-bottom: none;
+}
+.notice-l li:hover{
+    color: #ff9001;
+    background: #f8f8f8;
+}
+.notice-l li.active{
+    color: #ff9001;
+    background: #f8f8f8;
+}
+.notice-l li p{
+    padding-left: 50px;
+}
+
+.icon-mq{
+   /* position: absolute;
+    top: 8px;*/
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ff0101;
+    color: #fff;
+}
+.notice-r{
+    width: 1015px;
+}
+
+/*м╗ж╙ к╫пе*/
+.tongzhi-container{}
+.tongzhi-container .tab-tit{
+    position: relative;
+}
+.tongzhi-container .tab-tit ul{
+    height: 40px;
+    line-height: 40px;
+    background: #fafafa;
+}
+.tongzhi-container .tab-tit li{
+    float: left;
+    padding: 0 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    height: 39px;
+    line-height: 39px;
+}
+.tongzhi-container .tab-tit li:hover ,.tongzhi-container .tab-tit li.active{
+    color: #ff9001;
+    border-bottom: 1px solid #ff9001;
+}
+.tongzhi-container .tab-tit .settingbtn {
+    position: absolute;
+    top: 0;right: 0;
+    height: 18px;
+    width: 34px;
+    margin: 11px 11px;
+    cursor: pointer;
+    background: url("../../img/system/icon.png") no-repeat;
+    background-position: -5px 0px;
+}
+
+.tongzhi-container .tab-tit .settingbtn:hover {
+    background-position: -5px -24px;
+}
+.tongzhi-container .tab-tit .settingbtn .smenu{
+    position: absolute;
+    display: none;
+    top: 28px;
+    right: -11px;
+    width: 87px;
+    border: 1px solid #babecb;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 4px #eee;
+    -moz-box-shadow: 0px 0px 4px #eee;
+    box-shadow: 0px 0px 4px #eee;
+    z-index: 99;
+}
+.tongzhi-container .tab-tit .settingbtn .smenu a{
+    display: block;
+    height: 35px;
+    padding-left: 18px;
+    text-align: left;
+    line-height: 35px;
+    color: #999;
+    font-size: 12px;
+    overflow: hidden;
+}
+.tongzhi-container .tab-tit .settingbtn .smenu a:hover{
+    background: #f8f8f8;
+    color: #ff9001;
+}
+.tongzhi-container .tab-con{
+    background: #fff;
+
+}
+.tongzhi-container .tab-con ul{
+    padding-bottom: 30px;
+    min-height: 200px;
+}
+.tongzhi-container .tab-con li{
+    position: relative;
+    border-bottom: 1px solid #efefef;
+}
+.tongzhi-container .tab-con li .msg-cnt{
+    position: relative;
+    padding: 20px 20px 30px 70px;
+    line-height: 20px;
+    vertical-align: middle;
+    word-wrap: break-word;
+    color: #444;
+}
+.tongzhi-container .tab-con li .msg-icon{
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    color: #999;
+    width: 33px;
+    text-align: center;
+    line-height: 18px;
+}
+.tongzhi-container .tab-con li .msg-icon.wd{
+    color: #fff;
+    background: #ff9001;
+}
+.tongzhi-container .tab-con li .msg-txt {
+    width: 608px;
+    zoom: 1;
+}
+.tongzhi-container .tab-con li.text-overflow .msg-txt{
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.tongzhi-container .tab-con li .msg-close {
+    display: none;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    background: url("../../img/system/icon.png") no-repeat;
+    background-position:-48px 0;
+    cursor: pointer;
+}
+.tongzhi-container .tab-con li .msg-time {
+    position: absolute;
+    /*bottom: 21px;*/
+    /*width: 70px;*/
+    text-align: right;
+    right: 20px;
+    color: #999;
+    line-height: 14px;
+    font-size: 12px;
+}
+.tongzhi-container .tab-con li a {
+    color: #ff9001;
+    margin-right: 4px;
+}
+.tongzhi-container .tab-con li a:hover {
+    text-decoration: underline;
+}
+.tongzhi-container .tab-con li.msg-hover{
+    background: #f8f8f8;
+}
+.tongzhi-container .tab-con li.msg-hover .msg-close{
+    display: block;
+}
+.box-shadow {
+    -webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+}

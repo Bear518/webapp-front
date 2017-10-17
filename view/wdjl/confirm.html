@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>简历确认</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/wdjl/resume.css">
+	<link rel="stylesheet" href="../../css/wdjl/confirm.css">
+</head>
+<body>
+<div include="../module/header.html"></div>
+
+<div class="confirmbar warpper clearfix" ng-app="ResumePreApp" ng-controller="ResumePreCtrl">        
+    <div class="jobtab">
+        <div class="jobcard clearfix">
+        
+            
+        
+        </div>
+        <p>亲，投递简历前，再确认一下你的简历内容吧~</p>
+    </div>
+    <div class="mainbox">
+    	<div class="progress"><span><i id="j_progress" style="width:10%"></i>
+            <b ng-bind="resumeFinishedPerc">10%</b></span><p>您的简历完成度为<i ng-bind="resumeFinishedPerc">75%</i>  前往
+            <a target="_blank" href="/view/wdjl/edit.html">更新简历>></a></p></div>
+        <div class="warch_jl">
+        	<div class="right-wrap clearfix"  >
+            <div include="resumebar.html"></div>
+            </div>
+        </div>
+        <div class="conf_btn"><a href="javascript:" class="">发送简历</a></div>
+    </div>
+</div>
+
+
+<div include="../module/footer.html"></div>
+
+<div class="tk_dl" id="tk_dl2" style=" display:none">
+    <div class="loginbg"></div>
+    <div class="tk_box tdbox">
+        <h3><i class="iconfont tkcls2">&#xe604;</i>投递成功提示</h3>
+        <div class="tk_main">
+        <div class="jobtab">
+            <div class="jobcard clearfix">
+            
+                
+            
+            </div>
+        </div>
+        <div class="tk_wd">
+        投递成功！您可以在 求职中心查看您已经 投递的公司职位！ <br>
+        <span>现在就到 <a href="/view/info/job_info.html">求职中心>></a></span>
+        </div>
+        <div class="tk_btn"><a href="javascript:" class="">关 闭</a></div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="/css/login/tck.css">
+</body>
+<script src="../../js/vendor/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/js/common/angular.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/wdjl/confirm.js"></script>
+<script src="../../js/wdjl/resume.js"></script>
+</html>

@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>职业测评-查看结果_极视教育网</title>
+    <meta name="keywords" content="极视教育,职业教育,在线教育平台,在线教育,在线学习,职业培训,android,ios,Unity3D,java,Photoshop,Maya,3D MAX,独立游戏">
+    <meta name="description" content="职业锚问卷（Career Anchor Questionaire）是国外职业测评运用最广泛，最有效的工具之一。 职业锚问卷是一种职业生涯规划咨询、自我了解的工具，能够协助组织或个人进行更理想的职业生涯发展计划。职业锚没有好坏， 请根据第一感觉，不假思索迅速答题。">
+	<meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="/js/common/device.check.js"></script>
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/zycp/test.css">
+    <style type="text/css">
+.flex-viewport {height: 340px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
+/* Direction Nav */
+.flex-direction-nav {*height: 0;}
+.flex-direction-nav a  {text-decoration: none;
+display: block;
+width: 40px;
+height: 48px;
+margin: -20px 0 0;
+position: absolute;
+top: 50%;
+z-index: 10;
+overflow: hidden;
+opacity: 1;
+cursor: pointer;
+color: rgba(0,0,0,0.8);
+background: url(/img/zycp/arr.png) no-repeat;
+text-indent: -999em;}
+.flex-direction-nav .flex-prev { left: -50px; background-position:0 0; left: 10px;visibility: hidden;}
+.flex-direction-nav .flex-next { right: -50px; background-position:-132px 0;right: 10px;visibility: hidden;}
+.flexslider:hover .flex-prev { opacity: 0.7; left: 10px;}
+.flexslider:hover .flex-next { opacity: 0.7; right: 10px;}
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover { opacity: 1; }
+.flex-direction-nav .flex-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
+    </style>
+</head>
+<body>
+<div include="../module/header.html"></div>
+
+<div class="testbar">
+	<div class="warpper testbox">
+        <div class="share-wrap">分享<span><i data-type="sina" class="i-icon i-size i-sina"></i><i data-type="qqzone" class="i-icon i-size i-qq"></i><i data-type="wx" class="i-icon i-size i-wx"></i></span></div>
+        <div class="wemcn" id="wemcn" style="display: none;">
+            
+             <div id="ewm" class="ewmDiv clearfix">
+             <img id="ewmimg" class="ewmimg" src="">
+                <div class="rwmtext">
+                    <p>扫一扫，用手机来测试！</p>
+                    <p>用微信扫描还可以</p>
+                    <p>分享至好友和朋友圈</p> 
+            </div>
+             </div> 
+            <a href="javascript:void(0)" id="ewmkg"></a>
+             <i class="ewmsj"></i><!-- /ewmsj -->
+        </div>
+    	<div class="testtop">
+    	<h2>职业锚（职业定位）测评</h2>        
+        <p>职业锚问卷（Career Anchor Questionaire）是国外职业测评运用最广泛、最有效的工具之一。
+职业锚问卷是一种职业生涯规划咨询、自我了解的工具，能够协助组织或个人进行更理想的职业
+生涯发展规划。职业锚倾向没有好坏，请根据第一感觉，不假思索迅速答题。</p>
+        </div>
+        
+        <div id="j_zycp_result" class="testrst">
+            <span class="rsttop">测试结果<i></i></span>
+            <span class="rsttitle j_name">加载中...</span>
+            <div class="j_intro">
+            加载中...<br><br>
+            </div>
+            <span class="yel">该类职业锚的人比较适合：<span class="j_industry_choose">加载中...</span></span>
+            <div class="but-wrap but-wrap2"><a class="but but-preview but-shadow but-animation"  id="step2but" href="subject.html">重新测试</a><a class="but but2 but-preview but-shadow but-animation j_save_result" style="display:none;"  href="javascript:;">登录并保存结果</a></div>
+            <div class="but-wrap" style="display:none"><a class="but but-preview but-shadow but-animation"  id="step2but" href="subject.html">重新测试</a></div>
+            <div style="color:#5ba5af;font-size:12px;text-align:center;">将结果分享给好友，可获得7天VIP权益</div>
+        </div>
+        <h1>我们为您提供的对应方向是</h1>
+        <div class="jobwaybox">
+        	<span id="j_left_arrow" style="display:none;" onclick="$('.flex-prev').trigger('click')" class="lft_arr"></span><span id="j_right_arrow" onclick="$('.flex-next').trigger('click')" style="display:none;" class="rt_arr"></span>
+        	<div id="j_direction_slider" class="jobwaytab flexslider">
+            	<ul id="j_jobwaylist_wrap" class="jobwaylist slides clearfix">
+                    <li style="width: 984px;height: 340px;line-height: 340px;" class="j_loading">数据正在努力加载中...</li>
+                </ul>
+            </div>
+        </div>
+        <div class="courselist">
+            <h2>相关课程</h2>
+            <ul id="j_courselist_wrap" class="img-hover-bigger">
+                <li style="line-height: 150px;text-align: center;" class="j_loading">数据正在努力加载中...</li>
+            </ul>
+            
+            <div class="clear"></div>
+            <div class="but-wrap"><a class="but but-preview but-shadow but-animation"  id="step2but" href="/view/seek/course.html">查看更多</a></div>
+        </div>
+        <h1>我们为您推荐的其他岗位是</h1>
+        <div class="jobbar">
+            <ul id="j_jobbar_wrap">
+                <li style="line-height: 150px;text-align: center;" class="j_loading">数据正在努力加载中...</li>
+            <!-- <li class="clearfix">
+                <span class="com_img"><img src="../../img/index/logo.png" alt=""></span>
+                <div class="jobinfo">
+                <div class="jobtitle"><a href="#">移动社交网站助理</a><span class="qz">全职</span></div>
+                <span class="ico company"><i></i>宁波极视文化科技有限公司</span>
+                <span class="ico address"><i></i>上海－浦东新区</span>
+                <span class="ico price"><i></i>¥2000-4000</span>
+                </div>
+            </li> -->
+           
+            </ul>
+            <div class="but-wrap"><a class="but but-preview but-shadow but-animation"  id="step2but" href="/view/xzjy/list.html">查看更多</a></div>
+        </div>
+    </div>
+</div>
+
+
+<div include="../module/footer.html"></div>
+</body>
+<script src="../../js/vendor/jquery-1.9.0.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="/js/zycp/common.js"></script>
+<script src="/js/dk/jquery.flexslider-min.js"></script>
+<script>
+var score=mainModule.getQueryValueByName('score'),locationToDefaultPage=function(){
+        window.location.href='/view/zycp/index.html';
+    };
+if(!key){locationToDefaultPage();}
+(function(){
+    var result=careerPathList[key]||{};
+    //     $wrap=$('#j_zycp_result');
+    // $wrap.find('.j_name').html(result.name);
+    // $wrap.find('.j_intro').html(result.intro+'<br><br>');
+    // $wrap.find('.j_industry_choose').html(result.industryChoose);
+    // $('#j_zycp_result').on('click','.j_save_result',function(){
+    //     getCareerAnchorList(function(careerAnchorArr){
+    //         for(var i=0,ii=careerAnchorArr.length;i<ii;i++){
+    //             var item=careerAnchorArr[i];
+    //             if(result.name.indexOf(item.code)>-1){
+    //                 result.id=item.id;
+    //             }
+    //         }
+    //         saveCareerAnchor({careerAnchorId:result.id,score:result.score,success:function(result){
+    //             console.log('保存职业锚数据成功');
+    //             // $('.j_save_result').hide();
+    //         },notLoginErr:function(result){
+    //             console.log('保存职业锚数据出错，现进入循环模式');
+    //             var st=setInterval(function(){
+    //                 if(mainModule.getCookie('islogin')){
+    //                     saveCareerAnchor({careerAnchorId:result.id,score:result.score,success:function(result){
+    //                         console.log('保存职业锚数据成功');
+    //                         clearInterval(st);
+    //                         // $('.j_save_result').hide();
+    //                     }})
+    //                 }   
+    //             },100);
+                
+    //         }})
+    //     });
+
+    // });
+    $('#j_jobwaylist_wrap').on('click','li',function(){
+        var $this=$(this),id=$this.data('id');
+        getCACourseRecommand(id);
+        $("li.on").removeClass('on');
+        $this.addClass('on');
+    });
+
+var saveCareerAnchor=function(obj){
+        $.ajax({
+            type:'post',
+            data:{careerAnchorId:obj.careerAnchorId,score:obj.score},
+            url:mainModule.uri.saveCareerAnchor,
+            success:function(result){
+                mainModule.log('保存职业锚数据接口返回',result);
+                mainModule.httpInterceptor(result,obj.success,obj.notLoginErr);
+            }
+        })
+    },
+    getCareerAnchorList=function(callback){
+        $.ajax({
+            type:'get',
+            url:mainModule.uri.getCareerAnchorList,
+            success:function(result){
+                mainModule.log('职业锚列表数据接口返回',result);
+                mainModule.httpInterceptor(result,callback);
+            }
+        })
+    },
+    getCAIndustryDirectionRecommand=function(careerAnchorId,success){
+        $.ajax({
+            type:'get',
+            data:{careerAnchorId:careerAnchorId,page:1,rows:8},
+            url:mainModule.uri.getCAIndustryDirectionRecommand,
+            success:function(result){
+                mainModule.log('获取该职业锚推荐的方向接口返回数据：',result);
+                mainModule.httpInterceptor(result,success);
+            }
+        })
+    },
+    getCACourseRecommand=function(directionId){
+        $.ajax({
+            type:'get',
+            data:{directionId:directionId,page:1,rows:8},
+            url:mainModule.uri.getCACourseRecommand,
+            success:function(result){
+                mainModule.log('获取该职业锚推荐的课程接口返回数据：',result);
+                mainModule.httpInterceptor(result,renderCACourseDom);
+            }
+        })
+    },
+    renderCACourseDom=function(result){
+        var dom='';
+        for(var i=0,ii=result.length;i<ii;i++){
+            var item=result[i];
+            dom+='<a target="_blank" href="/view/lesson/lessonintro.html?courseid='+item.id+'"><li class="j_kechen_item kenchen-list-item f-l mrg-r33 mrg-b36" data-videoid="" data-id="">'+
+                    '<div class="kechen-img-wrap">';
+                    switch(item.type){
+                        case 0:
+                            dom+='<i class="icon-i mianfei-i"></i><img class="" src="'+item.picture+'"></div>';
+                        break;
+                        case 1:
+                            dom+='<i class="icon-i fufei-i"></i><img class="" src="'+item.picture+'"></div>';
+                        break;
+                        case 2:
+                            dom+='<img class="" src="'+item.picture+'"><div class="kechen-price-wrap">¥ '+item.price+'</div></div>';
+                        break;
+                        case 3:
+                            dom+='<i class="icon-i fufei-i"></i><img class="" src="'+item.picture+'"><div class="kechen-price-wrap">¥ '+item.price+'</div></div>'
+                        break;
+                    }
+                    dom+='<div class="kechen-detail-wrap">'+
+                        '<p class="name c333">'+item.name+'</p>'+
+                        '<div class="detail f12-c666">'+
+                        '<i class="icon-i i-time"></i>'+item.totalTimes+' <i class="icon-i i-chapter"></i>'+item.totalLessons+'课时</div></div>'+
+                        '<div class="kenchen-like-wrap f12-c666">'+
+                        '<i class="icon-i i-like"></i>'+item.likesNum+'人<span class="f-r mrg-r20">'+
+                        '<i class="icon-i i-watch-people"></i>'+item.watchedNum+'</span></div></li></a>';
+        }
+        if(result.length<1){
+            dom='<li style="line-height: 150px;text-align: center;" >暂没有推荐的课程</li>';
+        }
+        $('#j_courselist_wrap').html(dom);
+    },
+    getCAJobRecommand=function(careerAnchorId){
+        $.ajax({
+            type:'get',
+            data:{careerAnchorId:careerAnchorId,page:1,rows:8},
+            url:mainModule.uri.getCAJobRecommand,
+            success:function(result){
+                mainModule.log('获取该职业锚推荐的职位接口返回数据：',result);
+                mainModule.httpInterceptor(result,renderCAJobDom);
+            }
+        })
+    },
+    renderCAJobDom=function(result){
+        var dom='';
+        for(var i=0,ii=result.length;i<ii;i++){
+            var item=result[i],salary;
+            if(item.incomeTop==0){
+                salary='面议';
+            }else{
+                salary='¥ '+item.incomeBottom+'-'+item.incomeTop;
+            }
+            dom+='<li class="clearfix">'+
+                '<span class="com_img"><img src="'+item.companyLogo+'" alt=""></span>'+
+                '<div class="jobinfo">'+
+                '<div class="jobtitle"><a target="_blank" href="/view/xzjy/detail.html?id='+item.jobId+'">'+item.jobName+'</a><span class="qz">'+item.jobType+'</span></div>'+
+                '<span class="ico company"><i></i>'+item.companyName+'</span>'+
+                '<span class="ico address"><i></i>'+item.areaCode+'</span>'+
+                '<span class="ico price"><i></i>'+salary+'</span>'+
+                '</div>'+
+            '</li>';
+        }
+        if(result.length<1){
+            dom='<li style="line-height: 150px;text-align: center;" >暂没有推荐的岗位</li>';
+        }
+        $('#j_jobbar_wrap').html(dom);
+    },
+    getMyCareerAnchorInfo=(function(){
+            $.ajax({
+                type:'get',
+                url:mainModule.uri.getMyCareerAnchorInfo,
+                success:function(result){
+                    mainModule.log('我的职业锚信息接口返回：',result);
+                    if(result.content){
+                        // $('.j_save_result').hide();
+                    }else{
+                        // $('.j_save_result').show();
+                        // locationToDefaultPage();
+                    }
+                }
+            })
+        })(),countCA=function(careerAnchorId){
+        $.ajax({
+            type:'get',
+            url:mainModule.uri.countCA,
+            data:{careerAnchorId:careerAnchorId},
+            success:function(result){
+                mainModule.log('新增测试数量接口返回：',result);
+            }
+        })
+    };
+    getCareerAnchorList(function(careerAnchorArr){
+        for(var i=0,ii=careerAnchorArr.length;i<ii;i++){
+            var item=careerAnchorArr[i];
+            if(result.name.indexOf(item.code)>-1){
+                result.id=item.id;
+                var $wrap=$('#j_zycp_result');
+                $wrap.find('.j_name').html(item.name);
+                $wrap.find('.j_intro').html(item.description+'<br><br>');
+                $wrap.find('.j_industry_choose').html(item.remark);
+            }
+        }
+        countCA(result.id);
+        getCAIndustryDirectionRecommand(result.id,function(result){
+            var dom='';
+            for(var i=0,ii=result.length;i<ii;i++){
+                var item=result[i];
+                if(i==0){
+                    dom+='<li data-id="'+item.id+'" class="on">';
+                    getCACourseRecommand(item.id)
+                }else{
+                    dom+='<li data-id="'+item.id+'" class="">';
+                }
+                var salaryBottom=item.bottom||0,salaryTop=item.top||0;
+                dom+='<div class="jobwaytit">'+item.name+'<i></i></div>'+
+                '<div class="jobwayimg"><img class="way-img" src="'+item.picture+'"></div>'+
+                '<div class="jobwaypri"><span>'+salaryBottom+'K<br><br>'+salaryTop+'K</span>'+
+                '<p>'+item.description+'</p></div>'+
+                '</li>';
+            }
+            if(result.length<1){
+                dom='<li style="width: 984px;height: 340px;line-height: 340px;">该方向暂没有推荐的方向</li>';
+            }
+            if(result.length>4){
+                $('#j_left_arrow').show();
+                $('#j_right_arrow').show();
+            }
+            $('#j_jobwaylist_wrap').html(dom);
+            $('#j_direction_slider').flexslider({
+                animation : 'slide',
+                controlNav : false,
+                directionNav : true,
+                animationLoop : true,
+                slideshow : true,
+                useCSS : false,
+                itemWidth: 246,
+                itemMargin: 0,
+                minItems: 2,
+                maxItems: 4
+            });
+        });
+        getCAJobRecommand(result.id);
+        if(mainModule.getCookie('islogin')){
+            saveCareerAnchor({careerAnchorId:result.id,score:result.score,success:function(result){
+                console.log('保存职业锚数据成功');
+                // $('.j_save_result').hide();
+            }})
+        }
+    });
+})();
+$(function() {
+	
+	$(".jobwaylist li").click(function(){
+		$(this).addClass("on").siblings().removeClass("on");				
+	})
+	
+	/*学员风采图片滚动*/
+	linum = $('.jobwaylist li').length;//图片数量
+	w = linum * 246;//ul宽度
+		
+	$('.rt_arr').click(function(){		
+		var lft=$('.jobwaylist').position().left;
+		var mm=lft+w;
+		var lft2=$('.jobwaylist').position().left;
+		if(linum>4 && mm>=984){//多于4张图片
+			$('.jobwaylist').animate({left:lft2-984+'px'},600);
+		}
+	})
+	$('.lft_arr').click(function(){
+		var lft=$('.jobwaylist').position().left;
+		var mm=lft+w;
+		if(linum>4 ){
+			if(mm>0 && mm<w){
+		var lft2=$('.jobwaylist').position().left;
+		$('.jobwaylist').animate({left:lft2+984+'px'},600);
+			}
+		}
+		
+	})
+})
+
+</script>
+
+</html>

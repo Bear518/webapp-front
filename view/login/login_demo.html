@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>登录</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/login/login.css">
+</head>
+<body>
+<div include="../module/header.html"></div>
+
+<div class="loginbg"></div>
+<div class="loginbox">
+                <h3><i class="iconfont">&#xe604;</i>欢迎登录极视教育</h3>
+                <span style="" class="err">请输入密码<i></i></span>
+                <ul>
+                    <li class="focus">
+                        <input type="text" tabindex="1" data-checkurl="#" name="Account" id="Account" class="input" placeholder="手机/邮箱"><i class="yhm"></i></li>
+                    <li>
+                        <input type="password" tabindex="2" name="Password" id="Password" class="input" placeholder="8-16个字符"><i class="mm"></i>
+                    </li>
+                    
+                </ul>
+                <div class="wjma">
+                    <label>
+                        <input type="checkbox" value="" name="cbkAutoLogin" id="cbkAutoLogin">下次自动登录
+                    </label>
+                    <a href="#">忘记密码？</a>
+                </div>
+                <a data-title="登录" data-activeurl="#" data-success="#" data-url="#" href="javascript:" id="lg_btn" class="lg_btn">登 录</a>
+                <span class="lg_zc">还没有账号？<a href="#">马上注册</a></span>
+                <dl class="zc_hz">
+                    <dt>
+                        社交账号登录：
+                    </dt>                    
+                    <dd class="wx"><a title="微信登录" trackgoogle="微信登录" href="#"></a></dd>
+                    <dd class="sina"><a title="新浪用户登录" trackgoogle="新浪用户登录" href="#"></a></dd>                    
+                    <dd class="qq"><a title="QQ账户登录" trackgoogle="QQ账户登录" href="#"></a></dd>
+                 
+                </dl>
+            </div>
+
+
+
+
+<div include="../module/footer.html"></div>
+</body>
+<script src="../../js/vendor/jquery-1.9.0.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/login/login.js"></script>
+
+
+</html>

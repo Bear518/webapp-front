@@ -1,0 +1,131 @@
+@charset "utf-8";
+/*banner*/
+.banner { height:178px;background:url(../../img/lessonintro/lsbg.jpg) center 0;color:#fff; padding-top:32px; font-size:16px; margin-bottom:30px;min-width: 1200px;}
+.banner h2{ color:#fff; font-size:33px; margin:30px 0;}
+.crumbs a{ color:#fff; }
+.crumbs a:hover{ color:#ff9001}
+/*lesson introduce*/
+.lsintro .warpper{ border:1px solid #e0e0e0; padding:30px 0 30px 24px; width:1174px; height:474px; margin-bottom:20px}
+.videobox{ height:474px; width:775px; background-color:#010101; float:left}
+.videobox object,.videobox embed{height:474px; width:775px; margin:0 auto}
+.introbox{ width:330px; float:left; margin-left:45px; position:relative}
+.introbox h3{ max-height:74px; line-height:37px; font-weight:normal; overflow:hidden; margin-bottom:10px}
+.introbox ul{border-bottom:1px solid #ccc; padding:23px 0 3px 0 ; height:70px;}
+.introbox li{ float:left; width:72px; margin-right:57px}
+.introbox li i{ height:30px; width:30px;background-image:url(../../img/lessonintro/lsicons.png); display:block; margin:0 0 7px 19px }
+.introbox li span{ display:block; text-align:center}
+.introbox .times i{ background-position:0 0 }
+.introbox .types i{ background-position:-33px 0 }
+.introbox .types i.hy{ background-position:-66px 0 }.introbox .types i.vip{ background:url(../../img/lessonintro/vip.png) }
+.introbox .ks i{ background-position:-99px 0 }
+.intro_wd{ margin:12px 0; font-size:16px; line-height:24px; max-height:188px; overflow:hidden; text-indent:32px}
+.dzbox{ height:38px; border-bottom:1px solid #ccc}
+.dzbox span{ float:left; margin-right:13px; color:#999;margin-top:8px;}
+.dzbox span i{ height:18px;  width:22px; display:inline-block;background:curl(../../img/lessonintro/lsicons.png) -135px 0; vertical-align:middle}
+.dzbox span.learn i{ background-position:-158px 0}
+
+/*progress*/
+.progressbar .warpper{border:1px solid #e0e0e0; padding:20px 23px 10px; width:1152px; height:70px; margin-bottom:20px}
+.progress span{ float:left; height:20px; width:1000px; background-color:#dddddd; margin-top:10px}
+.progress span i{ float:left; height:20px; width:10%; background-color:#ff8f14;}
+.progress a,.dzbox1 a.addplan{ float:right; height:38px; width:113px;background:#ff9001; line-height:36px; color:#fff; text-align:center; font-size:18px; transition:0.2s;box-shadow:0px 2px 0 #d77900; border-radius:4px}
+.dzbox1 a.addplan{ width:220px; height:50px; line-height:50px; margin-right:60px}
+.dzbox1 a.rmoveplan{ height:27px; width:34px;background:url(../../img/lessonintro/tc.png) 0 -27px ; display:block; position:absolute; top:52px; right:5px;}
+.dzbox1 a.rmoveplan:hover{ height:27px; width:34px;background:url(../../img/lessonintro/tc.png) ;}
+.progress a:hover,.dzbox a:hover{ margin-top:2px; box-shadow:0 0 0 #d77900; }
+.dzbox1 a.addplan:hover{ margin-top:2px; box-shadow:0 0 0 #d77900; }
+.progress { clear:both;height:48px; }
+.progress_wd span{ float:left}
+.progress_wd span.nextls{ float:right}
+
+/*introinfo_info*/
+.introinfo{ margin-bottom:40px; }
+.introinfo_main{ width:800px; float:left}
+.introinfo_site{ width:365px; margin-left:35px; float:left}
+.introinfo_tab{ height:58px; line-height:58px; background-color:#62aeb8;}
+.introinfo_tab a{ color:#fff; width:64px; text-align:center; float:left; margin:0 100px 0 10px}
+.introinfo_tab a:hover,.introinfo_tab a.on{ background-color:#ff8f14}
+.introinfo_content{ border:1px solid #e0e0e0; border-top:0;padding:1px 0 20px}
+/*catlog*/
+.catlog{  line-height:34px;}
+.catlog li.zj{ height:44px; line-height:44px; font-size:16px; padding:0 20px;margin-top:4px;}
+.catlog li.ks{height:34px; margin-bottom:4px; padding:0 20px 0 60px; color:#999; position:relative}
+.catlog li.ks:hover{ background-color:#ffecd8}
+.catlog li.zj i{ float:left; height:21px; width:21px;background:url(../../img/lessonintro/lslist.png) no-repeat; margin:10px 18px 0 0;}
+.catlog span.mul{ float:left; width:120px}
+.catlog span.title{float:left; width:360px; height:34px; overflow:hidden; padding-right:110px;text-overflow:ellipsis;white-space:nowrap}
+.catlog span.radio{float:left; width:15px; height:15px; margin:10px 0px 0 10px;background:url(../../img/lessonintro/lsradio.png) no-repeat;}
+.catlog span.choosed{background:url(../../img/lessonintro/lsradio.png) no-repeat -15px 0;}
+.catlog span.k_time{float:left; width:50px;background:url(../../img/lessonintro/bf.png) no-repeat 29px 11px; padding-left:50px}
+.catlog li.ks a{ position:absolute; height:31px; width:85px; top:1px; right:22px;background:url(../../img/lessonintro/lsbtnbg2.png) no-repeat; display:none}
+.catlog li.ks a.vipbtn{background:url(../../img/lessonintro/lsbtnbg4.png) no-repeat;}
+.catlog li.ks a.jrbtn,.catlog li.ks a.jrbtn_m,.catlog li.ks a.jrbtn_y{ background:none #ff9001; color:#fff; display:none; text-align:center; border-radius:4px; line-height:29px}
+.catlog li.ks:hover a.jrbtn,.catlog li.ks:hover a.jrbtn_m,.catlog li.ks:hover a.jrbtn_y{display:block}
+.catlog .canwarch li.ks:hover a.freebtn,.catlog .canwarch li.ks:hover a.vipbtn{ display:block}
+.catlog .canwarch li.ks:hover a.jrbtn{ display:none}
+/*wiki*/
+.wiki li{ color:#999; padding:15px 20px; border-bottom:1px solid #e0e0e0}
+.wiki li.gray{ background-color:#f5f5f5}
+.wiki li span{ display:block; font-size:16px; color:#333; line-height:30px}
+/*comment*/
+.comment li{padding:10px 23px}
+.comment li img{ float:left;height:50px; width:50px; border-radius:25px;margin:4px 13px 0px 0px}
+.comment li .comment_item{ float:left; width:680px }
+.comment li .comment_cap{line-height:43px; height:43px; background-color:#efefef; border-bottom:1px solid #d5d5d5; position:relative}
+.comment_cap i{ display:block; position:absolute; height:7px; width:14px; bottom:-1px; left:34px;background: url(../../img/lessonintro/arr1.png) no-repeat}
+.comment_cap span{ font-size:16px; color:#477f86; padding:0 17px;}
+.comment_con{ display:block; padding:12px 17px 30px; background-color:#f8f8f8}
+.nols{ display:block;width:190px ; height:33px;background: url(../../img/lessonintro/nols.png) no-repeat; margin:100px 280px; padding:338px 0 0 26px;}
+.nols i{ font-size:18px; color:#999;}
+/*site*/
+.tea_caption{ height:58px;line-height:58px;color:#fff; text-indent:77px; font-size:18px;background:#6cc3cf url(../../img/lessonintro/teaico.png) no-repeat 25px 19px; position:relative }
+.teainfo .tea_caption a{ height:20px; width:24px;background: url(../../img/lessonintro/lsarr.png) no-repeat -30px 0; display:block; position:absolute;top:23px; right:20px;}
+.teainfo .tea_caption a:hover{background-position: -30px -20px;}
+.teainfo .tea_caption a.arr_l{ right:50px;background-position: 0 0;}
+.teainfo .tea_caption a.arr_l:hover{background-position: 0 -20px;}
+
+.tea_content{border:1px solid #e0e0e0; border-top:0;padding-top:1px; color:#333;}
+.teainfo .tea_content{ width:363px; overflow-x:hidden}
+.tea_content ul{ width:1600px; margin-left:0px}
+.tea_content li{width:363px; float:left}
+.teainfo img{height:130px; width:130px; border-radius:65px;margin:50px 0 15px 115px}
+.teainfo p.name{ text-align:center; margin-bottom:20px; color:#666}
+.teainfo .info{padding:10px 30px 15px 30px; font-size:14px; text-indent:24px; line-height:24px; color:#666 }
+.teainfo .info p{ margin-top:5px; text-align:right; text-indent:0;}
+.teanote .tea_caption{background:#6cc3cf url(../../img/lessonintro/teanote.png) no-repeat 26px 21px; background-color:#fff; color:#666; border-left:1px solid #e0e0e0;border-right:1px solid #e0e0e0;}
+.teanote .tea_content{ padding:15px 25px 25px}
+.teanote img{height:92px; width:92px; border-radius:46px;margin:0px 37px 13px 0px;float:left}
+.teanote p.name{ font-size:16px; line-height:50px}
+.teanote .title{ font-size:12px; color:#999}
+.teanote .noteinfo{ clear:both; width:320px; padding-top:20px;background:#ededed}
+.teanote .noteinfo_main{padding:0px 15px 30px;}
+
+
+/*tck*/
+.loginbg{ position:absolute; width:100%; opacity:0.5; filter:alpha(opacity=50); background-color:#000; height:1000px; left:0; top:0;z-index:1000}
+.tk_box{z-index:1100; background-color:#FFF;width:460px; text-align:center; margin-left:-200px;box-shadow:0px 2px 2px rgba(0, 0, 0, 0.1); position:fixed; left:50%;box-sizing:content-box;top:50%;margin-top:-195px}
+.tk_box h3{ line-height:40px; height:40px; text-align:center; font-weight:normal ; color:#333; background-color:#ededed; font-size:16px; }
+.tk_box h3 i.iconfont{cursor: pointer;display: block;height: 24px;line-height: 24px;position: absolute;right: 10px;top: 10px;width: 20px;}
+.tk_main{ padding:10px 65px; height:335px; text-align:left; font-size:16px;line-height:24px;}
+.tk_btn a{ height:32px; width:113px;background:#ff9001; line-height:32px; color:#fff; text-align:center; font-size:14px; transition:0.2s;box-shadow:0px 2px 0 #d77900; border-radius:4px; display:block; margin-left:123px}
+.tk_dl .tdbox .tk_btn { padding-left:10px}
+.tk_dl .tdbox .tk_btn a{ margin-left:30px; float:left}
+.tk_dl .tdbox .tk_btn a:hover{ margin-top:2px; box-shadow:0 0 0 #d77900; }
+.tk_dl .tk_btn a.hot { position:relative}
+.tk_dl .tk_btn a.hot i{ position:absolute; top:0px; right:-1px; height:30px; width:30px;background:url(../../img/vip/icon.png) no-repeat -74px -15px;}
+#tk_dl2 .tdbox .tk_wd{ background:url(../../img/vip/bl.png) no-repeat 0px 27px; padding:10px 0px 0px 87px; height:140px; font-size:16px; text-align:left; line-height:26px}
+#tk_dl2 .tdbox p{ padding:10px 0}
+#tk_dl2 .tk_main{ height:220px}#tk_dl2 .tdbox .tk_btn a{margin-left:78px}
+#tk_dl1 .tdbox .tk_wd,#tk_dl3 .tdbox .tk_wd{ background:url(../../img/vip/cl.png) no-repeat 0px 10px; padding:140px 0px 0px 137px; height:60px; font-size:14px; text-align:left; line-height:26px}
+#tk_dl1 .tdbox p,#tk_dl3 .tdbox p{ padding:10px 0}
+#tk_dl1 .tk_wd a,#tk_dl3 .tk_wd a{ color:#999; text-decoration:underline}
+#tk_dl1 .tk_wd a:hover{ color:#ff9001}
+.red{ color:#d50101}.yel{color:#ff8f14}
+
+
+
+
+
+
+
+

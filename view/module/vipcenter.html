@@ -1,0 +1,269 @@
+<style type="text/css">
+	.vc-container .l-wrap{width: 49.5%;margin-right: 1%;background-color: #fff;}
+	.vc-container .r-wrap{width: 49.5%;background: #fff;height: 665px;}
+	.vc-container .l-wrap .header-wrap{padding: 18px 0;margin:0 22px;border-bottom: 2px solid #00ca98;color: #00ca98;font-size: 16px;}
+	.vc-container .r-wrap .header-wrap{padding: 18px 0;margin:0 22px;border-bottom: 2px solid #85a9c4;color: #85a9c4;font-size: 16px;}
+	.vc-container .i-zwsc{width: 33px;height: 22px;margin-right: 20px;background-position:-352px -476px;}
+	.vc-container .l-wrap .content-wrap{padding:22px;}
+	.vc-container .l-wrap .content-wrap ul{overflow: auto;}
+	.vc-container .r-wrap .content-wrap{}
+	.vc-container .r-wrap .img-wrap{width: 397px;margin: 0 auto;}
+	.vc-container .header-wrap{position: relative;}
+	.vc-container .r-sp-wrap{position: absolute;right: 0;top: 18px;}
+	.vc-container .r-sp-wrap{color: #999;}
+	.vc-container .r-sp-wrap span:first-child{border-top-left-radius:5px;border-bottom-left-radius: 5px;}
+	.vc-container .r-sp-wrap span:last-child{border-top-right-radius:5px;border-bottom-right-radius: 5px;}
+
+	.vc-container .r-sp-wrap span{padding: 4px;border: 1px solid #999;cursor: pointer;font-size: 14px;}
+	.vc-container .r-sp-wrap span:hover{border:1px solid #ff9001;background: #ff9001;color:#fff;}
+	.vc-container .r-sp-wrap span.active{border:1px solid #ff9001;background: #ff9001;color:#fff;}
+	.applyed-sp{color: #999;margin-left: 10px;}
+	.vc-container .order-content-wrap ul li{width: 20%;text-align: center;}
+	.vc-container .order-content-wrap ul li:first-child{width: 40%;text-align: left;}
+	.vc-container .list-wrap{margin-top: 12px;height: 480px;overflow: auto;/*padding-bottom: 50px;*/padding-right: 20px;}
+
+	.c3{color: #333;}.c6{color: #666;}.c9{color: #999;}.fs12{font-size: 12px;}.fs14{font-size: 14px;}
+	.vc-container .order-content-wrap dl dt{background: #f1f1f1;}.td-lt{text-decoration: line-through;}
+	.vc-container .order-content-wrap dt{padding: 5px;border:1px solid #ececec;border-bottom: none;}
+	.vc-container .order-content-wrap dd{border:1px solid #ececec;border-top: none;margin-bottom: 5px;}
+	.vc-container .list-wrap li{border-right: 1px solid #ececec;padding: 0 5px;height: 62px;}.mrg-l18{margin-left: 18px;}
+	.vc-container .list-wrap li.pad-t12{padding-top: 12px;}.vc-container .list-wrap li.pad-t20{padding-top: 20px;}
+	.j_cancel_order{cursor: pointer;}
+	.j_cancel_order:hover{color: #ff9001;}
+	/*.a-hover:hover{color: #ff9001;}*/
+	.i-vip-record{background-position: -46px -560px;}
+	/*table th{text-align: center;}*/
+	.vip-record-wrap dl{text-align: center;margin:10px 33px 16px;max-height: 558px;overflow: auto;}
+	.vip-record-wrap dt{line-height: 36px;}
+	.vip-record-wrap dd span{color: #999;}
+	.perc20{width: 20%;}.perc10{width: 10%;}.perc30{width: 30%;}
+	.date-td{width: 20%;padding:6px;border:1px solid #ececec;height: 54px;}
+	.day-td{width: 10%;padding:6px;border:1px solid #ececec;height: 54px;}
+	.remark-td{width: 30%;padding:6px;border:1px solid #ececec;height: 54px;}
+	.vc-container .r-wrap .page-control{margin: 0;text-align: right;padding-right: 30px;}
+	.vc-container .l-wrap .page-control{margin: 0;text-align: center;}
+	.vc-container{width: 100%;}
+	.vip-record-wrap .br-none{border-right: none;}
+	/*.vip-record-wrap dl ul:last-child{border-top: none;}*/
+</style>
+<div class="vc-container clearfix">
+	<div class="l-wrap f-l">
+		<div class="header-wrap"><i class="i-icon i-zwsc"></i>我的订单<div id="j_orderlabel_wrap" class="r-sp-wrap"><span class="active" data-type="1">已支付</span><span data-type="0">未支付</span></div></div>
+		<div class="content-wrap order-content-wrap">
+			<ul class="c3"><li class="f-l">订单名称</li><li class="f-l">价格(元)</li><li class="f-l">状态</li><li class="f-l">操作</li></ul>
+			<dl id="j_order_list_wrap" class="list-wrap">
+				<!-- <div style="line-height:120px;text-align:center;">暂时没有订单</div> -->
+				<!-- <dt class="c6">2016-06-14 <span class="c9 mrg-l18">订单号：23333323434493993</span></dt>
+				<dd>
+					<ul class="c9 clearfix">
+						<li class="f-l pad-t12">
+							<a class="a-hover" href="">购买年会员</a><div class="fs12">有效期至：2018-08-08</div>
+						</li>
+						<li class="f-l">
+							<div class="td-lt fs12">204.00</div><div class="fs14 c3">200.00</div><div class="fs12">(已优惠：4.00)</div>
+						</li>
+						<li class="f-l pad-t20"><div>已关闭</div></li>
+						<li class="f-l pad-t12"></li>
+					</ul>
+				</dd> -->
+				<div style="line-height:120px;text-align:center;">加载数据中...</div>
+			</dl>
+			<div id="j_order_page_control" class="page-control page-wrap">
+            <!-- <a href="view/more.html">查看更多</a> -->
+        	</div>
+		</div>
+	</div>
+	<div class="r-wrap f-l">
+		<div class="header-wrap"><i class="i-icon i-vip-record"></i>VIP记录</div>
+		<div class="content-wrap vip-record-wrap">
+			<!-- <div class="img-wrap">
+				<img src="/img/xzjy/100.png">
+			</div> -->
+			<!-- <table id="j_vip_record_wrap" border="1" cellpadding="10">
+				<tr><th>日期</th><th>天数</th><th>开始日期</th><th>结束日期</th><th>备注</th></tr>
+				<tr><td class="date-td">2016-06-30 15:45:49</td>
+					<td class="day-td">30天</td>
+					<td class="date-td">2016-06-30 15:45:49</td>
+					<td class="date-td">2016-06-30 15:45:49</td>
+					<td class="remark-td">赠送获得日vip，邀请好友获得30天vip</td></tr>
+			</table> -->
+			<dl id="j_vip_record_wrap">
+				<div style="line-height:120px;text-align:center;">加载数据中...</div>
+			</dl>
+		</div>
+    	<div id="j_viprecord_page_control" class="page-control page-wrap">
+            <!-- <a href="view/more.html">查看更多</a> -->
+        </div>
+	</div>
+
+</div>
+<script type="text/javascript">
+	var vipModule={
+		bindEvents:function(){
+			var self=this;
+			$('#j_order_list_wrap').on('click','.j_cancel_order',function(){
+				var $this=$(this),orderNo=$this.data('id');
+				$.ajax({
+					type:'get',
+					url:mainModule.uri.cancelOrder,
+					data:{orderNo:orderNo},
+					success:function(result){
+						mainModule.log('取消该订单接口返回',result);
+						self.httpInterceptor(result,function(result){
+							$this.closest('li').prev().children().html('已关闭');
+							$this.closest('li').empty();
+						})
+					}
+				})
+			});
+			$('#j_orderlabel_wrap').on('click','span',function(){
+				var $this=$(this),status=$(this).data('type');
+				$this.parent().find('.active').removeClass('active');
+				$this.addClass('active');
+				$('#j_order_list_wrap').html('<div style="line-height:120px;text-align:center;">正在努力加载数据中...</div>');
+				self.isHasPaged=false;
+				self.status=status;
+				self.getMyPayOrderList(1);
+			})
+		},
+		getMyPayOrderList:function(page){
+			var self=this;
+			$.ajax({
+				type:'get',
+				data:{statue:self.status,page:page,rows:20},
+				url:mainModule.uri.getMyPayOrderList,
+				success:function(result){
+					mainModule.log('我的购买订单接口返回',result);
+					self.httpInterceptor(result,self.renderMyPayOrderList);
+				}
+			})
+		},
+		httpInterceptor:function(result,succfunc,failfunc){
+			if(result.status=='SUCCESS'){
+				result.content.list&&(result.content.list.total=result.content.total);
+                result.content.rows&&(result.content.rows.total=result.content.total);
+				succfunc&&succfunc.call(this,result.content&&(result.content.list||result.content.rows),result.content&&result.content.total);
+			}else{
+				failfunc&&failfunc.call(this,result);
+			}
+		},
+		renderMyPayOrderList:function(result){
+			var dom='',ii=result.length,self=this;
+			for(var i=0;i<ii;i++){
+				var item=result[i],nameUrl='javascript:;';
+				if(item.orderType==2){
+					item.href='/view/vip/paychos.html?ordid='+item.id+'&id='+item.productId;
+					nameUrl='/view/lesson/lessonintro.html?courseid='+item.productId;
+				}else{
+					item.href='/view/vip/paychos_m.html?ordid='+item.id+'&number='+item.number;
+					nameUrl='/view/vip/vipintro.html';
+				}
+				dom+='<dt class="c6">'+(mainModule.formatBirthdate(item.createDate))+' <span class="c9 mrg-l18">订单号：'+item.orderNo+'</span></dt>'+
+				'<dd>'+
+					'<ul class="c9 clearfix">'+
+						'<li class="f-l pad-t12">'+
+							'<a class="a-hover" target="_blank" href="'+nameUrl+'">购买'+item.productName+'</a><div class="fs12 dis_none">有效期至：2018-08-08</div>'+
+						'</li>'+
+						'<li class="f-l">'+
+							'<div class="td-lt fs12" style="visibility:hidden;">'+(item.number*item.price)+'</div><div class="fs14 c3">'+item.orderMoney+'</div><div class="fs12" style="visibility:hidden;">(已优惠：'+(item.cutMoney||0)+'元)</div>'+
+						'</li>';
+						switch(item.statue){
+							case 0:
+								
+								dom+='<li class="f-l pad-t20"><div>未支付</div></li><li class="f-l pad-t12"><a href="'+item.href+'" target="_blank">去支付</a><div data-id="'+item.orderNo+'" class="c6 j_cancel_order">取消订单</div></li>';
+							break;
+							case 1:
+								dom+='<li class="f-l pad-t20"><div>支付完成</div></li><li class="f-l pad-t12"></li>';
+							break;
+							case 3:
+								dom+='<li class="f-l pad-t20"><div>已关闭</div></li><li class="f-l pad-t12"></li>';
+							break;
+						}
+					dom+='</ul>'+
+				'</dd>';
+			}
+			if(ii==0){
+				dom+='<div style="line-height:120px;text-align:center;">该选项暂时没有订单</div>';
+			}
+			// result.total=120;
+			mainModule.createPage(self,result.total,$('#j_order_page_control'),self.getMyPayOrderList);
+			$('#j_order_list_wrap').html(dom);
+		},
+		getVipRecord:function(page){
+			var self=this,page=page?page:1;
+			$.ajax({
+				type:'get',
+				url:mainModule.uri.getVipRecord,
+				data:{page:page,rows:20},
+				success:function(result){
+					mainModule.log('我的VIP记录接口返回',result);
+					mainModule.httpInterceptor(result,function(result,total){
+						self.renderVipRecordDom(result,total);
+					})
+				}
+			})
+		},
+		formatDateTime:function(timestamp){
+			var date=new Date(timestamp);
+			return date.toLocaleDateString()+'<br>'+date.toLocaleTimeString();
+		},
+		renderVipRecordDom:function(result,total){
+			var dom='<dt><ul class="clearfix">'+
+					'<li class="perc20 f-l">日期</li>'+
+					'<li class="perc10 f-l">天数</li>'+
+					'<li class="perc20 f-l">开始日期</li>'+
+					'<li class="perc20 f-l">结束日期</li>'+
+					'<li class="perc30 f-l">备注</li></ul></dt>',ii=result.length;
+			for(var i=0;i<ii;i++){
+				var item=result[i],createDateObj=mainModule.formatFulldate(item.createDate),
+				vipEndDateObj=mainModule.formatFulldate(item.vipEndDate),vipStartDateObj=mainModule.formatFulldate(item.vipStartDate);
+				dom+='<dd><ul class="clearfix">'+
+					'<li class=" date-td br-none f-l">'+createDateObj.date+' <span>'+createDateObj.time+'</span></li>'+
+					'<li class="day-td br-none f-l">'+item.vipDays+'天</li>'+
+					'<li class="date-td br-none f-l">'+vipStartDateObj.date+'</li>'+
+					'<li class="date-td br-none f-l">'+vipEndDateObj.date+'</li>'+
+					'<li class="remark-td f-l">'+item.typeName+'获得'+item.vipDays+'天VIP</li></ul></dd>';
+
+				// dom+='<tr><td class="date-td">'+createDate+'</td>'+
+				// 	'<td class="day-td">'+item.vipDays+'天</td>'+
+				// 	'<td class="date-td">'+vipStartDate+'</td>'+
+				// 	'<td class="date-td">'+vipEndDate+'</td>'+
+				// 	'<td class="remark-td">'+item.typeName+'获得'+item.vipDays+'天VIP</td></tr>';
+			}
+			if(ii==0){
+				dom='<div style="line-height:120px;text-align:center;">暂时没有记录</div>';
+			}
+			// total=40;
+	        if(!this.isHasPaged){
+	            $('#j_kechen_page_control').hide();
+	        }
+	        var self=this;
+	        if(total>20&&!this.isHasPaged){
+	            var pageCount=(total%20)==0?(total/20):Math.floor(total/20)+1;
+	            $('#j_viprecord_page_control').off('click');
+	            $('#j_viprecord_page_control').createPage({
+	                  pageCount:pageCount,
+	                  current:1,
+	                  isHasGoto:true,
+	                  backFn:function(p){
+	                      //单击回调方法，p是当前页码
+	                      console.log(p);
+	                      self.getVipRecord(p);
+	                      // self.isClickPage=true;
+	                  }
+	            });
+	            this.isHasPaged=true;
+	            $('#j_viprecord_page_control').show();
+	        }
+			$('#j_vip_record_wrap').html(dom);
+		},
+		init:function(){
+			this.bindEvents();
+			this.status=1;
+			this.getMyPayOrderList(1);
+			this.getVipRecord();
+		}
+	};
+	vipModule.init();
+	console.log('vip-center module loaded');
+</script>

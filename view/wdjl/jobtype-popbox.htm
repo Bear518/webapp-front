@@ -1,0 +1,61 @@
+<style type="text/css">
+    	.jobtype-popbox{width: 753px;min-height: 505px;top: 50%;left: 50%;position: fixed;margin-top: -252.5px;margin-left: -376px;background: #fff;z-index: 1124;padding-bottom: 26px;}
+    	.jobtype-popbox h5{line-height: 40px;height: 40px;text-align: center;font-size: 16px;color: #333;background: #ededed;font-weight: normal;}
+    	.jobtype-popbox .content-wrap{padding:0 10px;}
+    	.jobtype-popbox .content-wrap label{padding:4px 8px;background: #cecece;color: #fff;margin:4px 4px 0 0;display: inline-block;}
+    	.jobtype-popbox h5 span{}
+    	.jobtype-popbox .title-wrap{background: #fafafa;color: #999;text-align: center;height: 30px;line-height: 30px;width: 244px;border:1px solid #e6e6e6;}
+    	.jobtype-popbox .jobtype-selected-wrap{padding:16px 0;color: #333;}
+    	.jobtype-popbox .jobtype-selected-wrap span{font-size: 16px;margin-left: 6px;}
+    	.jobtype-popbox .jobtype-select-wrap .border-left-none{border-left: none;}
+    	.jobtype-popbox .jobtype-select-wrap{}
+    	.jobtype-popbox .jobtype-select-wrap ul>li{height: 30px;line-height: 30px;border-bottom: 1px solid #e6e6e6;width: 242px;padding-left: 6px;cursor: pointer;}
+    	.jobtype-popbox .jobtype-select-wrap ul>li.active{background: #ff9001 right center no-repeat;color: #fff;}
+    	.jobtype-popbox .jobtype-select-wrap ul.haschild-ul>li.active:hover{background: #ff9001 right center no-repeat;color: #fff;  background-image: url("data:image/IFf;base64,R0lGODlhFAALAIABAP///wAAACH5BAEAAAEALAAAAAAUAAsAAAIVRI6pauvbngxxumpZhlt3hG1hNmYFADs=");}
+    	.jobtype-popbox .jobtype-select-wrap ul.nochild-ul>li.active:hover{background: #ff9001 right center no-repeat;color: #fff;background-image: url("data:image/IFf;base64,R0lGODlhFQAIAIABAP///wAAACH5BAEAAAEALAAAAAAVAAgAAAIXjH8AyJ3qolFLBviqpRPbTmkfKI6deRQAOw==");}
+    	.jobtype-popbox  ul.haschild-ul>li.active{background-image: url("data:image/IFf;base64,R0lGODlhFAALAIABAP///wAAACH5BAEAAAEALAAAAAAUAAsAAAIVRI6pauvbngxxumpZhlt3hG1hNmYFADs=");}
+    	.jobtype-popbox  ul.haschild-ul>li:hover{background: #ffecd8 right center no-repeat;  background-image: url("data:image/IFf;base64,R0lGODlhFAALAIABAP///wAAACH5BAEAAAEALAAAAAAUAAsAAAIVRI6pauvbngxxumpZhlt3hG1hNmYFADs=");}
+    	.jobtype-popbox  ul.nochild-ul>li.active{background-image: url("data:image/IFf;base64,R0lGODlhFQAIAIABAP///wAAACH5BAEAAAEALAAAAAAVAAgAAAIXjH8AyJ3qolFLBviqpRPbTmkfKI6deRQAOw==");}
+    	.jobtype-popbox ul.nochild-ul>li:hover{background: #ffecd8 right center no-repeat;background-image: url("data:image/IFf;base64,R0lGODlhFQAIAIABAP///wAAACH5BAEAAAEALAAAAAAVAAgAAAIXjH8AyJ3qolFLBviqpRPbTmkfKI6deRQAOw==");}
+    	.jobtype-popbox .jobtype-select-wrap ul{border-left: 1px solid #e6e6e6;border-right: 1px solid #e6e6e6;height: 289px;overflow-y: auto;border-bottom: 1px solid #e6e6e6;}
+    	</style>
+    	<div  ng-class="{'dis_block':jobtypePopboxShow}" class="popbox jobtype-popbox dis_none">
+    		<h5 class="clearfix">请选择职位类别<span class="f-r i-sprite i-close" ng-click="closeJobTypeSelect()"></span></h5>
+    		<div class="content-wrap">
+    			<div class="jobtype-selected-wrap" >已选择：<label ng-repeat="item in jobtypeSelectedLabels track by item.code"><span ng-bind="item.name"></span><span class="del-label" ng-click="deleteJobTypeSelectedLabel(item)">x</span></label></div>
+    			<div class="jobtype-select-wrap clearfix">
+    				<div class="f-l">
+    					<div class="title-wrap">职位大类</div>
+    					<ul class="haschild-ul">
+    						<li ng-class="{'active':item.isActive}" ng-repeat="item in jobtypeData" ng-bind="item.name" ng-click="jobtypeClick(item)"></li>
+    						<!-- <li>it互联网</li>
+    						<li>it互联网</li> -->
+    					</ul>
+    				</div>
+    				<div class="f-l">
+    					<div class="title-wrap border-left-none">职位小类</div>
+    					<ul class="border-left-none haschild-ul">
+    						<li ng-class="{'active':item.isActive}" ng-repeat="item in jobtypeChildData" ng-bind="item.name" ng-click="jobtypeChildClick(item)"></li>
+    						
+    					</ul>
+    				</div>
+                    <div class="f-l">
+                        <div class="title-wrap border-left-none"> 详细职位</div>
+                        <ul class="border-left-none nochild-ul">
+                            <li ng-class="{'active':item.isActive}" ng-repeat="item in jobtypeGrandChildData" ng-bind="item.name" ng-click="jobtypeGrandChildClick(item)"></li>
+                            
+                        </ul>
+                    </div>
+    			</div>
+    			<div>
+    				<div class="clearfix but-wrap">
+	    				<div class="f-l">
+							<input type="button" ng-click="saveJobTypeSelectedLabels()" class="but but-shadow but-animation w95" value="保存">
+						</div>
+						<div class="f-l">
+							<input type="button" data-id="#j_contact_wrap" ng-click="closeJobTypeSelect()" class="but but-cancel but-shadow but-animation mrg-l80 w95" value="取消">
+						</div>
+					</div>
+    			</div>
+    		</div>
+    	</div>

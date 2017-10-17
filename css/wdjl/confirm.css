@@ -1,0 +1,34 @@
+@charset "utf-8";
+body{ background-color:#f2f2f2}
+
+/*confirm*/
+.jobtab,.jobtab *{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.jobtab{ height:120px; padding:15px 135px;border-bottom:1px solid #cdcdcd; background-color:#e1e1e1}.jobtab p{ float:left; color:#333; font-size:18px; margin:33px 0 0 80px}
+.confirmbar .jobcard{ background-color:#fff; height:90px; width:356px; padding:20px; text-align:left;float:left}
+.jobcard img{ height:50px; width:100px; float:left; margin:0px 20px 0 0}
+.jobinfo{ float:left; width:195px;}
+.jobtitle{ font-size:16px; color:#333; line-height:26px; height:28px; overflow:hidden}
+.jobtitle a{ height: 22px; display:inline-block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; width: 128px;}
+.jobtitle span{ display:inline-block; padding:0 13px; background-color:#ff5d6c; color:#fff; margin-left:8px}
+.jobtitle span.qz{ background-color:#4791ff; }
+.jobtitle span.zy{ background-color:#6dc6d2; }
+.jobtitle span.jz{ background-color:#ffa23b; }.jobtitle span.ls{background-color:#956dfc}
+.jobtitle span.qt{background-color:#82cdfd}
+.jobinfo .ico{ float:left; line-height:30px; overflow: hidden;text-overflow: ellipsis;white-space: nowrap; width: 190px; height:30px}
+.jobinfo .ico i{ display:inline-block; height:17px; width:17px; background-image:url(../../img/xzjy/sprite.png); vertical-align:middle; margin-right:5px; background-size:422px auto}
+.jobinfo .company i{ background-position:-31px -22px}
+
+
+.confirmbar{ border:1px solid #cdcdcd;box-shadow:1px 0px 4px rgba(0, 0, 0, 0.1); background-color:#FFF}
+.mainbox{ padding:10px}
+.progress{ height:50px; width:940px; margin:0 auto; padding-top:30px}
+.progress span{ float:left; height:16px; width:354px; background-color:#dddddd; margin-top:4px; position:relative}
+.progress span i{ float:left; height:16px; width:10%; background-color:#ff8f14;}
+.progress span b{ position:absolute; left:150px; top:-20px}
+.progress p{ float:left; font-size:16px; padding-left:80px}
+.progress p a{ color:#63b6c1; text-decoration:underline}
+.warch_jl{ height:510px; width:940px; overflow-y:scroll; border:1px solid #dcdcdc; margin:10px auto}
+.conf_btn{ height:46px; padding:16px}
+.conf_btn a{ height:38px; width:200px;background:#ff9001; line-height:38px; color:#fff; text-align:center; font-size:14px; border-radius:3px; display:block; margin-left:453px}
+.conf_btn a:hover{background: #ffad43 }
+.tk_dl .jobtitle a:hover{ color:#666; cursor:default}

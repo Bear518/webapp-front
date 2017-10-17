@@ -1,0 +1,139 @@
+﻿<link rel="stylesheet" href="/css/login/register.css">
+<style type="text/css">.register_dl .activity-wrap{position: fixed;left: 50%;box-sizing: content-box;top: 50%;margin-top: -300px;z-index: 1111;margin-left: -200px;}
+    .fs13-c7{font-size: 13px;color: #777;text-align: center;cursor: pointer;}
+    input[type="password"]:after{display: block;content: '';width: 20px;height: 20px;}
+    body li i.i-login-icon,i.i-login-icon{background: url('/img/login/icon.png') no-repeat;display: inline-block;width: 20px;height: 25px;}
+    body li i.i-view-pwd,i.i-view-pwd{background-position: -25px -9px;left: inherit;right: 20px;cursor: pointer;top:30px;position: absolute;}
+
+</style>
+<div class="loginbg"></div>
+<!-- <div class="activity-wrap"><img src="/img/login/activity.jpg"></div> -->
+<div class="zcbox">
+        <div><img src="/img/login/activity.jpg"></div>
+        <input type="hidden" name="RegFlag" id="RegFlag" value="0">
+        <!-- <h3><i class="iconfont cls">&#xe604;</i>欢迎注册极视教育</h3> -->
+        <div class="loginorreg-options-wrap clearfix">
+            <div class="ljdl f-l">登录</div><div class="f-l active">注册</div>
+            <span class="f-r"><i class="i-login-icon i-close cls"></i></span>
+        </div>
+        <div style="display:none;" class="zc_tab">
+            <a id="zcbox_phone" href="javascript:" class="on">手机注册</a>
+            <a id="zcbox_mail" href="javascript:" class="">邮箱注册</a>
+        </div>
+        <div class="bottom-wrap">
+                <div>
+                    <!--手机注册-->
+                    <div id="regPhonePanel" class="zcbox_main zcbox_phone">
+                        <div class="first-step-wrap ">
+                            <ul>
+                                <li class="inputli1 ">
+                                    <input type="text" data-checkphoneurl="#" data-notice="" name="RegPhone" id="RegPhone" class="input" placeholder="请输入手机/邮箱号码"><i class="yhm"></i>
+                                    <span class="err err1">提示</span>
+                                   
+                                </li>
+                                <li class="inputli2">
+                                    <input type="password" maxlength="16" name="RegistPassword" id="RegistPasswordPhone" class="input"  placeholder="请输入密码（6-16个字符）"><i class="mm"></i>
+                                    <span class="err err2">提示</span>
+                                    <i class="i-login-icon i-view-pwd j_view_pwd"></i>
+                                </li>
+                                
+                            </ul>
+                            <div class="wjma">
+                                <label>
+                                    <input type="checkbox" checked="checked" value="" name="ckbPhone" id="ckbPhone">接受
+                                    <a href="../../view/info/serv_info.html?id=1" target="_blank" class="clause">极视教育用户协议</a>
+                                </label>
+                                <!-- <span class="lg_zc">已有账号&nbsp;&nbsp;<a class="ljdl" href="javascript:void(0);">立即登录</a></span> -->
+                            </div>
+                            <a data-success="#" data-url="#" href="javascript:" id="go_second_view" class="lg_btn">注 册</a>
+                        </div>
+                        <div class="second-step-wrap dis_none">
+                            <ul>
+                                <li class="inputli10 yzm">
+                                    <input type="text" maxlength="4" name="CheckCode" id="CheckCode1" class="input" placeholder="请填写验证码">
+                                    <img align="absmiddle" src="" id="imgCC2" class="yzm_img" alt="">
+                                    <a data-url="#" href="javascript:" style="color: Gray" class="yzm_a"><img  src="/img/login/refls.png"  style="margin:0" alt=""></a>
+                                    <span class="err err10">提示</span>
+                                    
+                                </li>
+                                <li class="inputli5 yzm">
+                                    <input type="text" maxlength="6" name="CheckCode" id="ValidatorCode" class="input" placeholder="请查收短信并填写"><input type="button" class="yzm_phoneDisEnable" id="btnSendSmsCode" value="获取验证码" style="margin:0">
+                                    <span class="err err5">提示</span>
+                                    
+                                </li>
+                                
+                            </ul>
+
+                            <a style="margin-top:20px;" data-success="#" data-url="#" href="javascript:" id="regPhoneBtn" class="lg_btn">提 交</a>
+                            <div class="fs13-c7 j_goback_update"><a href="javascript:;">返回修改手机号</a></div>
+                        </div>
+                        
+                    </div>
+                    <!--邮箱注册-->
+                    <div style="display:none" id="regMailPanel" class="zcbox_main zcbox_mail">
+                        <span class="err" style="display: none">提示<i></i></span>
+                        <div>
+                            <ul>
+                                <li class="inputli6">
+                                    <input type="text" data-checkphoneurl="#" maxlength="50" name="RegEmail" id="RegEmail" class="input" placeholder="请输入手机/邮箱号码"><i class="yhm"></i>
+                                    <span class="err err6">提示</span>
+                                    
+                                </li>
+                                
+                                <li class="inputli7">
+                                    <input type="password" maxlength="16" name="RegistPassword" id="RegistPassword" class="input" placeholder="请输入密码（6-16个字符）"><i class="mm"></i>
+                                    <span class="err err7">提示</span>
+                                    <i class="i-login-icon i-view-pwd j_view_pwd"></i>	  						
+                                </li>
+                                <!-- <li class="inputli8">
+                                    <input type="password" maxlength="16" name="ConfirmPassword" id="ConfirmPassword" class="input" placeholder="请再次填写密码"><i class="mm"></i>
+                                    <span class="err err8">提示</span>
+                                    
+                                </li> -->
+                                
+                            </ul>
+                            <div class="wjma">
+                                <label>
+                                    <input type="checkbox" checked="checked" value="" name="ckbEmail" id="ckbEmail">接受
+                                    <a href="../../view/info/serv_info.html?id=1" target="_blank" class="clause">极视教育用户协议</a>
+                                </label>
+                                <!-- <span class="lg_zc">已有账号&nbsp;&nbsp;<a class="ljdl" href="javascript:void(0);">立即登录</a></span> -->
+                            </div>
+                            <a data-success="#" data-url="#" href="javascript:" id="go_second_view" class="lg_btn">注 册</a>
+                        </div>
+                        <div class="second-step-wrap dis_none">
+                            <ul>
+                                <li class="inputli9 yzm">
+                                    <input type="text" maxlength="4" name="CheckCode" id="CheckCode" class="input" placeholder="请填写验证码">
+                                    <img align="absmiddle" src="" id="imgCC2" class="yzm_img" alt="">
+                                    <a data-url="#" id="changepic_btn" href="javascript:" style="color: Gray" class="yzm_a"><img  src="/img/login/refls.png"  style="margin:0" alt=""></a>
+                                    <span class="err err9">提示</span>
+                                    
+                                </li>
+                                <li class="inputli11 yzm">
+                                    <input type="text" maxlength="6" name="CheckCode" id="ValidatorEmailCode" class="input" placeholder="请查收邮箱验证码并填写"><input type="button" class="yzm_phoneDisEnable" id="btnSendEmailSmsCode" value="获取验证码" style="margin:0">
+                                    <span class="err err11">提示</span>
+                                    
+                                </li>
+                            </ul>
+                             <a style="margin-top:20px;" data-success="#" data-url="#" href="javascript:" id="regEmailBtn" class="lg_btn">提 交</a>
+                            <div class="fs13-c7 j_goback_update"><a href="javascript:;">返回修改邮箱</a></div>
+                        </div>
+                    </div>
+                </div>
+           <dl id="" class="zc_hz j_thlogin_wrap">
+                <dt>
+                    社交账号登录：
+                </dt>                    
+                <dd class="wx"><a title="微信登录" trackgoogle="微信登录" href="#"></a></dd>
+                <dd class="sina dis_none"><a title="新浪用户登录" trackgoogle="新浪用户登录" href="#"></a></dd>                    
+                <dd class="qq"><a title="QQ账户登录" trackgoogle="QQ账户登录" href="#"></a></dd>
+             
+            </dl>
+        </div>
+</div>
+
+
+<script src="/js/login/register.js"></script>
+
+

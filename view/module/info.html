@@ -1,0 +1,227 @@
+<style type="text/css">
+.vip-xingxi-wrap{width: 59%;height: 503px;/*display: inline-block;*/background: #fff;vertical-align: top;margin-right: 1%;}
+.jyfk-wrap{width: 40%;height: 503px;/*display: inline-block;*/background: #fff;vertical-align: top;padding: 26px 28px;}
+.jbxx-wrap{width: 49.5%;height: 785px;/*display: inline-block;*/background: #fff;vertical-align: top;margin-right: 1%;padding: 0 28px;}
+.xtxx-wrap{width: 49.5%;height: 785px;background: #fff;padding: 0 28px;}
+.vip-img-wrap{position: relative;height: 123px;background: url('/img/info/100.png') no-repeat center center;background-size: cover;}
+.i-fankui{background-position: -107px -105px;width: 38px;height:27px; vertical-align: middle;}
+.i-jbxx{background-position: -168px -105px;width: 38px;height:27px; vertical-align: middle;}
+.i-xtxx{background-position: -341px -105px;width: 38px;height:27px; vertical-align: middle;}
+.jyfk-wrap .header-wrap{line-height: 70px;height: 70px;border-bottom: 2px solid #4891dc;color: #4891dc;}
+.jbxx-wrap .header-wrap{line-height: 70px;height: 70px;border-bottom: 2px solid #63b6c1;color: #63b6c1;}
+.xtxx-wrap .header-wrap{line-height: 70px;height: 70px;border-bottom: 2px solid #f68585;color: #f68585;}
+.header-wrap{font-size: 16px;}
+.btn{color: #fff;width: 116px;height: 36px;line-height: 36px;display:block;border-radius:5px;font-size: 16px;background:#ff9001;text-align: center;margin:0 auto;cursor: pointer;}
+.mrg-t86{margin-top: 86px;}
+.no-vip-wrap{width: 60%;/*display: inline-block*/;padding-left: 6%;/*vertical-align: top;*/}
+.no-vip-wrap p{width: 180px;display: inline-block;font-size: 14px;color: #999999;}
+.vip-xingxi-wrap a:hover{color: #fff;}
+.jifeng-wrap{width: 40%;/*display: inline-block;*/}
+.i-jifeng{background-position: -151px -144px;height: 93px;width: 111px;}
+.c3{color: #333;font-size: 16px;}
+.jifeng-content-wrap{display: inline-block;vertical-align: middle;}
+.mrg-t118{margin-top: 118px;}
+.i-update{background-position: -230px -105px;width: 33px;height: 29px;}
+.jbxx-wrap .name-wrap{width: 142px;}
+.jbxx-wrap ul>li{padding: 18px 0;}
+.w298{width: 298px;}
+.jbxx-wrap .edit{display: none;}
+.jbxx-wrap .active .edit{display: block;}
+.jbxx-wrap .active .default{display: none;}
+.input-txt{border: 1px solid #e0e0e0;height: 24px;padding-left: 10px;}
+textarea{height: 191px;border: 1px solid #e0e0e0;width: 100%;resize:none;}
+.sex-radio{margin-left: 20px;margin-right: 8px;}
+.mrg-r8{margin-right: 8px;}
+select{background: #fff;border:1px solid #e0e0e0;min-width: 88px;width: 88px;}
+.info-edit{cursor: pointer;}
+.i-addimg{background-position: -289px -106px;width: 37px;height: 25px;display: inline-block;cursor: pointer;}
+.input-jy{margin:24px 0 24px 0;height: 36px;width: 220px;}
+.textarea-jy{padding-left: 12px;padding-top: 20px;}
+.btn-jy{margin:0;}
+.jyfk-addimg-wrap:hover{color: #ff9001;}
+.img-jy-upload{position: relative;width: 100px;left: -103px;opacity: 0;cursor: pointer;}
+.jyfk-wrap .img-jy{width: 30px;height: 30px;background: #eee;position: relative;left: -100px;margin-left: 6px;}
+.vip-wrap{width: 60%;text-align: center;position: relative;padding: 0 6px;vertical-align: top;}
+.vip-title-wrap{font-size: 12px;color: #999;position: absolute;}
+.vip-title-wrap span{color: #ff8500;}
+.vip-wrap{}
+.h-vip-wrap{right: 0;}
+.mrg-t16{margin-top: 16px;}
+.mrg-t46{margin-top: 46px;}
+.jbxx-wrap .require-star{line-height: 24px;margin-left: 20px;}
+.cr{color: red;}.jyfk-addimg-wrap{position: relative;}
+.z-input-file{opacity: 0;position: absolute;z-index: 3;width: 100px;}
+@media only screen and (min-width: 1600px) {
+     /*Style adjustments for viewports that meet the condition */
+.vip-title-wrap{font-size: 12px;color: #999;position: absolute;}
+.vip-wrap{left: 40px;}
+.h-vip-wrap{right: 50px;}
+.jifeng-wrap {padding-left: 50px;}
+}
+</style>
+<div class="clearfix">
+    <div class="vip-xingxi-wrap f-l dis_none">
+            <div class="vip-img-wrap">
+                    <!-- <div class="user-photo-wrap">
+                        <form action="/skillbridge-customer/user/updateIcon" id="uploadPhotoForm" enctype="multipart/form-data" method="post" target="ajaxifr">
+                            <img name="file" class="user-photo" src="/img/info/101.png">
+                            <div class="txt">修改头像</div>
+                            <input id="j_upload_photo" name="file" accept="image/gif, image/jpeg, image/png, image/bmp" type="file" class="upload-file" onchange="infoModule.uploadFile(this)"> 
+                        </form>
+                    </div> -->
+            </div>
+            <div class="mrg-t86 clearfix">
+                    <div class="no-vip-wrap f-l dis_none">
+                            <img src="/img/info/102.png">
+                            <p>你还没有购买VIP,<br>请前往VIP中心购买！</p>
+                            <div class="mrg-t46"><a href="/view/vip/vipintro.html" class="btn">前往购买</a></div>
+                    </div>
+                    <div class="vip-wrap f-l dis_none">
+                        <div class="vip-title-wrap">VIP还有<span>30</span>天过期</div>
+                        <div class="vip-title-wrap h-vip-wrap">高级VIP还有<span>20</span>天过期</div>
+                        <canvas id="myVipCanvas" width="279" height="150" ></canvas>
+                        <div>VIP使用时间：2016.2.28-2016.3.28</div>
+                        <div>高级VIP使用时间：2016.3.28-2016.4.18</div>
+                        <div class="mrg-t16"><a href="/view/vip/vipintro.html" class="btn">升级／续费</a></div>
+                    </div>
+                    <div class="jifeng-wrap f-l dis_none">
+                            <i class="i-icon i-jifeng"></i>
+                            <div class="jifeng-content-wrap"><span class="c3">当前积分：</span><span class="jifeng-number">20</span>
+                                    <br><br><span>积分怎么获得？</span></div>
+                            <div class="mrg-t118"><a href="/view/vip/vipintro.html" class="btn">兑换VIP</a></div>    
+                    </div>
+            </div>
+    </div>
+    <div class="jyfk-wrap f-l dis_none">
+            <div class="header-wrap"><i class="i-icon i-fankui"></i>建议反馈</div>
+            <form action="/skillbridge-customer/user/feedback" id="uploadForm" enctype="multipart/form-data" method="post" target="ajaxifr">
+                <input type="text" name="subject" id="j_jy_subject" class="input-txt input-jy" placeholder="请您输入主题！">
+                <span id="j_jy_resmsg" class="jyfk-res-msg c4c"></span>
+                <textarea name="detail" id="j_jy_detail" class="textarea-jy" placeholder="请您输入信息！"></textarea>
+                <div id="j_jyfk_addimg_wrap" class="jyfk-addimg-wrap">
+                    <i class="i-icon i-addimg"></i>添加图片
+                    <input id="j_upload_feedback_img" type="file" name="file" accept="image/gif, image/jpeg, image/png, image/bmp" class="img-jy-upload" onchange="infoModule.uploadjyFile(this)">
+                    <!-- <img name="file" class="img-jy" src="">
+                    <img name="file" class="img-jy" src="">
+                    <img name="file" class="img-jy" src=""> -->
+                </div>
+                <div><input id="j_feedback_add_btn" class="btn but-animation but-shadow f-r" type="button" value="提交"></div>
+            </form>
+    </div>
+    <div class="jbxx-wrap f-l">
+            <div class="header-wrap clearfix">
+                    <i class="i-icon i-jbxx"></i>基本信息
+                    <div class="f-r j_info_edit info-edit"><i class="i-icon i-update"></i>修改</div>
+            </div>
+            <div>
+                    <ul id="j_info_wrap" class="">
+                            <li class="clearfix">
+                                    <div class="f-l name-wrap">昵称</div>
+                                    <div class="f-l">
+                                            <span id="j_info_name_sp" class="default"></span>
+                                            <input class="edit input-txt" type="text" value="" placeholder="请输入昵称（必填）">
+                                    </div>
+                                    <div class="f-l"><span id="j_info_name_error_sp" class="edit require-star">*</span></div>
+                            </li>
+                            <li class="clearfix">
+                                    <div class="f-l name-wrap">性别</div>
+                                    <div class="f-l">
+                                            <span id="j_info_sex_sp" class="default"></span>
+                                            <div class="edit">
+                                                    <input id="j_info_sex_1" type="radio" class="mrg-r8 male" name="sex" value="M">男
+                                                    <input id="j_info_sex_0" type="radio" class="sex-radio female" name="sex" value="F">女
+                                                    <input id="j_info_sex_2" type="radio" class="sex-radio other" name="sex" value="S">保密
+                                            </div>
+                                    </div>
+                                     <div class="f-l"><span id="j_info_sex_error_sp" class="edit require-star">*</span></div>
+                            </li>
+                            <li class="clearfix">
+                                    <div class="f-l name-wrap">生日</div>
+                                    <div class="f-l">
+                                            <span id="j_info_bd_sp" class="default"></span>
+                                            <div class="edit">
+                                                    <select id="j_years_select" class="year">
+                                                            <option>－请选择－</option>
+                                                    </select>
+                                                    <span>年</span>
+                                                    <select id="j_months_select" class="month">
+                                                            <option>－请选择－</option>
+                                                    </select>
+                                                    <span>月</span>
+                                                    <select id="j_days_select" class="day">
+                                                             <option>－请选择－</option>
+                                                    </select>
+                                                    <span>日</span>
+                                            </div>
+                                    </div>
+                            </li>
+                            <li class="clearfix">
+                                    <div class="f-l name-wrap">个人状态</div>
+                                    <div class="f-l">
+                                            <span id="j_info_st_sp" class="default"></span>
+                                            <div class="edit">
+                                                    <select class="state">
+                                                            <option>学生</option>
+                                                            <option>在职</option>
+                                                            <option>待业</option>
+                                                    </select>
+                                            </div>
+                                    </div>
+                            </li>
+                            <li class="clearfix">
+                                    <div class="f-l name-wrap">现居地</div>
+                                    <div class="f-l">
+                                            <span id="j_info_address_sp" class="default"></span>
+                                            <div class="edit"><input class="input-txt" type="address"></div>
+                                    </div>
+                            </li>
+                            <li class="clearfix">
+                                    <div class="f-l name-wrap">手机</div>
+                                    <div class="f-l">
+                                            <span id="j_tel_sp" class="default"></span>
+                                            <input style="background: #fffadf;" type="tel" class="edit input-txt" readonly>
+                                    </div>
+                            </li>
+                            <li class="clearfix">
+                                    <div class="f-l name-wrap">邮箱</div>
+                                    <div class="f-l">
+                                            <span id="j_info_email_sp" class="default"></span>
+                                            <input style="background: #fffadf;" type="email" class="edit input-txt" readonly>
+                                    </div>
+                            </li>
+                            <li class="clearfix">
+                                    <div class="f-l name-wrap">个人简介</div>
+                                    <div class="f-l w298">
+                                            <p id="j_info_intro_sp" class="default"></p>
+                                            <textarea class="edit"></textarea>
+                                    </div>
+                            </li>
+                            <li class="edit"> <div><input id="j_btn_update_info" type="button" class="btn but-animation but-shadow" value="保存"></div></li>
+                    </ul>
+            </div>
+    </div>
+    <style type="text/css">
+        /*系统消息样式*/
+        .xtxx-wrap ul>li{padding: 28px 0;border-bottom: 1px solid #e0e0e0;}
+        .xtxx-wrap ul>li .img-wrap{width: 64px;height: 64px;background: #eee;border-radius: 50%;margin-right: 2%;}
+        .xtxx-wrap .title-wrap{font-size: 16px;}
+        .xtxx-wrap .title-wrap .time{font-size: 12px;margin-left: 25px;}
+        .xtxx-wrap .title-wrap .i-del{background-position: -391px -106px;width: 27px;height: 29px;display: inline-block;margin-right: 0;}
+        .xtxx-wrap .r-wrap{width: 80%;}
+        .xtxx-wrap .detail-wrap{font-size: 13px;color: #999;margin-top: 6px;}
+        .xtxx-wrap .detail-wrap p{overflow: hidden;white-space: pre-wrap;}
+        .mrg-r52{margin-right: 12px;}.no-xtxx-wrap .img-wrap{width: 135px;margin:0 auto;margin-top: 80px}
+    </style>
+    <div class="xtxx-wrap f-l">
+            <div class="header-wrap"><i class="i-icon i-xtxx"></i>系统消息</div>
+            <div>
+                <div id="j_noxtxx_wrap" class="no-xtxx-wrap dis_none">
+                    <div class="img-wrap"><img src="/img/info/no-xtxx.png"></div>
+                </div>
+                <ul id="j_xtxx_wrap" class="">
+                </ul>
+            </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/jquery.timeago.js"></script>
+<script type="text/javascript" src="/js/info/info.js"></script>

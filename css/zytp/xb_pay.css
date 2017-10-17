@@ -1,0 +1,245 @@
+@charset "utf-8";
+.content-wrap *{box-sizing:border-box;-moz-box-sizing:border-box; /* Firefox */-webkit-box-sizing:border-box; /* Safari */}
+.content-wrap{margin:0 auto;width: 1200px;}
+.top-img-wrap{height: 200px;line-height: 200px;font-size: 38px;color: #f8f8f8;background: url(../../img/info/mycoursebg.png) no-repeat;background-size: cover;margin-bottom: 12px;}
+
+.step1 {
+    background: url(/img/zytp/1.1.1/step1.png) no-repeat;
+}
+
+.step2 {
+    background: url(/img/zytp/1.1.1/step2.png) no-repeat;
+}
+
+.step3 {
+    background: url(/img/zytp/1.1.1/step3.png) no-repeat;
+}
+.stepbox {
+    height: 47px;
+    margin: 28px 0 40px;
+}
+.div-box{
+    width: 1200px;
+    height: 540px;
+    box-shadow:0 3px 6px rgba(0,0,0,.3);
+    margin: 0 auto 90px;
+    padding-top: 20px;
+}
+.order-info{
+    width: 550px;
+    margin: 0px auto;
+    color: #666666;
+}
+.order-info p{
+    font-size: 16px;
+    line-height: 50px;
+}
+.order-info ul{}
+.order-info ul li{}
+.order-info ul li{
+    margin: 15px 0;
+}
+.order-info ul li .l-wrap{
+    height: 40px;
+    line-height: 40px;
+    width: 85px;
+    text-align: right;
+    margin-right: 15px;
+}
+.order-info ul li .l-wrap span{
+    color: #ff9001;
+}
+.order-info ul li .r-wrap{
+    position: relative;
+}
+.order-info ul li .r-wrap input{
+    width: 446px;
+    border: 1px solid #cecece;
+    height: 36px;
+    vertical-align: middle;
+    color: #666;
+    font-size: 14px;
+    border-radius: 3px;
+    padding-left: 15px;
+}
+.order-info ul li .r-wrap  input::-webkit-input-placeholder {
+　　  color: #999 !important; 
+      font-size: 12px;
+　　}
+ .order-info ul li .r-wrap   input:-moz-placeholder {
+　　color: #999 !important; 
+    font-size: 12px;
+　　}
+.order-info ul li .r-wrap　　input::-o-placeholder {
+　　color: #999 !important; 
+    font-size: 12px;
+　　}
+.order-info ul li .r-wrap　　input:-ms-input-placeholder {
+　　  color: #999 !important; 
+     font-size: 12px;
+　　}
+.order-info .zx{
+    font-size: 12px;
+    text-align: right;
+    text-decoration: underline;
+}
+.order-info .xy{
+    margin-top: 50px;
+    text-align: center;
+}
+.order-info .xy a{
+    text-decoration: underline;
+}
+.order-info .btn-bm{
+    display: block;
+    margin: 25px auto;
+    width: 150px;
+    height: 36px;
+    background: #ff9001;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+.order-info .btn-bm:hover{
+    background: #ffad43;
+}
+
+.buybox{
+    width: 1110px;
+    margin: 0 auto;
+
+}
+.buybox h4{
+    line-height: 56px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+}
+.buybox .buyinfo-box{
+    border:1px solid #f8f8f8;
+    background: #fbfbfb;
+    padding: 26px;
+    margin-bottom: 25px;
+}
+
+.buyinfo-box .buyinfo-img ,.buyinfo-box .buyinfo-img img{
+    display: block;
+    width: 210px;
+    height: 130px;
+}
+.buyinfo-box .buyinfo{
+    margin-left: 210px;
+    padding: 30px;
+    position: relative;
+
+}
+.buyinfo-box .buyinfo .tit{
+    color: #333;
+    font-size: 16px;
+    line-height: 38px;
+}
+.buyinfo-box .buyinfo .money{
+    position: absolute;
+    top:40px;
+    right: 0;
+    font-size: 20px;
+    color: #e85555;
+}
+.buyinfo-box .buyinfo .money s{
+    font-size: 14px;
+    color: #333333;
+    margin-left: 16px;
+}
+.buyinfo-box .buyinfo .time{
+    color: #666;
+    font-size: 14px;
+}
+.line {
+     height: 5px;
+     line-height: 0;
+     background: url(/img/vip/memb3.png) repeat-x;
+ }
+.choslist{ height:115px}
+.choslist li{ height:76px; width:180px; margin-right:63px; float:left;}
+.choslist li a{height:72px; width:176px; display:block; position:relative; border:2px solid #f6f6f6;}
+.choslist li.on a i{ position:absolute; height:24px; width:24px;background:url(../../img/vip/icon.png) -289px -15px;top:-10px; right:-10px}
+.choslist li.on a{ border-color:#ff9001;}
+.choslist li a.zfb{ background:#f6f6f6 url(../../img/vip/zfb.png) no-repeat center center;}
+.choslist li a.wx{ background:#f6f6f6 url(../../img/vip/wx.png) no-repeat center center;}
+.choslist li a:hover{border-color:#ff9001;}
+
+.loginbg {
+    position: absolute;
+    width: 100%;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    background-color: #000;
+    height: 1000px;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+/*tck*/
+.loginbg{ position:absolute; width:100%; opacity:0.5; filter:alpha(opacity=50); background-color:#000; height:1000px; left:0; top:0;z-index:1000}
+.tk_box{z-index:1100; background-color:#FFF;width:508px; text-align:center; margin-left:-200px;box-shadow:0px 2px 2px rgba(0, 0, 0, 0.1); position:fixed; left:50%;box-sizing:content-box;top:50%;margin-top:-195px}
+.tk_box h3{ line-height:40px; height:40px; text-align:center; font-weight:normal ; color:#ffffff; background-color:#636874; font-size:16px; }
+
+.tk_main{ padding:10px 45px; height:335px; text-align:left; color: #333}
+.tk_main h4{ line-height:40px ;color: #333;font-size: 18px;}.tk_main .buyinfo{ line-height:30px; margin:15px 0 }
+.tk_main .red{ text-align:center;}
+.tk_wd{ font-size:18px; line-height:36px; display:block; height:100px;}
+.tk_btn { padding-top:20px}
+.tk_btn a{ height:32px; width:113px;background:#ff9001; line-height:32px; color:#fff; text-align:center; font-size:14px; border-radius:4px; display:block; margin-left:123px}
+.tk_btn a:hover{background: #ffad43; }
+.tk_main .tk_btn a{ margin-left:65px; float:left}
+.tk_main .tk_btn a.on{ background:#cecece;}
+.tk_main .tk_btn a.on:hover{background: #cacaca; }
+.tk_box h3 i.zfb{ display:inline-block; height:18px; width:58px; margin:0 5px;background: url(../../img/vip/icon.png) no-repeat -201px -15px; vertical-align:middle}
+.tk_box h3 i.wx{ display:inline-block; height:28px; width:33px; margin:0 5px;background: url(../../img/vip/icon.png) no-repeat -133px -15px; vertical-align:middle}
+.ewm_pay{ display:block; text-align:center; margin:10px 0}
+.tk_box h3 i.iconfont {  cursor: pointer;  display: block;  height: 24px;  line-height: 24px;  position: absolute;  right: 10px;  top: 10px;  width: 20px;  }
+.ewm_pay img{ height:210px; width:210px}
+.yel {  color: #e85555; font-size: 20px;  }
+.je_wx{ font-size:16px; line-height:25px; text-align:center}
+.tk_main .buyinfo{  font-size: 16px;  width: 340px;  line-height: 30px;  margin: 15px auto;  }
+.tk_main .buyinfo span{  color: #666;  }
+.tk_main .tips{  padding: 15px 10px ;  }
+
+/*pay3*/
+.apply-succeed{
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 200px;
+    background: url("../../img/zytp/1.1.1/s1.png") no-repeat top center;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    line-height: 28px;
+}
+.apply-succeed h4{
+    line-height: 36px;
+    font-size: 18px;
+    text-align: center;
+}
+.apply-succeed h5{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+.apply-succeed .hint{
+    color: #999;
+}
+.apply-succeed .btn-s{
+    width: 130px;
+    height: 36px;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+/*
+.apply-succeed .tel ,.apply-succeed .qq{
+    font-size: 14px;
+    color: #333;
+}*/

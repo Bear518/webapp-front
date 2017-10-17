@@ -1,0 +1,91 @@
+@charset "utf-8";
+.stepbox{ height:45px; margin:90px 0 40px;}
+.step1{background: url("../../img/vip/step1.png") no-repeat;}
+.step2{background: url("../../img/vip/step2.png") no-repeat;}
+.step3{background: url("../../img/vip/step3.png") no-repeat;}
+.membuybox h4,.tk_main h4{ line-height:56px; font-weight:normal; font-size:16px; color:#333}
+.line{ height:5px; line-height:0;background: url("../../img/vip/memb3.png") repeat-x;}
+.buyinfo{ line-height:34px; margin:25px 0 55px; font-size:14px}
+.buyinfo dt{ width:64px; text-align:right; float:left; color:#333}
+.buyinfo select{ height:24px; line-height:24px; width:200px; }
+.buyinfo .courtable select{margin-top:34px}
+.buyinfo .qh{ margin-left:20px; text-decoration:underline}
+.chosmonth { width:1210px; height:40px}
+.chosmonth span{ line-height:35px; width:80px; border:1px solid #aaa; color:#333; display:inline-block; font-size:14px; text-align:center; border-radius:5px; margin-right:4px; float:left; cursor:pointer}
+.chosmonth span.on{ border:1px solid #ffa23b; background-color:#ffa23b; color:#fff}
+.tips{ line-height:34px;}
+.tips i{ display:inline-block; height:20px; width:20px;background: url("../../img/vip/memb2.png") no-repeat; vertical-align:middle; margin-right:5px}
+.qy { padding:20px 0}
+.qy span{ display:inline-block; margin-left:30px; height:21px; width:100px; background-color:#cecece; color:#fff; font-size:12px; text-align:center; border-radius:3px}
+.qy span.on{ background-color:#63b6c1;}
+.priceinfo{ text-align:right; line-height:40px; font-size:18px}
+.priceinfo span{ font-size:26px; display:inline-block; width:80px;}
+.priceinfo p{ font-size:14px}
+.red{ color:#d50101}.yel{color:#ff8f14}
+.but-wrap{ height:86px; text-align:right; padding:10px 0px 1px}
+.but{width: 168px;height:40px;background: #ff9001;font-size: 14px;border-radius: 5px;color: #fff;text-align: center;display: block;margin: 0 auto; line-height:40px; font-size:16px; float:right}
+.but:hover{ color:#fff;}
+.arrbox{ position:relative}
+.arrbox span{ position:absolute; left:174px; top:-36px; width:83px; text-align:center}
+.arrbox span b{ display:inline-block; height:24px; width:18px;background: url("../../img/vip/icon.png") no-repeat -17px -15px; margin-top:3px;}
+/*coursebuy*/
+.courtable { border:1px solid #eeeeee}
+.courtable th{ line-height:46px; background-color:#f1f1f1; border-bottom:2px solid #dedede; font-size:16px; text-align:center; color:#333; font-weight:normal}
+.courtable td{ padding:20px 10px ; text-align:center; line-height:24px;}
+.courtable td .img{ border:1px solid #e0e0e0; padding:4px; height:105px; width:139px; }
+.courtable td .title{ display:inline-block; width:49%; text-align:left; padding-left:10px; vertical-align:middle}
+.courtable td .qh{ text-align:right; padding-top:10px; color:#999}
+.courtable td .qh a{ color:#999}
+.buyinfo .input{ height:28px; line-height:28px; width:160px;}
+.yhm a.use{ display:inline-block; padding:0 10px; background-color:#ff9001; border-radius:4px; margin-left:2px; color:#fff; line-height:26px}
+/*paychos*/
+.membuybox .payinfo{  margin:0px 0 25px; }
+.payinfo .goback{ text-align:right}
+.payinfo .goback a{ text-decoration:underline; color:#999}
+.payinfo .goback a:hover{ color:#ff9001}
+.choslist{ height:115px}
+.choslist li{ height:76px; width:180px; margin-right:63px; float:left;}
+.choslist li a{height:72px; width:176px; display:block; position:relative; border:2px solid #f6f6f6;}
+.choslist li.on a i{ position:absolute; height:24px; width:24px;background:url(../../img/vip/icon.png) -289px -15px;top:-10px; right:-10px}
+.choslist li.on a{ border-color:#ff9001;}
+.choslist li a.zfb{ background:#f6f6f6 url(../../img/vip/zfb.png) no-repeat center center;}
+.choslist li a.wx{ background:#f6f6f6 url(../../img/vip/wx.png) no-repeat center center;}
+.choslist li a:hover{border-color:#ff9001;}
+
+/*success*/
+.succbox{ height:290px; width:218px;background: url(../../img/vip/succ.png) no-repeat; margin:0 auto; padding:159px 203px 20px; line-height:24px; font-size:14px;}
+.succbox h4{ font-size:18px; font-weight:normal; color:#333; line-height:44px; text-align:center}
+.succbox span{ display:block; font-size:14px;color:#999; }
+.succbox p{ font-size:16px; }
+.succbox .yel{ font-size:16px; color:#ff9001; margin-bottom:10px}
+.c-wrap{width: 200px;text-align: center;}
+.c-wrap p{color: #666;}
+.c-wrap span.t{font-size: 10px;}
+.succbar .but{ float:none}
+
+/*tck*/
+.loginbg{ position:absolute; width:100%; opacity:0.5; filter:alpha(opacity=50); background-color:#000; height:1000px; left:0; top:0;z-index:1000}
+.tk_box{z-index:1100; background-color:#FFF;width:508px; text-align:center; margin-left:-200px;box-shadow:0px 2px 2px rgba(0, 0, 0, 0.1); position:fixed; left:50%;box-sizing:content-box;top:50%;margin-top:-195px}
+.tk_box h3{ line-height:40px; height:40px; text-align:center; font-weight:normal ; color:#333; background-color:#ededed; font-size:16px; }
+.tk_box h3 i.iconfont{cursor: pointer;display: block;height: 24px;line-height: 24px;position: absolute;right: 10px;top: 10px;width: 20px;}
+.tk_main{ padding:10px 45px; height:335px; text-align:left}
+.tk_main h4{ line-height:40px}.tk_main .buyinfo{ line-height:30px; margin:15px 0 }
+.tk_main .buyinfo dt{ width:200px}
+.tk_main .red{ text-align:center;}
+.tk_wd{ font-size:18px; line-height:36px; display:block; height:100px;}
+.tk_btn { padding-top:20px}
+.tk_btn a{ height:32px; width:113px;background:#ff9001; line-height:32px; color:#fff; text-align:center; font-size:14px; border-radius:4px; display:block; margin-left:123px}
+.tk_btn a:hover{background: #ffad43; }
+.tk_main .tk_btn a{ margin-left:65px; float:left}
+.tk_main .tk_btn a.on{ background:#cecece;}
+.tk_main .tk_btn a.on:hover{background: #cacaca; }
+.tk_box h3 i.zfb{ display:inline-block; height:18px; width:58px; margin:0 5px;background: url(../../img/vip/icon.png) no-repeat -201px -15px; vertical-align:middle}
+.tk_box h3 i.wx{ display:inline-block; height:28px; width:33px; margin:0 5px;background: url(../../img/vip/icon.png) no-repeat -133px -15px; vertical-align:middle}
+.ewm_pay{ display:block; text-align:center; margin:10px 0}
+.ewm_pay img{ height:210px; width:210px}
+.je_wx{ font-size:16px; line-height:25px; text-align:center}
+
+.qylb{ display:inline}
+
+
+

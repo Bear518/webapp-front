@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>视频播放器|Demos 代码演示、代码片段 - 读你 | 这世间唯有梦想和好姑娘不可辜负!</title>
+    <meta name="Keyword" content="代码演示,代码片段,HTML5,CSS3,JavaScript,jQuery,Bootstrap">
+    <meta name="Author" content="dunizb">
+    <meta name="website" content="http://www.mybry.com">
+    <meta name="Description" content="Demos 代码演示、代码片段 - 读你 | 这世间唯有梦想和好姑娘不可辜负!">
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="/css/player/style.css">
+    <link rel="stylesheet" href="/css/player/player.css">
+    <style type="text/css">
+        /*.player{position: relative;}*/
+        /*.player video{width: 100%;height: 100%;position: absolute;}*/
+        /*.player .control-wrap{position: absolute;width: 100%;height: 100%;}*/
+        body .controls{position: absolute;bottom: 0;height: 2.5em;width: 100%;}
+        .jw-controls, .jw-media, .jw-overlays, .jw-preview {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+        .jw-controls{z-index: 2147483647;background: transparent;}
+        .jwplayer {
+            width: 100%;
+            font-size: 16px;
+            position: relative;
+            display: block;
+            min-height: 0;
+            overflow: hidden;
+            box-sizing: border-box;
+            font-family: Arial,Helvetica,sans-serif;
+            background-color: #000;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .jw-reset {
+            color: inherit;
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+            float: none;
+            font-family: Arial,Helvetica,sans-serif;
+            font-size: 1em;
+            line-height: 1em;
+            list-style: none;
+            text-align: left;
+            text-transform: none;
+            vertical-align: baseline;
+            border: 0;
+            direction: ltr;
+            font-variant: inherit;
+            font-stretch: inherit;
+            -webkit-tap-highlight-color: rgba(255,255,255,0);
+        }
+        .jwplayer video {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            background: transparent;
+        }
+.jwplayer.jw-flag-fullscreen {
+    width: 100%!important;
+    height: 100%!important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    margin: 0;
+    position: fixed;
+}
+.progress .bar{background: #fff;width: 0;opacity: 1;}
+.progress .loaded{position: absolute;left: 0;top: 0;z-index: 2;}
+    </style>
+</head>
+<body>
+    <div class="player jwplayer jw-reset jw-flag-fullscreen" style="display:none;">
+        <div class="jw-media">
+        <video style="object-fit: fill;" poster="http://192.168.6.136/img/index/600.jpg"  src="http://res.skillbridge.cn/video/dkx1.mp4"></video>
+        </div>
+        <div class="jw-controls">
+            <div class="controls">
+                <div style="position:relative;">
+                    <!-- 播放/暂停 -->
+                    <a href="javascript:;" class="switch fa fa-play icon-play3"></a>
+                    <!-- 全屏 -->
+                    <a href="javascript:;" class="expand fa fa-expand icon-enlarge2"></a>
+                    <!-- 进度条 -->
+                    <div class="progress">
+                        <div class="bar buffered"></div>
+                        <div class="loaded"></div>
+                        <div class="line"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <!-- 时间 -->
+                    <div class="timer">
+                        <span class="current">00:00:00</span> /
+                        <span class="total">00:00:00</span>
+                    </div>
+                    <!-- 声音 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="width:600px;height:600px;position:relative;">
+       <object type="application/x-shockwave-flash" data="http://localhost:8008/js/jwplayer/jwplayer-7.7.0/jwplayer.flash.swf" width="100%" height="100%" bgcolor="#000000" id="myDiv_swf_0" name="myDiv_swf_0" class="jw-swf jw-reset" style="display: block; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px;">
+        <param name="allowfullscreen" value="true">
+        <param name="allowscriptaccess" value="always">
+        <param name="wmode" value="opaque">
+        <param name="menu" value="false">
+        <param name="FileName" value="http://res.skillbridge.cn/video/dkx1.mp4">
+        <param name="play" value="true">
+        </embed>
+    </object>
+
+    </div>
+    <div class="download">
+        <a href="http://pan.baidu.com/s/1jIyJ06y" target="_blank">下载</a>
+    </div>
+<figure>
+    <figcaption><h1>视频播放器</h1></figcaption>
+
+</figure>
+<script src="/js/vendor/jquery-1.11.3.min.js"></script>
+
+
+<script type="text/javascript">
+    var video = document.querySelector("video");
+    var isPlay = document.querySelector(".switch");
+    var expand = document.querySelector(".expand");
+    var progress = document.querySelector(".progress");
+    var buffered=document.querySelector('.buffered');
+    var loaded = document.querySelector(".progress > .loaded");
+    var currPlayTime = document.querySelector(".timer > .current");
+    var totalTime = document.querySelector(".timer > .total");
+
+    //当视频可播放的时候
+    video.oncanplay = function(){
+        //显示视频
+        this.style.display = "block";
+        //显示视频总时长
+        totalTime.innerHTML = getFormatTime(this.duration);
+        
+    };
+
+    //播放按钮控制
+    isPlay.onclick = function(){
+        if(video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+        this.classList.toggle("fa-pause");
+    };
+
+    //全屏
+    expand.onclick = function(){
+        // video.controls=false;
+        // $('.jwplayer').addClass('jw-flag-fullscreen');
+        video.webkitRequestFullScreen();
+        var ge=video,Se = ge.requestFullscreen || ge.webkitRequestFullscreen || ge.webkitRequestFullScreen || ge.mozRequestFullScreen || ge.msRequestFullscreen;
+        // Oe = document.exitFullscreen || document.webkitExitFullscreen || document.webkitCancelFullScreen || document.mozCancelFullScreen || document.msExitFullscreen;
+        Se();
+    };
+
+    //播放进度
+    video.ontimeupdate = function(){
+        var currTime = this.currentTime,    //当前播放时间
+            duration = this.duration;       // 视频总时长
+        //百分比
+        var pre = currTime / duration * 100 + "%";
+        //显示进度条
+        loaded.style.width = pre;
+
+        //显示当前播放进度时间
+        currPlayTime.innerHTML = getFormatTime(currTime);
+    };
+
+    //跳跃播放
+    progress.onclick = function(e){
+        var event = e || window.event;
+        video.currentTime = (event.offsetX / this.offsetWidth) * video.duration;
+    };
+
+    //播放完毕还原设置
+    video.onended = function(){
+        //切换播放按钮状态
+        isPlay.classList.remove("fa-pause");
+        isPlay.classList.add("fa-play");
+        //进度条为0
+        loaded.style.width = 0;
+        //还原当前播放时间
+        currPlayTime.innerHTML = getFormatTime();
+        //视频恢复到播放开始状态
+        video.currentTime = 0;
+    };
+    video.onprogress=function(){
+        console.log('onprogress');
+        var buff=video.buffered;
+        console.log(buff);
+        console.log("Start: " + buff.start(0) + " End: "  + buff.end(0));
+        var end=buff.end(0);
+        //百分比
+        var pre = end / this.duration * 100 + "%";
+        //显示进度条
+        buffered.style.width = pre;
+    };
+    // video.onBuffer=function(e){
+    //     console.log(e);
+    // };
+    video.addEventListener("loadstart", function()
+      {
+        //SomeJavaScriptCode
+        console.log('loadstart');
+      }
+    );
+    function getFormatTime(time) {
+        var time = time || 0;
+
+        var h = parseInt(time/3600),
+            m = parseInt(time%3600/60),
+            s = parseInt(time%60);
+        h = h < 10 ? "0"+h : h;
+        m = m < 10 ? "0"+m : m;
+        s = s < 10 ? "0"+s : s;
+
+        return h+":"+m+":"+s;
+    }
+</script>
+</body>
+</html>

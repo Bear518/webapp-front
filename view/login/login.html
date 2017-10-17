@@ -1,0 +1,50 @@
+﻿
+<link rel="stylesheet" href="/css/login/login.css">
+<style type="text/css">
+.loginorreg-options-wrap{margin:0 20px;border-bottom:1px solid #d1d6da;}
+.loginorreg-options-wrap div.active{color: #f11401;border-bottom: 1px solid #f11401;margin-bottom: -1px;}
+.loginorreg-options-wrap div{color: #666;font-size: 18px;text-align: center;line-height: 52px;width: 89px;}
+.loginorreg-options-wrap div:hover{color: #f11401;border-bottom: 1px solid #f11401;margin-bottom: -1px;cursor: pointer;}
+.i-login-icon{background: url('/img/login/icon.png') no-repeat;display: inline-block;}
+body li i.i-close,body i.i-close{background-position: 0px -17px;width: 20px;height: 20px;margin-top: 20px;}
+</style>
+<div class="loginbg"></div>
+<!-- <div class="activity-wrap"><img src="/img/login/activity.jpg"></div> -->
+<div style="display:block" class="loginbox">
+    <div class="activity-wrap"><img src="/img/login/activity.jpg"></div>
+    <div class="loginorreg-options-wrap clearfix">
+        <div class=" active f-l">登录</div><div class="f-l mszc">注册</div>
+        <span class="f-r"><i class="i-login-icon i-close cls"></i></span>
+    </div>
+    <div class="bottom-wrap">
+        <ul>
+            <li class="linputli1">
+                <input type="text"  id="Account" class="input" placeholder="手机/邮箱"><i class="yhm"></i><span class="lerr lerr1">请输入手机号<i></i></span></li>
+            <li class="linputli2">
+                <input type="password" id="Password" class="input" placeholder="请输入密码"><i class="mm"></i><span class="lerr lerr2">请输入密码<i></i></span>
+                <i class="i-login-icon i-view-pwd j_view_pwd"></i>
+            </li>
+            
+        </ul>
+        <div class="wjma">
+            <label>
+                <input type="checkbox" checked="checked" value="" name="cbkAutoLogin" id="cbkAutoLogin">下次自动登录
+            </label>
+            <a href="/view/login/findpassword.html">忘记密码？</a>
+        </div>
+        <a data-title="登录" data-jr="" data-success="#" data-url="#" href="javascript:" id="lg_btn" class="lg_btn">登 录</a>
+        
+        <dl id="" class="zc_hz j_thlogin_wrap">
+            <dt>
+                社交账号登录：
+            </dt>                    
+            <dd class="wx"><a title="微信登录" trackgoogle="微信登录" href="#"></a></dd>
+            <dd class="sina dis_none"><a title="新浪用户登录" trackgoogle="新浪用户登录" href="#"></a></dd>                    
+            <dd class="qq"><a title="QQ账户登录" trackgoogle="QQ账户登录" href="#"></a></dd>
+         
+        </dl>
+    </div>
+</div>
+
+
+<script src="/js/login/login.js"></script>

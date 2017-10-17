@@ -1,0 +1,42 @@
+<style type="text/css">
+	.left-wrap,.left-wrap *{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+	.left-wrap{width: 256px;border-radius: 3px;margin-right: 20px;border:1px solid #ededed;overflow: auto;}
+	.left-wrap .title-wrap{line-height: 36px;height: 36px;background: #64b7c2;font-size: 16px;color: #fff;text-align: center;}
+	.left-wrap .i-wrap{height: 110px;background: #ededed;padding-top: 11px;}
+	.left-wrap .i-wrap i{width: 131px;height: 98px;display: block;margin-left: 71px;background-position: -25px -26px;}
+	.left-wrap .progress-wrap{background: #dadada;height: 10px;}
+	.left-wrap .progress{width: 50%;height:100%;background:#ff9001; }
+	.left-wrap ul>li{line-height: 36px;height: 36px;font-size: 14px;color: #666;padding:0 12px;cursor: pointer;}
+	.left-wrap ul>li:nth-child(odd){background: #fafafa;}
+	.left-wrap ul>li:hover a{color: #ff9001;};
+	.left-wrap ul>li span{color: #999;}
+	.left-wrap ul>li .i-complete{display: inline-block;width: 45px;height: 36px;background-position: -171px -17px;}
+	.left-wrap .but-wrap{background: #fafafa;padding:18px 0;width: auto;}
+	.but{width: 131px;height: 32px;background: #ff9001;font-size: 14px;border-radius: 5px;color: #fff;text-align: center;display: block;margin: 0 auto;cursor: pointer;}
+	.left-wrap ul>li .dis_none{display: none;}
+	.left-wrap .but-wrap a{line-height: 29px;}
+	.left-wrap .but-wrap a:hover{color: #fff;}
+</style>
+<div  class="left-wrap">
+	<div class="title-wrap">简历完整度：<span ng-bind="resumeFinishedPerc"></span></div>
+	<div class="i-wrap"><i class="i-sprite"></i></div>
+	<div class="progress-wrap"><div id="j_progress" class="progress"></div></div>
+	<div>
+		<ul>
+			<li data-id="j_info_wrap" class="clearfix"><a href="javascript:;">基本信息</a><span ng-if="!resumeFinishedInfo.basicInfoFinished" class="f-r">未添加</span><i ng-if="resumeFinishedInfo.basicInfoFinished" class="f-r i-sprite i-complete "></i></li>
+			<li data-id="j_objective_wrap" class="clearfix"><a href="javascript:;">求职意向</a><span ng-if="!resumeFinishedInfo.jobIntensionFinished" class="f-r">未添加</span><i ng-if="resumeFinishedInfo.jobIntensionFinished" class="f-r i-sprite i-complete "></i></li>
+			<li data-id="j_contact_wrap" class="clearfix"><a href="javascript:;">联系方式</a><span ng-if="!resumeFinishedInfo.contactInfoFinished" class="f-r">未添加</span><i ng-if="resumeFinishedInfo.contactInfoFinished" class="f-r i-sprite i-complete"></i></li>
+			<li data-id="j_lang_wrap" class="clearfix"><a href="javascript:;">语言能力</a><span class="f-r" ng-if="!resumeFinishedInfo.languagesFinished">未添加</span><i ng-if="resumeFinishedInfo.languagesFinished" class="f-r i-sprite i-complete"></i></li>
+			<li data-id="j_skill_wrap" class="clearfix"><a href="javascript:;">掌握技能</a><span class="f-r" ng-if="!resumeFinishedInfo.skillFinished">未添加</span><i ng-if="resumeFinishedInfo.skillFinished" class="f-r i-sprite i-complete "></i></li>
+			<li data-id="j_cert_wrap" class="clearfix"><a href="javascript:;">证书</a><span class="f-r" ng-if="!resumeFinishedInfo.certificateFinished">未添加</span><i ng-if="resumeFinishedInfo.certificateFinished" class="f-r i-sprite i-complete"></i></li>
+			<li data-id="j_education_wrap" class="clearfix"><a href="javascript:;">教育经历</a><span class="f-r" ng-if="!resumeFinishedInfo.educationsFinished">未添加</span><i ng-if="resumeFinishedInfo.educationsFinished" class="f-r i-sprite i-complete"></i></li>
+			<li data-id="j_trained_wrap" class="clearfix"><a href="javascript:;">培训经历</a><span class="f-r" ng-if="!resumeFinishedInfo.trainingsFinished">未添加</span><i ng-if="resumeFinishedInfo.trainingsFinished" class="f-r i-sprite i-complete"></i></li>
+			<li data-id="j_school_wrap" class="clearfix"><a href="javascript:;">校内职务</a><span class="f-r" ng-if="!resumeFinishedInfo.campusDutiesFinished">未添加</span><i ng-if="resumeFinishedInfo.campusDutiesFinished" class="f-r i-sprite i-complete"></i></li>
+			<li data-id="j_honor_wrap" class="clearfix"><a href="javascript:;">获得荣誉</a><span class="f-r" ng-if="!resumeFinishedInfo.honorsFinished">未添加</span><i ng-if="resumeFinishedInfo.honorsFinished" class="f-r i-sprite i-complete"></i></li>
+			<li data-id="j_work_wrap" class="clearfix"><a href="javascript:;">工作经历</a><span class="f-r" ng-if="!resumeFinishedInfo.worksFinished">未添加</span><i ng-if="resumeFinishedInfo.worksFinished" class="f-r i-sprite i-complete"></i></li>
+			<li data-id="j_internship_wrap" class="clearfix"><a href="javascript:;">实习经历</a><span class="f-r" ng-if="!resumeFinishedInfo.internshipsFinished">未添加</span><i ng-if="resumeFinishedInfo.internshipsFinished" class="f-r i-sprite i-complete"></i></li>
+			<li data-id="j_project_wrap" class="clearfix"><a href="javascript:;">项目经历</a><span class="f-r" ng-if="!resumeFinishedInfo.projectsFinished">未添加</span><i ng-if="resumeFinishedInfo.projectsFinished" class="f-r i-sprite i-complete"></i></li>
+		</ul>
+	</div>
+	<div class="but-wrap"><a href="/view/wdjl/resume.html" target="_blank" class="but">预览简历</a>
+</div>

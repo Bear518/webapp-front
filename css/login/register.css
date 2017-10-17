@@ -1,0 +1,51 @@
+@charset "utf-8";
+.input{ border:1px solid #cacaca; height:40px; font:14px/40px "微软雅黑"; width:248px; padding:0 3px;}
+.input:hover{ border:1px solid #ff8f15; box-shadow:0px 0px 5px #ff8f15;}
+.loginbg{min-width: 1200px; position:fixed; width:100%; opacity:0.5; filter:alpha(opacity=50);  background-color:#000; height:1000px; left:0; top:0; z-index:1000}
+.zcbox{z-index:1100;top: 50%;/*margin-top: -265px;*/margin-top: -256px; background-color:#FFF;width:396px;text-align:left;box-shadow:0px 2px 2px rgba(0, 0, 0, 0.1); position:fixed; left:50%; margin-left:-200px;height: 512px;}
+.zcbox .bottom-wrap{padding:0 30px;}
+.zcbox *{box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;}
+
+.zcbox h3{ line-height:50px; height:56px; font-size:20px;border-bottom:1px solid #dcdcdc; text-align:center; font-weight:normal ;}
+.zcbox h3 i{cursor: pointer;display: block;height: 24px;line-height: 24px;
+position: absolute;right: 10px;top: 10px;width: 20px;}
+
+.zcbox li{ height:42px; padding-top:25px; position:relative;_padding-top:10px; }
+.zcbox .input{ padding:0 20px 0 38px; background-color:#FFF; width:270px}
+.zcbox .focus .input{ border-color:#db8a83}
+.zcbox li.lab{ height:20px; padding-top:10px}
+
+.zc_tab{ height:46px;}
+.zc_tab a{ float:left; height:37px; width:92px; color:#666; font:normal 16px/37px "微软雅黑";text-align:center; position:relative; margin:10px 27px 0 39px}
+.zc_tab a:hover{ text-decoration:none;}
+.zc_tab a.on{ color:#ff9001; border-bottom:2px solid #ff9001;}
+.zc_tab a.on:hover{ cursor:default }     
+.zcbox_main{ position:relative;}
+.zcbox_main li span{ float:left; width:89px;font:14px/40px "微软雅黑"; text-align:right; padding-right:5px;}
+.zcbox_main li span.rt{ width:360px; text-align:left}.zcbox_main li span.rt label{ color:#999}
+.zcbox_main li i{display:block; height:22px; width:22px; position:absolute; top:35px; left:10px;background:url(../../img/login/zc_ic.png) no-repeat 0px 0px;}
+.zcbox_main li i.mm{ background-position: 0px -28px;}
+.zcbox_main li i.yx{ background-position: 0px -54px;}
+
+.wjma{ line-height:47px; height:47px; clear:both;}
+.wjma label{ float:left; line-height:47px;}
+.wjma label,.wjma input{ vertical-align:middle; margin-right:5px}
+.wjma a{ float:right; }
+.wjma label a{ float:none}
+a.lg_btn{  height:40px;background-color:#ff8f15; color:#fff; font:18px/40px "微软雅黑"; text-align:center; border-radius:3px; display:block; margin:0 0 28px 0px; }
+a.lg_btn:hover{background-color:#ff8f15; color:#fff; text-decoration:none}
+.lg_zc{ text-align:right; display:block; font-size:12px} .lg_zc a{ color:#62aeb8}
+a.yzm_phone{ display:inline-block; line-height:38px; text-decoration:none; border:1px solid #ffd1b2; padding:0 10px; background-color:#ffefe5; margin-right:10px; border-radius:3px; color:#f60; vertical-align:middle}
+.zcbox .yzm input.yzm_phoneDisEnable,input.yzm_phoneDisEnable { background:#ff8f15; color:#fff; border:1px solid #ff8f15; display:inline-block; line-height:38px; text-decoration:none;padding:0 10px;margin-right:10px; border-radius:3px; width:70px; cursor:pointer}
+
+.zcbox .yzm input.hui{color:#aaaaaa; border:1px solid #e5e5e5;background-color:#f5f5f5; }
+.zcbox .yzm input{ width:178px; padding:0 20px; vertical-align:middle; margin-right:10px}
+.yzm img{ display:inline-block;  vertical-align:middle; margin:0 5px 0 0; }
+#imgCC1,#imgCC2,.yzm_img{ width:65px; height:38px}
+
+
+.zcbox_main span.err{ display:none;background-color: #db8a83;color: #fff;font-weight: normal;height: 24px;right:10px;line-height: 24px;padding-right: 10px;position: absolute;
+top:33px; padding:0 7px; float:left; width:auto}
+.zcbox_main span.err4,.zcbox_main span.err5,.zcbox_main span.err9,.zcbox_main span.err10,.zcbox_main span.err11{ right:118px }
+.zcbox_main .placeholder{top:31px}
+.inputli4 .placeholder,.inputli5 .placeholder,.inputli9 .placeholder{left:20px;}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>极视教育－课程播放</title>
+        <meta name="description" content="">
+        <!-- <meta name="viewport" content="width=device-width"> -->
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link rel="stylesheet" href="/css/main.css">
+        <style type="text/css">
+html,body{width: 100%;height: 100%;overflow: hidden;min-width: 1208px;}.content-wrap{width: 100%;height: 93%;}
+.bg-icon{background:url('/img/course/icon.png') no-repeat;}
+.ba-icon:after,.ba-icon:before{background:url('/img/course/icon.png') no-repeat;content: '';display: inline-block;}
+.header-wrap{background: #393f4a;height: 7%;color: #fff;position: relative;}.header-wrap .vc{position: absolute;top: 50%;margin-top: -14px;min-width: 1208px;}
+.left-wrap,.midden-wrap,.right-wrap{height: 100%;}
+.left-wrap{width: 70%;height: 100%;position: relative;}
+.right-wrap ul>li{width: 100%;padding: 9px 0;cursor: pointer;}
+.midden-wrap{position: relative;width: 26%;}
+.right-wrap{width: 4%;background: #393f4a;text-align: center;color: #fff;}
+.shrink{position: absolute;left: -30px;top: 5px;background: #abaeb0;cursor: pointer;}
+.shrink i{background-position: -98px -49px;display: inline-block;width: 30px;height: 30px;}
+.f-l{float: left;}
+.keshi-name{margin-left: 105px;}
+.i-home{width: 61px;height: 45px;background-position: 2px -40px;display: inline-block;margin-right: 28px;}
+.i-arrow-r:after{display: inline-block;content: '';width: 18px;height: 28px;background-position: -164px -256px;margin-left: 10px;vertical-align: middle;}
+.title-wrap{height: 5%;background: #d2d6da;text-align: center;font-size: 16px;position: relative;}.title-wrap .vc{position: absolute;left: 0;right: 0;top: 50%;margin-top: -10px;}
+.zhangjie-item:before{background-position: -31px -219px;width: 25px;height: 25px;display: inline-block;content: '';vertical-align: bottom;margin-left: 14px;margin-right: 8px;}
+.kcml-list-wrap .y-none-line:after{display: none;}
+.kcml-list-wrap dt{margin-top: -4px;}
+.kcml-list-wrap dd li{margin-top: -5px;}
+.kcml-list-wrap dd li:hover{cursor: pointer;color: #ff9001;}
+.kcml-list-wrap dd li:hover .k_time{color: #666;}
+.y-line:after{background-position: -22px -265px;width: 25px;height: 24px;display: block;content: '';margin-left: 14px;}
+.keshi-item:before{background-position: -80px -220px;height: 14px;width: 36px;vertical-align: middle;margin-right: 7px;}
+.learned:before{background-position:-80px -262px;}
+.name-wrap{display: inline-block;width: 46%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;vertical-align: bottom;margin-left: 2%;}
+.i-molu{background-position: -30px -127px;display: block;width: 22px;height: 20px;margin:0 auto;margin-bottom: 4px;}
+.active .i-molu{background-position: -30px -168px;}
+.active .i-biji{background-position: -98px -166px;}
+.i-biji{background-position: -98px -127px;display: block;width: 22px;height: 20px;margin:0 auto;margin-bottom: 4px;}
+.active .i-pinglun{background-position: -168px -166px;}
+.right-wrap ul>li:hover{background: #ff9001;}
+.right-wrap ul>li:hover .i-molu{background-position: -30px -168px;}
+.right-wrap ul>li:hover .i-biji{background-position: -98px -166px;}
+.right-wrap ul>li:hover .i-pinglun{background-position: -168px -166px;}
+.i-pinglun{background-position: -169px -127px;display: block;width: 22px;height: 20px;margin:0 auto;margin-bottom: 4px;}
+.right-wrap .active{background: #ff9001;}
+.list-wrap{height: 95%;overflow: auto;}
+.user-photo-wrap{display: inline-block;width: 35px;height: 35px;overflow: hidden;border-radius:50%;background: #eee;vertical-align: middle;}
+.user-photo-wrap img{width: 100%;height: 100%;}
+.pinglun-dt{padding: 14px 9px 0px 15px;border-top: 1px solid #dfdfdf;}
+.pinglun-dd{background: #efefef;margin:0 9px 14px 15px;padding: 5px;border-left: 1px solid #dfdfdf;border-right: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf;}
+.pinglun-header-wrap{padding: 15px;}
+.btn-pinglun-wrap{margin-top: 8px;height: 32px;}
+.btn-pinglun{background: #ff9001;height: 29px;width: 78px;line-height: 29px;color: #fff;float: right;border-radius: 4px;cursor: pointer;}
+.pinglun-header-wrap textarea,.bj-header-wrap textarea,.bj-content-wrap textarea{
+width: 98%;
+height: 89px;
+resize:none;
+border: 1px solid #dfdfdf;
+-webkit-box-shadow:1px 1px 1px #999 inset,-1px -1px 1px #999 inset;/* For Chrome5+, Safari5+ */
+-moz-box-shadow:1px 1px 1px #999 inset,-1px -1px 1px #999 inset; /* For Firefox3.6+ */
+box-shadow: 1px 1px 1px #999 inset,-1px -1px 1px #999 inset; /* For Latest Opera */
+/*margin-bottom: 14px;*/
+}
+.pinglun-header-wrap p.error,.bj-header-wrap p.error,.bj-content-wrap p.error{color: red;height: 20px;}
+.f-r{float: right;}
+.pinglun-dt .user-name{color: #5e898e;margin: 0 8px;}
+.pinglun-dt .time{font-size: 12px;color: #999;}
+.pinglun-dt:after{display:block;content: '';width: 0;height: 0;border-left: 8px solid transparent;border-right: 8px solid transparent;border-bottom: 8px solid #efefef;margin-left: 10px;margin-top: 5px;}
+.midden-wrap .bj-list-wrap{overflow: hidden;display: none;}
+.add-pointtime{font-size: 12px;color: #999999;margin-right: 20px;margin-left: 5px;display: inline-block;position: relative;width: 80px;left: -16px;padding-left: 16px;cursor: pointer;}
+.pointtime:before{background-position: -171px -50px;width: 21px;height: 19px;vertical-align: top;}
+.pointtime{display: inline-block;border: 1px solid #dfdfdf;cursor: pointer;}
+.bj-btn-save{background: #ff9001;color: #fff;width: 64px;height: 23px;line-height: 23px;border-radius: 4px;font-size: 14px;cursor: pointer;}
+.mrg-r20{margin-right: 20px;}
+.c9{color: #999999;}
+.f12{font-size: 12px;}
+.bj-header-wrap{padding: 13px 15px;}
+.bj-content-wrap{height: 65%;overflow: auto;width: 91%;padding: 13px 15px;}
+.bj-list-wrap .bj-item{padding-top: 19px;margin-bottom: 11px;border-top: 1px solid #dfdfdf;margin-top: 20px;}
+.active .i-edit{background-position: -234px -124px;}
+.i-edit{background-position: -230px -48px;width: 24px;height: 26px;display: inline-block;margin-right: 12px;cursor: pointer;}
+.i-del:hover{background-position: -325px -126px;}
+.i-del{background-position: -322px -50px;width: 30px;height: 26px;display: inline-block;cursor: pointer;}
+.bj-content-wrap textarea,.bj-content-wrap input.bj-btn-save{display: none;}
+.bj-list-wrap .active  textarea,.bj-list-wrap .active  input.bj-btn-save{display: block;}
+.bj-list-wrap .active p{display: none;}.bj-list-wrap .bj-content-wrap p.error{display: none;}
+.bj-list-wrap .active p.error{display: block;}
+.pl-list-wrap{display: none;overflow: hidden;}
+.pl-list-wrap dl{height: 68%;overflow: auto;}
+.midden-list-wrap{height: 95%;}
+.kcml-list-wrap{padding-top: 5%;height: 95%;}
+.a-home-wrap{width: 150px;padding-left: 20px;}
+.cf{color: #fff;}
+.left-wrap div.video-wrap{height: 92%;background: #010101;}.left-wrap div.video-wrap>div:first-child{height: 100%;width: 100%;}.left-wrap div.video-wrap>div:first-child video{width: 100%;height: 100%;min-width: 800px;}
+.left-wrap .yxx{display: inline-block;}
+.left-wrap div.custom-wrap {height: 5%;padding: 12px 10px;background: #010101;position: relative;}
+.left-wrap div.custom-wrap .vc{position: absolute;top: 50%;margin-top: -14px;right: 0;margin-right: 10px;}
+.left-wrap .i-learned-wrap{height: auto;padding: 4px;width: 80px;text-align: center;background: #fe8f12;border-radius:5px;color: #fff;margin-right: 20px;cursor: pointer;}
+.left-wrap .i-learned-wrap i{background-position: -327px -219px;width: 21px;height: 17px;display: inline-block;vertical-align: top;}
+.left-wrap .i-learn-wrap{height: 25px;padding: 4px;width: 80px;text-align: center;background: #858585;border-radius:5px;margin-right: 20px;}
+.left-wrap .i-learn-wrap i{background-position: -326px -167px;width: 26px;height: 17px;display: inline-block;vertical-align:top;}
+.left-wrap .i-like-wrap{cursor: pointer;position: relative;display: none;}
+.left-wrap .i-liked-wrap i{background-position: -230px -220px;width: 35px;height: 28px;display: inline-block;vertical-align: bottom;}
+.left-wrap .i-like-wrap i{background-position: -230px -169px;width: 35px;height: 28px;display: inline-block;vertical-align: bottom;}
+.left-wrap div.custom-wrap div{height: auto;}
+.dis_none{display: none;}
+.header-wrap a{color: #fff;}
+.header-wrap a:hover{color: #ff9001;}
+.kcml-list-wrap span.k_time {background: url(/img/lessonintro/bf.png) no-repeat 1px 4px;padding-left: 20px;margin-right: 20px;color: #666;}.j_playing_item_class {color:#ff9001;}
+.left-wrap .i-learned-wrap:hover .cancel-learned{display: block;cursor: pointer;}
+.left-wrap .i-learned-wrap:hover .learn-i-wrap{display: none;}
+.left-wrap .i-learned-wrap:hover{background: #858585;}
+.left-wrap .i-learn-wrap:hover{background: #fe8f12;color: #fff;}
+.left-wrap .i-learn-wrap:hover .set-learned{display: block;cursor: pointer;}
+.left-wrap .i-learn-wrap:hover .learn-i-wrap{display: none;}
+/*.left-wrap .i-like-wrap:hover .like-i-wrap{display: none;}*/
+.left-wrap .i-like-wrap .set-liked{display: none;z-index: 2;position: absolute;top: 8px;color: #fff;left: 14px;font-size: 12px;}
+.left-wrap .i-like-wrap:hover .set-liked{display: block;}
+.left-wrap .i-like-wrap:hover i{background-position: -230px -220px;}.bj-content-wrap .pointtime:hover{border:1px solid #ff9001;}.i-edit:hover{background-position: -234px -124px;}
+.bj-header-wrap .add-pointtime:hover{color: #ff9001;}
+@media all and (min-height:300px) and (max-height:600px){
+   /* .kcml-list-wrap {padding-top: 20px;height: 81%;}
+    .pl-list-wrap dl {height: 63%;overflow: auto;}
+    .bj-content-wrap {height: 61%;}*/
+}
+/*@media all and (min-height:700px) and (max-height:1000px){
+    .kcml-list-wrap {padding-top: 20px;height: 81%;}
+    .pl-list-wrap dl {height: 63%;overflow: auto;}
+    .bj-content-wrap {height: 61%;}
+}*/
+input[disabled]{cursor: default;}
+#j_bj_content_wrap dd p{word-wrap: break-word;}
+        </style>
+    </head>
+    <body>
+    	<div class="header-wrap ">
+            <div class="clearfix vc">
+                <div class="a-home-wrap f-l">
+                    <a href="/" class="cf"><!-- <i class="bg-icon i-home f-l"></i> -->
+                        <span class="ba-icon i-arrow-r">首页</span></a>
+                    <a href="/view/seek/course.html" class="cf">
+                        <!-- <i class="bg-icon i-home f-l"></i> -->
+                        <span class="ba-icon i-arrow-r">全部课程</span></a>
+                </div>
+                <div class="f-l">
+                    <!-- <a id="j_bread_indus" class="ba-icon i-arrow-r" href="/view/seek/course.html"></a> -->
+                    <a id="j_bread_dir" class="ba-icon i-arrow-r" href="/view/seek/course.html"></a>
+                    <a id="j_bread_sort" class="" href="/view/seek/course.html"></a>
+                </div>
+                <div id="j_keshi_name" class="f-l keshi-name"></div>
+            </div>
+        </div>
+        <div class="clearfix content-wrap">
+            <div id="j_left_wrap" class="left-wrap f-l">
+                <div id="j_video_wrap" class="video-wrap">
+                    <div class="j_loading" style="text-align: center;line-height: 150px;color: #fff;font-size: 16px;position: absolute;top: 50%;margin-top: -75px;width:100%;">视频正在努力加载中...</div>
+                </div>
+                <div id="j_custom_wrap" class="custom-wrap">
+                    <div class="vc clearfix">
+                        <div id="j_like_item" class="f-r i-like-wrap">
+                            <div class="like-i-wrap"><i class="bg-icon"></i><span id="j_likes"></span></div>
+                            <div id="j_set_liked" class="set-liked dis_none">+1</div>
+                        </div>
+                        <div id="j_class_plan_item" class="f-r i-learn-wrap">
+                            <div class="learn-i-wrap"><i class="bg-icon"></i>已学习</div>
+                            <div id="j_cancel_learned" class="cancel-learned dis_none">取消已学习</div>
+                            <div id="j_set_learned" class="set-learned dis_none">标为已学习</div>
+                        </div>
+                    </div>
+                </div>
+                <style type="text/css">
+                .vip-hint-wrap{position: absolute;top: 0;left: 0;right:0;bottom: 0;background:#010101;z-index: 866;text-align: center;}
+                .vip-hint-wrap .i-warn{background-position:-392px -45px;width: 110px;height: 110px;}
+                .vip-hint-wrap .i-gray-tick{background-position:-239px -258px;height: 25px;width: 27px;vertical-align: bottom;margin-left: 35px;}
+                .vip-hint-wrap .i-gray-tick:first-child{margin-left: 0px;}
+                .vip-hint-wrap .i-hot{background-position:-303px -263px;width: 32px;height: 32px;position: absolute;right: 0;top: 0;}
+                .vip-hint-wrap h5{font-size: 30px;color: #fff;margin:32px 0;}
+                .vip-hint-wrap p{font-size: 22px;color: #ff9001;margin-bottom: 50px;}
+                .vip-hint-wrap .content-wrap{width: 538px;height: 108px;color: #fff;margin:0 auto;}
+                .vip-hint-wrap .but-wrap{width: 538px;margin:0 auto;}
+                .vip-btn{background: #ff9001;color: #fff;width: 150px;height: 34px;line-height: 23px;border-radius: 4px;font-size: 18px;cursor: pointer;}
+                .fs24{font-size: 24px;}
+                .fs20{font-size: 20px;}
+                .fs22{font-size: 22px;}
+                .cf{color: #fff;}
+                .cf1{color: #ff9001;}
+                .ss{margin:23px 0 52px;}
+                .vip-hint-wrap .bg-icon{display: inline-block;}
+                .vip-btn-wrap:hover .i-hot{top: 3px;}
+
+                </style>
+                <div id="j_viphint_wrap_1" class="vip-hint-wrap dis_none">
+                    <div style="position: absolute;top: 50%;margin-top: -205px;left: 50%;margin-left: -269px;">
+                        <div><i class="bg-icon i-warn"></i></div>
+                        <h5>预览结束</h5>
+                        <p>该课程为VIP课程，你需要开通VIP后才能进行观看～</p>
+                        <div class="content-wrap">
+                            <div class="fs24">VIP权益<a style="font-size: 18px;color: #13aec0;text-decoration:underline;margin-left:26px;" href="/view/vip/vipintro.html">查看更多VIP权益</a></div>
+                            <div style="margin:23px 0 52px;" class="fs20"><i class="bg-icon i-gray-tick"></i>所有会员课程观看权限<i class="bg-icon i-gray-tick"></i>下载资料<i class="bg-icon i-gray-tick"></i>技术问答</div>
+                        </div>
+                        <div class="but-wrap clearfix">
+                            <div style="width:150px;margin:0 auto;"><input data-type="1" type="button" class="but-animation but-shadow vip-btn j_vip_btn" value="开通VIP"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="j_viphint_wrap_2" class="vip-hint-wrap dis_none">
+                    <div style="position: absolute;top: 50%;margin-top: -182px;left: 50%;margin-left: -275px;">
+                        <div><i class="bg-icon i-warn"></i></div>
+                        <h5>预览结束</h5>
+                        <p>该课程为付费课程，你需要购买该课程后才能进行观看～</p>
+                        <div class="fs22 cf">价格：<span class="cf1">¥<span class="price"></span>元</span></div>
+                        <div class="but-wrap clearfix">
+                            <div style="width:150px;margin:42px auto 0;"><input data-type="2" type="button" class="but-animation but-shadow vip-btn j_vip_btn" value="购买课程"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="j_viphint_wrap_3" class="vip-hint-wrap dis_none">
+                    <div style="position: absolute;top: 50%;margin-top: -205px;left: 50%;margin-left: -332px;">
+                        <div ><i class="bg-icon i-warn"></i></div>
+                        <h5>预览结束</h5>
+                        <p>该课程售价¥<span class="price"></span>元，你可以通过购买该课程或开通VIP的方式进行观看～</p>
+                        <div class="content-wrap">
+                            <div class="fs24">VIP权益<a style="font-size: 18px;color: #13aec0;text-decoration:underline;margin-left:26px;" href="/view/vip/vipintro.html">查看更多VIP权益</a></div>
+                            <div style="margin:23px 0 52px;" class="fs20"><i class="bg-icon i-gray-tick"></i>所有会员课程观看权限<i class="bg-icon i-gray-tick"></i>下载资料<i class="bg-icon i-gray-tick"></i>技术问答</div>
+                        </div>
+                        <div class="but-wrap clearfix">
+                            <div class="f-l"><input data-type="2" type="button" class="but-animation but-shadow vip-btn j_vip_btn" value="购买课程"></div>
+                            <div class="f-r vip-btn-wrap" style="position:relative;"><input data-type="1" type="button" class="but-animation but-shadow vip-btn j_vip_btn" value="开通VIP"><i class="bg-icon i-hot but-animation"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="j_midden_wrap" class="midden-wrap f-l">
+                <div id="j_shrink_midden_wrap" class="shrink"><i class="bg-icon"></i></div>
+                <div  class="title-wrap"><div id="j_title_wrap" class="vc">课程目录</div></div>
+                <div class="j_midden_list_wrap midden-list-wrap">
+                    <dl id="j_molu_list_wrap" class="list-wrap kcml-list-wrap">
+<!--                         <dt class="ba-icon zhangjie-item y-line">章节1<span class="name-wrap">第一ios应用程序</span></dt>
+                        <dd>
+                            <ul>
+                                <li class="ba-icon keshi-item y-line learned">课时1 <span class="name-wrap">iso开发使用的基础</span></li>
+                                <li class="ba-icon keshi-item y-line">课时1 <span class="name-wrap">iso开发使用的基础</span></li>
+                                <li class="ba-icon keshi-item y-line">课时1 <span class="name-wrap">iso开发使用的基础</span></li>
+                                <li class="ba-icon keshi-item y-line">课时1 <span class="name-wrap">iso开发使用的基础</span></li>
+                            </ul>
+                        </dd> -->
+                    </dl>
+                    <div id="j_pinglun_list_wrap" class="list-wrap pl-list-wrap">
+                        <div class="pinglun-header-wrap clearfix">
+                            <textarea class="txt-pinglun"></textarea>
+                            <p class="error"></p>
+                            <div class="btn-pinglun-wrap"><input id="j_add_comment" type="button" class="but-animation but-shadow btn-pinglun f-r" value="发表评论"></div>
+                        </div>
+                        <dl>
+                            <!-- <dt class="pinglun-dt">
+                                <div class="user-photo-wrap"><img src=""></div>
+                                <span class="user-name">张天爱</span>
+                                <span class="time">一秒前</span>
+                            </dt>
+                            <dd class="pinglun-dd">我爱你水电费水电费水电费爽肤水地方上独领风骚里的风景</dd> -->
+                        </dl>
+                    </div>
+                    <div id="j_biji_list_wrap" class="list-wrap bj-list-wrap">
+                        <div class="bj-header-wrap">
+                            <textarea id="j_biji_textarea" class="txt-pinglun"></textarea>
+                            <p class="error"></p>
+                            <div>
+                                <input type="checkbox" checked><span id="j_add_pointtime" class="add-pointtime">添加时间驻点</span>
+                                <span class="ba-icon pointtime">00.00</span>
+                                <input id="j_biji_add" type="button" class="but-animation but-shadow bj-btn-save f-r" value="保存">
+                            </div>
+                        </div>
+                        <div  class="bj-content-wrap">
+                            <dl id="j_bj_content_wrap">
+                                <!-- <dt class="bj-item clearfix">
+                                    <span class="ba-icon pointtime mrg-r20">12.02</span><span class="f12 c9">2016-01-13</span>
+                                    <i class="bg-icon i-del f-r j_biji_del"></i><i class="bg-icon i-edit f-r j_biji_edit"></i>
+                                </dt>
+                                <dd class="clearfix">
+                                    <p>人生得一小丸子足矣舍得放手的风景</p>
+                                    <textarea></textarea>
+                                    <input type="button" class="bj-btn-save f-r j_biji_btn_update" value="保存">
+                                </dd> -->
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-wrap f-l">
+                <ul>
+                    <li class="active j_r_item" data-id="#j_molu_list_wrap" data-title="课程目录"><i class="bg-icon i-molu"></i>目录</li>
+                     <li class="j_r_item" data-id="#j_biji_list_wrap" data-title="我的笔记"><i class="bg-icon i-biji"></i>笔记</li>
+                      <li class="j_r_item" data-id="#j_pinglun_list_wrap" data-title="评论区"><i class="bg-icon i-pinglun"></i>评论</li>
+                </ul>
+            </div>
+        </div>
+<div class="login_dl" style=" display:none"><div include="/view/login/login.html"></div></div>
+<div class="register_dl" style=" display:none"><div include="/view/login/register.html"></div></div>
+<div include="/view/login/thlogin.html"></div>
+        <!-- <div id="j_canvas_container">
+            <canvas id="myCanvas" width="200" height="200" style="border:1px solid gray">你的浏览器不支持canvas</canvas>
+        </div>
+        <input class="example1" type="button" value="button"> -->
+
+
+        <script type="text/javascript" data-main="/view/player/js-built/main.js" src="/js/vendor/require.js"></script>
+         <script src="/js/vendor/jquery-1.11.3.min.js"></script>
+        <script src="/js/gb.js"></script>
+         <script src="/js/main.js"></script>
+        <script type="text/javascript" src="/js/store.js"></script>
+         <script type="text/javascript" src="/js/jquery.timeago.js"></script>
+         <script type="text/javascript" src="/js/course/play.js"></script>
+    </body>
+</html>

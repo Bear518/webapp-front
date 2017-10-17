@@ -1,0 +1,1 @@
+requirejs.config({baseUrl:".",paths:{js:".",templates:"../templates",app:"."}}),define("common",function(){});

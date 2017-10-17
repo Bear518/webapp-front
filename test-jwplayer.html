@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>测试页面</title>
+
+</head>
+<body>
+<div id="myDiv">This text will be replaced with a player.</div>
+<!-- /jwplayer-master-2/src/js/ -->
+<!-- <script  src="../node_modules/requirejs/require.js"></script> -->
+<script src="/js/jwplayer/jwplayer-master-2/bin-debug/jwplayer.js"></script>
+<script>jwplayer.key="9r1M8zDCeUXPh2GvuNvE8PaITxRLPANbJcfXPA==";</script>
+<script>
+jwplayer("myDiv").setup({
+    // "file": "http://res.skillbridge.cn/video/dkx1.mp4",
+    // "image": "http://www.skillbridge.cn/img/dk/v.jpg",
+    "height": 251,
+    "width": 403,
+    primary:'flash',
+    abouttext:'author:wumin',
+    aboutlink:'http://skillbridge.cn',
+    "playlist": [{
+        // "file": "http://res.skillbridge.cn/video/dkx1.mp4",
+        "image": "http://www.skillbridge.cn/img/dk/v.jpg",
+        "title": "Sintel Trailer",
+        "mediaid": "ddra573",
+        'sources':[{file:'http://res.skillbridge.cn/video/dkx1.mp4',label:'HD'},{file:'http://res.skillbridge.cn/video/dkx1.mp4',label:'SD'},{file:'http://res.skillbridge.cn/video/dkx1.mp4',label:'BD'}],
+        'allSources':[{file:'http://res.skillbridge.cn/video/dkx1.mp4',label:'1'},{file:'http://res.skillbridge.cn/video/dkx1.mp4',label:'2'},{file:'http://res.skillbridge.cn/video/dkx1.mp4',label:'3'}]
+    },{
+        // "file": "http://res.skillbridge.cn/video/dkx1.mp4",
+        "image": "http://www.skillbridge.cn/img/dk/v.jpg",
+        "title": "Big Buck Bunny Trailer",
+        "mediaid": "ddrx3v2",
+        'sources':[{file:'http://res.skillbridge.cn/video/dkx1.mp4',label:'1'}],
+        'allSources':[{file:'http://res.skillbridge.cn/video/dkx1.mp4',label:'1'},{file:'http://res.skillbridge.cn/video/dkx1.mp4',label:'2'},{file:'http://res.skillbridge.cn/video/dkx1.mp4',label:'3'}]
+    }]
+});
+var handler=function(){
+    alert('me');
+};
+jwplayer().addButton('http://www.skillbridge.cn/img/dk/v.jpg', 'label', handler, 'j_ss');
+// jwplayer().addButton('http://www.skillbridge.cn/img/dk/v.jpg', 'label', handler, 'j_sds');
+
+jwplayer().on('ready', function(event){
+sharingPlugin = jwplayer().getPlugin('sharing');
+var arr=jwplayer().getContainer();
+console.log(arr);
+});
+jwplayer().on('levelsChanged',function(e){
+    console.log('levelsChanged'+e);
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>测试页面</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <style type="text/css">
+    .item-wrap{position: relative;/*float: right;color: #fff;right: 120px;top: 25px;*/width: 3em;height: 2.3em;display: inline-block;vertical-align: top;padding-top: 1em;}
+    .item-select-wrap{position: absolute;top: -60px;width: 120px;right: -45px;text-align: center;background: rgba(0,0,0,0.7);display: none;cursor: pointer;}
+    .item-wrap:hover .item-select-wrap{display: block;}
+    .item-select-wrap:hover{display: block;}
+    .item-select-wrap li.active{color: #ff9001;}
+    .item-select-wrap ul>li:hover{background: #5c5c5c;color: #fff;border:none;}
+
+    .hd-wrap{right: 120px;top: 25px;}
+    .hd-select-wrap{top: -60px;right: -45px;}
+    .provider-switch-wrap{right: 150px;}
+    .provider-select-wrap{line-height: 30px;}
+    .rate-wrap{position: absolute;color: #b4b4b4;top: 1em;right: 20em;}
+    .rate-select-wrap{line-height: 33px;top: -17em;}
+    .rate-select-wrap li{border-bottom: 1px solid #4c4b4b;}
+    .rate-select-wrap li:last-child{border-bottom: none;}
+    .rate-selected{width: 42px;height: 18px;line-height: 18px;border-radius: 5px;color: #aeaeae;/* background: #ff9001; */text-align: center;}
+    .item-wrap:hover .rate-selected{background: #ff9001;color: #fff;}
+    /*声音slider垂直布局*/
+    .vertical-layout .volume-slider{position: absolute;top: -110px;padding: 20px;background-color: rgba(33,33,33,0.8);right: -7px;}
+    .vertical-layout .slider-wrap{height: 4em;background-color: rgba(255,255,255,0.2);position: relative;width: .25em;}
+    .vertical-layout .slider-wrap .progress{height: 2em;background: #ff9001;bottom: 0;position: absolute;width: 100%;}
+    .vertical-layout .slider-wrap .knob{background-color: #fff;width: .5em;height: .5em;border-radius: .25em;position: absolute;bottom: 2em;right: -2px;}
+    /*声音slider水平布局*/
+    .volume-slider{position: absolute;right: 320px;padding: 0px 20px 20px 0;/* background-color: rgba(33,33,33,0.8); */top: 14px;}
+    .volume-slider .title{color: #aeaeae;font-size: 12px;text-align: center;visibility: hidden;}
+    .slider-wrap{height: .25em;background-color: #474747;position: relative;width: 4em;border-radius: 5px;}
+    .slider-wrap .progress{width: 2em;background: #ff9001;bottom: 0;position: absolute;height: 100%;}
+    .slider-wrap .knob{background-color: #cfcfcf;width: .5em;height: .5em;border-radius: .25em;position: absolute;left: 2em;top: -2px;}
+    /*flash播放器样式*/
+    .prism-player.jx-flag-fullscreen {width: 100% !important;height: 100% !important;top: 0;right: 0;bottom: 0;left: 0;z-index: 1000;margin: 0;position: fixed;}
+    .jx-btn-fullbrowser{position: absolute;right: 100px;color: #fff;}
+    .prism-player{position: relative;}
+    .jx-controls{position: absolute;height: 3.3em;bottom: 0;width: 8em;right: 11em;color: #aeaeae;}
+    .jx-controlbar{display: block;position: absolute;bottom: 0;height: 3.3em;width: 100%;padding: 0 .5em;}
+    .jx-controlbar .item-wrap{width: 3em;height: 2.3em;display: inline-block;vertical-align: top;padding-top: 1em;}
+    .jx-flash-hd-wrap{width: 36px;height: 18px;border-radius: 5px;background: #474747;font-size: 12px;text-align: center;}
+    .jx-hd-select-wrap{font-size: 14px;line-height: 33px;top: -100px;}
+    .jx-controlbar .provider-switch-wrap{}
+    .jx-controlbar .provider-select-wrap{padding: 12px 18px;width: 155px;text-align: left;top: -84px;color: #aeaeae;}
+    .jx-controlbar .provider-select-wrap ul>li{display: inline-block;width: 60px;height: 24px;border-radius: 5px;font-size: 14px;border:1px solid #aeaeae;color: #aeaeae;text-align: center;line-height: 24px;}
+    .jx-controlbar .provider-select-wrap ul>li.active{background: #ff9001;color: #fff;border:1px solid #ff9001;}
+
+    .jx-controlbar .mrg-r22{margin-right: 22px;}
+    .js-player .icon{background: url('/img/player/icon.png');display: inline-block;}
+    .jx-controlbar .i-set{width: 18px;height: 18px;background-position: -110px -15px;}
+    .jx-controlbar .i-set:hover{background-position: -110px -49px;}
+
+    .period-state-wrap{position: absolute;right: 22px;bottom: 0.7em;}
+    .period-state-wrap .state-wrap{width: 70px;height: 26px;line-height: 26px;background: #474747;color: #aeaeae;font-size: 14px;position: relative;text-align: center;border-radius: 5px;}
+    .period-state-wrap .state-wrap .i-gray-tick{background-position:-212px -13px;width: 20px;height: 100%;vertical-align: middle;}
+    .period-state-wrap .state-wrap:hover .state-title-wrap{display: block;}
+    .period-state-wrap .state-wrap .state-title-wrap{position: absolute;left: 0;top: -36px;width: 70px;height: 28px;line-height: 28px;background: inherit;color: #c8c8c8;border-radius: 5px;display: none;}
+    .period-state-wrap .state-wrap .state-title-wrap:before,.period-state-wrap .state-wrap .state-title-wrap:after{content: '';display: block;width: 0;height: 0;border-left: 6px solid transparent;border-right: 6px solid transparent;border-top: 6px solid #474747;margin-left: 56px;}
+    .period-state-wrap .state-wrap .state-title-wrap:before,.period-state-wrap .state-wrap .state-title-wrap:after{position: absolute;top: 28px;right: 26px; border-top: 6px solid #474747;}
+    .next-period-wrap{position: absolute;left: 4.5em;bottom: 0.6em;}
+    .next-period-wrap .i-next{background-position: -42px -15px;width: 20px;height: 20px;}
+    .next-period-wrap .i-next:hover{background-position:-42px -49px;}
+    .rightclick-menu{display: none;background: #474747;padding: 5px;color: #fff;border-radius: 5px;}
+    .js-flag-rightclick-open .rightclick-menu{display: block;}
+    </style>
+</head>
+<body>
+<div id="" class="prism-player jx-size js-player"></div>
+<!— prism-player为h5播放器皮肤的钩子类名，请务必加上 —>
+<div id="j_test" class="prism-player jx-size js-player"></div>
+<div ></div>
+<script id="j_hd_temp" type="text/template">
+
+</script>
+<script type="text/javascript">
+// var playModule={
+//     recordData:{}
+// };
+// function on_player_start() {
+//     console.log('播放器开始播放');
+//     // playModule.player.start();
+//     playModule.recordData.startTime=Date.now();
+//     if(playModule.queryNotePoint){
+//         playModule.player.seek(playModule.queryNotePoint);
+//     }
+// }
+// function onPlayPaused(){
+//     var moment=Date.now(),time=moment-playModule.recordData.startTime;
+//     playModule.recordData.learingSec=(playModule.recordData.learingSec||0)+Math.floor(time/1000);
+//     console.log('播放暂停，已经播放了'+time);
+
+// }
+// function onPlayResume(){
+//     playModule.recordData.startTime=Date.now();
+//     console.log('暂停后继续播放');
+// }
+</script>
+<script type="text/javascript" data-main="/view/player/js-built/main.js" src="/js/vendor/require.js"></script>
+<script>
+var data = {name: 'kindeng'};
+observe(data);
+data.name = 'dmq'; // 哈哈哈，监听到值变化了 kindeng --> dmq
+
+function observe(data) {
+    if (!data || typeof data !== 'object') {
+        return;
+    }
+    // 取出所有属性遍历
+    Object.keys(data).forEach(function(key) {
+        defineReactive(data, key, data[key]);
+    });
+};
+
+function defineReactive(data, key, val) {
+    observe(val); // 监听子属性
+    Object.defineProperty(data, key, {
+        enumerable: true, // 可枚举
+        configurable: false, // 不能再define
+        get: function() {
+            return val;
+        },
+        set: function(newVal) {
+            console.log('哈哈哈，监听到值变化了 ', val, ' --> ', newVal);
+            val = newVal;
+        }
+    });
+}
+function loopConsole(){
+    for(var i=0;i<10;i++){
+        switch(i){
+            case 3:
+            setTimeout(function(){
+                console.log(3);
+            },10)
+            break;
+            case 6:
+            setTimeout(function(){
+                console.log(6);
+            },0)
+            break;
+            default:
+                console.log(i);
+            break;
+        }
+        
+    }
+}
+
+</script>
+</body>
+</html>

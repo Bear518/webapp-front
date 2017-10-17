@@ -1,0 +1,44 @@
+    	<style type="text/css">
+    	.cert-popbox{width: 753px;min-height: 505px;top: 50%;left: 50%;position: fixed;margin-top: -252.5px;margin-left: -376px;background: #fff;z-index: 1124;padding-bottom: 26px;border-radius: 3px;}
+    	.cert-popbox h5{line-height: 40px;height: 40px;text-align: center;font-size: 16px;color: #333;background: #ededed;font-weight: normal;}
+    	.cert-popbox .content-wrap{padding:0 15px;font-size: 12px;}
+    	.cert-popbox .content-wrap label{padding:4px 8px;background: #cecece;color: #fff;margin:4px 4px 0 0;display: inline-block;}
+    	.cert-popbox h5 span{}
+    	.cert-popbox .title-wrap{background: #fafafa;color: #999;text-align: center;height: 30px;line-height: 30px;width: 358px;border:1px solid #e6e6e6;}
+    	.cert-popbox .cert-selected-wrap{padding:16px 8px;color: #333;font-size: 16px;height: 86px;overflow-y:auto;margin-bottom: 12px;}
+    	.cert-popbox .cert-selected-wrap span{font-size: 16px;margin-left: 6px;}
+        .cert-popbox .cert-select-wrap{border:1px solid #e6e6e6;background: #f8f8f8;padding:8px 8px 18px;}
+    	.cert-popbox .cert-select-wrap .border-left-none{border-left: none;}
+    	.cert-popbox .cert-select-wrap .common-txt-wrap{font-size: 13px;color: #333;}
+        .cert-popbox .common-wrap{padding:2px;min-height: 126px;}
+        .cert-popbox .common-wrap .item-wrap{min-width: 135px;margin:0 40px 10px 0;}
+        .cert-popbox .common-wrap .item-wrap span{padding:0 0 0 16px;position: relative;left: -17px;cursor: pointer;}
+        .mrg-r40{margin-right: 40px;}
+        .cert-popbox .other-wrap .item-wrap{color: #559cae;padding:10px;}
+        .cert-popbox .cert-select-wrap .item-active-wrap{background: #fff;border:1px solid #c9c9c9;border-bottom:none;margin-bottom: -1px;}
+        .cert-popbox .data-wrap{border:1px solid #c9c9c9;padding:10px 10px 10px 0;background: #fff;}
+    	</style>
+    	<div ng-class="{'dis_block':certPopboxShow}" class="popbox cert-popbox dis_none">
+    		<h5 class="clearfix">添加获得证书<span class="f-r i-sprite i-close" ng-click="closeCertPopbox()"></span></h5>
+    		<div class="content-wrap">
+    			<div class="cert-selected-wrap" >已选择：<label ng-repeat="item in certSelectedArr track by $index"><span ng-bind="item.name"></span><span class="del-label" ng-click="deleteSelectedLabel(item,'cert')">x</span></label></div>
+    			<div class="cert-select-wrap clearfix">
+    				<div class="common-txt-wrap">常用：</div>
+                    <div class="common-wrap clearfix"><div ng-repeat="item in certCommonData" class="f-l item-wrap"><input class="mrg-r5 mrg-l5" ng-init="checked=$index==certSelectedArr[$index]" type="checkbox" ng-model="item.checked" ><span ng-click="certItemClick(item)" ng-bind="item.name"></span></div></div>
+                    <div class="other-wrap">
+                        <div class="tab-wrap clearfix"><div ng-click="certTabItemClick($index,item)" ng-class="{'item-active-wrap':$index==certTabActiveIndex}" ng-repeat="item in certOtherData track by $index" ng-bind="item.name" class="item-wrap f-l">英语认证<i class=""></i></div></div>
+                        <div class="data-wrap clearfix"><div ng-repeat="item in certOtherChildItemData"  class="f-l item-wrap"><input  class="mrg-r5 mrg-l10" ng-model="item.checked" type="checkbox"><span ng-click="certItemClick(item)" class="mrg-l5" ng-bind="item.name"></span></div></div>
+                    </div>
+    			</div>
+    			<div>
+    				<div class="clearfix but-wrap">
+	    				<div class="f-l">
+							<input type="button" ng-click="saveSelectedLabels('cert_cert_select')" class="but but-shadow but-animation w95" value="保存">
+						</div>
+						<div class="f-l">
+							<input type="button" data-id="#j_contact_wrap" ng-click="closeCertPopbox()" class="but but-cancel but-shadow but-animation mrg-l80 w95" value="取消">
+						</div>
+					</div>
+    			</div>
+    		</div>
+    	</div>

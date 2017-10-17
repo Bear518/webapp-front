@@ -1,0 +1,53 @@
+@charset "utf-8";
+.banner { background:url(../../img/aboutus/connect1.jpg) center 0; height:270px;}
+.banner2 { background:url(../../img/aboutus/abt1.jpg) center 0; height:270px;}
+
+.map{ padding:85px 0;}
+.map #dituContent{ box-shadow:3px 3px 3px #ccc}
+.cntway{ background-color:#f2f2f2; padding:85px 0;}
+.cntway_l{ float:left; width:460px; margin-right:163px}
+.cntway_l h3{ height:70px; font-size:40px; border-bottom:2px solid #acacac; color:#666; font-weight:normal}
+.cntway_l li{ height:95px; margin-top:60px;}
+.cntway_l li i{ float:left; height:65px; width:50px; background:url(../../img/aboutus/connect4.png) no-repeat 0 0; margin-right:40px}
+.cntway_l li i.ic2{background:url(../../img/aboutus/connect4.png) no-repeat 0 -140px;}
+.cntway_l li i.ic3{background:url(../../img/aboutus/connect4.png) no-repeat 0 -288px;}
+.cntway_l li span{ display:block; font-size:24px; margin-bottom:15px}
+.cntway_r{ float:left; width:577px;}
+.cntfrom{padding:85px 0; }
+.cntfrom h2{ text-align:center; font-weight:normal;color:#666}
+.cntfrom ul{ float:left; width:653px;}
+.cntfrom .cntfrom_r{ float:left; width:547px;}
+.info_l{ display:block; font-size:20px; line-height:65px; margin-top:15px}
+.info_l .yel{ color:#c90e0e}
+.cntfrom input,.cntfrom textarea{ height:48px; width:388px; border:1px solid #b5b5b5; padding:0 5px;border-radius:3px;}
+.cntfrom textarea{ height:316px; width:540px; padding:5px}
+.btnbox{ background-color:#ffffff; padding:45px 0 55px 452px; clear:both; height:65px }
+.btnbox a{height:62px; width:296px;background:#ff9001; display:block;box-shadow:0 4px 0 #b06300;border-radius:5px; color:#fff; line-height:62px; text-align:center; font-size:18px;transition:0.2s;}
+.btnbox a:hover{margin-top:4px; box-shadow:0 0 0 #d77900; }
+.cntfrom .info_r .err{ color:#F00; margin-left:10px; font-size:14px; display:none}
+
+.knowus,.circ{padding:58px 0;}
+.know_l{ width:566px; float:left;}
+.know_r{ width:600px; float:left; padding-left:34px;}
+.knowus h3{ height:70px; font-size:30px; font-weight:normal; color:#666; text-align:center; width:462px}
+.know_wd{ line-height:22px ; font-size:14px }
+.know_wd p{margin-bottom:3px; color:#333; text-indent:28px;}
+.know_wd li{ position:relative; padding-left:28px;}
+.know_wd li i{ height:9px; width:9px; background-color:#5ba5af; border-radius:4px; position:absolute; left:0; top:7px}
+.know_wd li span{ font-size:14px; color:#438d9d;}
+.weneed{padding:85px 0; height:429px; background:url(../../img/aboutus/abtbg.jpg) no-repeat center 0;}
+.weneed h2{ color:#fff; font-size:36px; font-weight:normal; height:104px;text-align:center}
+.weneed li{ float:left; width:214px; color:#fff; margin-right:113px; line-height:26px;}
+.weneed li h4{color:#FFF; font-size:20px; line-height:34px; text-align:center; font-weight:normal}
+.weneed li p{ height:125px; overflow:hidden}
+.weneed li i{ display:block; height:66px; width:70px; background:url(../../img/aboutus/icon.png) no-repeat; margin:0 0 25px 70px}
+.weneed li i.ic2{background:url(../../img/aboutus/icon.png) no-repeat -70px 0;}
+.weneed li i.ic3{background:url(../../img/aboutus/icon.png) no-repeat -140px 0;}
+.weneed li i.ic4{background:url(../../img/aboutus/icon.png) no-repeat -210px 0;}
+.weneed .btnbox{ background-color:transparent; padding-left:500px;}
+.weneed .btnbox a{ height:35px; width:150px; line-height:35px;box-shadow:0 2px 0 #b06300;}
+.weneed .btnbox a:hover{margin-top:2px; box-shadow:0 0 0 #d77900;}
+.circ li{ float:left; width:269px; margin-right:41px}
+.circ h2,.knowus h2{ font-size:36px; font-weight:normal; height:104px;text-align:center;color:#666;}
+
+.videobox video{ height:320px; width:566px}

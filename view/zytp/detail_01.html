@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>极视教育－职业图谱详情</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link rel="stylesheet" href="/css/main.css">
+        <style type="text/css">
+.container{width: 1200px;margin: 0 auto;margin-top: 12px;margin-bottom: 120px;}
+.left-wrap{width: 324px;border:1px solid #d7d7d7;margin-right:22px;}
+.left-wrap .img-wrap{width: 300px;height: 225px;background: #eee;  margin: 12px 12px 0px;}
+.right-wrap{width: 810px;background: #fafafa;padding: 0 20px 20px;}
+.btn-join-wrap{padding:16px 0;height: 43px;}
+.join-plan-btn{background: #ff9001;font-size: 16px;text-align: center;width: 175px;height: 40px;border-radius: 5px;display: block;margin:0 auto;color: #fff;cursor: pointer;}
+.joined-plan-btn{background: #fff;font-size: 16px;text-align: center;width: 175px;height: 40px;border-radius: 5px;display: block;margin:0 auto;color: #ff9001;border:1px solid #ff9001;}
+.cancel-plan-btn{background: #ff9001;font-size: 16px;text-align: center;width: 175px;height: 40px;border-radius: 5px;margin:0 auto;color: #fff;display: block;cursor: pointer;}
+.btn-joined-wrap{padding: 16px 0;}
+.btn-joined-wrap:hover .joined-plan-btn{display: none;}
+.btn-joined-wrap:hover .cancel-plan-btn{display: block;}
+.btn-joined-wrap .join-plan-btn{display: none;}
+.btn-join-wrap .join-plan-btn{display: block;}
+.btn-join-wrap .joined-plan-btn{display: none;}
+.btn-join-wrap .cancel-plan-btn{display: none;}
+.content-container h4{font-size: 18px;color: #333;}
+.zy-title{font-size: 30px;color: #333;margin:30px 0 20px 0;}
+.zy-bq-wrap span{font-size: 13px;border:1px solid #5ba5af;color: #5ba5af;padding: 3px 12px;margin-right: 25px;}
+.yclx-wrap{padding:20px 0 20px 0;border-bottom: 2px solid #e2e2e2;}
+.lx-content-wrap .lx-name{padding-right: 36px;border-right: 2px solid #999999;font-size: 16px;color: #333;line-height: 25px;margin-right: 28px;margin-left: 30px;display: inline-block;}
+.lx-content-wrap .yy-name{font-size: 14px;color: #999;padding: 4px 10px;cursor: pointer;white-space:nowrap;}
+.lx-content-wrap .active-yy{color: #fff;background: #ff9001;}
+.lx-content-wrap .yy-name:hover{color: #fff;background: #ff9001;}
+.lx-content-wrap{padding-bottom: 60px;}
+.lx-content-wrap dl{margin-left: 20px;margin-top: 26px;}
+.lx-content-wrap dl dt{position: relative;}
+/*.lx-content-wrap dt .i-q{display: inline-block;width: 18px;height: 18px;border: 2px solid #999999;border-radius: 50%;position: absolute;top: 3px;left: -10px;}*/
+.lx-content-wrap dt .i-q{display: inline-block;width: 17px;height: 26px;position: absolute;top: -1px;left: -8px;background: url('/img/zytp/106.png') no-repeat center center;}
+.lx-content-wrap dt:first-child .i-q{background: url('/img/zytp/109.png') no-repeat center center;top: 2px;}
+.lx-content-wrap dt .i-q-last{background: url('/img/zytp/108.png') no-repeat center center;top: -3px;}
+.lx-content-wrap dl dd{border-left: 2px solid #999999;padding-left: 35px;padding-bottom: 26px;}
+.lx-content-wrap dl .by{font-size: 14px;color: #5ba5af;padding:20px 0;margin-left: 116px;}
+.lx-content-wrap dl ul.kechen-wrap{padding-left: 56px;border-bottom: 1px solid #e8e8e8;/*padding-bottom: 26px;*/}
+.zyjs-wrap{background: #fafafa;padding:20px; }
+.zyjs-wrap p{color: #666666;font-size: 13px;margin-top: 12px;}
+.course-total-num{font-size: 14px;color: #666;margin-right: 20px;}
+.class-num{font-size: 14px;color: #666;}
+/*课程item项*/
+.kenchen-list-item {width: 275px;height: 336px;cursor: pointer;margin-left: 60px;margin-bottom: 26px;}
+.kechen-img-wrap {width: 275px;height: 208px;overflow: hidden;position: relative;}
+/*.icon-i {background: url('/img/index/icon.png') no-repeat;}*/
+.mianfei-i {background-position: -118px -45px;height: 59px;width: 50px;display: block;position: absolute;top: -5px;left: 13px;z-index: 1;}
+.kechen-detail-wrap {padding: 18px;border: 1px solid #ccc;padding: 16px 18px;}
+.c333 {color: #333;}
+.f12-c666 {font-size: 12px;color: #666;}
+.i-time {display: inline-block;height: 35px;width: 20px;background-position: -72px -285px;vertical-align: middle;margin-right: 15px;}
+.i-chapter {display: inline-block;height: 35px;width: 20px;background-position: -109px -286px;vertical-align: middle;margin-right: 15px;margin-left: 24px;}
+.kenchen-like-wrap {border-left: 1px solid #ccc;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;height: 40px;line-height: 40px;}
+.i-like {display: inline-block;height: 35px;width: 20px;background-position: -172px -285px;vertical-align: middle;margin-left: 16px;vertical-align: top;margin-right: 13px;}
+.mrg-r20 {margin-right: 20px;}
+.fufei-i{background-position: -52px -45px;height: 59px;width: 50px;display: block;position: absolute;top: -5px;left: 13px;z-index: 1;}
+/**/
+.lx-content-wrap .i-arrow-r{display: inline-block;width: 0;height: 0;border-top: 6px solid transparent;border-bottom: 6px solid transparent;border-left: 13px solid #999;margin: 0 20px;vertical-align: middle;}.dis_none{display: none;}
+.lx-content-wrap .shrink-wrap{height: 26px;border-bottom: 1px solid #e8e8e8;}
+.lx-content-wrap dl dd:last-child{border-left: none;}
+.lx-content-wrap dl dd:nth-child(2){border-left: 2px solid #999999;}
+.progress-wrapper .btn-start-learn{background: #ff9001;border:1px solid #df7600;border-radius: 5px;font-size: 18px;width: 110px;height: 38px;color: #fff;cursor: pointer;}
+.progress-wrapper{/*margin: 65px 0;*/margin-top: 25px;height: 41px;}
+.progress-wrapper .progress-wrap{width: 642px;height: 20px;background: #dddddd;margin:9px 0;}
+.progress-wrapper .progress{height: 20px;width: 50%;background: #ff9001; }
+.progress-wrapper .txt-wrap{color: #5ba5af;margin-top: 20px;}
+.progress-wrapper .btn-wrap{margin-left: 46px;}
+.h0{height: 0;overflow: hidden;}
+html .navbar{box-shadow: 3px 3px 3px #999;-moz-box-shadow:3px 3px 3px #999;}
+.course-name{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+        </style>
+    </head>
+    <body>
+    	<div include="../module/header.html"></div>
+    	<div></div>
+    	<div class="container ">
+    		<div class="clearfix">
+    		<div class="left-wrap f-l ">
+    			<div class="img-wrap"><img id="j_img" src=""></div>
+    			<div id="j_isjoined" class="btn-joined-wrap">
+                    <input id="j_join_plan_btn" class="join-plan-btn dis_none but-animation but-shadow" type="button" value="加入计划">
+                    <input class="joined-plan-btn " type="button" value="已参加该计划">
+                    <input id="j_cancel_plan_btn" class="cancel-plan-btn dis_none" type="button" value="取消该计划">
+                </div>
+    			<div class="zyjs-wrap">
+    				<h4 class="zyjs-h">职业介绍</h4>
+    				<p id="j_descrip"></p>
+    			</div>
+    		</div>
+    		<div class="right-wrap f-l">
+    			<h2 id="j_name" class="zy-title"></h2>
+    			<div id="j_labels" class="zy-bq-wrap">
+                    <!-- <span>it/互联网</span><span>安卓开发</span><span>初级</span> -->
+                </div>
+    			<div id="j_progress_wrapper" class="progress-wrapper clearfix dis_none">
+                    <div class="f-l">
+                        <div id="j_progress_tst" class="progress-wrap"><div id="j_progress" class="progress"></div></div>
+                        <div class="txt-wrap clearfix dis_none">
+                            <div id="j_two_statetxts_wrap" class="f-l">目前已完成<span id="j_learnednum"></span>门课程，赶快开始学习吧</div>
+                            <div class="f-r">下个课程：<span id="j_next_learncourse" ></span></div>
+                        </div>
+                    </div>
+                    <div class="f-l btn-wrap"><input id="j_start_learn_btn" class="btn-start-learn but-animation but-shadow" type="button" value="开始学习"></div>
+                </div>
+    			<div class="clearfix yclx-wrap">
+    				<h4 class="f-l">养成路线</h4>
+    				<div class="f-r ">
+    					<span  class="course-total-num">总课程：<label id="j_coursenum"></label></span>
+    					<span  class="class-num">课时数：<label id="j_chapternum"></label></span>
+    				</div>
+    			</div>
+    			<div class="lx-content-wrap">
+    				<dl id="j_lx_content_wrap">
+    					<!-- <dt class="f-child">
+	    					<i class="i-icon i-q"></i>
+	    					<label class="lx-name">敲门砖</label>
+	    					<span class="yy-name active-yy">java语言</span>
+	    					<i class="i-icon i-arrow-r"></i>
+                            <span class="yy-name">java语言</span>
+                            <i class="i-icon i-arrow-r"></i>
+                            <span class="yy-name">java语言</span>
+    					</dt>
+    					<dd class="j_default_expand_wrap">
+                            <div class="shrink-wrap"></div>
+                            <div class="expand-content">
+        						<h5 class="by">山东加夫里什江东父老技术的开发建设的经费</h5>
+        						<ul class="kechen-wrap clearfix">
+                                    <a href="/">
+                                    <li class="kenchen-list-item f-l mrg-r33">
+                                        <div class="kechen-img-wrap"><i class="icon-i fufei-i"></i><img class="kechen-img" src="/img/index/101.jpg"></div>
+                                        <div class="kechen-detail-wrap">
+                                            <p class="name c333">ios 开发</p>
+                                            <div class="detail f12-c666"><i class="icon-i i-time"></i>12小时<i class="icon-i i-chapter"></i>10课时</div>
+                                        </div>
+                                        <div class="kenchen-like-wrap f12-c666">
+                                            <i class="icon-i i-like"></i>234234人
+                                            <span class="f-r mrg-r20">23232332学习</span>
+                                        </div>
+                                    </li>
+                                    </a>
+                                    <li class="kenchen-list-item f-l mrg-r33">
+                                        <div class="kechen-img-wrap"><i class="icon-i mianfei-i"></i><img class="kechen-img" src="/img/index/101.jpg"></div>
+                                        <div class="kechen-detail-wrap">
+                                            <p class="name c333">ios 开发</p>
+                                            <div class="detail f12-c666"><i class="icon-i i-time"></i>12小时<i class="icon-i i-chapter"></i>10课时</div>
+                                        </div>
+                                        <div class="kenchen-like-wrap f12-c666">
+                                            <i class="icon-i i-like"></i>234234人
+                                            <span class="f-r mrg-r20">23232332学习</span>
+                                        </div>
+                                    </li>
+                                    <li class="kenchen-list-item f-l mrg-r33">
+                                        <div class="kechen-img-wrap"><i class="icon-i mianfei-i"></i><img class="kechen-img" src="/img/index/101.jpg"></div>
+                                        <div class="kechen-detail-wrap">
+                                            <p class="name c333">ios 开发</p>
+                                            <div class="detail f12-c666"><i class="icon-i i-time"></i>12小时<i class="icon-i i-chapter"></i>10课时</div>
+                                        </div>
+                                        <div class="kenchen-like-wrap f12-c666">
+                                            <i class="icon-i i-like"></i>234234人
+                                            <span class="f-r mrg-r20">23232332学习</span>
+                                        </div>
+                                    </li>
+                                    <li class="kenchen-list-item f-l mrg-r33">
+                                        <div class="kechen-img-wrap"><i class="icon-i mianfei-i"></i><img class="kechen-img" src="/img/index/101.jpg"></div>
+                                        <div class="kechen-detail-wrap">
+                                            <p class="name c333">ios 开发</p>
+                                            <div class="detail f12-c666"><i class="icon-i i-time"></i>12小时<i class="icon-i i-chapter"></i>10课时</div>
+                                        </div>
+                                        <div class="kenchen-like-wrap f12-c666">
+                                            <i class="icon-i i-like"></i>234234人
+                                            <span class="f-r mrg-r20">23232332学习</span>
+                                        </div>
+                                    </li>
+        						</ul>
+                            </div>
+    					</dd>
+                        <dt>
+                            <i class="i-icon i-q"></i>
+                            <label class="lx-name">初级认知</label>
+                            <span class="yy-name active-yy">java语言</span>
+                            <i class="i-icon i-arrow-r"></i>
+                            <span class="yy-name">java语言</span>
+                            <i class="i-icon i-arrow-r"></i>
+                            <span class="yy-name">java语言</span>
+                        </dt>
+                        <dd class="">
+                            <div class="shrink-wrap"></div>
+                            <div class="dis_none expand-content">
+                                <h5 class="by">山东加夫里什江东父老技术的开发建设的经费</h5>
+                                <ul class="kechen-wrap clearfix">
+                                    <li class="kenchen-list-item f-l mrg-r33">
+                                        <div class="kechen-img-wrap"><i class="icon-i fufei-i"></i><img class="kechen-img" src="/img/index/101.jpg"></div>
+                                        <div class="kechen-detail-wrap">
+                                            <p class="name c333">ios 开发</p>
+                                            <div class="detail f12-c666"><i class="icon-i i-time"></i>12小时<i class="icon-i i-chapter"></i>10课时</div>
+                                        </div>
+                                        <div class="kenchen-like-wrap f12-c666">
+                                            <i class="icon-i i-like"></i>234234人
+                                            <span class="f-r mrg-r20">23232332学习</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </dd>
+                         <dt>
+                            <i class="i-icon i-q i-q-last"></i>
+                            <label class="lx-name">初级认知</label>
+                            <span class="yy-name active-yy">java语言</span>
+                            <i class="i-icon i-arrow-r"></i>
+                            <span class="yy-name">java语言</span>
+                            <i class="i-icon i-arrow-r"></i>
+                            <span class="yy-name">java语言</span>
+                        </dt>
+                        <dd class="">
+                            <div class="shrink-wrap"></div>
+                            <div class="dis_none expand-content">
+                                <h5 class="by">山东加夫里什江东父老技术的开发建设的经费</h5>
+                                <ul class="kechen-wrap clearfix">
+                                    <li class="kenchen-list-item f-l mrg-r33">
+                                        <div class="kechen-img-wrap"><i class="icon-i fufei-i"></i><img class="kechen-img" src="/img/index/101.jpg"></div>
+                                        <div class="kechen-detail-wrap">
+                                            <p class="name c333">ios 开发</p>
+                                            <div class="detail f12-c666"><i class="icon-i i-time"></i>12小时<i class="icon-i i-chapter"></i>10课时</div>
+                                        </div>
+                                        <div class="kenchen-like-wrap f12-c666">
+                                            <i class="icon-i i-like"></i>234234人
+                                            <span class="f-r mrg-r20">23232332学习</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </dd> -->
+    				</dl>
+    			</div>
+    		</div>
+    		</div>
+    	</div>
+    	<div include="../module/footer.html"></div>
+        <script src="/js/vendor/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="/js/main.js"></script>
+        <script type="text/javascript">
+            var dm={
+                bindEvents:function(){
+                    var self=this;
+                    // $('#j_progress_tst').click(function(e){
+                    //     console.info(e);
+                    //     console.info(this);
+                    //     $('#j_progress').css('width',e.offsetX);
+                    // });
+                    $('#j_cancel_plan_btn').click(function(){
+                        var $this=$(this);
+                        self.cancelZytpPlan(function(){
+                            var $parent=$this.parent();
+                            $parent.removeClass('btn-joined-wrap').addClass('btn-join-wrap');
+                            $('#j_progress_wrapper').hide();
+                        })
+                    });
+                    $('#j_join_plan_btn').click(function(){
+                        var $this=$(this);
+                        if(self.mm.isLogined(true)){
+                            self.joinZytpPlan(function(){
+                                var $parent=$this.parent();
+                                $parent.removeClass('btn-join-wrap').addClass('btn-joined-wrap');
+                                $('#j_progress_wrapper').show();
+                            },function(result){
+                                mainModule.log('加入计划失败',result);
+                                this.assertCookieExpired(result);
+                            });
+                        }else{
+                            var si=setInterval(function(){
+                                if(self.mm.isLogined(false)){
+                                    self.initStudyState();
+                                    clearInterval(si);
+                                }
+                            },1000);
+                        }
+                    });
+                    $('#j_lx_content_wrap').on('click','.yy-name',function(){
+                        var $this=$(this),routeId=$this.data('id'),$dd=$this.parent().next(),$shrink_wrap=$dd.find('.shrink-wrap');
+                        $('.active-yy').removeClass('active-yy')
+                        $this.addClass('active-yy');
+                        $shrink_wrap.hide();
+ 
+                        var $j_default_expand_wrap=$('.j_default_expand_wrap');
+                        $j_default_expand_wrap.find('.expand-content').hide();
+                        $j_default_expand_wrap.find('.shrink-wrap').show();
+                        $j_default_expand_wrap.removeClass('j_default_expand_wrap');
+                        $dd.find('.j_yy_descrip').html($this.data('descrip'));
+                        $dd.addClass('j_default_expand_wrap');
+                        self.getZytpMapCourse(routeId,function(){
+                             var $expand_content=$shrink_wrap.next(),
+                                height=$expand_content.height();
+                                height=window.height;
+                             $expand_content.show().css('height','0').animate({height:height});
+                        });
+                    });
+                    $('#j_start_learn_btn').click(function(){
+                        var $this=$(this),href=$this.data('href');
+                        window.open(href,'_blank');
+                    })
+                },
+                getZytpLxById:function(id){
+                    var self=this;
+                    $.ajax({
+                        type:'get',
+                        data:{jobMapId:id},
+                        url:this.mm.uri.getZytpLx,
+                        success:function(result){
+                            self.mm.log('职业图谱路线数据',result);
+                            self.mm.httpInterceptor(result,self.renderZytpLxDom);
+                        }
+                    });
+                },
+                renderZytpLxDom:function(result){
+                    var dom='',self=this;;
+                    for(var i=0,xlen=result.length;i<xlen;i++){
+                        var item=result[i];
+                        dom+=' <dt>';
+                        if(i<xlen-1){
+                            dom+='<i class="i-icon i-q"></i>';
+                        }else{
+                            dom+='<i class="i-icon i-q i-q-last"></i>';
+                        }
+                            dom+='<label class="lx-name">'+item.name+'</label>';
+                        for(var j=0,ylen=item.subJobMapRouteList.length;j<ylen;j++){
+                            var yitem=item.subJobMapRouteList[j];
+                            if(i==0&&j==0){
+                                dom+='<span id="j_jd_'+yitem.id+'" data-id="'+yitem.id+'" data-descrip="'+yitem.description+'" class="yy-name active-yy">'+yitem.name+'</span>';
+                            }else{
+                                dom+='<span id="j_jd_'+yitem.id+'" data-id="'+yitem.id+'" data-descrip="'+yitem.description+'" class="yy-name">'+yitem.name+'</span>';
+                            }
+                            if(ylen>j+1){
+                                dom+='<i class="i-icon i-arrow-r"></i>';
+                            }
+                        }
+                         dom+='</dt>';
+                         if(i==0){
+                            dom+='<dd class="j_default_expand_wrap">'+
+                                '<div class="shrink-wrap"></div>'+
+                                '<div class=" expand-content">'+
+                                '<h5 class="by j_yy_descrip">'+item.subJobMapRouteList[0].description+'</h5>';
+                         }else{
+                            dom+='<dd class="">'+
+                            '<div class="shrink-wrap"></div>'+
+                            '<div class="dis_none expand-content">'+
+                            '<h5 class="by j_yy_descrip"></h5>';
+                         }
+                            dom+='<ul class="kechen-wrap clearfix">'+
+                            //         <li class="kenchen-list-item f-l mrg-r33">
+                            //             <div class="kechen-img-wrap"><i class="icon-i fufei-i"></i><img class="kechen-img" src="/img/index/101.jpg"></div>
+                            //             <div class="kechen-detail-wrap">
+                            //                 <p class="name c333">ios 开发</p>
+                            //                 <div class="detail f12-c666"><i class="icon-i i-time"></i>12小时<i class="icon-i i-chapter"></i>10课时</div>
+                            //             </div>
+                            //             <div class="kenchen-like-wrap f12-c666">
+                            //                 <i class="icon-i i-like"></i>234234人
+                            //                 <span class="f-r mrg-r20">23232332学习</span>
+                            //             </div>
+                            //         </li>
+                                '</ul>'+
+                            '</div>'+
+                        '</dd>';
+
+                    }
+                    $('#j_lx_content_wrap').html(dom);
+                    if(result[0]&&result[0].subJobMapRouteList[0]){
+                        dm.getZytpMapCourse(result[0].subJobMapRouteList[0].id);
+                    }
+                },
+                joinZytpPlan:function(succFun,failFun){
+                    var self=this;
+                    $.ajax({
+                        type:'post',
+                        data:{jobMapId:this.jobMapId},
+                        url:this.mm.uri.joinZytpPlan,
+                        success:function(result){
+                            self.mm.log('加入计划接口数据',result);
+                            self.mm.httpInterceptor(result,succFun,failFun);
+                        }
+                    });
+                },
+                cancelZytpPlan:function(succFun){
+                    var self=this;
+                    $.ajax({
+                        type:'post',
+                        data:{jobMapId:this.jobMapId},
+                        url:this.mm.uri.cancelZytpPlan,
+                        success:function(result){
+                            self.mm.log('取消计划接口数据',result);
+                            self.mm.httpInterceptor(result,succFun);
+                        }
+                    });
+                },
+                getZytpDetail:function(id){
+                    var self=this;
+                    $.ajax({
+                        type:'get',
+                        url:this.mm.uri.getZytpDetail+id,
+                        success:function(result){
+                            self.mm.log('获取职业详情',result);
+                            self.mm.httpInterceptor(result,self.renderZytpDetailDom);
+                        }
+                    })
+                },
+                renderZytpDetailDom:function(result){
+                    $('#j_img').attr('src',result.picture||'');
+                    $('#j_progress').css('width',result.speedProgress);
+                    if(!!result.currentCourse){
+                        $('#j_two_statetxts_wrap').html('正在学习：'+result.currentCourse.name);
+                    }else{
+                        $('#j_two_statetxts_wrap').html('目前已完成0门课程，赶快开始学习吧');
+                    }
+                    $('#j_next_learncourse').html(result.nextCourse&&result.nextCourse.name)
+                    if(result.isJoin=='0'){
+                        $('#j_isjoined').removeClass('btn-joined-wrap').addClass('btn-join-wrap');
+                        $('#j_progress_wrapper').hide();
+                    }else{
+                        $('#j_progress_wrapper').show();
+                        dm.initStudyState();
+                    }
+                    $('#j_descrip').html(result.description);
+                    $('#j_name').html(result.name);
+                    document.title=result.name+'图谱_极视教育网';
+
+                    $('#j_coursenum').html(result.courseNum);
+                    $('#j_chapternum').html(result.chapterNum);
+                    var dom='';
+                    result.labels=JSON.parse(result.labels||'[]');
+                    for(var i=0,len=result.labels&&result.labels.length;i<len;i++){
+                        var item=result.labels[i];
+                        dom+='<span>'+item+'</span>';
+                    }
+                    $('#j_labels').html(dom);
+                },
+                getZytpMapCourse:function(id,callback){
+                    var self=this;
+                    $.ajax({
+                        type:'get',
+                        data:{routeId:id},
+                        url:this.mm.uri.getZytpMapCourse,
+                        success:function(result){
+                            self.mm.log('路线课程',result);
+                            self.mm.httpInterceptor(result,self.renderZytpMapCourseDom,undefined,callback);
+                            // callback&&callback();
+                        }
+                    })
+                },
+                renderZytpMapCourseDom:function(result,callback){
+                    var dom='',ii=result.length;
+                    for(var i=0;i<ii;i++){
+                        var item=result[i];
+                        dom+='<a target="_blank" href="/view/lesson/lessonintro.html?courseid='+item.id+'"><li class="kenchen-list-item f-l mrg-r33">';
+                        if(!!!item.type){
+                            dom+='<div class="kechen-img-wrap"><i class="icon-i mianfei-i"></i><img class="kechen-img" src="'+(item.picture)+'"></div>';
+                        }else{
+                            switch(item.type){
+                                case 1:
+                                    dom+='<div class="kechen-img-wrap"><i class="icon-i fufei-i"></i><img class="kechen-img" src="'+item.picture+'"></div>';
+                                break;
+                                case 2:
+                                    dom+='<div class="kechen-img-wrap"><img class="kechen-img" src="'+item.picture+'"><div class="kechen-price-wrap">¥ '+item.price+'</div></div>';
+                                break;
+                                case 3:
+                                    dom+='<div class="kechen-img-wrap"><i class="icon-i fufei-i"></i><img class="kechen-img" src="'+item.picture+'"><div class="kechen-price-wrap">¥ '+item.price+'</div></div>';
+                                break;
+                            }
+                        }
+                           dom+='<div class="kechen-detail-wrap">'+
+                                '<p title="'+item.name+'" class="course-name name c333">'+item.name+'</p>'+
+                               '<div class="detail f12-c666"><i class="icon-i i-time"></i>'+this.formattime(item.totalTimes)+'<i class="icon-i i-chapter"></i>'+item.totalLessons+'课时</div>'+
+                           '</div>'+
+                            '<div class="kenchen-like-wrap f12-c666">'+
+                                '<i class="icon-i i-like"></i>'+item.likesNum+'人'+
+                                '<span class="f-r mrg-r20"><i class="icon-i i-watch-people"></i>'+item.watchedNum+'</span>'+
+                            '</div>'+
+                        '</li></a>';
+                        if(i==0&&!$('#j_start_learn_btn').data('href')){
+                            $('#j_start_learn_btn').data('href','/view/lesson/lessonintro.html?courseid='+item.id);
+                        }
+                    }
+                    window.height=Math.round(ii/2)*363+60;
+                    if(ii==0||!ii){
+                        dom='<div style="line-height:170px;text-align:center;">该阶段暂没有课程</div>';
+                        window.height=231;
+                    }
+                    var $j_default_expand_wrap=$('.j_default_expand_wrap');
+                    $j_default_expand_wrap.find('.kechen-wrap').html(dom);
+                    $j_default_expand_wrap.find('.expand-content').css('height','auto');
+                    callback&&callback();
+                },
+                getZytpStudyState:function(jobMapId,succFun,failFun){
+                    var self=this;
+                    $.ajax({
+                        type:'get',
+                        url:this.mm.uri.getZytpStudyState+jobMapId,
+                        success:function(result){
+                            self.mm.log('我的职业图谱学习状况接口',result)
+                            self.mm.httpInterceptor(result,succFun,failFun);
+                        }
+                    })
+                },
+                initStudyState:function(){
+                    if(this.mm.isLogined(false)){
+                        this.getZytpStudyState(this.jobMapId,function(result){
+                            // if(result.isJoin=='1'){
+                                $('#j_isjoined').removeClass('btn-join-wrap').addClass('btn-joined-wrap');
+                                $('#j_learnednum').html(result.studyNum);
+                                $('#j_progress').css('width',result.speedProgress);
+                                if(result.nextCourse){
+                                    $('#j_next_learncourse').html(result.nextCourse.name);
+                                }
+                                if(!!result.currentCourse){
+                                    var dom='正在学习：'+result.currentCourse.name,href='/view/lesson/lessonintro.html?courseid='+result.currentCourse.id;
+                                    if(!!result.currentCourseChapter){
+                                        dom='正在学习：'+result.currentCourseChapter.name;
+                                        href='/view/course/play.html?courseId='+result.currentCourseChapter.courseId+'&chapterId='+result.currentCourseChapter.id
+                                    }
+                                    console.log('当前学习路径：'+href);
+                                    $('#j_two_statetxts_wrap').html(dom);
+                                    $('#j_start_learn_btn').val('继续学习').data('href',href);
+                                }else{
+                                    $('#j_two_statetxts_wrap').html('目前已完成0门课程，赶快开始学习吧');
+                                }
+                                if(result.currentRoute){
+
+                                    $('#j_jd_'+result.currentRoute.id).trigger('click');
+                                }
+                                $('#j_progress_wrapper').show();
+                            // }
+                        },function(result){
+                            this.assertCookieExpired(result);
+                        })
+                    }
+                },
+                init:function(){
+                    this.mm=mainModule;
+                    this.jobMapId=this.mm.getQueryValueByName('id');
+                    this.getZytpLxById(this.jobMapId);
+                    this.getZytpDetail(this.jobMapId);
+                    // this.initStudyState();
+                    this.bindEvents();
+                }
+            };
+            dm.init();
+        </script>
+    </body>
+</html>

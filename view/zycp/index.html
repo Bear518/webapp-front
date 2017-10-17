@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>可能是最靠谱的职业测试_极视教育网</title>
+    <meta name="keywords" content="极视教育,职业教育,在线教育平台,在线教育,在线学习,职业培训,android,ios,Unity3D,java,Photoshop,Maya,3D MAX,独立游戏">
+    <meta name="description" content="职业锚问卷（Career Anchor Questionaire）是国外职业测评运用最广泛，最有效的工具之一。 职业锚问卷是一种职业生涯规划咨询、自我了解的工具，能够协助组织或个人进行更理想的职业生涯发展计划。职业锚没有好坏， 请根据第一感觉，不假思索迅速答题。">
+	<meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="/js/common/device.check.js"></script>
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/zycp/test.css">
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div include="../module/header.html"></div>
+
+<div class="testbar">
+	<div class="warpper testbox teststart">
+        <div class="share-wrap">分享<span><i data-type="sina" class="i-icon i-size i-sina"></i><i data-type="qqzone" class="i-icon i-size i-qq"></i><i data-type="wx" class="i-icon i-size i-wx"></i></span></div>
+        <div class="wemcn" id="wemcn" style="display: none;">
+            
+             <div id="ewm" class="ewmDiv clearfix">
+             <img id="ewmimg" class="ewmimg" src="">
+                <div class="rwmtext">
+                    <p>扫一扫，用手机来测试！</p>
+                    <p>用微信扫描还可以</p>
+                    <p>分享至好友和朋友圈</p> 
+            </div>
+             </div> 
+            <a href="javascript:void(0)" id="ewmkg"></a>
+             <i class="ewmsj"></i><!-- /ewmsj -->
+        </div>
+    	<div class="testtop">
+    	<h2>职业锚（职业定位）测评
+  		</h2>    
+        <p>职业锚问卷（Career Anchor Questionaire）是国外职业测评运用最广泛、最有效的工具之一。
+职业锚问卷是一种职业生涯规划咨询、自我了解的工具，能够协助组织或个人进行更理想的职业
+生涯发展规划。职业锚倾向没有好坏，请根据第一感觉，不假思索迅速答题。</p>
+        </div>
+        <div class="testbtnbox">
+        <p>本测试包含40个问题描述，请根据您的实际情况选择最符合您的描述。<p>
+        <a class="teststabtn animation" onclick="mainModule.locationIncludeSearch('subject.html')"  href="javascript:;"></a><br>
+        <span id="j_ca_count">正在加载中...</span>
+        </div>
+        <div class="testword">
+        <span><i></i>关于职业锚测试</span>
+职业锚测试是国外职业测评运用最广泛、最有效的工具之一。职业锚测试是通过对你过去行为的分析和未来目标的探索，帮你认清真实的自我，从而帮助你在面临职业选择时，
+做出与自己价值观、内心真实自我相匹配的职业决策。
+		<span><i></i>关于职业锚</span>
+职业锚理论产生于在职业生涯规划领域具有“教父”级地位的美国麻省理工大学斯隆商学院、美国著名的职业指导专家埃德加·H·施恩（Edgar.H.Schein）教授领导的专门研究
+小组，是对该学院毕业生的职业生涯研究中演绎成的。斯隆管理学院的44名MBA毕业生，自愿形成一个小组接受施恩教授长达12年的职业生涯研究，包括面谈、跟踪调查、公
+司调查、人才测评、问卷等多种方式，最终分析总结出了职业锚(又称职业定位)理论。
+        </div>
+    </div>
+</div>
+
+
+<div include="../module/footer.html"></div>
+
+
+</body>
+<script src="../../js/vendor/jquery-1.9.0.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/zycp/common.js"></script>
+<script>
+var indexModule={
+    getCACount:function(){
+        $.ajax({
+            type:'get',
+            url:mainModule.uri.getCACount,
+            success:function(result){
+                mainModule.log('查询职业锚总测试次数接口返回',result);
+                $('#j_ca_count').html('已有'+result.content+'人测试');
+            }
+        })
+    },
+    init:function(){
+        this.getCACount();
+    }
+};
+indexModule.init();
+</script>
+</html>

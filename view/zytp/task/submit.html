@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>职业学院_在线系统学习职业技能_极视教育网</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="/css/main.css">
+    <style type="text/css">
+    .bg{background: #f8f8f8;padding: 50px 0px;}
+    .container{width: 1200px;margin:0 auto;background: #fff;-moz-box-shadow:4px 4px 6px -2px #eee;-webkit-box-shadow:4px 4px 6px -2px #eee;box-shadow:4px 4px 6px -2px #eee;}
+    .content-wrap{padding: 80px 190px;}
+    .title-wrap{font-size: 20px;color: #333;font-weight: bold;border-bottom: 1px dashed #999;}
+    .title-wrap a{font-size: 14px;color: #ff9001;margin-top: 15px;}
+    .i-icon{background: url('/img/zytp/task/icon.png') no-repeat;display: inline-block;vertical-align: middle;}
+    .i-edit{background-position: -16px -12px;width: 65px;height: 48px;margin: 0 0 -2px -5px;}
+    .i-file{background-position: -153px -10px;width: 50px;height: 18px;}
+    .score{margin:28px 0 15px;}
+    .d-wrap{padding: 0 15px 45px;}
+    .a-wrap span{margin:20px 0;display: inline-block;width: 78px;height: 22px;line-height: 22px;background: #00c570;text-align: center;color: #fff;border-radius: 15px;}
+    .upload-wrap{width: 760px;/*height: 180px;*/border:1px solid #ccc;padding-bottom: 20px;}
+    .hint{margin:18px 0 0 12px;}.progress-wrap{height: 92px;margin-left: 12px;}.progress-wrap b{color: #ff0000;}
+    .btn{width: 106px;height: 34px;text-align: center;border-radius: 5px;color: #fff;cursor: pointer;}
+    .btn-gray{background: #b9b9b9;margin-left: 510px;}
+    .btn-active{margin-left: 15px;background: #ff9001;}
+    .mrg-b28{margin-bottom: 20px;}.red{color: #ff0000;}.red .user-filename{color: #333;}
+    #console{padding: 0px 0px 10px 13px;color: red;}
+    </style>
+</head>
+<body>
+<div include="/view/module/header.html"></div>
+<div class="bg">
+	<div class="container">
+		<div class="content-wrap">
+			<div class="title-wrap clearfix"><i class="i-icon i-edit"></i><i class="j_name"></i><a class="f-r j_goback" href="javascript:;">返回</a></div>
+			<div class="d-wrap">
+				<div class="score "><span class="j_total_score"></span><span class="red j_status"></span></div>
+				<p class="j_des"></p>
+				<div class="a-wrap">
+					<a class="j_download_file" href="javascript:;"><span>素材下载</span></a>
+					<i><i class="i-icon i-file"></i><i class="j_filename"></i></i>
+				</div>
+				<div class="upload-wrap">
+					<div class="hint">上传规则：上传Zip、Rar格式</div>
+					<div id="ossfile" class="progress-wrap"><!-- 你的浏览器不支持flash,Silverlight或者HTML5！ --></div>
+                    <div id="console"></div>
+					<div id="container">
+						<input id="selectfiles" style="display:none;" type="button" class="btn btn-gray" value="添加附件">
+						<input id="postfiles" style="display:none;" type="button" class="btn btn-active but-sure" value="上传">
+					</div>
+				</div>
+			</div>
+			<div style="display:none;" class="title-wrap mrg-b28"><i class="i-icon i-edit"></i>作业提示</div>
+			<div style="display:none;"><p class="j_tips"></p></div>
+		</div>
+	</div>
+</div>
+<div include="/view/module/footer.html"></div>
+<form style="display:none;" name=theform>
+<input type="radio" name="myradio" value="local_name" checked=true/> 上传文件名字保持本地文件名字
+<input type="radio" name="myradio" value="random_name" /> 上传文件名字是随机文件名, 后缀保留
+</form>
+<script src="/js/vendor/jquery-1.9.0.min.js"></script>
+<script src="/js/main.js"></script>
+<script type="text/javascript" src="../osstest/lib/plupload-2.1.2/js/plupload.full.min.js"></script>
+<script type="text/javascript" src="../osstest/upload.js"></script>
+<script type="text/javascript">
+    var submitModule={
+        bindEvents:function(){
+            var self=this;
+            $('.j_goback').click(function(){
+                window.location.href='/view/zytp/detail.html?id='+self.jobMapId+'#key_sclass';
+            });
+            $('.j_download_file').click(function(){
+                var $this=$(this);
+                self.downloadHomeWorkFile(self.id);
+            });
+        },
+        downloadHomeWorkFile:function(id){
+            var downloadUrl;
+            $.ajax({
+                type:'get',
+                data:{id:id},
+                async:false,
+                url:mainModule.uri.downloadHomeWorkFile,
+                success:function(result){
+                    mainModule.log('下载资料接口返回：',result);
+                    mainModule.httpInterceptor(result,function(result){
+                        console.log(result);
+                        downloadUrl=result;
+                    })
+                }
+            });
+            window.open(downloadUrl);
+        },
+        getHomeWorkDetail:function(id){
+            var self=this;
+            $.ajax({
+                type:'get',
+                data:{id:id},
+                url:mainModule.uri.getHomeWorkDetail,
+                success:function(result){
+                    mainModule.log('作业详情接口返回：',result);
+                    mainModule.httpInterceptor(result,function(result){
+                        self.renderHomeWorkDetail(result);
+                        window.userId=result.userId;
+                        window.deadLine=result.deadLine;
+                    })
+                }
+            })
+        },
+        renderHomeWorkDetail:function(result){
+            result.totalScore=result.totalScore||100;
+            $('.j_name').html(result.name);
+            $('.j_total_score').html('（'+result.totalScore+'分）');
+
+           
+            this.validDate(result);
+            if(result.statue==1){
+                var str='<i><i class="i-icon i-file"></i><i class="user-filename">'+result.userHomeworkAttachment+'</i></i>';
+                $('.j_status').prepend('作业已提交'+str);
+            }
+            $('.j_des').html(result.description);
+            $('.j_tips').html(result.tips);
+            result.attachmentSize='（'+Math.floor(result.attachmentSize/1240)+'KB）';
+            if(!result.attachmentName){
+                $('.j_filename').parent().hide();
+                $('.j_download_file').hide();
+            }
+            $('.j_filename').html(result.attachmentName+result.attachmentSize);
+        },
+        validDate:function(result){
+            var ldeadLine=(result&&result.deadLine)||deadLine;
+            var now=new Date();
+            ldeadLine=new Date(ldeadLine);
+            var overDate=ldeadLine.getDate()+5;
+            ldeadLine=ldeadLine.setDate(overDate);
+            if(now<ldeadLine){
+                document.getElementById('selectfiles').style.display='inline-block';
+                document.getElementById('postfiles').style.display='inline-block';
+                return true;
+            }else{
+                document.getElementsByClassName('j_status')[0].innerHTML ='  上传作业已经过了截止日期，如有疑问请咨询老师!' ;
+                return false;
+            }
+        },
+        init:function(){
+            this.bindEvents();
+            var id=mainModule.getQueryValueByName('id');
+            this.id=id;
+            this.jobMapId=mainModule.getQueryValueByName('jobMapId');
+
+            this.getHomeWorkDetail(id);
+            window.userHomeWorkId=id;
+        }
+    };
+    submitModule.init();
+</script>
+</body>
+</html>

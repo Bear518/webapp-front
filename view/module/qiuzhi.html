@@ -1,0 +1,232 @@
+<style type="text/css">
+	.qz-container .sprite{background: url('/img/xzjy/sprite.png');display: inline-block;width: 26px;height: 23px;vertical-align: top;}
+	.qz-container .l-wrap{width: 49.5%;margin-right: 1%;background-color: #fff;}
+	.qz-container .r-wrap{width: 49.5%;background: #fff;}
+	.qz-container .l-wrap .header-wrap{padding: 18px 0;margin:0 22px;border-bottom: 2px solid #ff5d6b;color: #ff5d6b;font-size: 16px;}
+	.qz-container .r-wrap .header-wrap{padding: 18px 0;margin:0 22px;border-bottom: 2px solid #4991dc;color: #4991dc;font-size: 16px;}
+	.qz-container .i-zwsc{width: 33px;height: 22px;margin-right: 20px;}
+	.qz-container .l-wrap .content-wrap{padding: 33px 22px;height: 680px;}
+	.qz-container .l-wrap .content-wrap ul{height: 100%;overflow: auto;}
+	.qz-container .r-wrap .content-wrap{padding:33px 0;max-height: 385px;overflow: auto;}
+	.qz-container .r-wrap .img-wrap{width: 397px;margin: 0 auto;}
+	.qz-container li{padding:1%;margin-bottom: 33px;background: #fff;position: relative;border:1px solid #f6f6f6;}
+	.qz-container li:hover{background: #f6f6f6;}
+	.qz-container li .img-wrap{width: 81px;height: 41px;margin-right: 1%;margin:25px 18px;overflow: hidden;}
+	.qz-container li .img-wrap img{width: 100%;display: block;height: auto;}
+	.qz-container li .m-wrap{width: 70%;}
+	.qz-container li .del-wrap{position: absolute;right: 1%;top: 2%;}
+	.qz-container li .i-del{background-position: -225px -99px;width: 19px;cursor: pointer;}
+	.qz-container .i-company{background-position: -47px -37px;}
+	.qz-container .i-address{background-position: -92px -36px;}
+	.qz-container .i-rmb{background-position: -139px -37px;}
+	.qz-container .i-zwsc{background-position: -115px -101px;width: 33px;height: 24px;margin-right: 20px;}
+	.qz-container .i-wdjl{background-position: -168px -101px;width: 33px;height: 24px;margin-right: 20px;}
+	.qz-container .zw-name{font-size: 16px;color: #333;margin-right: 20px;}
+	.qz-container .bq{padding:5px 12px;color: #fff;background: #ff5d6b;}
+	.qz-container .m-wrap .xx-wrap{font-size: 14px;color: #666;}
+	.qz-container .xx-wrap label{margin-right: 12px;margin-left: 4px;}
+	.mrg-t18{margin-top: 18px;}.mrg-t30{margin-top: 30px;}
+	.qz-container .loading-wrap{line-height: 118px;text-align: center;}
+	.nojob-collect-wrap{line-height: 351px;text-align: center;}
+	.nojob-collect-wrap a{color: #ff9001;}
+	.ahover:hover span{color: #ff9001;}
+	body .qz-container li .i-del:hover{background: url('/img/info/fixed.png') no-repeat;background-position:-20px -42px;}
+	.qz-container .header-wrap{position: relative;}
+	.qz-container .r-sp-wrap{position: absolute;right: 0;top: 18px;}
+	.qz-container .r-sp-wrap{color: #999;}
+	.qz-container .r-sp-wrap span:first-child{border-top-left-radius:5px;border-bottom-left-radius: 5px;}
+	.qz-container .r-sp-wrap span:last-child{border-top-right-radius:5px;border-bottom-right-radius: 5px;}
+
+	.qz-container .r-sp-wrap span{padding: 4px;border: 1px solid #999;cursor: pointer;font-size: 14px;}
+	.qz-container .r-sp-wrap span:hover{border:1px solid #ff9001;background: #ff9001;color:#fff;}
+	.qz-container .r-sp-wrap span.active{border:1px solid #ff9001;background: #ff9001;color:#fff;}
+	.applyed-sp{color: #999;margin-left: 10px;}
+</style>
+<div class="qz-container clearfix">
+	<div class="l-wrap f-l">
+		<div class="header-wrap"><i class="sprite i-zwsc"></i>我的职位<div id="j_qzlabel_wrap" class="r-sp-wrap"><span class="active" data-type="0">已收藏</span><span data-type="1">已投递</span></div></div>
+		<div class="content-wrap">
+			<ul id="j_myjob_collection_wrap">
+				<li class="clearfix">
+					<div class="loading-wrap">正在努力加载中...</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="r-wrap f-l dis_none">
+		<div class="header-wrap"><i class="sprite i-wdjl"></i>我的简历</div>
+		<div class="content-wrap">
+			<div class="img-wrap">
+				<img src="/img/xzjy/100.png">
+			</div>
+		</div>
+	</div>
+
+</div>
+<script type="text/javascript">
+	var qzModule={
+		bindEvents:function(){
+			var self=this;
+			$('#j_myjob_collection_wrap').on('click','.del',function(){
+				var $this=$(this),id=$this.data('id'),$li=$this.closest('li'),type=$this.data('type');
+				switch(type){
+					case 0:
+						self.cancelMyJobCollection(id,function(){
+							var num=$li.siblings().length;
+							$li.remove();
+							if(num==0){
+								var dom='<div class="nojob-collect-wrap">暂无职位收藏，<a href="/view/xzjy/list.html">立即前往?</a></div>';
+								$('#j_myjob_collection_wrap').html(dom);
+							}
+						});
+					break;
+					case 1:
+						self.cancelMyJobApplyed(id,function(){
+							var num=$li.siblings().length;
+							$li.remove();
+							if(num==0){
+								var dom='<div class="nojob-collect-wrap">暂无职位投递，<a href="/view/xzjy/list.html">立即前往?</a></div>';
+								$('#j_myjob_collection_wrap').html(dom);
+							}
+						});
+					break;
+				}
+			});
+			$('#j_qzlabel_wrap').on('click','span',function(){
+				var $this=$(this),type=$this.data('type');
+				$('#j_myjob_collection_wrap').html('<li class="clearfix"><div class="loading-wrap">正在努力加载中...</div></li>');
+				$this.siblings().removeClass('active');
+				$this.addClass('active');
+				switch(type){
+					case 0:
+						self.getMyJobCollection(function(){
+							
+						});
+					break;
+					case 1:
+						self.getApplyRecords(function(){
+							// $this.siblings().removeClass('active');
+							// $this.addClass('active');
+						});
+					break;
+				}
+				console.log(type);
+			})
+		},
+		cancelMyJobApplyed:function(jobId,succFunc){
+			var self=this,mm=self.mm;
+			$.ajax({
+				type:'get',
+				url:mm.uri.delApplyedRecord,
+				data:{id:jobId},
+				success:function(result){
+					mm.log('删除该职位投递',result);
+					mm.httpInterceptor(result,succFunc);
+				}
+			})
+		},
+		cancelMyJobCollection:function(jobId,succFunc){
+			var self=this,mm=self.mm;
+			$.ajax({
+				type:'get',
+				url:mm.uri.cancelMyJobCollection,
+				data:{jobId:jobId},
+				success:function(result){
+					mm.log('取消职位收藏',result);
+					mm.httpInterceptor(result,succFunc);
+				}
+			})
+		},
+		getApplyRecords:function(callback){
+			var self=this,mm=self.mm;
+			$.ajax({
+				type:'get',
+				data:{page:1,rows:50},
+				url:mainModule.uri.applyRecords,
+				success:function(result){
+					mm.log('获取我的职位投递列表',result);
+					mm.httpInterceptor(result,self.renderMyJobApplyedDom,undefined,callback);
+				},
+				error:function(result){
+					console.log('可能网速原因加载失败，请稍后再试');
+					$('#j_myjob_collection_wrap').html('<li class="clearfix"><div class="loading-wrap">无法连接到服务器，请检查你的网络或稍后再试！</div></li>');
+				}
+			})
+		},
+		getMyJobCollection:function(callback){
+			var self=this,mm=self.mm;
+			$.ajax({
+				type:'get',
+				data:{page:1,rows:50},
+				url:mm.uri.getMyJobCollection,
+				success:function(result){
+					mm.log('获取我的职位收藏列表数据',result);
+					mm.httpInterceptor(result,self.renderMyJobCollectionDom,undefined,callback);
+				},
+				error:function(result){
+					console.log('可能网速原因加载失败，请稍后再试');
+					$('#j_myjob_collection_wrap').html('<li class="clearfix"><div class="loading-wrap">无法连接到服务器，请检查你的网络或稍后再试！</div></li>');
+				}
+			})
+		},
+		renderMyJobCollectionDom:function(result,callback){
+			var dom='';
+			for(var i=0,ii=result.length;i<ii;i++){
+				var item=result[i];
+				dom+='<li class="clearfix">'+
+					'<div class="img-wrap f-l"><img src="'+item.companyLogo+'"></div>'+
+					'<div class="m-wrap f-l">'+
+						'<div class="mrg-t18"><a class="ahover" target="_blank" href="/view/xzjy/detail.html?id='+item.jobId+'"><span class="zw-name">'+item.jobName+'</span></a><label class="bq">'+item.jobType+'</label></div>'+
+						'<div class="xx-wrap mrg-t30">'+
+							'<i class="sprite i-company"></i><label>'+item.companyName+'</label>'+
+							'<i class="sprite i-address"></i><label>'+item.address+'</label>';
+							if(item.incomeTop>0){
+								dom+='<i class="sprite i-rmb"></i><label>￥'+item.incomeBottom+'-'+item.incomeTop+'</label>';
+							}else{
+								dom+='<i class="sprite i-rmb"></i><label>面议</label>';
+							}
+						dom+='</div>'+
+					'</div>'+
+					'<div class="del-wrap"><i class="sprite del i-del" data-type="0" data-id="'+item.jobId+'"></i></div>'+
+				'</li>';
+			}
+			
+			dom?dom:(dom='<div class="nojob-collect-wrap"><span>暂无职位收藏</span>，<a href="/view/xzjy/list.html">立即前往?</a></div>');
+			$('#j_myjob_collection_wrap').html(dom);
+			callback&&callback();
+		},
+		renderMyJobApplyedDom:function(result,callback){
+			var dom='';
+			for(var i=0,ii=result.length;i<ii;i++){
+				var item=result[i];
+				dom+='<li class="clearfix">'+
+					'<div class="img-wrap f-l"><img src="'+item.companyLogo+'"></div>'+
+					'<div class="m-wrap f-l">'+
+						'<div class="mrg-t18"><a class="ahover" target="_blank" href="/view/xzjy/detail.html?id='+item.jobId+'"><span class="zw-name">'+item.jobName+'</span></a><label class="bq">'+item.jobType+'</label><span class="applyed-sp"> √ 已申请</div>'+
+						'<div class="xx-wrap mrg-t30">'+
+							'<i class="sprite i-company"></i><label>'+item.companyName+'</label>'+
+							'<i class="sprite i-address"></i><label>'+item.areaCode+'</label>';
+							if(item.incomeTop>0){
+								dom+='<i class="sprite i-rmb"></i><label>￥'+item.incomeBottom+'-'+item.incomeTop+'</label>';
+							}else{
+								dom+='<i class="sprite i-rmb"></i><label>面议</label>';
+							}
+						dom+='</div>'+
+					'</div>'+
+					'<div class="del-wrap"><i class="sprite del i-del" data-type="1" data-id="'+item.applyId+'"></i></div>'+
+				'</li>';
+			}
+			
+			dom?dom:(dom='<div class="nojob-collect-wrap"><span>暂无职位投递</span>，<a href="/view/xzjy/list.html">立即前往?</a></div>');
+			$('#j_myjob_collection_wrap').html(dom);
+			callback&&callback();
+		},
+		init:function(){
+			this.mm=mainModule;
+			this.getMyJobCollection();
+			this.bindEvents();
+			console.log('qzModule');
+		}
+	}
+	qzModule.init();
+</script>

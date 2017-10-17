@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+        <title>学习中心_极视教育网</title>
+        <meta name="description" content="">
+       <!--  <meta name="viewport" content="width=device-width"> -->
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link rel="stylesheet" href="/css/main.css">
+		<style type="text/css">
+body{background: #ededed;position: relative;}
+*{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+.left-wrap{width: 14%;margin-left:1%;height: 1565px;padding: 22px 24px;background: #fff;margin-bottom: 60px;}
+.right-wrap{width: 83%;height: 1565px;margin: 0px 1%;vertical-align: top;}
+.left-wrap .menu-wrap li.active{color: #ff9001;border-left: 2px solid #ff9001;}
+.menu-wrap{text-align: center;cursor: pointer;}
+.menu-wrap li{height: 66px;line-height: 66px;font-size: 16px;color: #666;border-bottom: 1px solid #e0e0e0;}
+.i-icon{background: url('/img/info/icon.png') no-repeat;display: inline-block;width: 28px;height: 30px;vertical-align: middle;margin-right: 12px;}
+.i-year-crown{background-position:-47px -476px;position: absolute;top: 0;left: 0;width: 30px;height: 32px;}
+.i-month-crown{background-position:-95px -513px;position: absolute;top: 0;left: 0;width: 30px;height: 32px;}
+.i-blue-tick{background-position: -50px -526px;width: 19px;}.i-user-scope{background-position: -423px -468px;width:108px;}
+.menu-wrap li:hover{color: #ff9001;}
+.menu-wrap li:hover .i-info{background-position: -200px -43px;}
+.menu-wrap li:hover .i-xuexi{background-position: -245px -45px;}
+.menu-wrap li:hover .i-qiuzhi{background-position: -276px -45px;}
+.menu-wrap li:hover .i-zhanghu{background-position: -312px -46px;}
+.menu-wrap li:hover .i-vipcenter{background-position:-240px -472px;}
+.i-vipcenter{background-position: -294px -472px;}
+.active .i-vipcenter{background-position:-240px -472px;}
+.active .i-info{background-position: -200px -43px;}
+.i-info{background-position: -47px -43px;width: 28px;height: 37px;}
+.active .i-xuexi{background-position: -245px -45px;}
+.i-xuexi{background-position: -92px -45px;width: 28px;height: 30px;}
+.active .i-qiuzhi{background-position: -276px -45px;}
+.i-qiuzhi{background-position:-126px -45px}
+.active .i-zhanghu{background-position: -312px -46px;}
+.i-zhanghu{background-position: -159px -46px;}
+.crumbs-wrap{height: 50px;line-height: 50px;background: #ededed;}
+.mrg-t12{margin-top: 12px;}
+.f-l{float: left;}
+.f-r{float: right;}
+body .dis_none{display: none;}
+.grzx-li{border-top: 1px solid #e0e0e0;}
+/* 学习模块笔记样式*/
+.biji-content-wrap{padding:67px 0;/*height: 620px;overflow: hidden;*/}
+.kechen-name-wrap{width: 19%;height: 620px;overflow: auto;text-align: center;margin-right: 1%;}
+.kechen-name-wrap li{height: 54px;border:1px solid #ff9001;font-size: 16px;color: #ff9001;line-height: 54px;margin-bottom: 20px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden;cursor: pointer;}
+.biji-content-wrap .midden-wrap{width: 4%;height: 620px;text-align: center;}
+.biji-content-wrap .kechen-name-wrap li:hover{background: #ff9001;color: #fff;}
+.biji-content-wrap .kechen-name-wrap li.active{background: #ff9001;color: #fff;}
+.keshi-biji-container{width: 76%;height: 620px;overflow: auto;}
+.keshi-biji-container dl{position: relative;}
+/*.keshi-biji-container dl:before{width: 30px;height: 268px;float: left;content: '';background: url('/img/info/103.png') no-repeat;background-position: -7px -10px;margin-right: 20px;}*/
+.keshi-biji-container dt{width: 85%;font-size: 16px;}
+.keshi-biji-container dd{padding-left: 26px;margin-left: 11px;border-left: 1px solid #d3d3d3;}
+.keshi-biji-container dd ul.keshi-biji-wrap{padding-bottom: 20px;border-bottom: 1px solid #d3d3d3;margin-bottom: 12px;}
+.keshi-biji-wrap li{width: 163px;height: 182px;border:1px solid #5aa6af;border-radius: 5px;margin-right: 16px;margin-top: 20px;}
+.biji-header-wrap{background: #5aa6af;color: #fff;font-size: 12px;padding: 4px 6px;}
+.i-big{background-position: -141px -262px;width: 26px;height: 22px;display: inline-block;margin-left: 16px;cursor: pointer;}
+.i-big:hover{background: url('/img/info/fixed.png') no-repeat;background-position: -45px -15px;}
+.keshi-biji-wrap .biji-txt-wrap{width: 163px;height: 116px;overflow: hidden;}
+.keshi-biji-wrap .biji-txt-wrap p{padding: 2px;font-size: 12px;color: #666;}
+.pointtime{border: 1px solid #d3d3d3;font-size: 12px;background: #eee;margin-right: 8px;padding-right:2px;cursor: pointer;display: inline-block;}
+.keshi-biji-container .number{width: 23px;height: 23px;display: inline-block;text-align: center;border-radius: 50%;border:1px solid #d3d3d3; line-height: 23px;margin-right: 15px;}
+.keshi-biji-wrap .i-del{margin-right: 0;}
+.i-triangle-l{content: '';display: inline-block;background-position: -274px -265px;width: 20px;height: 19px;margin-right: 0;}
+/*弹出框加背景*/
+.bg{background: #333;position: absolute;top: 0;bottom: 0;height: 100%;width: 100%;z-index: 11;opacity: 0.4;}
+.pop-box{width: 651px;min-height: 378px;background: #fff;position: fixed;top: 50%;left: 50%;margin-top: -189px;margin-left: -325px;z-index: 12;}
+.pop-box .i-close{background-position: -225px -256px;width: 25px;height: 28px;display: inline-block;cursor: pointer;}
+.pop-box .i-edit{background-position: -182px -260px;width: 29px;height: 24px;display: inline-block;cursor: pointer;}
+.pop-box .i-edit:hover{background-position:-156px -519px;}
+.pop-box .i-edit-active{background-position: -242px -49px;}
+.pop-box .bg-date{background: url('/img/info/104.png') no-repeat center center;background-size: cover;width: 186px;height: 76px;position: relative;left: -36px;float: left;line-height: 66px;color: #fff;padding-left: 53px;}
+.pop-box .edit-wrap{margin-top: 20px;margin-right: 30px;}
+.pop-box .bj-txt-wrap{padding:0 44px;width: 100%;min-height: 205px;/*height: 280px;overflow: auto;*/}
+.pop-box textarea{width: 100%;display: none;}
+.pop-box  .active p{display: none;}
+.pop-box  .active textarea{display: block;min-height: 120px;border:1px solid #ededed;}
+.pop-box .btn-save{width: 72px;height: 23px;border:1px solid #ff9001;border-radius: 5px;color: #ff9001;text-align: center;background: #fff;margin-right: 44px;}
+/*弹出框样式结束*/
+body .navbar{box-shadow: 0 3px 3px rgba(0,0,0,0.2);}
+.mrg-r12{margin-right: 12px;}.container{min-width: 1208px;}
+.left-wrap .name-wrap{text-align: center;margin-bottom: 12px;font-size: 16px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden;}
+/*头像上传的样式*/
+.upload-file{position: absolute;top: 0;width: 130px;height: 130px;z-index: 2;opacity: 0;cursor: pointer;left: 0;}
+.user-photo-wrap{width: 130px;height: 130px;overflow: hidden;margin:0 auto;display: block;position: relative;margin-bottom:12px;/*top: 56px;*/border-radius: 50%;}
+.user-photo-wrap .txt{position: absolute;top: 20px;width: 130px;line-height: 222px;height: 130px; text-align: center;color: #fff;font-size: 12px;border-radius: 50%;background: url('/img/info/bottom-half-circle.png') no-repeat;background-position: center  bottom;visibility: hidden;}
+#uploadPhotoForm{width: 130px;height: 100%;position: relative;}
+.user-photo-wrap img{width: 100%;height: 100%;border-radius: 50%;}
+.user-photo-wrap:hover{border:1px solid #ff9001;}
+.user-photo-wrap:hover .txt{top: 0;visibility: visible;}
+.a-buyvip{display:block;width: 80px;height: 24px;border:1px solid #ff9001;border-radius: 5px;text-align: center;color: #ff9001;line-height: 22px;margin:0 auto 20px;}
+.a-buyvip:hover{background: #ff9001;color: #fff;}
+.info-vip-wrap{position: relative;}
+.info-vip-wrap:hover .outer-wrap{display: block;}
+.info-vip-wrap .outer-wrap{background:#f5f5f5;border:1px solid #eee;padding: 5px;position: absolute;}
+.info-vip-wrap .inner-wrap{background: #fff;}
+.info-vip-wrap .inner-wrap li{padding: 0 2px;white-space: nowrap;}
+.user-scope-wrap{position: relative;top: -24px;width: 108px;margin: 0 auto;}.mrg-b12{margin-bottom: 12px;}
+/*送VIP提示条*/
+.vip-hint-bar-container{background-color: #fffadf;border-bottom: 1px solid #ccd7e8;}
+.vip-hint-bar{width:1200px;margin:0 auto;height: 38px;line-height: 38px;text-align: center;position: relative;position: relative;}
+.vip-hint-bar span{color: #ef6601;}
+.vip-hint-bar a{position: absolute;right: 0;}
+		</style>
+    </head>
+    <body>
+      <div id="j_vip_hint_bar" class="vip-hint-bar-container"><div class="vip-hint-bar">立刻完善基本信息，即可<span >免费获赠7天VIP</span><a onclick="$('#j_vip_hint_bar').fadeOut()" href="javascript:;">x</a></div></div>
+    	<div include="../module/header.html"></div>
+    	<div class="clearfix mrg-t12 container">
+			<div class="left-wrap f-l">
+            <div style="position:relative;width: 130px;margin: 0 auto;">
+              <div class="user-photo-wrap about">
+                  <form action="/skillbridge-customer/user/updateIcon" id="uploadPhotoForm" enctype="multipart/form-data" method="post" target="ajaxifr">
+                      <img name="file" class="user-photo" src="/img/info/101.png">
+                      <div class="txt animation">修改头像</div>
+                      <input id="j_upload_photo" name="file" accept="image/gif, image/jpeg, image/png, image/bmp" type="file" class="upload-file" onchange="indexModule.uploadFile(this)"> 
+                  </form>
+                  
+              </div>
+              <i id="j_vip_crown" class="i-icon i-month-crown j_vip_show dis_none"></i>
+            </div>
+            <div id="j_info_vip_wrap" class="info-vip-wrap scale-normal">
+              <div class="lgnamebox name-wrap"></div>
+              
+              <div class="outer-wrap animation shrink-08">
+                <div class="inner-wrap">
+                  <div class="user-scope-wrap"><i class="i-icon i-user-scope"></i></div>
+                  <div style="margin-top:-16px;"><ul class="clearfix j_userscope_list">
+                    <li style="width:100%;text-align:center;" class="f-l">正在努力加载中...</li>
+                    <!-- <li class="f-l"><i class="i-icon i-blue-tick"></i>免费课程</li>
+                    <li class="f-l"><i class="i-icon i-blue-tick"></i>申请职位</li>
+                    <li class="f-l"><i class="i-icon i-blue-tick"></i>VIP课程</li>
+                    <li class="f-l"><i class="i-icon i-blue-tick"></i>资料下载</li>
+                    <li class="f-l"><i class="i-icon i-blue-tick"></i>技术问答</li>
+                    <li class="f-l"><i class="i-icon i-blue-tick"></i>1对1“伴读书童”</li> -->
+                  </ul></div>
+                </div>
+              </div>
+            </div>
+            <div style="text-align:center;" class="mrg-b12 j_vip_show c9 dis_none">你的会员<span class="j_expire_date"></span>后到期</div>
+            <div class="j_vip_show dis_none"><a class="a-buyvip" href="/view/vip/memberbuy.html">续费会员</a></div>
+            <div class="j_novip_show dis_none"><a class="a-buyvip" href="/view/vip/memberbuy.html">开通会员</a></div>
+		        <ul id="j_menu_wrap" class="menu-wrap">
+                    <li class=" grzx-li" data-id="#j_vip_container" data-type="4" data-title="会员中心"><i class="i-icon i-vipcenter"></i>会员中心</li>
+		                <li class=" grzx-li" data-id="#j_info_container" data-type="0" data-title="信息中心"><i class="i-icon i-info"></i>信息中心</li>
+		                <li class="active" data-id="#j_xuexi_container" data-type="1" data-title="学习中心"><i class="i-icon i-xuexi"></i>学习中心</li>
+		                <li class="" data-type="3" data-id="#j_qiuzhi_container" data-title="求职中心"><i class="i-icon i-qiuzhi"></i>求职中心</li>
+		                <li data-id="#j_account_safe_container" data-type="2" data-title="账户安全"><i class="i-icon i-zhanghu"></i>账户安全</li>
+		        </ul>
+			</div>
+			<div class="right-wrap f-l">
+				<div class="crumbs-wrap dis_none"><a href="/" class="mrg-r12">首页 ></a><a href="/" class="mrg-r12">个人中心 ></a><a href="/">信息中心</a></div>
+		        <div>
+              <div id="j_vip_container"   data-include="../module/vipcenter.html"></div>
+		        	<div id="j_xuexi_container"  data-include="../module/xuexi.html"></div>
+		        	<div id="j_info_container"   data-include="../module/info.html"></div>
+		        	<div id="j_account_safe_container" data-include="../module/account-safe.html"></div>
+              <div id="j_qiuzhi_container" data-include="../module/qiuzhi.html"></div>
+		        </div>
+			</div>
+		</div>
+  		<div include="../module/footer.html"></div>
+  		<div class="bg dis_none"></div>
+  		<div id="j_pop_box" class="pop-box dis_none">
+  			<div class="clearfix"><i class="i-icon i-close f-r"></i></div>
+  			<div>
+  				<div class="clearfix">
+  					<div  class="bg-date j_date"></div>
+  					<div class="f-r edit-wrap">
+  						<i class="i-icon i-edit"></i>
+  						<span  class="pointtime j_pointtime"><i class="i-icon i-triangle-l"></i>12.15</span>
+  					</div>
+  				</div>
+  				<div id="j_bj_txt_wrap" class="bj-txt-wrap">
+  					<p  class="j_txt"></p>
+  					<textarea></textarea>
+  				</div>
+  				<div class="dis_none"><input  class="f-r btn-save" type="button" value="保存"></div>
+  			</div>
+  		</div>
+    <iframe name="ajaxifr" style="display: none;"></iframe>
+         <script src="/js/vendor/jquery-1.11.3.min.js"></script>
+         <script src="/js/main.js"></script>
+         <script type="text/javascript" src="/js/store.js"></script>
+        <script type="text/javascript" src="/js/common/jquery.page.js"></script>
+         <script type="text/javascript" src="/js/info/index.js"></script>
+    </body>
+</html>

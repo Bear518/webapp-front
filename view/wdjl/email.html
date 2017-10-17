@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>极视教育－邮件详情</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <!-- <link rel="stylesheet" href="/css/main.css"> -->
+    </head>
+    <body>
+
+<style type="text/css">
+    .container{margin:40px 0 142px 20px;width: 700px;border-top: 3px solid #e99613;}
+    .title-wrap{padding:20px 0;font-size: 14px;color: #000;line-height: 20px;}.mrg-l65{margin-left: 65px;}
+    .body-wrap{border:1px solid #e2e2e2;line-height: 30px;}.ssss{line-height: 1.5;}
+    .item-wrap{padding: 20px 25px;position: relative;border-bottom: 1px dashed #e2e2e2;color: #333;font-size: 14px;}
+    .l-name-wrap{width: 112px;text-align: right;display: inline-block;white-space: nowrap;}.l-value-wrap{width: 248px;display: inline-block;}
+    .r-name-wrap{width: 76px;text-align: right;display: inline-block;white-space: nowrap;}.r-value-wrap{width: 196px;display: inline-block;}
+</style>
+<div class="container" style="margin:40px 0 142px 20px;width: 700px;border-top: 3px solid #e99613;">
+    <textarea></textarea>
+    <div class="title-wrap" style="padding:20px 0;font-size: 14px;color: #000;line-height: 20px;">
+        <div id="tst">尊敬的<span>企业名称</span>，您好！</div>
+        <div style="margin-left: 65px;">您在极视教育网招聘的职位：<label style="color: #ff9001;"><span>职位名</span>|<span>工作地点</span></label></div>
+        <div style="margin-left: 65px;"><span>2016年5月18日</span>收到一份应聘简历，信息如下：</div>
+    </div>
+    <div class="body-wrap" style="border:1px solid #e2e2e2;line-height: 30px;">
+        <div class="item-wrap" style="padding: 20px 25px;position: relative;border-bottom: 1px dashed #e2e2e2;color: #333;font-size: 14px;">
+            <div style="font-size: 12px;position: absolute;top: 15px;right: 30px;"><a style="color:#ff9001;" href="">登陆极视教育网查看更多简历</a></div>
+            <div style="color:#666;font-size:16px;">基本信息</div>
+            <div><span class="l-name-wrap" >姓名：</span><span class="l-value-wrap"  id="name"></span><span class="r-name-wrap" >现居地：</span><span class="r-value-wrap"  id="presentAddressText"></span></div>
+            <div><span class="l-name-wrap" >政治面貌：</span><span class="l-value-wrap"  id="politicalStatus"></span><span class="r-name-wrap" >户口地：</span><span class="r-value-wrap"  id="domicileAddressText"></span></div>
+            <div><span class="l-name-wrap" >目前状态：</span><span class="l-value-wrap"  id="situation"></span><span class="r-name-wrap" >年龄：</span><span class="r-value-wrap" >18</span></div>
+            <div><span class="l-name-wrap" >婚姻状态：</span><span class="l-value-wrap"  id="maritalStatus"></span><span class="r-name-wrap" >名族：</span><span class="r-value-wrap"  id="nation"></span></div>
+            <div><span class="l-name-wrap" >到岗时间：</span><span class="l-value-wrap"  id="postTime"></span><span class="r-name-wrap" >工作经验：</span><span class="r-value-wrap"  id="workExperience"></span></div>
+            <div><span class="l-name-wrap" >个人标签：</span><span class="" id="individualTag"></span></div>
+            <div><span class="l-name-wrap" >自我描述：</span><span style="display: inline-block;vertical-align: top;width: 500px;line-height: 1.5;padding-top:4px;" id="selfDescription"></span></div>
+        </div>
+        <div class="item-wrap" style="padding: 20px 25px;position: relative;border-bottom: 1px dashed #e2e2e2;color: #333;font-size: 14px;">
+            <div style="color:#666;font-size:16px;">求职意向</div>
+            <div><span class="l-name-wrap" >期望行业：</span><span class="l-value-wrap"  id="industryText"></span><span class="r-name-wrap" >期望地点：</span><span class="r-value-wrap"  id="citysText"></span></div>
+            <div><span class="l-name-wrap" >期望职位：</span><span class="l-value-wrap"  id="categoryText"></span><span class="r-name-wrap" >期望月薪：</span><span class="r-value-wrap"  id="expectSalary"></span></div>
+            <div><span class="l-name-wrap" >目前月薪：</span><span class="l-value-wrap"  id="currentSalary"></span></div>
+
+        </div>
+        <div class="item-wrap" style="padding: 20px 25px;position: relative;border-bottom: 1px dashed #e2e2e2;color: #333;font-size: 14px;">
+            <div style="color:#666;font-size:16px;">联系方式</div>
+            <div><span class="l-name-wrap" >手机：</span><span class="l-value-wrap"  id="mobilePhone"></span><span class="r-name-wrap" >QQ：</span><span class="r-value-wrap"  id="qqNum"></span></div>
+            <div><span class="l-name-wrap" >邮箱：</span><span class="l-value-wrap"  id="email"></span><span class="r-name-wrap" >微信：</span><span class="r-value-wrap"  id="weixin"></span></div>
+        </div>
+        <div class="item-wrap" style="padding: 20px 25px;position: relative;border-bottom: 1px dashed #e2e2e2;color: #333;font-size: 14px;">
+            <div style="color:#666;font-size:16px;">语言能力</div>
+            <div><span class="l-name-wrap" >英语</span></div>
+            <div><span class="l-name-wrap" >听说：</span><span style="width:102px;display:inline-block;">精通</span><span>读写：</span><span style="width:102px;display:inline-block;">精通</span><span>lette：</span><span style="width:102px;display:inline-block;">7风</span></div>
+        </div>
+        <div class="item-wrap" style="padding: 20px 25px;position: relative;border-bottom: 1px dashed #e2e2e2;color: #333;font-size: 14px;">
+            <div style="color:#666;font-size:16px;">掌握的技能</div>
+            <div><span style="width:142px;color:#999;display:inline-block;text-align:right;">精通的技能</span></div>
+            <div><span style="margin-right:20px;width:92px;display:inline-block;text-align:right;">jsp</span><span style="margin-right:20px;">sql server</span></div>
+            <div><span style="width:142px;color:#999;display:inline-block;text-align:right;">熟练的技能</span></div>
+            <div><span style="margin-right:20px;width:92px;display:inline-block;text-align:right;">jsp</span><span style="margin-right:20px;">sql server</span></div>
+        </div>
+        <div class="item-wrap" style="padding: 20px 25px;position: relative;border-bottom: 1px dashed #e2e2e2;color: #333;font-size: 14px;">
+            <div style="color:#666;font-size:16px;">证书</div>
+            <div style="padding-left:38px;"><span style="margin-right:20px;">大学英语四级</span><span style="margin-right:20px;">大学英语四级</span><span style="margin-right:20px;">大学英语四级</span></div>
+        </div>
+        <div class="item-wrap" style="padding: 20px 25px;position: relative;border-bottom: 1px dashed #e2e2e2;color: #333;font-size: 14px;">
+            <div style="color:#666;font-size:16px;">教育经历</div>
+            <div style="border:1px solid #e2e2e2;border-top: none;">
+                <div><span style="width: 159px;height: 40px;line-height: 40px;text-align: center;border:1px solid #e2e2e2;border-left: none;display: inline-block;">1992.09-1996.06</span><span style="width: 466px;margin-left: -5px;display: inline-block;padding-left: 20px;border-top: 1px solid #e2e2e2;line-height: 40px;border-bottom: 1px solid #e2e2e2;font-weight: bold;color: #000;">北京大学</span></div>
+                <div><span style="width: 466px;display: inline-block;padding-left: 20px;border-bottom: 1px solid #e2e2e2;border-left: 1px solid #e2e2e2;margin-left: 159px;height: 40px;line-height: 40px;">－专业：计算机科学与技术</span></div>
+                <div><span style="width: 466px;display: inline-block;padding-left: 20px;border-left: 1px solid #e2e2e2;margin-left: 159px;height: 40px;line-height: 40px;">－学历：本科</span></div>
+            </div>
+        </div>
+        <div class="item-wrap" style="padding: 20px 25px;position: relative;border-bottom: 1px dashed #e2e2e2;color: #333;font-size: 14px;">
+            <div style="color:#666;font-size:16px;">培训经历</div>
+            <div style="border:1px solid #e2e2e2;border-top: none;">
+                <div><span style="width: 159px;height: 40px;line-height: 40px;text-align: center;border:1px solid #e2e2e2;border-left: none;display: inline-block;">1992.09-1996.06</span><span style="width: 466px;margin-left: -5px;display: inline-block;padding-left: 20px;border-top: 1px solid #e2e2e2;line-height: 40px;border-bottom: 1px solid #e2e2e2;font-weight: bold;color: #000;">北京大学</span></div>
+                <div><span style="width: 466px;display: inline-block;padding-left: 20px;border-left: 1px solid #e2e2e2;margin-left: 159px;height: 40px;line-height: 40px;">－专业：计算机科学与技术</span></div>
+            </div>
+        </div>
+        <div class="item-wrap" style="padding: 20px 25px;position: relative;border-bottom: 1px dashed #e2e2e2;color: #333;font-size: 14px;">
+            <div style="color:#666;font-size:16px;">校内职务</div>
+            <div style="border:1px solid #e2e2e2;border-top: none;">
+                <div><span style="width: 159px;height: 40px;line-height: 40px;text-align: center;border:1px solid #e2e2e2;border-left: none;display: inline-block;">1992.09-1996.06</span><span style="width: 466px;margin-left: -5px;display: inline-block;padding-left: 20px;border-top: 1px solid #e2e2e2;line-height: 40px;border-bottom: 1px solid #e2e2e2;font-weight: bold;color: #000;">北京大学</span></div>
+                <div><span style="width: 466px;display: inline-block;padding-left: 20px;border-left: 1px solid #e2e2e2;margin-left: 159px;height: 40px;line-height: 40px;">－职务：学生会会长</span></div>
+            </div>
+        </div>
+        <div class="item-wrap" style="padding: 20px 25px;position: relative;border-bottom: 1px dashed #e2e2e2;color: #333;font-size: 14px;">
+            <div style="color:#666;font-size:16px;">获得荣誉</div>
+            <div style="border:1px solid #e2e2e2;border-top: none;">
+                <div><span style="width: 159px;height: 40px;line-height: 40px;text-align: center;border:1px solid #e2e2e2;border-left: none;display: inline-block;">1992.09-1996.06</span><span style="width: 466px;margin-left: -5px;display: inline-block;padding-left: 20px;border-top: 1px solid #e2e2e2;line-height: 40px;border-bottom: 1px solid #e2e2e2;font-weight: bold;color: #000;">北京大学</span></div>
+                <div><span style="width: 466px;display: inline-block;padding-left: 20px;border-left: 1px solid #e2e2e2;margin-left: 159px;height: 40px;line-height: 40px;">－诺贝尔创新奖</span></div>
+            </div>
+        </div>
+        <div class="item-wrap" style="padding: 20px 25px;position: relative;border-bottom: 1px dashed #e2e2e2;color: #333;font-size: 14px;">
+            <div style="color:#666;font-size:16px;">工作经历</div>
+            <div style="border:1px solid #e2e2e2;border-top: none;">
+                <div><span style="width: 159px;height: 40px;line-height: 40px;text-align: center;border:1px solid #e2e2e2;border-left: none;display: inline-block;">1992.09-1996.06</span><span style="width: 466px;margin-left: -5px;display: inline-block;padding-left: 20px;border-top: 1px solid #e2e2e2;line-height: 40px;border-bottom: 1px solid #e2e2e2;font-weight: bold;">上海极视文化科技有限公司</span></div>
+                <div><span style="width: 466px;display: inline-block;padding-left: 20px;border-bottom: 1px solid #e2e2e2;border-left: 1px solid #e2e2e2;margin-left: 159px;height: 40px;line-height: 40px;">web前端开发负责任</span></div>
+                <div><div style="width: 466px;display: inline-block;padding-left: 20px;border-left: 1px solid #e2e2e2;margin-left: 159px;line-height: 30px;">
+                    <div>－所在部门：技术部</div>
+                    <div>－汇报对象：技术部</div>
+                    <div>－下属人数：技术部</div>
+                    <div>负责完成公司项目开发</div>
+
+                </div></div>
+            </div>
+        </div>
+        <div class="item-wrap" style="padding: 20px 25px;position: relative;border-bottom: 1px dashed #e2e2e2;color: #333;font-size: 14px;">
+            <div style="color:#666;font-size:16px;">实习经历</div>
+            <div style="border:1px solid #e2e2e2;border-top: none;">
+                <div><span style="width: 159px;height: 40px;line-height: 40px;text-align: center;border:1px solid #e2e2e2;border-left: none;display: inline-block;">1992.09-1996.06</span><span style="width: 466px;margin-left: -5px;display: inline-block;padding-left: 20px;border-top: 1px solid #e2e2e2;line-height: 40px;border-bottom: 1px solid #e2e2e2;font-weight: bold;">上海极视文化科技有限公司</span></div>
+                <div><span style="width: 466px;display: inline-block;padding-left: 20px;border-bottom: 1px solid #e2e2e2;border-left: 1px solid #e2e2e2;margin-left: 159px;height: 40px;line-height: 40px;">web前端开发负责任</span></div>
+                <div><div style="width: 466px;display: inline-block;padding-left: 20px;border-left: 1px solid #e2e2e2;margin-left: 159px;line-height: 30px;">
+                    <div>－所在部门：技术部</div>
+                    <div>－汇报对象：技术部</div>
+                    <div>负责完成公司项目开发</div>
+
+                </div></div>
+            </div>
+        </div>
+        <div class="item-wrap" style="padding: 20px 25px;position: relative;color: #333;font-size: 14px;border-bottom:none;">
+            <div style="color:#666;font-size:16px;">项目经验</div>
+            <div style="border:1px solid #e2e2e2;border-top: none;">
+                <div><span style="width: 159px;height: 40px;line-height: 40px;text-align: center;border:1px solid #e2e2e2;border-left: none;display: inline-block;">1992.09-1996.06</span><span style="width: 466px;margin-left: -5px;display: inline-block;padding-left: 20px;border-top: 1px solid #e2e2e2;line-height: 40px;border-bottom: 1px solid #e2e2e2;font-weight: bold;">上海极视文化科技有限公司</span></div>
+                <div><div style="width: 466px;display: inline-block;padding-left: 20px;border-left: 1px solid #e2e2e2;margin-left: 159px;line-height: 30px;">
+                    <div>－项目职务：web前端开发</div>
+                    <div>－所在公司：上海极视文化科技有限公司</div>
+                    <div>－项目简介：在线教育</div>
+                    <div>－项目职责：负责整个项目的开发</div>
+                </div></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-wrap" style="font-size:12px;color:#999;">
+        <div style="height: 40px;border-bottom: 1px dashed #e2e2e2;text-align: right;font-size: 12px;color: #333;line-height:40px;">注：此邮件为系统邮件，请勿直接回复。</div>
+        <div style="line-height:22px;padding:10px; 0">
+            <div>极视教育网竭诚为您服务</div>
+            <div>如有任何疑问请拨打全国热线电话：400-670－9910</div>
+            <div>公司地址：上海浦东新区张江高科技园区盛夏路560号501</div>
+
+        </div>
+        <div style="border-top: 1px dashed #e2e2e2;padding-top:10px;">Copyright ©2014-2015 Skill Bridge版权所有 - 浙ICP备15043692号-1</div>
+    </div>
+</div>
+        <script type="text/javascript" src="/js/common/angular.js"></script>
+        <script type="text/javascript">
+        var a="<script src=\"http://p.bokecc.com/player?vid=F4457602E90548C79C33DC5901307461&siteid=C2ACC2A42300D6AE&autoStart=false&width=600&height=490&playerid=52152A22B61F9714&playertype=1\" type=\"text/javascript\"><\/script>";
+        var d=document.createDocumentFragment(),div=document.createElement('div');
+        div.innerHTML=a;
+        d.appendChild(div);
+        var src=div.firstChild.getAttribute('src');
+        var script=document.createElement("script");  
+        script.setAttribute("type", "text/javascript");  
+        script.setAttribute("src",src); 
+        document.getElementById('tst').appendChild(script);
+        // $('#tst').html(a);
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,69 @@
+@charset "utf-8";
+.loginbg{ position:absolute; width:100%; opacity:0.5; filter:alpha(opacity=50); background-color:#000; height:1000px; left:0; top:0;z-index:1000}
+.tk_box{z-index:1100; background-color:#FFF;width:408px; text-align:center; margin-left:-200px;box-shadow:0px 2px 2px rgba(0, 0, 0, 0.1); position:fixed; left:50%;box-sizing:content-box;top:50%;margin-top:-195px}
+.tk_box h3{ line-height:40px; height:40px; font-size:22px;text-align:center; font-weight:normal ; color:#dbdbdb; background-color:#535353}
+.tk_box h3 i{cursor: pointer;display: block;height: 24px;line-height: 24px;position: absolute;right: 10px;top: 10px;width: 20px;}
+.tk_main{ padding:40px 20px 40px; height:150px}
+.tk_wd{ font-size:18px; line-height:36px; display:block; height:100px;}
+a.tk_btn,.tk_btn a{ height:32px; width:113px;background:#ff9001; line-height:32px; color:#fff; text-align:center; font-size:14px; transition:0.2s;border-radius:4px; display:block; margin-left:123px}
+a.tk_btn:hover,.tk_btn a:hover{ }
+/*地区*/
+.areabox{width:810px; margin-top:-300px; margin-left:-400px;}
+.areabox .tk_main{ height:auto; text-align:left; padding:0}
+.areachosed{ height:38px; background-color:#f2f1f0; padding:25px 0 0 44px; position:relative}
+.areachosed .areaitem,.areachosed .areaitem2{ display:inline-block; background-color:#ff9001; color:#fff; padding-left:5px; margin-left:10px}
+.areachosed .err{ position:absolute; top:30px; right:50px;  border:1px solid #ff9001; background-color:#FC9; float:right; padding:0 10px; color:#f60; display:none}
+.sheng_tab{ background-color:#f2f1f0; height:26px; padding-left:44px;}
+.sheng_tab a{ padding:0 10px; background-color:#d9d9d8; margin-right:5px; line-height:26px; display:none}
+.sheng_tab a label{ display:none}
+.sheng_tab a.on{background-color:#fff; display:inline-block; cursor:default }
+.sheng_tab a:hover{ color:#666}
+.shenglist{ padding:10px 45px; height:334px}
+.shenglist h4{font-size:18px; line-height:48px; font-weight:normal; clear:both}
+.shenglist li{ float:left; width:100px; height:36px; padding-left:20px}
+.shenglist li a,.s_title a{ line-height:24px; padding:0 10px; font-size:16px}
+.shenglist li a:hover,.s_title a:hover,.shenglist li a.on,.s_title .on{ background-color:#ff9001; color:#fff;}
+.shenglist li label{ display:none}
+.tk_btn_box{ height:60px; padding:20px 0 20px 186px}
+
+.s_citybox{ display:none}
+.s_title a{margin:10px 0; clear:both; display:inline-block;}
+
+/*投递简历*/
+.tk_dl .tdbox{ width:506px;}
+.tk_dl .tdbox h3{ color:#333; background-color:#ededed; font-size:16px; border-bottom:1px solid #cdcdcd }
+.tk_dl .tdbox .tk_main{ height:350px; padding:0}
+.tk_dl .tdbox .jobtab{ height:110px; padding:10px 0;border-bottom:1px solid #cdcdcd; background-color:#e1e1e1}
+.tk_dl .tdbox .jobcard{ background-color:#fff; height:90px; width:356px; margin:0 auto; padding:20px; text-align:left}
+.tk_dl .tdbox .jobcard img{ height:50px; width:100px; float:left; margin:0px 20px 0 0}
+.tk_dl .jobinfo{ float:left; width:195px;}
+.tk_dl .jobtitle{ font-size:16px; color:#333; line-height:26px; height:28px; overflow:hidden}
+.tk_dl .jobtitle a{ height: 22px; display:inline-block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; width: 128px;}
+.tk_dl .jobtitle span{ display:inline-block; padding:0 13px; background-color:#ff5d6c; color:#fff; margin-left:8px; width:58px}
+.tk_dl .jobtitle span.qz{ background-color:#4791ff; }
+.tk_dl .jobtitle span.zy{ background-color:#6dc6d2; }
+.tk_dl .jobtitle span.jz{ background-color:#ffa23b; }.jobtitle span.ls{background-color:#956dfc}
+.tk_dl .jobtitle span.qt{background-color:#82cdfd}
+.tk_dl .jobinfo .ico{ float:left; line-height:30px; overflow: hidden;text-overflow: ellipsis;white-space: nowrap; width: 190px; height:30px}
+.tk_dl .jobinfo .ico i{ display:inline-block; height:17px; width:17px; background-image:url(../../img/xzjy/sprite.png); vertical-align:middle; margin-right:5px; background-size:422px auto}
+.tk_dl .jobinfo .company i{ background-position:-31px -22px}
+.tk_dl .tdbox .tk_wd{ background:url(../../img/wdjl/ic1.png) no-repeat center 10px; padding:120px 0 0px 0; height:173px; font-size:16px}
+.tk_dl .tdbox .tk_btn { padding-left:70px}
+.tk_dl .tdbox .tk_btn a{ margin-left:40px; float:left}
+.tk_dl .tk_btn a.on{ background:#cecece; box-shadow:0 2px 0 #a4a4a4;}
+.tk_dl .tk_btn a.on:hover{box-shadow:0 0 0 #a4a4a4; }
+
+#tk_dl2 .tdbox .tk_wd{ background:url(../../img/wdjl/ic2.png) no-repeat 300px 40px; padding:34px 255px 0px 105px; height:133px; font-size:16px; text-align:left; line-height:26px}
+#tk_dl2 .tk_wd span{ font-size:12px;}
+#tk_dl2 .tk_wd span a{ color:#63b6c1; text-decoration:underline}
+#tk_dl2 .tk_btn a{ margin-left:128px}
+
+
+
+
+
+
+
+
+
+

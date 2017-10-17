@@ -1,0 +1,1 @@
+define(["jquery"],function(t){var e=window.location.host;/127|8000|8001|800/.test(e)?t._CACHEOBJ={context:"/skillbridge"}:t._CACHEOBJ={context:"/skillbridge"}});

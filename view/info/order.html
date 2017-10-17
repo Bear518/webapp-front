@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>订单管理_极视教育网</title>
+    <meta name="description" content="极视教育作为中国领先的游戏职业在线教育平台之一,国内第一家专注于游戏职业培训与发展的在线 教育平台。平台致力于构建“学习+实战+机遇”三元结构闭环的模式，携手企业与名师一 起帮助有职业培训需求的人才，并为企业提供人才储备的解决方案,拥有海量高清职业课程,涵盖20+个技术领域,如Android,iOS ,Unity3D,Java,Photoshop,Maya,3D MAX,独立游戏等视频教程.根据在线学习特点,极视教育推出职业图谱,帮助学习者从零基础起步,结合实战案例演练,系统学习,助你快速成为优秀技术人才！">
+    <meta name="keywords" content="极视教育,职业教育,在线教育平台,在线教育,在线学习,职业培训,android,ios,Unity3D,java,Photoshop,Maya,3D MAX,独立游戏">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../css/info/order.css">
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div class="" include="/view/module/header.html"></div>
+<div include="/view/module/info-banner.html"></div>
+<div class="body-container">
+    <div class="order-container">
+        <h2>订单管理</h2>
+
+        <div class="order-tit ">
+            <ul class="clearfix" id="j_orderlabel_wrap">
+                <li class="active" data-type="1">已支付订单</li>
+                <li data-type="0">待支付订单</li>
+            </ul>
+        </div>
+        <div class="order-con">
+            <div id="j_order_list_wrap">
+                <div style="line-height:120px;text-align:center;">正在努力加载数据中...</div>
+              <!--  <div class="order-list">
+                    <table class="">
+                        <colgroup >
+                            <col class="order-col1">
+                            <col class="order-col2">
+                            <col class="order-col2">
+                            <col class="order-col2">
+                        </colgroup>
+                        <tbody class="order-list-tit">
+                            <tr >
+                               <td class="text-algl pdl-10"><span>2016-08-31</span><span class="order-id">订单号：1212255464848</span></td>
+                               <td>购买价格（元）</td>
+                               <td>状态</td>
+                               <td>操作</td>
+                            </tr>
+                        </tbody>
+                        <tbody class="order-list-cnt">
+                            <tr >
+                               <td class="order-list-td"><p class="order-name">购买季员购买季员购买季度会购买季度会买季度会员购买季员购买季度会购买季度会买季度会员购买季度会购买季度会买季度会员</p></td>
+                               <td><span class="price">¥174.00</span><s class="original-price">￥5.00</s></td>
+                               <td>未支付</td>
+                               <td class="pay"><a href=""  class="orange-btn" target="_blank">支付</a><a href="" class="link">取消订单</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="order-list">
+                    <table class="">
+                        <colgroup >
+                            <col class="order-col1">
+                            <col class="order-col2">
+                            <col class="order-col2">
+                            <col class="order-col2">
+                        </colgroup>
+                        <tbody class="order-list-tit">
+                        <tr >
+                            <td class="text-algl pdl-10"><span>2016-08-31</span><span class="order-id">订单号：1212255464848</span></td>
+                            <td>购买价格（元）</td>
+                            <td>状态</td>
+                            <td>操作</td>
+                        </tr>
+                        </tbody>
+                        <tbody class="order-list-cnt">
+                        <tr >
+                            <td class="order-list-td"><p class="order-name">购买季员购买季度会购买季度会买季度会员</p></td>
+                            <td><span class="price">¥174.00</span><s class="original-price">￥5.00</s></td>
+                            <td>未支付</td>
+                            <td class="pay"><a href=""  class="orange-btn" target="_blank">支付</a><a href="" class="link">取消订单</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="order-list">
+                    <table class="">
+                        <colgroup >
+                            <col class="order-col1">
+                            <col class="order-col2">
+                            <col class="order-col2">
+                            <col class="order-col2">
+                        </colgroup>
+                        <tbody class="order-list-tit">
+                        <tr >
+                            <td class="text-algl pdl-10"><span>2016-08-31</span><span class="order-id">订单号：1212255464848</span></td>
+                            <td>购买价格（元）</td>
+                            <td>状态</td>
+                            <td>操作</td>
+                        </tr>
+                        </tbody>
+                        <tbody class="order-list-cnt">
+                        <tr >
+                            <td class="order-list-td"><p class="order-name">购买季员购买季度会购买季度会买季度会员</p></td>
+                            <td><span class="price">¥174.00</span><s class="original-price">￥5.00</s></td>
+                            <td>未支付</td>
+                            <td class="pay"><a href=""  class="orange-btn" target="_blank">支付</a><a href="" class="link">取消订单</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="order-list">
+                    <table class="">
+                        <colgroup >
+                            <col class="order-col1">
+                            <col class="order-col2">
+                            <col class="order-col2">
+                            <col class="order-col2">
+                        </colgroup>
+                        <tbody class="order-list-tit">
+                        <tr >
+                            <td class="text-algl pdl-10"><span>2016-08-31</span><span class="order-id">订单号：1212255464848</span></td>
+                            <td>购买价格（元）</td>
+                            <td>状态</td>
+                            <td>操作</td>
+                        </tr>
+                        </tbody>
+                        <tbody class="order-list-cnt">
+                        <tr >
+                            <td class="order-list-td"><p class="order-name">购买季员购买季度会购买季度会买季度会员</p></td>
+                            <td><span class="price">¥174.00</span><s class="original-price">￥5.00</s></td>
+                            <td>未支付</td>
+                            <td class="pay"><a href=""  class="orange-btn" target="_blank">支付</a><a href="" class="link">取消订单</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>-->
+            </div>
+
+            <div id="j_order_page_control" class="page-control page-wrap">
+                <!-- <a href="view/more.html">查看更多</a> -->
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div include="../module/footer.html"></div>
+<script src="/js/vendor/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/js/common/jquery.page.js"></script>
+
+
+<script type="text/javascript">
+    var orderModule={
+        bindEvents:function(){
+            var self=this;
+            $('#j_order_list_wrap').on('click','.j_cancel_order',function(){
+                var $this=$(this),orderNo=$this.data('id');
+                $.ajax({
+                    type:'get',
+                    url:mainModule.uri.cancelOrder,
+                    data:{orderNo:orderNo},
+                    success:function(result){
+                        mainModule.log('取消该订单接口返回',result);
+                        self.httpInterceptor(result,function(result){
+                            $this.closest('td').prev().html('已取消');
+                            $this.closest('td').empty();
+                        /*    $this.closest('li').prev().children().html('已关闭');
+                            $this.closest('li').empty();*/
+
+                        })
+                    }
+                })
+            });
+            $('#j_orderlabel_wrap').on('click','li',function(){
+                var $this=$(this),status=$(this).data('type');
+                $this.parent().find('.active').removeClass('active');
+                $this.addClass('active');
+                $('#j_order_list_wrap').html('<div style="line-height:120px;text-align:center;">正在努力加载数据中...</div>');
+                self.isHasPaged=false;
+                self.status=status;
+                self.getMyPayOrderList(1);
+            })
+        },
+        getMyPayOrderList:function(page){
+            var self=this;
+            $.ajax({
+                type:'get',
+                data:{statue:self.status,page:page,rows:5},
+                url:mainModule.uri.getMyPayOrderList,
+                success:function(result){
+                    mainModule.log('我的购买订单接口返回',result);
+                    self.httpInterceptor(result,self.renderMyPayOrderList);
+                }
+            })
+        },
+        httpInterceptor:function(result,succfunc,failfunc){
+            if(result.status=='SUCCESS'){
+                result.content&&result.content.list&&(result.content.list.total=result.content.total);
+                result.content&&result.content.rows&&(result.content.rows.total=result.content.total);
+                succfunc&&succfunc.call(this,result.content&&(result.content.list||result.content.rows),result.content&&result.content.total);
+            }else{
+                failfunc&&failfunc.call(this,result);
+            }
+        },
+
+        renderMyPayOrderList:function(result){
+            var dom='',ii=result.length,self=this;
+            for(var i=0;i<ii;i++){
+                var item=result[i],nameUrl='javascript:;';
+                if(item.orderType==3){
+                    item.href='/view/zytp/xb_pay2.html?orderId='+item.id;
+                    nameUrl='javascript:;';
+                }else if(item.orderType==2){
+                    item.href='/view/vip/paychos.html?ordid='+item.id+'&id='+item.productId;
+                    nameUrl='/view/lesson/lessonintro.html?courseid='+item.productId;
+                }else if(item.orderType==4){
+                    item.href='/view/vip/paychos.html?ordid='+item.id+'&jobMapId='+item.productId;
+                    nameUrl='/view/zytp/detail.html?id='+item.productId;
+                }else{
+                    item.href='/view/vip/paychos_m.html?ordid='+item.id+'&number='+item.number;
+                    nameUrl='/view/vip/vipintro.html';
+                    item.productName=item.number+'个月会员';
+                }
+                dom+=' <div class="order-list"><table class=""><colgroup ><col class="order-col1"><col class="order-col2"><col class="order-col2"><col class="order-col2"></colgroup> ' +
+                        '<tbody class="order-list-tit"><tr >' +
+                        '<td class="text-algl pdl-10"><span>'+(mainModule.formatBirthdate(item.createDate))+' </span><span class="order-id">订单号：'+item.orderNo+'</span></td>' +
+                        '<td>购买价格（元）</td><td>状态</td><td>操作</td></tr></tbody> ';
+                dom+=' <tbody class="order-list-cnt"><tr ><td class="order-list-td"><p class="order-name"><a href="'+nameUrl+'" target="_blank">'+item.productName+'</a></p></td> ' +
+                        '<td><span class="price">'+item.orderMoney+'</span></td>' ;
+                        // <s class="original-price">'+item.price+'</s>
+                switch(item.statue){
+                    case 0:
+                        dom+='<td class="pay-type">未支付</td><td class="pay"><a href="'+item.href+'" class="orange-btn" target="_blank">支付</a><a  data-id="'+item.orderNo+'" class="link j_cancel_order">取消订单</a></td>';
+                        break;
+                    case 1:
+                        dom+='<td  class="pay-type">已支付</td><td class="pay"></td>';
+                        break;
+                    case 3:
+                        dom+='<td  class="pay-type">已取消</td><td class="pay"></td>';
+                        break;
+                }
+                dom+='</tr></tbody></table></div>';
+
+            }
+            if(ii==0){
+                dom+='<div style="line-height:320px;text-align:center;">该选项暂时没有订单</div>';
+            }
+             //result.total=120;
+            mainModule.createPage(self,result.total,$('#j_order_page_control'),self.getMyPayOrderList ,5);
+            $('#j_order_list_wrap').html(dom);
+
+        },
+        formatDateTime:function(timestamp){
+            var date=new Date(timestamp);
+            return date.toLocaleDateString()+'<br>'+date.toLocaleTimeString();
+        },
+
+        init:function(){
+            this.bindEvents();
+            this.status=1;
+            this.getMyPayOrderList(1);
+        }
+    };
+    orderModule.init();
+</script>
+
+</body>
+</html>

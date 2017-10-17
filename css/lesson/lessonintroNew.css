@@ -1,0 +1,222 @@
+@charset "utf-8";
+body{ background-color:#f8f8f8}
+/*banner*/
+.banner { height:40px; font-size:16px; line-height:40px}
+.crumbs a{ font-size:14px }
+.crumbs a:hover{ color:#ff9001}
+/*lesson introduce*/
+.lsintro .warpper{ border:1px solid #eee; padding:30px 0 30px 20px; width:1178px;margin-bottom:20px; background-color:#fff; position:relative; box-shadow:0px 1px 2px rgba(0,0,0,0.1)}
+.videobox{ height:225px; width:400px; background-color:#010101; float:left; overflow:hidden; border: 1px solid #d5d5d5}
+.videobox object,.videobox embed{height:248px; width:405px; margin:0 auto}
+.introbox{ width:718px; float:left; margin-right:30px; position:relative}
+.introbox h3{ max-height:74px; line-height:37px; font-weight:normal; overflow:hidden; margin-bottom:10px; font-size:32px}
+.kwlist{ padding:10px 0; height:22px}
+.kwlist ul{ float:left;}.kwlist span{ float:right}.kwlist span a{ margin-left:10px;position:relative; float:right; height:22px; width:35px; font-size:12px}
+.kwlist li{background-color:#eeeeee; display:inline-block; margin-right:20px; line-height:21px; padding:0 10px; border-radius:3px; font-size:12px;color:#333;}
+.introbox ul.infolist{ height:50px;}
+.introbox .infolist li{ float:left; margin-right:13px; color:#999;margin-top:8px;}
+.introbox .infolist li.zan{display: none;}
+.introbox .infolist li i,.kwlist a i.ico_sc,.kwlist a i.ico_fx{ height:18px;  width:22px; display:inline-block;background:url(../../img/lessonintro/couricon.png) -466px -50px; vertical-align:middle}.kwlist a b{ font-weight:normal}
+.introbox .infolist li span{ display:inline-block; text-align:center; font-size:14px}
+.introbox .infolist li b{ display:inline-block; height:18px; width:18px; border-right:1px solid #e0e0e0; vertical-align:middle}
+.kwlist a:hover i.ico_sc,.kwlist a i.on{background-position:-521px -50px }
+.kwlist a.fx i.ico_fx{background-position:-497px -48px;height:22px;  }
+.kwlist a.fx:hover i.ico_fx{background-position:-547px -48px }
+.introbox .infolist .learn i{ background-position:-577px -49px }
+.introbox .infolist .zan i{ background-position:-600px -49px }
+.introbox .infolist .ks i{ background-position:-628px -49px }
+.introbox .infolist .times i{ background-position:-649px -49px }
+.introbox .infolist .genx i{ background-position:-470px -94px }
+.intro_wd{ margin:12px 0; font-size:14px; line-height:22px; max-height:188px; overflow:hidden; text-indent:32px; color:#333}
+.dzbox1{}.dzbox1 span{ float:left; color:#21a76d; font-size:18px}
+.dzbox1 span i{ font-size:14px;color:#666; margin-left:20px; text-decoration:line-through}
+.dzbox1 a.addplan,#startstudy{width:111px; height:35px; line-height:35px; float:right;background:#ff9001; color:#fff; text-align:center;border-radius:4px; display:none }
+.dzbox1 a.addplan:hover,#startstudy:hover{ background-color:#ffad43}
+.dzbox1 a.rmoveplan{ height:27px; width:34px;background:url(../../img/lessonintro/tc.png) 0 -27px ; display:block; position:absolute; top:140px; right:0px;}
+.dzbox1 a.rmoveplan:hover{ height:27px; width:34px;background:url(../../img/lessonintro/tc.png) ;}
+.dzbox a:hover{ margin-top:2px; box-shadow:0 0 0 #d77900; }
+
+/*progress*/
+.progressbar {border:1px solid #eee; padding:35px 33px 10px; height:70px; margin-bottom:20px; background-color:#fff;box-shadow:0px 1px 2px rgba(0,0,0,0.1)}
+.progress span.pro{ float:left; height:12px; width:800px; background-color:#dddddd; margin-top:10px; border-radius:6px;}
+.progress span.pro i{ float:left; height:12px; width:10%; background-color:#ff8f14;border-radius:6px; position:relative}
+.progress span.pro i b{ position:absolute; top:-22px; right:-15px; color:#ff9001; font-size:14px}
+.progress span.pro b.pronum span{ font-size:20px}
+.progress { clear:both;height:38px; }
+.progress_wd span{ float:left; font-size:12px}
+.progress_wd span.nextls{ float:right}
+/*courbagbar*/
+.courbagbar{border:1px solid #eee; padding:10px 25px; margin-bottom:20px; background-color:#fff;box-shadow:0px 1px 2px rgba(0,0,0,0.1)}
+h4.titlebox{ font-size:18px; font-weight:normal;}
+h4.titlebox i{ display:inline-block; width:3px; height:17px; background-color:#ff9001; margin:2px 10px 0 0 ; float:left;}
+.courbagcon{ padding-top:10px; width:836px; overflow:hidden}
+.aboutles { width:3050px}
+.lessonbar,.aboutles li{width: 224px;float: left;margin-right: 20px;margin-bottom: 14px;overflow: hidden;}
+.lessonbar:hover,.aboutles li:hover {-webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);-moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);}
+.aboutles li{ width:200px; margin-right:10px}
+.lessonimg-box {width: 224px;height: 124px;position: relative;}
+.lessonimg-box .lessonimg {width: 224px;height: 124px;}
+.aboutles .lessonimg-box,.aboutles .lessonimg-box .lessonimg {width: 200px;height: 110px;}
+
+.lesson-infor {padding: 5px;position: relative;z-index: 200;height:25px;overflow: hidden;
+background: #fff;} 
+.aboutles .lesson-infor{ height:75px; font-size:14px}
+.lesson-infor .lesson-info-h2{font-size: 14px;color: #333;line-height: 30px;height: 30px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.lesson-class{position: absolute;top: 0;right: 0;width: 52px;height: 94px;background-color: #fff;
+opacity: 0.85;filter: alpha(opacity=85);color: #333;font-size: 14px;line-height: 20px;text-align: center;padding-top: 30px;}
+.lesson-class .num{    font-size: 18px;}
+.lesson-class i{display: inline-block;width: 25px;height: 22px;background: url("../../img/index/1.1.1/index-icon.png") no-repeat;background-position: -208px -156px;margin-top: 6px;
+}
+.lesson-infor .lesson-info .renshu-icon {background: url(../../img/index/1.1.1/index-icon.png) -445px -155px no-repeat;width: 20px;height: 20px;display: block;float: left;margin-right: 8px;}
+.lesson-infor .lesson-info em{ font-size:12px}
+.lesson-infor .lesson-info .free{font-size: 14px;color: #21a76d;}
+.lesson-infor .lesson-info .vip{font-size: 14px;color: #ff9001;}
+.lesson-infor .lesson-info .money{font-size: 14px;color: #e30202;}
+.lesson-infor .lesson-info .money i{ font-size:12px; color:#999; text-decoration:line-through; margin-left:5px}
+/*introinfo_info*/
+.introinfo{ margin-bottom:40px; }
+.introinfo_main{ width:880px; float:left}
+.introinfo_site{ width:302px; margin-left:18px; float:left}
+.introinfo_tab{ height:53px; line-height:53px; background:url(../../img/lessonintro/tabbg.png);}
+.introinfo_tab a{ color:#fff; width:74px; text-align:center; float:left; margin:0 70px 0 30px; font-size:18px}
+.introinfo_tab a:hover,.introinfo_tab a.on{ border-bottom:4px solid #ff9001; height:49px}
+.introinfo_content{ border:1px solid #eee; border-top:0;padding:1px 0 20px; margin-bottom:20px; padding-top:15px; min-height:300px; background-color:#FFF;box-shadow:0px 1px 2px rgba(0,0,0,0.1)}
+
+
+/*catlog*/
+.catlog{  line-height:34px; }
+.catlog li.zj{ height:44px; line-height:44px; font-size:16px; padding:0 20px;margin-top:4px;}
+.catlog li.ks{height:34px; margin-bottom:4px; padding:0 20px 0 30px; color:#666; position:relative; font-size:14px;}
+.catlog li.ks:hover{ background-color:#ffecd8}
+.catlog li.zj i{ float:left; height:21px; width:21px;background:url(../../img/lessonintro/lslist.png) no-repeat; margin:10px 18px 0 0;}
+.catlog span.mul{ float:left; width:120px}
+.catlog span.title{float:left; width:435px; height:34px; overflow:hidden; padding-right:140px;text-overflow:ellipsis;white-space:nowrap}
+.catlog span.radio{float:left; width:15px; height:15px; margin:10px 0px 0 10px;background:url(../../img/lessonintro/lsradio.png) no-repeat;}
+.catlog span.choosed{background:url(../../img/lessonintro/lsradio.png) no-repeat -15px 0;}
+.catlog span.k_time{float:left; width:50px;background:url(../../img/lessonintro/bf.png) no-repeat 29px 11px; padding-left:50px; color:#b2b2b2}
+.catlog li.ks a{ position:absolute; height:31px; width:85px; top:1px; right:22px;background:url(../../img/lessonintro/lsbtnbg2.png) no-repeat; display:none}
+.catlog li.ks a.vipbtn{background:url(../../img/lessonintro/lsbtnbg4.png) no-repeat;}
+.catlog li.ks a.jrbtn,.catlog li.ks a.jrbtn_m,.catlog li.ks a.jrbtn_y{ background:none #ff9001; color:#fff; display:none; text-align:center; border-radius:4px; line-height:29px}
+.catlog li.ks:hover a.jrbtn,.catlog li.ks:hover a.jrbtn_m,.catlog li.ks:hover a.jrbtn_y{display:block}
+.catlog .canwarch li.ks:hover a.freebtn,.catlog .canwarch li.ks:hover a.vipbtn{ display:block}
+.catlog .canwarch li.ks:hover a.jrbtn{ display:none}
+
+.wiki ol,.wiki  ul {margin: 0;width: 95%}
+.wiki li {clear: both;}
+.wiki .list-paddingleft-1 {padding-left: 0;}
+.wiki .list-paddingleft-2 {padding-left: 30px;}
+.wiki .list-paddingleft-3 {padding-left: 60px;}
+/*wiki*/
+.wiki { padding:0 20px}
+#wiki{ display:none}
+/*comment*/
+.com_form{ padding:8px 23px 0px; }
+.com_form textarea{ height:62px; width:810px; border:1px solid #c1c1c1; margin-bottom:15px; padding:10px; resize:none}.com_form textarea:focus{border:1px solid #e18325;}
+.com_form span{ float:left; font-size:12px}.com_form span i{ color:#ff0000}
+.com_form a{ float:right; height:26px; width:87px; background-color:#ff9001;color:#fff; text-align:center;border-radius:4px; line-height:26px; font-size:14px}
+.com_form a.dlcomment{ float:left; width:120px; margin-bottom:10px}
+.plnub{ line-height:36px; padding-left:20px; font-size:14px}
+.comment li{padding:14px 23px; border-top:1px solid #efefef}
+.comment li img{ float:left;height:50px; width:50px; border-radius:25px;margin:0px 13px 0px 0px}
+.comment li .comment_item{ float:left; width:740px }
+.comment li .comment_item2{float:left; width:676px}
+.comment li .comment_cap{}
+.comment_cap i{ display:inline-block; height:16px; width:26px;background: #ff9001; color:#fff; text-align:center; line-height:16px; font-size:12px; margin-right:10px; border-radius:3px}
+.comment_cap i.j{ background-color:#eb1717}
+.comment_cap span{ font-size:16px; color:#4095ce; padding:0 17px 0 0;}
+.comment_con{ display:block; padding:10px 0px 8px 0px;  font-size:14px; resize:none; width:100%; min-height:20px; background-color:#fff}
+.commif{ font-size:12px; color:#666}.commif i{ margin-right:20px}
+.nols{ display:block;width:190px ; height:33px;background: url(../../img/lessonintro/nols.png) no-repeat; margin:20px 280px; padding:338px 0 0 26px;}
+.nols i{ font-size:18px; color:#999;}
+.cback{ border-top:1px dashed #dcdcdc; margin-top:10px; padding-top:10px}
+.downld .nodata{ display:block; text-align:center; padding:100px 0; color:#666;}
+.downld li{ line-height:30px; padding:9px 0;}
+.downld li .dicon{ float:left; height:30px; width:30px; background: url(../../img/lessonintro/couricon.png) no-repeat -376px -89px; margin: 0 30px;}
+.downld li .dname{ float:left; width:500px}
+.downld li .dif{float:left; width:150px}
+.downld li a i{ display:inline-block; height:30px; width:20px;background: url(../../img/lessonintro/couricon.png) no-repeat -437px -88px; vertical-align:middle}
+.downld li a:hover i{background: url(../../img/lessonintro/couricon.png) no-repeat -413px -88px;}
+/*site*/
+.teainfo,.recommand-map-wrap{border:1px solid #eee;padding:15px 20px; color:#333; background-color:#fff; margin-bottom:20px; font-size:14px;box-shadow:0px 1px 2px rgba(0,0,0,0.1)}
+.recommand-map-wrap .c-wrap{margin-top: 20px;}
+.recommand-map-wrap .r-wrap{width: 140px;}
+.recommand-map-wrap .img-wrap{width: 112px;height: 62px;overflow: hidden;margin-right: 6px;background: #eee;}
+.recommand-map-wrap .img-wrap img{width: 100%;height: 100%;}
+.recommand-map-wrap p{color: #999;height: 40px;overflow: hidden;margin-top: 6px;}
+.recommand-map-wrap h4{font-size: 16px;}
+.teainfo .tea_content{  overflow-x:hidden}
+.teainfo img{height:62px; width:62px; border-radius:31px;margin:5px 13px 5px 0; float:left}
+.teainfo p.name{ margin-top:22px; color:#333}
+.teainfo .info{padding:10px 10px 15px 10px;text-indent:24px; line-height:22px; color:#666; clear:both }
+.teainfo .info p{ margin-top:5px; text-align:left; text-indent:0;}
+.institutebox{ border-top:1px dashed #dcdcdc;color:#666}
+.institutebox .instit{ font-size:16px; line-height:36px; color:#333}
+.insname{ }
+
+.teanote {border:1px solid #eee; background-color:#fff;box-shadow:0px 1px 2px rgba(0,0,0,0.1) }
+.teanote .titlebox{ border-bottom:1px solid #e0e0e0; line-height:22px; padding:12px 20px}
+.teanote .tea_content{ padding:15px 25px 25px}
+.teanote li{ border-bottom:1px dashed #e0e0e0}
+.teanote .name{ font-size:16px; line-height:30px; clear:both}
+.teanote .time{ font-size:12px; color:#999; float:left; height:30px; width:170px}
+.teanote .area{ font-size:12px; float:left}
+.teanote .area i{background:url(../../img/lessonintro/couricon.png) -80px -95px; display:inline-block; height:20px; width:18px; vertical-align:middle}
+.j-more{ display:block ; text-align:center; margin-top:10px}
+.j-more i{ display:inline-block; width: 18px; height:18px;background: url("../../img/lessonintro/couricon.png") no-repeat -27px -95px;  margin-left:5px; vertical-align:middle}
+.j-more a:hover i{background: url("../../img/lessonintro/couricon.png") no-repeat -52px -95px;}
+/*tck*/
+.loginbg{ position:absolute; width:100%; opacity:0.5; filter:alpha(opacity=50); background-color:#000; height:1000px; left:0; top:0;z-index:1000}
+.tk_box{z-index:1100; background-color:#FFF;width:300px; text-align:center; margin-left:-150px;box-shadow:0px 2px 2px rgba(0, 0, 0, 0.1); position:fixed; left:50%;box-sizing:content-box;top:50%;margin-top:-95px}
+.tk_box h3{ line-height:40px; height:40px; text-align:center; font-weight:normal ; color:#fff; background-color:#636874; font-size:16px; }
+.tk_box h3 i.iconfont{cursor: pointer;display: block;height: 24px;line-height: 24px;position: absolute;right: 10px;top: 10px;width: 20px;}
+.tk_main{ padding:10px 35px; height:162px; text-align:left; font-size:14px;line-height:24px;}
+.tk_btn a{ height:27px; width:86px;background:#ff9001; line-height:27px; color:#fff; text-align:center; font-size:14px;  border-radius:4px; display:block; margin-left:123px}
+.tk_dl .tdbox .tk_btn { padding-left:10px}
+.tk_dl .tdbox .tk_btn a{ margin-left:30px; float:left}
+.tk_dl .tdbox .tk_btn a:hover{  }
+.tk_dl .tk_btn a.hot { position:relative}
+.tk_dl .tk_btn a.hot i{ position:absolute; top:0px; right:-1px; height:30px; width:30px;background:url(../../img/vip/icon.png) no-repeat -74px -15px;}
+#tk_dl2 .tdbox .tk_wd{ height:120px; font-size:14px; text-align:left; line-height:24px}
+#tk_dl2 .tdbox p{ padding:10px 0}
+#tk_dl2 .tk_main{ height:170px}#tk_dl2 .tdbox .tk_btn a{margin-left:60px}
+#tk_dl1 .tdbox .tk_wd,#tk_dl3 .tdbox .tk_wd{ background:url(../../img/vip/cl.png) no-repeat 0px 10px; padding:140px 0px 0px 137px; height:60px; font-size:14px; text-align:left; line-height:26px}
+#tk_dl1 .tdbox p,#tk_dl3 .tdbox p{ padding:10px 0}
+#tk_dl1 .tk_wd a,#tk_dl3 .tk_wd a{ color:#999; text-decoration:underline}
+#tk_dl1 .tk_wd a:hover{ color:#ff9001}
+.red{ color:#d50101}.yel{color:#ff8f14}
+.oldprc{ text-decoration:line-through; color:#999; margin-left:10px; font-weight:normal}
+
+.page-control{ margin:30px 0 }
+/**/
+.kwlist .share-wrap2{ position:absolute; top:-32px; left:-70px; height:30px; width:120px; display:none}
+.kwlist a:hover .share-wrap2 { display:block}
+.kwlist .share-wrap2 span {background: #fff none repeat scroll 0 0;border: 1px solid #e8e8e8;
+margin-left: 10px;padding: 5px;}
+.kwlist .share-wrap2 .i-size {cursor: pointer;height: 18px;width: 32px;display: inline-block;}
+.kwlist .share-wrap2 .i-sina {background:url("/img/zycp/icon.png") no-repeat scroll -193px -62px;border-right: 1px solid #ededed;}
+.kwlist .share-wrap2 .i-qq {background:url("/img/zycp/icon.png") no-repeat scroll -218px -62px;border-right: 1px solid #ededed;}
+.kwlist .share-wrap2 .i-wx {background:url("/img/zycp/icon.png") no-repeat scroll -243px -62px;}
+.kwlist .share-wrap2 .i-sina:hover {background-position: -193px -86px;}
+.kwlist .share-wrap2 .i-qq:hover {background-position: -218px -86px;}
+.kwlist .share-wrap2 .i-wx:hover {background-position: -243px -86px;}
+.wemcn{ top:20px; right:520px; display:none}
+
+.jiathis_style{position:absolute; top:60px; left:656px; border:1px solid #e0e0e0; padding:5px; background-color:#fff; display:none }
+.com_wdl{ display:none}
+.header-container{ z-index:1000}
+
+.updateStatue{ text-align:center; color:#b2b2b2; font-size:14px;}
+
+.rwmtext{ float:none; padding:0;width:auto}
+.rwmtext p{ width:auto} 
+#ewmimg{ width:120px}
+
+
+.worm{ display:none;}
+.worm span{ position:absolute; background-color:#FCF; display:block; height:40px; line-height:40px; width:200px; border-radius:5px; text-align:center; left:50%; top:50%; margin:-20px 0 0 -100px; z-index:3000; opacity:1; display:none}
+.worm span.up{animation: myworm 3s forwards; display:block ; }
+@keyframes myworm
+{
+0%{top:50%; opacity:1;}
+100%{top:-40px; opacity:0;}
+}

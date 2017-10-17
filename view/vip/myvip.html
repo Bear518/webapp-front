@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>我的VIP_极视教育网</title>
+    <meta name="description" content="极视教育作为中国领先的游戏职业在线教育平台之一,国内第一家专注于游戏职业培训与发展的在线 教育平台。平台致力于构建“学习+实战+机遇”三元结构闭环的模式，携手企业与名师一 起帮助有职业培训需求的人才，并为企业提供人才储备的解决方案,拥有海量高清职业课程,涵盖20+个技术领域,如Android,iOS ,Unity3D,Java,Photoshop,Maya,3D MAX,独立游戏等视频教程.根据在线学习特点,极视教育推出职业图谱,帮助学习者从零基础起步,结合实战案例演练,系统学习,助你快速成为优秀技术人才！">
+    <meta name="keywords" content="极视教育,职业教育,在线教育平台,在线教育,在线学习,职业培训,android,ios,Unity3D,java,Photoshop,Maya,3D MAX,独立游戏">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" type="text/css"  href="../../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../css/vip/myvip.css">
+
+</head>
+<body>
+<div class="" include="/view/module/header.html"></div>
+
+<div class="myvip-info">
+    <div class="warpper">
+        <div class="info-img">
+            <img class="j_user_photo" src="">
+        </div>
+        <div class="inforight">
+            <p class="infoname j_username"></p>
+            <div class="vip-box">
+                <div class="vip-time ">
+                    <p class="remaining-time"></p>
+                    <div class="vip-progress-bg">
+                        <div class="vip-icon"></div>
+                        <div class="vip-progress">
+                            <div  class="vip-progress-bar" style="width: 0%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="renew" href="/view/vip/memberbuy.html">充值</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="body-container">
+    <div class="warpper">
+        <div class="vip-privilege">
+            <h3 class="tit">VIP权限</h3>
+            <div class="vip-privilege-list clearfix">
+                <!--   <div class="vip-privilege-box">
+                       <div class="vip-privilege-cnt">
+                           <p>观看会员课程</p>
+                       </div>
+                   </div>
+                   <div class="vip-privilege-box">
+                       <div class="vip-privilege-cnt">
+                           <p>资料下载</p>
+                       </div>
+                   </div>
+                   <div class="vip-privilege-box">
+                       <div class="vip-privilege-cnt">
+                           <p>技术问答</p>
+                       </div>
+                   </div>
+                   <div class="vip-privilege-box">
+                       <div class="vip-privilege-cnt">
+                           <p>1V1伴读书童</p>
+                       </div>
+                   </div>-->
+            </div>
+        </div>
+        <div class="vip-record">
+            <h3 class="tit">VIP记录<span>您获取VIP记录的情况</span></h3>
+
+            <div class="vip-record-list" id="j_vip_record_wrap">
+                <!-- <table class="">
+                     <colgroup >
+                         <col class="col1">
+                         <col class="col1">
+                         <col class="col1">
+                         <col class="col1">
+                         <col class="col2">
+                     </colgroup>
+                     <thead class="">
+                         <tr >
+                            <td>日期</td>
+                            <td>天数</td>
+                            <td>开始日期</td>
+                            <td>结束日期</td>
+                            <td>备注</td>
+                         </tr>
+                     </thead>
+                     <tbody class="" >
+                         <tr >
+                            <td class="col1">2016-8-22</td>
+                            <td class="time col1">7天</td>
+                            <td class="col1">2016-11-15</td>
+                            <td class="col1">2016-11-15</td>
+                            <td class="col2">完善会员信息获得7天</td>
+                         </tr>
+                         <tr >
+                             <td class="col1">2016-8-22</td>
+                             <td class="time col1">7天</td>
+                             <td class="col1">2016-11-15</td>
+                             <td class="col1">2016-11-15</td>
+                             <td class="col2">完善会员信息获得7天</td>
+                         </tr>
+                         <tr >
+                             <td class="col1">2016-8-22</td>
+                             <td class="time col1">7天</td>
+                             <td class="col1">2016-11-15</td>
+                             <td class="col1">2016-11-15</td>
+                             <td class="col2">完善会员信息获得7天</td>
+                         </tr>
+                         <tr >
+                             <td class="col1">2016-8-22</td>
+                             <td class="time col1">7天</td>
+                             <td class="col1">2016-11-15</td>
+                             <td class="col1">2016-11-15</td>
+                             <td class="col2">完善会员信息获得7天</td>
+                         </tr>
+                     </tbody>
+                 </table>-->
+            </div>
+
+            <div id="j_viprecord_page_control" class="page-control page-wrap">
+                <!-- <a href="view/more.html">查看更多</a> -->
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+<div include="../module/footer.html"></div>
+<script src="/js/vendor/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/js/common/jquery.page.js"></script>
+<script type="text/javascript">
+    var vipModule={
+        bindEvents:function(){
+            var self=this;
+        },
+        getVipRecord:function(page){
+            var self=this,page=page?page:1;
+            $.ajax({
+                type:'get',
+                url:mainModule.uri.getVipRecord,
+                data:{page:page,rows:5},
+                success:function(result){
+                    mainModule.log('我的VIP记录接口返回',result);
+                    mainModule.httpInterceptor(result,function(result,total){
+                        self.renderVipRecordDom(result,total);
+                    })
+                }
+            })
+        },
+        getRightList:function(){
+            var self=this;
+            $.ajax({
+                type:'get',
+                url:mainModule.uri.rightList,
+                success:function(result){
+                    mainModule.log('vip所有权益接口返回',result);
+                    if(result.status=='SUCCESS'){
+                        var dom='', ii=result.content&&result.content.length;
+                        self.rightListHashArr=self.rightListHashArr||{};
+                        for(var i=0;i<ii;i++){
+                            var item=result.content[i];
+                            self.rightListHashArr[item.id]=true;
+                            dom+='<div id="j_user_scope_'+item.id+'" class="vip-privilege-box"><div class="true-icon"></div><div class="vip-privilege-cnt"><img src="'+item.icon+'" class="icon-img"/><p>'+item.name+'</p></div></div>';
+                        }
+                        if(!ii){
+                            dom+='<div style="width:100%;text-align:center;" class="f-l">暂无用户权益</div>';
+                        }
+                        $('.vip-privilege-list').html(dom);
+                    }
+                    self.userVipInfo();
+                }
+            })
+        },
+        userVipInfo:function(){
+            var self=this;
+            $.ajax({
+                type:'get',
+                url:mainModule.uri.userVipInfo,
+                success:function(result){
+                    mainModule.log('我的个人信息',result);
+                    if(result.status=='SUCCESS'){
+                        var content=result.content;
+                        if(content.vip){ //是VIP
+                            var dom='',ii=content.rightList&&content.rightList.length;
+                            var expireDate=mainModule.remainDays(content.vipEndDate);
+                            var vipDays=content.vipDays;
+                            for(var i=0;i<ii;i++){
+                                var item=content.rightList[i];
+                                $("#j_user_scope_"+item.id).addClass('mark');
+                            }
+                            $('.vip-icon').addClass("mark");
+                            if(expireDate<10 ){
+                                $('.vip-progress-bar').css('width','5%');
+                            }else{
+                                $('.vip-progress-bar').css('width',Math.floor((expireDate/vipDays)*100)+'%');
+                            }
+                            $('.remaining-time').html('VIP剩余'+expireDate+'天');
+                            $('.renew').html('续费');
+                        }else{ //不是VIP
+                            $('.remaining-time').html('快快加入VIP大家庭');
+                        }
+                        $('.renew').show();
+                    }
+                }
+            })
+        },
+        renderVipRecordDom:function(result,total){
+            var dom='<table class=""><colgroup ><col class="col1"><col class="col1"><col class="col1"><col class="col1"><col class="col2"></colgroup>' +
+                    '<thead class=""><tr ><td>日期</td> <td>天数</td> <td>开始日期</td> <td>结束日期</td> <td>备注</td> </tr> </thead> ' +
+                    '<tbody class="" >';
+            ii=result.length;
+            for(var i=0;i<ii;i++){
+                var item=result[i],createDateObj=mainModule.formatFulldate(item.createDate),
+                        vipEndDateObj=mainModule.formatFulldate(item.vipEndDate),vipStartDateObj=mainModule.formatFulldate(item.vipStartDate);
+                dom+='<tr ><td class="col1">'+createDateObj.date+' </td> <td class="time col1">'+item.vipDays+'天</td>' +
+                        '<td class="col1">'+vipStartDateObj.date+'</td><td class="col1">'+vipEndDateObj.date+'</td> ' +
+                        '<td class="col2">'+item.typeName+'获得'+item.vipDays+'天VIP</td></tr>';
+            }
+            dom+='</tbody></table>';
+            if(ii==0){
+                dom='<div style="line-height:120px;text-align:center;">暂时没有记录</div>';
+            }
+            var self=this;
+            mainModule.createPage(self,result.total,$('#j_viprecord_page_control'),self.getVipRecord ,5);
+            $('#j_vip_record_wrap').html(dom);
+        },
+        init:function(){
+            this.bindEvents();
+            this.getVipRecord();
+            this.getRightList();
+        }
+    };
+    vipModule.init();
+    console.log('vip-center module loaded');
+</script>
+
+
+</body>
+</html>

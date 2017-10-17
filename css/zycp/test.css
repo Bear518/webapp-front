@@ -1,0 +1,125 @@
+@charset "utf-8";
+.testbar{ background:url(../../img/zycp/bg.png) fixed center 0px; padding:58px 0;min-width: 1200px;}
+.testbox{ width:1070px; border:15px solid #fff; background-color:#f2f2f2;-moz-box-shadow: 0 0 35px 5px rgba(0,0,0,0.2);box-shadow: 0 0 35px 5px rgba(0,0,0,0.2);}
+.testtop{ border-bottom:1px dashed #999; padding:25px 200px ;}
+.testtop h2{ background:url(../../img/zycp/icon.png) no-repeat -4px -6px; height:46px; width:337px; font-size:24px; color:#fff; text-align:center; line-height:44px; margin:0 0 25px 170px; position:relative}
+.testtop p{ line-height:24px; font-size:16px;}
+.testbtnbox{ text-align:center; padding-top:30px; line-height:30px; font-size:14px}
+.teststabtn{ display:inline-block; height:84px; width:84px;background:url(../../img/zycp/cpbtn.png) no-repeat; margin-top:20px }
+.teststabtn:hover{transform:scale(1.1);-ms-transform:scale(1.1);-moz-transform:scale(1.1);-webkit-transform:scale(1.1);-o-transform:scale(1.1);}
+.testword,.testrst{ border:1px dashed #dedede; background-color:#f8f8f8; margin:14px 34px; padding:10px 20px 10px 37px; font-size:12px; line-height:24px}
+.testword span{ display:block; font-size:14px; line-height:30px; position:relative;}
+.testword span i{ position:absolute; top:12px; left:-19px; height:7px; width:7px; display:block; background-color:#000;}
+
+/*result*/
+.testrst{ margin-top:60px; position:relative; padding:30px 10px 15px; font-size:14px; line-height:20px;}
+.testrst .rsttop{ background-color:#5ee6be; color:#fff; position:absolute; height:46px;  line-height:46px; font-size:20px; display:block; top:-23px; left:20px; text-indent:20px; float:left}
+.testrst .rsttop i{ display:block;position:absolute; height:46px; width:25px; background:url(../../img/zycp/icon2.png) no-repeat -23px -18px; top:0px; right:-25px;}
+.rsttitle{ display:block;font-size:16px; line-height:30px; color:#333;}
+.yel{ color:#ff9001}
+.but-wrap{ height:46px; text-align:right; padding:20px 0px 6px}
+.but{width: 120px;height:36px;background: #ff9001;font-size: 14px;border-radius: 5px;color: #fff;text-align: center;display: block;margin: 0 auto; line-height:36px; font-size:16px; }
+.but:hover{ color:#fff;}
+.but-wrap2 .but{ display:inline-block; float:left}
+.but-wrap2 {width: 120px;margin:0 auto;}
+.but-wrap2 .but2{background: #d2d2d2;}
+.testbox h1{ height:40px; width:268px; background:url(../../img/zycp/icon2.png) no-repeat -79px -21px; font-size:20px; line-height:40px; color:#333; text-align:center; font-weight:normal; margin:40px 400px }
+
+.jobwaybox{padding:14px 0px 0px 40px; position:relative;}
+.jobwaytab{ width:984px; overflow:hidden; position:relative; height:340px;}
+.jobwaytab ul.jobwaylist{ position:absolute; left:0;top:0}
+.jobwaytab ul.jobwaylist li{ width:220px; padding:13px; float:left; text-align:center;cursor: pointer;}
+.jobwaytab ul.jobwaylist li.on,.jobwaytab ul.jobwaylist li:hover{ background-color:#fafafa;}
+.jobwaytab .jobwaytit{ position:relative; margin-bottom:20px}
+.jobwaytab .jobwaytit i{ position:absolute; height:8px; width:64px;background:url(../../img/zycp/icon2.png) no-repeat 0px -270px; top:23px; left:77px}
+.jobwaytab ul.jobwaylist li .way-img{ height:137px; width:220px}
+.jobwaytab .jobwaypri{background-color:#fff; height:137px;position:relative; }
+.jobwaytab .jobwaypri span{ position:absolute; height:84px; width:96px;background:url(../../img/zycp/icon2.png) no-repeat 0px -306px; top:-9px; left:62px; font-size:18px; color:#333; padding-top:12px; line-height:24px}
+.jobwaytab .jobwaypri p{ padding:97px 10px 0;height:40px; line-height:40px; overflow:hidden}
+
+.courselist{ background-color:#fafafa; width:974px; overflow:hidden; margin-left:40px; padding:0 0 20px 10px;}
+.courselist h2{ text-align:center; font-size:18px; color:#666; font-weight:normal; margin:12px 0}
+.courselist ul{ width:1004px}
+.kenchen-list-item *{box-sizing:border-box;}
+.kenchen-list-item{width: 220px;height:241px;cursor: pointer; background-color:#fff}
+.kenchen-list-item:hover .name{ color:#ff9001}
+.i-time{  display: inline-block;height: 20px;width: 20px;background-position: -72px -292px;
+vertical-align: middle;margin-right: 15px;}
+.kechen-detail-wrap{  padding: 0 18px 7px;  border: 1px solid #ccc;}
+.kechen-detail-wrap>.name{font-size: 15px;padding:10px 0; height:38px; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.i-chapter{display: inline-block;height: 20px;width: 20px;background-position: -111px -292px;
+vertical-align: middle;margin-right: 15px;margin-left: 24px;}
+.kenchen-like-wrap{border-left: 1px solid #ccc;border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;height: 35px;line-height: 35px;}
+.mrg-r20{    margin-right: 20px;}
+.f12-c666{font-size: 12px;color: #666;}
+.c333{    color: #333;}
+.i-like{display: inline-block;height: 35px;width: 20px;background-position: -172px -285px;vertical-align: middle;margin-left: 16px;vertical-align: top;margin-right: 13px;}
+.mrg-r33{margin-right:28px;margin-bottom: 20px;}
+
+.jobbar{ padding:0 119px 30px}
+.jobbar .nols{ display:block; text-align:center; margin-top:30px}
+.jobbar li{ padding:35px 10px; border:1px dashed #e0e0e0; background-color:#fff; margin-bottom:25px}
+.jobbar li:hover{ box-shadow:3px 3px 3px rgba(0,0,0,0.1)}
+.jobbar li img{ height:60px; width:120px; float:left; margin:5px 30px 0 0}
+.jobinfo{ float:left; width:570px;}.jobinfo span{ font-size:14px}
+.jobtitle{ font-size:16px; color:#333; line-height:26px; height:52px; overflow:hidden}
+.jobtitle span{ display:inline-block; padding:0 15px; background-color:#ff5d6c; color:#fff; margin-left:20px; font-size:12px}
+.jobtitle span.qz{ background-color:#4791ff; }
+.jobtitle span.zy{ background-color:#6dc6d2; }
+.jobtitle span.jz{ background-color:#ffa23b; }.jobtitle span.ls{background-color:#956dfc}
+.jobtitle span.qt{background-color:#82cdfd}
+.jobinfo .ico{ float:left; line-height:30px; margin:0 20px 0 0px;}
+.jobinfo .ico i{ display:inline-block; height:25px; width:25px; background-image:url(../../img/xzjy/sprite.png); vertical-align:middle; margin-right:5px;}
+.jobinfo .company i{ background-position:-50px -36px}
+.jobinfo .address i{ background-position:-95px -36px}
+.jobinfo .price i{ background-position:-140px -36px}
+.kechen-img-wrap img{ height:137px; width:220px}
+.jobwaybox .lft_arr,.jobwaybox .rt_arr{height:35px; width:22px;background:url(../../img/zycp/icon2.png) no-repeat -13px -109px; display:block; position:absolute;top:185px; left:10px;}.jobwaybox .rt_arr{ left:auto; right:10px; background-position: -48px -109px}
+.jobwaybox .lft_arr:hover{background-position: -13px -153px}
+.jobwaybox .rt_arr:hover{background-position: -48px -153px}
+
+.jiathis_style{ position:absolute; left:570px; top:0px; width:150px}
+
+
+.warpper{position: relative;}
+.i-icon{background: url('/img/zycp/icon.png') no-repeat;display: inline-block;width: 66px;height: 42px;vertical-align: middle;}
+.share-wrap{position: absolute;right: 16px;top: 16px;}
+.share-wrap span{border:1px solid #e8e8e8;padding:5px;margin-left: 10px;background: #fff;}
+.share-wrap .i-size{width: 32px;height:18px;cursor: pointer;}
+.share-wrap .i-sina{background-position: -193px -62px;border-right: 1px solid #ededed;}
+.share-wrap .i-qq{background-position:-218px -62px;border-right: 1px solid #ededed;}
+.share-wrap .i-wx{background-position: -243px -62px;}
+.share-wrap .i-sina:hover{background-position: -193px -86px;}
+.share-wrap .i-qq:hover{background-position: -218px -86px;}
+.share-wrap .i-wx:hover{background-position: -243px -86px;}
+
+/*.wemcn {position: absolute;right: 20px;top: -103px;z-index: 4;}
+.ewmDiv {width: 255px;height: 89px;border: 2px solid #dcdcdc;padding: 10px;background: #fff;border-radius: 5px;-moz-border-radius: 5px;z-index: 7;}
+#ewmimg {float: left;width: 85px;height: 85px;}
+.rwmtext {float: left;padding-top: 7px;width: 145px;text-indent: 8px;}
+.rwmtext p {line-height: 25px;width: 145px;text-indent: 12px;color: #636363;font-size: 12px;}
+#ewmkg {width: 13px;height: 13px;display: block;position: absolute;right: 12px;top: 11px;background: url(/img/zycp/icon_wem_k_k.png) no-repeat 0 0;}
+.ewmsj {margin-left: 12px;margin-top: -2px;width: 18px;height: 13px;position: absolute;background: url(/img/zycp/icon_erwm_sj.png) no-repeat 0 0;right: 14px;}
+*/
+body .wemcn{right: 130px;}
+body .ewmsj{display: none;}
+.kechen-img-wrap{position: relative;width: 220px;height: 137px;overflow: hidden;}
+.mianfei-i {background-position: -118px -45px;height: 59px;width: 50px;display: block;position: absolute;top: -5px;left: 13px;z-index: 1;}
+.kechen-price-wrap {position: absolute;bottom: 0;left: 0;right: 0;height: 30px;font-size: 16px;color: #ff9001;background: rgba(0,0,0,0.5);padding-left: 15px;line-height: 30px;}
+.fufei-i {background-position: -52px -45px;height: 59px;width: 50px;display: block;position: absolute;top: -5px;left: 13px;z-index: 1;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

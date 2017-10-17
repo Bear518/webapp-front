@@ -1,0 +1,300 @@
+.container-one{
+	background: url('/img/seek/200.jpg') no-repeat center center;
+	background-size: cover;
+	height: 210px;
+	margin-bottom: 65px;
+    min-width: 1200px;
+}
+.content-wrapper{
+    width: 1210px;
+    margin:0 auto;
+}
+.content-one-wrap{
+	padding-top: 50px;
+}
+.content-one-wrap p{
+	margin-top: 22px;
+}
+.cf{
+	color: #fff; font-weight:normal
+}
+.content-one-wrap p{
+	font-size: 20px;
+	color: #fff;
+}
+.icon-ba:before,.icon-ba:after{
+    background: url('/img/index/icon.png') no-repeat;
+}
+.next-disabled:after {
+  display: inline-block;
+  content: '';
+  background-position: -541px -470px;
+  height: 20px;
+  width: 40px;
+  vertical-align: middle;
+}
+.disabled:before,.prevPage:before{
+    display: inline-block;
+    content: '';
+    background-position: -462px -470px;
+    height: 20px;
+    width: 40px;
+    vertical-align: middle;
+}
+.nextPage:after{
+  display: inline-block;
+  content: '';
+  background-position: -541px -470px;
+  height: 20px;
+  width: 40px;
+  vertical-align: middle;
+}
+.page-goto-wrap{
+    display: inline-block;
+}
+.page-input{
+    width: 30px;
+    height: 20px;
+    border: 1px solid #999;
+    margin-left: 6px;
+    margin-right: 12px;
+}
+.page-btn-goto{background: #fff;font-size: 14px;cursor: pointer;padding: 2px 6px;vertical-align: middle;}
+.page-btn-goto:hover{background: #ff9001;color: #fff;}
+/*寻找课程页面css结束*/
+/*寻找课程模块css开始*/
+.kechen-item{
+    width: 242px;
+    height: 120px;
+    color: #666;
+    text-align: center;
+    border-right: 1px solid #999;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    cursor: pointer;
+}
+.kechen-wrap{
+    /*border:1px solid #ff9001;*/
+}
+.kechen-wrap .active{
+    background: #fff;
+    color: #ff9001;
+    border-bottom: none;
+    border-top: 2px solid #ff9001;
+    /*box-shadow: -1px 0 1px #999,1px 0 1px #999;*/
+}
+.fufei-i{
+  background-position: -52px -45px;
+  height: 59px;
+  width: 50px;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 13px;
+  z-index: 1;
+}
+.mianfei-i{
+    background-position: -118px -45px;
+    height: 59px;
+    width: 50px;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 13px;
+    z-index: 1;
+}
+.kechen-i{
+    background: url('/img/index/icon.png') no-repeat;
+    display: block;
+    margin:0 auto;
+}
+.active .kechen-all-i{
+    background-position: -205px -20px;
+}
+.kechen-wrap li:hover .kechen-all-i{
+    background-position:-205px -20px;
+}
+.kechen-all-i{
+    background-position: -2px -518px;
+    height: 90px;
+    width: 80px;
+}
+.active .kechen-it-i{
+    background-position: -315px -18px;
+}
+.kechen-wrap li:hover{
+    color: #ff9001;
+}
+.kechen-wrap li:hover .kechen-it-i{
+    background-position: -315px -18px;
+}
+.kechen-it-i{
+    background-position: -112px -517px;
+    height: 90px;
+    width: 80px;
+}
+.active .kechen-jr-i{
+    background-position: -414px -18px;
+}
+.kechen-wrap li:hover .kechen-jr-i{
+    background-position: -414px -18px;
+}
+.kechen-jr-i{
+    background-position: -210px -517px;
+    height: 90px;
+    width: 94px;
+}
+.active .kechen-ys-i{
+    background-position: -531px -18px;
+}
+.kechen-wrap li:hover .kechen-ys-i{
+     background-position: -531px -18px;
+}
+.kechen-ys-i{
+    background-position: -328px -517px;
+    height: 90px;
+    width: 80px;
+}
+.active .kechen-zc-i{
+    background-position: -636px -18px;
+}
+.kechen-wrap li:hover .kechen-zc-i{
+     background-position:  -636px -18px;
+}
+.kechen-zc-i{
+    background-position: -434px -517px;
+    height: 90px;
+    width: 80px;
+}
+*{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+.kechen-img-wrap{
+    width: 275px;
+    height: 208px;
+    overflow: hidden;
+    position: relative;
+}
+.kenchen-list-item{
+    width: 275px;
+    height: 336px;
+    cursor: pointer;
+}.kenchen-list-item:hover .name{ color:#ff9001}
+.kechen-list-container{
+    margin-top: 50px;
+}
+.i-time{
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-position: -72px -292px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+.kechen-detail-wrap{
+  padding: 0 18px 15px;
+  border: 1px solid #ccc;
+}
+.kechen-detail-wrap>.name{font-size: 17px;padding:23px 0; height:47px; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.i-chapter{
+display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-position: -111px -292px;
+  vertical-align: middle;
+  margin-right: 15px;
+  margin-left: 24px;
+}
+.kenchen-like-wrap{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 40px;
+    line-height: 40px;
+}
+.mrg-r20{
+    margin-right: 20px;
+}
+.f12-c666{
+    font-size: 12px;
+    color: #666;
+}
+.c333{
+    color: #333;
+}
+.i-like{
+    display: inline-block;
+    height: 35px;
+    width: 20px;
+    background-position: -172px -285px;
+    vertical-align: middle;
+    margin-left: 16px;
+    vertical-align: top;
+    margin-right: 13px;
+}
+.mrg-r33{margin-right: 36px;margin-bottom: 30px;}
+.more-wrap a{
+    display: block;
+    width: 220px;
+    height: 50px;
+    line-height: 50px;
+    background: #ff9001;
+    border-radius:5px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    margin: 44px auto 88px;
+   /* margin:0 auto;*/
+}
+.f-l{
+    float: left;
+}
+.f-r{
+    float: right;
+}
+.kechen-fenglei-list{
+    padding: 42px 0 42px 96px;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    box-shadow:0 0 0 #999, /*左边阴影*/  
+    2px 0 2px #999, /*右边阴影*/  
+    0 2px 2px #999; /*底边阴影*/
+}
+.kechen-fenglei-list .title{
+    font-size: 18px;
+    color: #666;
+}
+.fenglei-name-wrap{
+  /*margin-right: 64px;*/
+  display: inline-block;
+  height: 32px;
+  vertical-align: middle;
+    padding: 6px 16px;
+}
+.bl9{
+    border-left: 1px solid #999;
+}
+.mrg-b50{
+    margin-bottom: 50px;
+}
+.kechen-fenglei-list .active {
+    padding: 6px 16px;
+    background: #ff9001;
+    color: #fff;
+}
+.kechen-fenglei-list .fenglei-option:hover{
+    color: #ff9001;
+    cursor: pointer;
+}
+.kechen-fenglei-list .active:hover{
+    color: #fff;
+}
+.fenglei-r-wrap{
+    width: 966px;
+    height: auto;
+}
+/*寻找课程css结尾*/
+

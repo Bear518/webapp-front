@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>简历预览_极视教育网</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/wdjl/resume.css">
+
+</head>
+<body>
+<div include="../module/header.html"></div>
+
+<div class="resumebar warpper clearfix" ng-app="ResumePreApp" ng-controller="ResumePreCtrl">        
+    <div class="left-wrap">
+	<div class="title-wrap">简历完整度：<span ng-bind="resumeFinishedPerc"></span></div>
+	<div class="i-wrap"><i class="i-sprite"></i></div>
+	<div class="progress-wrap"><div id="j_progress" class="progress"></div></div>
+	<div>
+		<ul>
+			<li class="clearfix"><a href="#basic_info">基本信息</a><span ng-if="!resumeFinishedInfo.basicInfoFinished" class="f-r">未添加</span><i ng-if="resumeFinishedInfo.basicInfoFinished" class="f-r i-sprite i-complete "></i></li>
+			<li class="clearfix"><a href="#job_obj">求职意向</a><span ng-if="!resumeFinishedInfo.jobIntensionFinished" class="f-r">未添加</span><i ng-if="resumeFinishedInfo.jobIntensionFinished" class="f-r i-sprite i-complete "></i></li>
+			<li class="clearfix"><a href="#contact_info">联系方式</a><span ng-if="!resumeFinishedInfo.contactInfoFinished" class="f-r">未添加</span><i ng-if="resumeFinishedInfo.contactInfoFinished" class="f-r i-sprite i-complete"></i></li>
+			<li class="clearfix"><a href="#languagebox">语言能力</a><span class="f-r" ng-if="!resumeFinishedInfo.languagesFinished">未添加</span><i ng-if="resumeFinishedInfo.languagesFinished" class="f-r i-sprite i-complete"></i></li>
+			<li class="clearfix"><a href="#skillbox">掌握技能</a><span class="f-r" ng-if="!resumeFinishedInfo.skillFinished">未添加</span><i ng-if="resumeFinishedInfo.skillFinished" class="f-r i-sprite i-complete "></i></li>
+			<li class="clearfix"><a href="#cert">证书</a><span class="f-r" ng-if="!resumeFinishedInfo.certificateFinished">未添加</span><i ng-if="resumeFinishedInfo.certificateFinished" class="f-r i-sprite i-complete"></i></li>
+			<li class="clearfix"><a href="#edu_exp">教育经历</a><span class="f-r" ng-if="!resumeFinishedInfo.educationsFinished">未添加</span><i ng-if="resumeFinishedInfo.educationsFinished" class="f-r i-sprite i-complete"></i></li>
+			<li class="clearfix"><a href="#train_exp">培训经历</a><span class="f-r" ng-if="!resumeFinishedInfo.trainingsFinished">未添加</span><i ng-if="resumeFinishedInfo.trainingsFinished" class="f-r i-sprite i-complete"></i></li>
+			<li class="clearfix"><a href="#edu_job">校内职务</a><span class="f-r" ng-if="!resumeFinishedInfo.campusDutiesFinished">未添加</span><i ng-if="resumeFinishedInfo.campusDutiesFinished" class="f-r i-sprite i-complete"></i></li>
+			<li class="clearfix"><a href="#honor">获得荣誉</a><span class="f-r" ng-if="!resumeFinishedInfo.honorsFinished">未添加</span><i ng-if="resumeFinishedInfo.honorsFinished" class="f-r i-sprite i-complete"></i></li>
+			<li class="clearfix"><a href="#job_exp">工作经历</a><span class="f-r" ng-if="!resumeFinishedInfo.worksFinished">未添加</span><i ng-if="resumeFinishedInfo.worksFinished" class="f-r i-sprite i-complete"></i></li>
+			<li class="clearfix"><a href="#sx_exp">实习经历</a><span class="f-r" ng-if="!resumeFinishedInfo.internshipsFinished">未添加</span><i ng-if="resumeFinishedInfo.internshipsFinished" class="f-r i-sprite i-complete"></i></li>
+			<li class="clearfix"><a href="#pro_exp">项目经历</a><span class="f-r" ng-if="!resumeFinishedInfo.projectsFinished">未添加</span><i ng-if="resumeFinishedInfo.projectsFinished" class="f-r i-sprite i-complete"></i></li>
+		</ul>
+	</div>
+	<div class="but-wrap"><a href="/view/wdjl/edit.html" type="button" class="but but-preview but-shadow but-animation" value="">编辑简历</a></div>
+</div>  
+	<div class="right-wrap clearfix"  >
+        <div class="res_ico dis_none"><a class="dy" href="#"></a><a class="xz"  href="#"></a></div>
+    	<div include="resumebar.html"></div>
+    </div>
+</div>
+
+
+<div include="../module/footer.html"></div>
+</body>
+<script src="../../js/vendor/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/js/common/angular.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/wdjl/resume.js"></script>
+
+</html>

@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="/css/topbtn.css">
+<style type="text/css">
+.warpper .topmenu .dis_none{display: none;}
+.topmenu .reg-login-wrap{display: inline-block;}
+.topmenu .photo-wrap{display: inline-block;width: 33px;height: 33px;border-radius: 50%;background: #eee;overflow: hidden;}
+.topmenu .photo-wrap img{width: 100%;height: 100%;}
+.topmenu .logined-wrap{display: inline-block;vertical-align: middle;position: relative;}
+.shrink-08{transform:scale(0.8);-ms-transform:scale(0.8);-moz-transform:scale(0.8);-webkit-transform:scale(0.8);-o-transform:scale(0.8);z-index: -1;}
+.info-menu-list-wrap:before,.info-menu-list-wrap:after{content: '';display: block;width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 10px solid #d1d1d1;margin-left: 56px;}
+.info-menu-list-wrap:after{position: absolute;top: 3px;border-bottom: 8px solid #fff;}
+.info-menu-list-wrap{position: absolute;left: -50px;opacity: 0;z-index: -1;font-size: 14px;}
+.info-menu-list-wrap ul{background: #fff;width: 108px;text-align: center; border-radius:5px; box-shadow:3px 3px 3px rgba(0, 0, 0, 0.1); overflow:hidden;border:1px solid #d1d1d1;}
+.info-menu-list-wrap ul li{padding:0 4px;line-height: 32px;height: 32px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.info-menu-list-wrap ul li:hover{color: #fff;background: #ff9001;}
+.info-menu-list-wrap ul li:hover a{color: #fff;}
+.bd8{border-bottom:1px solid #d8d8d8;}
+.logined-wrap:hover .info-menu-list-wrap{opacity: 1;transform:scale(1);-ms-transform:scale(1);-moz-transform:scale(1);-webkit-transform:scale(1);-o-transform:scale(1);z-index: 22;}
+.topbar,.navbar{z-index: 88;}.logout{cursor: pointer;}
+.morebox:hover .shrink-08{z-index:2;opacity: 1;transform:scale(1);-ms-transform:scale(1);-moz-transform:scale(1);-webkit-transform:scale(1);-o-transform:scale(1);}
+.rzbox:hover .shrink-08{z-index:2;opacity: 1;transform:scale(1);-ms-transform:scale(1);-moz-transform:scale(1);-webkit-transform:scale(1);-o-transform:scale(1);}
+</style>
+<div class="topbar">
+<div class="warpper clearfix">
+	<div class="f-l w150"><a href="/" class="logo"><img src="../../img/index/logo.png"/></a></div>
+	<div class="topmenu">
+		<a class="yellow dis_none" href="/view/vip/vipintro.html">VIP</a><i class="dis_none"></i>
+        <a class="wdda" href="javascript:;">我的档案</a><i></i>
+		<a id="j_header_a_xuexi" onclick="goxuexipage()" href="javascript:void(0);">学习中心</a><i></i>
+		<div id="j_reg_login_wrap" class="reg-login-wrap dis_none">
+			<a class="login" href="#">登录</a><a class="register" href="#">注册</a>
+		</div>
+		<div id="j_logined_wrap" class="logined-wrap dis_none">
+			<div class="photo-wrap"><a href="/view/info/index.html?type=0"><img id="j_user_photo" class="user-photo" src="/img/info/tx.jpg"></a></div>
+			<div class="info-menu-list-wrap animation shrink-08">
+				<ul>
+					<!-- <li class="lgnamebox bd8"></li> -->
+					<li class="bd8"><a class="lgnamebox" href="/view/info/index.html?type=0"></a></li>
+					<li class="bd8 dis_none">普通用户</li>
+					<li class="logout">退出登录</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="navbar">
+	<div class="warpper">
+	<ul class="clearfix">
+		<li style="padding-left:0"><a href="/">首页</a></li>
+		<li><a href="/view/seek/course.html">寻找课程</a></li>
+		<li><a href="/view/zytp/list.html">职业图谱</a></li>
+		<li><a href="/view/xzjy/list.html">寻找机遇</a></li>
+		<li class="rzbox"><a href="#">欢迎入驻<i class="iconfont">&#xe602;</i></a>
+        <span class="rzfl animation shrink-08"><a href="/view/join/tea_join.html">教师入驻</a><a href="/view/join/org_join.html">机构入驻</a></span></li>
+		<li class="morebox"><a href="#">更多<i class="iconfont">&#xe602;</i></a>
+        <span class="morefl animation shrink-08"><a href="/view/aboutus/connectus.html">联系我们</a><a href="/view/aboutus/aboutus.html">关于我们</a></span></li>
+	</ul>
+	</div>
+</div>
+<script>
+$(function() {
+// 	$('.rzbox').hover(function(){		
+// 		$('.rzfl').addClass('scale-10');
+// 		$(this).children().first().css('color','#ff9001');		
+// 	},function(){		
+// 		$('.rzfl').removeClass('scale-10');
+// 		$(this).children().first().css('color','#666');		
+// 	});
+// 	$('.morebox').hover(function(){		
+// 		$('.morefl').addClass('scale-10');
+// 		$(this).children().first().css('color','#ff9001');		
+// 	},function(){		
+// 		$('.morefl').removeClass('scale-10');
+// 		$(this).children().first().css('color','#666');		
+// 	});
+	$('.wdda').click(function(){
+		if(mainModule.getCookie('islogin')){
+			window.open("/view/wdjl/edit.html");
+		}
+		else{
+			$('.login_dl').show();  
+			$('.loginbg').height($(document).height())
+		}
+	})
+})
+
+</script>

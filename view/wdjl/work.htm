@@ -1,0 +1,106 @@
+<style type="text/css">
+	.r-wrap .work-txt-wrap{width: 105px;text-align: right;white-space: nowrap;}
+	.r-wrap .w116{width: 116px;}
+	.mrg-r66{margin-right: 66px;}
+	.r-wrap .work-wrap ul>li{margin-bottom: 16px;}
+	.r-wrap .work-detail-wrap .multi-select{width: 296px;height: 28px;border:1px solid #ededed;line-height: 22px;padding:3px;color: #999;}
+</style>
+<div id="j_work_wrap" class="item-wrap work-wrap">
+	<div ng-if="shadeInfo.workInfoShow" class="shade-wrap"></div>
+	<div class="clearfix header-wrap">
+		<div class="f-l title-wrap">
+			<i class="i-sprite i-work"></i>
+			<div class="item-txt">工作经历</div>
+		</div>
+		<div class="f-r"><i ng-click="changeShade('workInfo')" data-id="#j_work_wrap" class="i-sprite i-add"></i></div>
+	</div>
+	<div class="detail-wrap work-detail-wrap">
+		<table class="default-wrap">
+			<thead><tr><th>公司名称</th><th>在职时间</th><th>职位名称</th><th></th></tr></thead>
+			<tbody>
+				<tr ng-repeat="item in workList"><td ng-bind="item.company"></td><td><label ng-bind="item.startDate|dateFormatToMonth"></label><span ng-bind="item.endDate|isShowZhi"></span><label ng-bind="item.endDate|dateFormatToMonth"></label></td><td ng-bind="item.jobTitle"></td><td><span class="mrg-r10 mrg-l20" ng-click="infoEdit(item,'work_edit')">编辑</span><span ng-click="infoDel(item,'work_del',$index)">删除</span></td></tr>
+			</tbody>
+		</table>
+		<div class="edit-wrap">
+			<ul>
+				<li class="clearfix">
+					<div class="mrg-r38 work-txt-wrap f-l"><i class="i-sprite i-require"></i>公司名称</div>
+					<div class="f-l"><input ng-model="workInfo.company" type="text" class="input-default w228 mrg-r5"><span class="err mrg-l5" ng-bind="workInfoErr.company"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 work-txt-wrap f-l"><i class="i-sprite i-require"></i>在职时间</div>
+					<div class="f-l"><input maxlength="4" ng-keydown="checkNumberInput(e)" ng-model="workInfo.startYear" type="text" class="input-default w70 mrg-r5">年
+						<input type="text" maxlength="2" ng-keydown="checkNumberInput(e)" ng-model="workInfo.startMonth" class="input-default w70 mrg-r5 mrg-l5">月
+						<span class="mrg-l5 mrg-r5">至</span>
+					<input type="text" maxlength="4" ng-keydown="checkNumberInput(e)" ng-model="workInfo.endYear" class="input-default w70 mrg-r5 mrg-l5">年
+					<input type="text" maxlength="2" ng-keydown="checkNumberInput(e)" ng-model="workInfo.endMonth" class="input-default w70 mrg-r5 mrg-l5">月
+					<input ng-model="workInfo.asYet" type="checkbox" class="mrg-l10 mrg-r5"><span ng-click="toNowClick('work_tonow')">至今</span><span class="err mrg-l5" ng-bind="workInfoErr.startDate"></span><span class="err mrg-l5" ng-if="!workInfoErr.startDate" ng-bind="workInfoErr.endDate"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 work-txt-wrap f-l">工作城市</div>
+					<div class="f-l"><select ng-model="workInfo.citySelected" ng-options="item.name for item in cityData" class="mrg-r10" ng-change="workCityChange(workInfo.citySelected)"></select><select ng-model="workInfo.cityChildSelected" ng-options="item.name for item in workCityChildData"></select><span class="err mrg-l5" ng-bind="workInfoErr.city"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 work-txt-wrap f-l">所在部门</div>
+					<div class="f-l"><input ng-model="workInfo.department" type="text" class="input-default w228"></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 work-txt-wrap f-l"><i class="i-sprite i-require"></i>所属行业</div>
+					<!-- <div class="f-l"><select></select></div> -->
+					<div class="f-l ">
+						<span ng-repeat="item in workIndustrys" ng-bind="item.name" class="default-wrap mrg-r5"></span>
+						<div class="edit-wrap clearfix">
+							<div class="multi-select clearfix f-l" ng-click="selectIndustry('work_industry_select')"><div class="multi-wrap f-l"><span  ng-if="workIndustrys.length==0">请选择</span><span class="mrg-r5" ng-repeat="item in workIndustrys" ng-bind="item.name"></span></div><i class="f-r i-sprite i-multi"></i></div>
+							<div class="mrg-l10 err f-l" ng-bind="workInfoErr.industry"></div>
+						</div>
+					</div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 work-txt-wrap f-l"><i class="i-sprite i-require"></i>职位名称</div>
+					<div class="f-l"><input ng-model="workInfo.jobTitle" type="text" class="input-default w228"><span class="err mrg-l5" ng-bind="workInfoErr.jobTitle"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 work-txt-wrap f-l"><i class="i-sprite i-require"></i>职位类别</div>
+					<div class="f-l ">
+						<span ng-repeat="item in workJobTypes" ng-bind="item.name" class="default-wrap"></span>
+						<div class="edit-wrap clearfix">
+							<div ng-click="showJobTypeSelect('work_jobtype_select')" class="multi-select clearfix f-l"><span ng-if="workJobTypes.length==0">请选择</span><div class="multi-wrap f-l" ng-if="workJobTypes.length>0"><span ng-repeat="item in workJobTypes" class="mrg-r5" ng-bind="item.name"></span></div><i class="f-r i-sprite i-multi"></i></div>
+							<div class="mrg-l10 err f-l" ng-bind="workInfoErr.jobCategory"></div>
+
+						</div>
+					</div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 work-txt-wrap f-l"><i class="i-sprite i-require"></i>职位级别</div>
+					<div class="f-l"><select ng-init="workInfo.positionLevel=positionLevelData[0]" ng-model="workInfo.positionLevel" ng-options="item for item in positionLevelData"></select><span class="err mrg-l5" ng-bind="workInfoErr.positionLevel"></span></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 work-txt-wrap f-l">薪水(税前)</div>
+					<div class="f-l"><input ng-model="workInfo.salary" type="text" class="input-default w228 mrg-r10">RMB/月</div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 work-txt-wrap f-l">汇报对象</div>
+					<div class="f-l"><input ng-model="workInfo.superior" type="text" class="input-default w116 mrg-r66">下属人数<input ng-model="workInfo.subordinate" type="text" class="input-default w116 mrg-l35"></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 work-txt-wrap f-l">工作描述</div>
+					<div class="f-l"><textarea ng-keydown="enterToNewLine(this)" ng-model="workInfo.jobDescription" class="textarea w545"></textarea></div>
+				</li>
+				<li class="clearfix">
+					<div class="mrg-r38 work-txt-wrap f-l h20"></div>
+					<div class="f-l">
+						<div class="clearfix mrg-t20 h34">
+							<div class="f-l">
+								<input ng-disabled="disabledInfo.workInfoUpdateBtnDisabled" ng-click="saveWorkInfo('#j_work_wrap')" type="button" class="but but-shadow but-animation w95" value="保存">
+							</div>
+							<div class="f-l">
+								<input ng-click="cancelUpdate('work_update_cancel')" type="button" data-id="#j_work_wrap" class="but but-cancel but-shadow but-animation mrg-l80 w95" value="取消">
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+	</div>
+</div>

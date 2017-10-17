@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta property="qc:admins" content="3742272215633144221475636"/>
+    <meta property="wb:webmaster" content="7a8f5a3007d75f75"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>极视教育官网_专注于游戏职业培训的在线教育平台_极视教育网首页</title>
+    <meta name="description" content="极视教育作为中国领先的游戏职业在线教育平台之一,专注于游戏职业培训与发展的在线 教育平台。平台致力于构建“学习+实战+机遇”三元结构闭环的模式，携手企业与名师一 起帮助有职业培训需求的人才，并为企业提供人才储备的解决方案,拥有海量高清职业课程,涵盖20+个技术领域,如Android,iOS ,Unity3D,Java,Photoshop,Maya,3D MAX,独立游戏等视频教程.根据在线学习特点,极视教育推出职业学院,帮助学习者从零基础起步,结合实战案例演练,系统学习,助你快速成为优秀技术人才！">
+    <meta name="keywords" content="极视教育,职业教育,在线教育平台,在线教育,在线学习,职业培训,android,ios,Unity3D,java,Photoshop,Maya,3D MAX,独立游戏">
+
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0"> -->
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <script type="text/javascript">
+        var isMobile = /mobile/gi.test(window.navigator.userAgent);
+        if (isMobile) {
+            window.location.href = 'http://m.skillbridge.cn';
+        }
+    </script>
+    <link rel="stylesheet" href="css/main.css">
+     <link rel="stylesheet" type="text/css" href="css/topbtn.css">
+    <link rel="stylesheet" type="text/css" href="css/index/index.css">
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
+    improve your experience.</p>
+<![endif]-->
+<div class="j-indextopwrap ">
+    <div class="g-flow">
+        <!-- head star-->
+        <div class="topheader f-pr clearfix">
+            <div class="logo f-fl clearfix" >
+                <!--<img class="f-fl img" src="img/index/1.1.1/logo.png" alt="" width="350" height="80">-->
+            </div>
+            <div class="search dis_none">
+                <div class="box ">
+                    <input type="text" class="j-input f-fl" placeholder="请输入想搜索的内容..." id="search">
+                    <div class="submit  f-hide f-fl" >搜索课程、计划或用户</div>
+                </div>
+                 <div class="j-suggest" id="search-list"></div>
+            </div>
+            <div class="top-menu">
+                <a title="系统消息" class="i-icon i-email" id="j_login_email" style="display: none" href="/view/system/notice.html" ><i class="i-email-num dis_none j_has_notice f-pa"></i></a>
+                <a title="VIP" class="i-icon i-vip-a" href="/view/vip/vipintro.html" ></a>
+                <a title="帮助中心" class="i-icon i-question" href="/view/info/help_center.html" ></a>
+                <span id="j_reg_login_wrap" class="reg-login-wrap mrg-l10" style="display: none">
+                    <a class="login" href="javascript:;">登录</a><i class="i-icon-i"></i><a class="register" href="javascript:;">注册</a>
+                </span>
+                <span id="j_logined_wrap" class="photo-wrapper logined-wrap mrg-l10" style="display:none;">
+                    <a class="a-photo-wrap" href="/view/info/setinfo.html"><img class="photo j_user_photo" src=""></a>
+                   <!-- <div class="info-menu-list-wrap animation shrink-08">
+                        <ul>
+                            &lt;!&ndash; <li class="lgnamebox bd8"></li> &ndash;&gt;
+                            <li class="bd8"><a class="lgnamebox" href="/view/info/index.html?type=0"></a></li>
+                            <li class="bd8 dis_none">普通用户</li>
+                            <li class="logout">退出登录</li>
+                        </ul>
+                    </div>-->
+
+                <div class="info-menu-list-wrap box-shadow animation shrink-08" >
+                    <div class="info-menu-top">
+                        <div class="info-menu-img">
+                            <a class="a-photo-wrap" href="/view/info/setinfo.html">
+                                <img class="photo j_user_photo" src="">
+                            </a>
+                            <i class="vip j_isvip" style="display:none;"></i>
+                        </div>
+                        <p class="info-menu-name j_username"></p>
+                        <a href="/view/info/setinfo.html" class="set"></a>
+                    </div>
+                    <div  class="course-history j_menu_course_history"  >
+                        <div class="course">
+                            <h4 class="text-ellipsis j_menu_course_name"></h4>
+                            <p class="text-ellipsis j_menu_chapterName_name"></p>
+                            <a href="#" class="continue j_menu_course_continue" target="_blank">继续</a>
+                        </div>
+                    </div>
+                    <div class="info-menu-cnt">
+                        <div class="info-menu-box clearfix">
+                            <a  href="/view/info/mycourse.html" class="float_l" target="_blank"><i class="xxzx"></i>学习中心</a>
+                            <a  href="/view/info/job_info.html" class="float_l" target="_blank"><i class="wdvip"></i>求职管理</a>
+                        </div>
+                        <div class="info-menu-box clearfix">
+                            <a  href="/view/info/order.html" class="float_l" target="_blank"><i class="qzgl"></i>订单管理</a>
+                            <a href="/view/vip/myvip.html" class="float_l" target="_blank"><i class="ddgl"></i>我的VIP </a>
+                        </div>
+                        <div class="info-menu-box clearfix">
+                            <a  href="/view/info/coupon.html" class="float_l"><i class="coupon"></i>我的优惠券</a>
+                        </div>
+                    </div>
+                    <div class="info-menu-exit logout">
+                        <i></i>退出
+                    </div>
+                </div>
+
+                </span>
+                <!--登录状态 -->
+                <!--<div id="j_logined_wrap" class="logined-wrap dis_none">
+                    <div class="photo-wrap"><a href="/view/info/index.html?type=0"><img id="j_user_photo" class="user-photo" src="/img/info/tx.jpg"></a></div>
+                    <div class="info-menu-list-wrap animation shrink-08">
+                        <ul>
+                            &lt;!&ndash; <li class="lgnamebox bd8"></li> &ndash;&gt;
+                            <li class="bd8"><a class="lgnamebox" href="/view/info/index.html?type=0"><i class="i-vip-icon i-no-vip"></i></a></li>
+                            <li class="bd8 dis_none">普通用户</li>
+                            <li class="logout">退出登录</li>
+                        </ul>
+                    </div>
+                </div>-->
+            </div>
+           <!-- <div class="f-r">
+                <span class="input-search-wrap"><input type="text" class="input input-search"><i class="i-icon i-search"></i></span>
+                <i class="i-icon i-email"></i>
+                <i class="i-icon i-vip"></i>
+                <i class="i-icon i-question"></i>
+                <span id="j_reg_login_wrap" class="login-wrap"><a class="login" href="javascript:;">登录</a><i class="midden-line">|</i>
+                    <a class="register" href="javascript:;">注册</a></span>
+                <span id="j_logined_wrap" class="photo-wrapper" style="display:none;"><img class="photo" src="/img/info/tx.jpg"></span>
+            </div>-->
+        </div>
+        <!-- head end-->
+        <!-- topnav star-->
+        <div class="topnav f-pr clearfix">
+            <div class=" j-allcourse">
+                <a href="/view/seek/course.html?version=1.5.1" target="_blank" class="cbtn clearfix">
+                    <div class="ic f-fl"></div>
+                    <span class="qb f-fl">全部课程</span> </a>
+            </div>
+            <div class=" j-allcourselist f-pa">
+                <div class="f-fl  f-pa j-cateleft">
+                    <div class="catebg f-pa"></div>
+                    <div class="items f-pa" id="j-item">
+                      <!--  <div class="item j-item">
+                            <div class="curbg"></div>
+                            <div class="inn">
+                                <p><a href="" target="_blank">IT/互联网</a></p>
+                                <a href="" target="_blank">前端开发</a>
+                                <a href="" target="_blank">移动开发</a>
+                            </div>
+                        </div>
+                        <div class="item j-item">
+                            <div class="curbg"></div>
+                            <div class="inn">
+                                <p><a href="" target="_blank">设计</a></p>
+                                <a href="" target="_blank">PS</a>
+                                <a href="" target="_blank">平面设计</a>
+                                <a href="" target="_blank">影视特效</a>
+                            </div>
+                        </div>
+                        <div class="item j-item">
+                            <div class="curbg"></div>
+                            <div class="inn">
+                                <p><a href="" target="_blank">兴趣生活</a></p>
+                                <a href="" target="_blank">摄影</a>
+                                <a href="" target="_blank">健身</a>
+                                <a href="" target="_blank">乐器</a>
+                            </div>
+                        </div>
+                        <div class="item j-item last">
+                            <div class="curbg"></div>
+                            <div class="inn">
+                                <p><a href="" target="_blank">兴趣生活</a></p>
+                                <a href="" target="_blank">摄影</a>
+                                <a href="" target="_blank">健身</a>
+                                <a href="" target="_blank">乐器</a>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+                <div class=" f-pa clearfix j-cateright" id="j-rwrap-img">
+                    <canvas id="canvas" width="730" height="500"></canvas>
+                    <div class="f-pr j-rwrap " id="j-rwrap" >
+                       <!-- <div class="j-rwrap-list">
+                            <a class="cat" target="_blank"><h4 class="tit">分类目标</h4></a>
+                            <div class="links">
+                                <p class="">
+                                    <a href="" target="_blank">Java</a>
+                                    <span>/</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="j-rwrap-recommend f-cb">
+                            <a class="tit" href="" target="_blank">系列课程</a>
+                            <p class="links">
+                                <a href="" class=" " target="_blank">9种语言，带你进入编程的世界</a><br>
+                            </p>
+                        </div>-->
+                    </div>
+                   <!-- <img src="img/index/1.1.1/list-bg.png" id="j-rwrap-img" class="dis_none"/>-->
+                </div>
+            </div>
+          <!--  <div class="mainnav clearfix">
+                <a class="nitem " href="">职业学院</a>
+                <a class="nitem " href="">系列课程</a>
+                <a class="nitem" target="" hidefocus="true">工作机遇</a>
+            </div>-->
+            <div id="menu" class="mainnav clearfix">
+                <ul>
+                    <li class="nitem"> <a href="/view/zytp/list.html?version=1.5.1" target="_blank">职业学院</a> </li>
+                    <li class="nitem dis_none"> <a href="" target="_blank">系列课程</a> </li>
+                    <li class="nitem"> <a href="/view/xzjy/list.html?version=1.5.1" target="_blank">工作机遇</a></li>
+                </ul>
+            </div>
+
+            <!--侧边栏star-->
+            <div class="sidenav  f-pa">
+                <div class="sidenav-wrap clearfix">
+                    <div class="sidenav-list f-fl">
+                        <div class="qq-warp">
+                            <img src="img/index/qq-top.jpg">
+                            <div class="qq-warp-list">
+                                <p>Unity学习交流群：575561285</p>
+                                <img src="img/index/xrq.jpg">
+                            </div>
+                            <div class="qq-warp-list">
+                                <p>3Dmax学习交流群：468487213</p>
+                                <img src="img/index/zzq.png">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="sidenav-list f-fl" style="display: none">
+                        <ul class="j_statistics_wrap">
+                            <li class="clearfix">
+                                <div class="icon f-fl">
+                                    <i class="icon-tupu"></i>
+                                </div>
+                                <div class="sidenav-cnt">
+                                    <p class="first"><em class="j_map_num"></em><sup>+</sup>个</p>
+                                    <p class="second">在线职业学院数</p>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="icon f-fl">
+                                    <i class="icon-zxsp"></i>
+                                </div>
+                                <div class="sidenav-cnt">
+                                    <p class="first"><em class="j_video_num"></em><sup>+</sup>个</p>
+                                    <p class="second">在线视频数</p>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="icon f-fl">
+                                    <i class="icon-zxkc"></i>
+                                </div>
+                                <div class="sidenav-cnt">
+                                    <p class="first"><em class="j_class_time"></em><sup>+</sup>时</p>
+                                    <p class="second">在线课程时长</p>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="icon f-fl">
+                                    <i class="icon-spdj"></i>
+                                </div>
+                                <div class="sidenav-cnt">
+                                    <p class="first"><em class="j_job_num"></em><sup>+</sup>个</p>
+                                    <p class="second">在线职位数</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidenav-dot-wrapper clearfix">
+                    <div  class="sidenav_dot sidenav_dot_active" ></div>
+                    <div  class="sidenav_dot " ></div>
+                </div>
+            </div>
+            <!--侧边栏end-->
+
+            <!--活动 star -->
+            <div class="footnav f-pa">
+                <div class="slide-activity f-fl">
+                    <div class="img-scroll">
+                        <span class="prev"style="display: none"></span>
+                        <span class="next" style="display: none"></span>
+                        <div class="img-list">
+                            <ul>
+                               <!-- <li class="">
+                                    <a href="/view/zycp/index.html" target="_blank">
+                                        <div class="imgbox  f-fl">
+                                            <img src="img/index/1.1.1/tit1.png">
+                                        </div>
+                                        <div class="tit text-ellipsis"><a href="/view/zycp/index.html" target="_blank" >职业锚（职业定位）测评</a></div>
+                                        <div class="tip ">职业锚问卷（Career Anchor Questionaire）是国外职业测评运用最广泛、最有效的工具之一。 </div>
+                                    </a>
+                                </li>-->
+                                <li class="">
+                                    <a href="/view/invite/index.html" target="_blank">
+                                        <div class="imgbox  f-fl">
+                                            <img src="img/index/1.1.1/tit3.png">
+                                        </div>
+                                        <div class="tit text-ellipsis"> <a href="/view/invite/index.html" target="_blank">好友募集令</a></div>
+                                        <div class="tip " title="每邀请一个好友注册，各送30天VIP">每邀请一个好友注册，各送30天VIP</div>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="/view/info/setinfo.html" target="_blank">
+                                        <div class="imgbox  f-fl">
+                                            <img src="img/index/1.1.1/tit4.jpg">
+                                        </div>
+                                        <div class="tit text-ellipsis"> <a href="/view/info/setinfo.html" target="_blank">完善资料</a></div>
+                                        <div title="立刻完善基本信息，即可免费获赠7天VIP" class="tip ">立刻完善基本信息，即可免费获赠7天VIP
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="/view/wdjl/edit.html" target="_blank">
+                                        <div class="imgbox  f-fl">
+                                            <img src="img/index/1.1.1/tit5.jpg">
+                                        </div>
+                                        <div class="tit text-ellipsis"> <a href="/view/wdjl/edit.html" target="_blank">填写简历</a></div>
+                                        <div title="立刻完善简历档案，每完成一项即可免费获赠3天VIP" class="tip ">立刻完善简历档案，每完成一项即可免费获赠3天VIP</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="js-info">
+                    <div class="js-info-box">
+                        <a href="/view/join/tea_join.html" target="_blank">
+                            <i class="js-info-rz"></i>
+                            入驻
+                        </a>
+                    </div>
+                    <div class="js-info-box">
+                        <a href="/view/aboutus/connectusN.html" target="_blank">
+                            <i class="js-info-lx"></i>
+                            联系
+                        </a>
+                    </div>
+                    <div class="js-info-box">
+                        <a href="/view/aboutus/aboutusN.html" target="_blank">
+                            <i class="js-info-gy"></i>
+                            关于
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--活动 end-->
+        </div>
+        <!-- topnav end-->
+    </div>
+    <!--轮播 star-->
+    <div id="j_topimg_slider_container" class="container clearfix img-slide-container">
+        <div id="j_arrow_left" class="arrow-wrap arrow-wrap-l"><i class="arrow-l"></i></div>
+        <ul id="j_top_img_slide" data-cur="1" class="img-slide-wrapper">
+            <li class="slide-item"></li>
+        </ul>
+        <div id="j_arrow_right" class="arrow-wrap arrow-wrap-r"><i class="arrow-r"></i></div>
+        <div class="slide-pagination">
+            <div id="j_banner_dot_wrapper" class="dot-wrapper clearfix">
+                <div class="slide-active-dot"></div>
+                <div class="slide-dot"></div>
+            </div>
+        </div>
+    </div>
+    <!--轮播 end-->
+</div>
+
+<!--推荐课程 -->
+<div class="j-box" id="introduce" >
+
+    <div class="j-box-tit clearfix">
+        <h2 class="f-fl">推荐课程
+            <p id="j_order_wrap"><span data-value="createDate"  class="cf1">最新</span><i class="split"></i>
+            <span data-value="watchedNum">热门</span></p>
+        </h2>
+        <a class=" f-fr j-more" target="_blank" href="/view/seek/course.html"><span>更多</span><span class="icn"></span></a>
+    </div>
+    <div class="lesson-list">
+        <ul class="clearfix" id="lesson-list">
+           <!-- <li>
+                <div class="lessonimg-box img-hover-bigger">
+                    <a href="" target="_blank">
+                        <img src="img/index/1.1.1/1.jpg" class="lessonimg">
+                    </a>
+                </div>
+                <div class="lesson-infor">
+                    <h2 class="lesson-info-h2"><a href="" target="_blank">LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                    <div class="lesson-info">
+                        <div class="">
+                            <i class="renshu-icon"></i> <em>8000</em>
+                        </div>
+                        <div class="clearfix">
+                            <span class="free">免费</span>
+                            <span class="f-r">初级</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="lessonimg-box img-hover-bigger">
+                    <a href="" target="_blank">
+                        <img src="img/index/1.1.1/1.jpg" class="lessonimg">
+                    </a>
+                </div>
+                <div class="lesson-infor">
+                    <h2 class="lesson-info-h2"><a href="" target="_blank">LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+
+                    <div class="lesson-info">
+                        <div class="">
+                            <i class="renshu-icon"></i> <em>8000</em>
+                        </div>
+                        <div class="clearfix">
+                            <span class="vip">会员</span>
+                            <span class="f-r">初级</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="lessonimg-box img-hover-bigger">
+                    <a href="" target="_blank">
+                        <img src="img/index/1.1.1/1.jpg" class="lessonimg">
+                    </a>
+                </div>
+                <div class="lesson-infor">
+                    <h2 class="lesson-info-h2"><a href="" target="_blank">LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+
+                    <div class="lesson-info">
+                        <div class="">
+                            <i class="renshu-icon"></i> <em>8000</em>
+                        </div>
+                        <div class="clearfix">
+                            <span class="money">￥800</span>
+                            <span class="f-r">初级</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="lessonimg-box img-hover-bigger">
+                    <a href="" target="_blank">
+                        <img src="img/index/1.1.1/1.jpg" class="lessonimg">
+                    </a>
+                </div>
+                <div class="lesson-infor">
+                    <h2 class="lesson-info-h2"><a href="" target="_blank">LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+
+                    <div class="lesson-info">
+                        <div class="">
+                            <i class="renshu-icon"></i> <em>8000</em>
+                        </div>
+                        <div class="clearfix">
+                            <span class="free">免费</span>
+                            <span class="f-r">初级</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="lessonimg-box img-hover-bigger">
+                    <a href="" target="_blank">
+                        <img src="img/index/1.1.1/1.jpg" class="lessonimg">
+                    </a>
+                </div>
+                <div class="lesson-infor">
+                    <h2 class="lesson-info-h2"><a href="" target="_blank">LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                    <div class="lesson-info">
+                        <div class="">
+                            <i class="renshu-icon"></i> <em>8000</em>
+                        </div>
+                        <div class="clearfix">
+                            <span class="vip">会员</span>
+                            <span class="f-r">初级</span>
+                        </div>
+                    </div>
+                </div>
+            </li>-->
+        </ul>
+    </div>
+</div>
+<!--职业学院 -->
+<div class="j-index">
+    <div class="j-box clearfix ">
+        <div class="j-box-tit clearfix">
+            <h2 class="f-fl">职业学院</h2>
+            <a class="f-fr j-more" target="_blank" href="/view/zytp/list.html"><span>更多</span><span class="icn"></span></a>
+        </div>
+        <div class="j_map_container"></div>
+        
+
+    </div>
+</div>
+<!--系列课程 -->
+<div style="display:none;" class="j-box">
+    <div class="j-box-tit clearfix">
+        <h2 class="f-fl">系列课程</h2>
+        <a class=" f-fr j-more" target="_blank" href=""><span>更多</span><span class="icn"></span></a>
+    </div>
+    <div class="lesson-list">
+        <ul class="clearfix">
+            <li>
+                <div class="lessonimg-box img-hover-bigger">
+                    <a href="" target="_blank">
+                        <img src="img/index/1.1.1/1.jpg" class="lessonimg">
+                    </a>
+                    <div class="lesson-class">
+                        <span>9</span><br>课程<br>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="lesson-infor">
+                    <h2 class="lesson-info-h2"><a href="" target="_blank">LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                    <div class="lesson-info">
+                        <div class="">
+                            <i class="renshu-icon"></i> <em>8000</em>
+                        </div>
+                        <div class="clearfix">
+                            <span class="free">免费</span>
+                            <span class="f-r">初级</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="lessonimg-box img-hover-bigger">
+                    <a href="" target="_blank">
+                        <img src="img/index/1.1.1/1.jpg" class="lessonimg">
+                    </a>
+                    <div class="lesson-class">
+                        <span>9</span><br>课程<br>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="lesson-infor">
+                    <h2 class="lesson-info-h2"><a href="" target="_blank">LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                    <div class="lesson-info">
+                        <div class="">
+                            <i class="renshu-icon"></i> <em>8000</em>
+                        </div>
+                        <div class="clearfix">
+                            <span class="free">免费</span>
+                            <span class="f-r">初级</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="lessonimg-box img-hover-bigger">
+                    <a href="" target="_blank">
+                        <img src="img/index/1.1.1/1.jpg" class="lessonimg">
+                    </a>
+                    <div class="lesson-class">
+                        <span>9</span><br>课程<br>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="lesson-infor">
+                    <h2 class="lesson-info-h2"><a href="" target="_blank">LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                    <div class="lesson-info">
+                        <div class="">
+                            <i class="renshu-icon"></i> <em>8000</em>
+                        </div>
+                        <div class="clearfix">
+                            <span class="free">免费</span>
+                            <span class="f-r">初级</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="lessonimg-box img-hover-bigger">
+                    <a href="" target="_blank">
+                        <img src="img/index/1.1.1/1.jpg" class="lessonimg">
+                    </a>
+                    <div class="lesson-class">
+                        <span>9</span><br>课程<br>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="lesson-infor">
+                    <h2 class="lesson-info-h2"><a href="" target="_blank">LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                    <div class="lesson-info">
+                        <div class="">
+                            <i class="renshu-icon"></i> <em>8000</em>
+                        </div>
+                        <div class="clearfix">
+                            <span class="free">免费</span>
+                            <span class="f-r">初级</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="lessonimg-box img-hover-bigger">
+                    <a href="" target="_blank">
+                        <img src="img/index/1.1.1/1.jpg" class="lessonimg">
+                    </a>
+                    <div class="lesson-class">
+                        <span>9</span><br>课程<br>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="lesson-infor">
+                    <h2 class="lesson-info-h2"><a href="" target="_blank">LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                    <div class="lesson-info">
+                        <div class="">
+                            <i class="renshu-icon"></i> <em>8000</em>
+                        </div>
+                        <div class="clearfix">
+                            <span class="free">免费</span>
+                            <span class="f-r">初级</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--合作伙伴 -->
+<div class="j-box">
+    <div class="j-box-tit">
+        <h2> 合作伙伴</h2>
+    </div>
+    <div class="hzhb-list">
+        <div class="clearfix">
+            <div class="hzhb-wrap">
+                <img src="img/index/1.1.1/qiye_1.png"/>
+            </div>
+            <div class="hzhb-wrap">
+                <img src="img/index/1.1.1/qiye_2.png"/>
+            </div>
+            <div class="hzhb-wrap">
+                <img src="img/index/1.1.1/qiye_3.png"/>
+            </div>
+            <div class="hzhb-wrap">
+                <img src="img/index/1.1.1/qiye_4.png"/>
+            </div>
+            <div class="hzhb-wrap">
+                <img src="img/index/1.1.1/qiye_5.png"/>
+            </div>
+            <div class="hzhb-wrap">
+                <img src="img/index/1.1.1/qiye_6.png"/>
+            </div>
+            <div class="hzhb-wrap">
+                <img src="img/index/1.1.1/qiye_7.png"/>
+            </div>
+            <div class="hzhb-wrap">
+                <img src="img/index/1.1.1/qiye_8.png"/>
+            </div>
+            <div class="hzhb-wrap">
+                <img src="img/index/1.1.1/qiye_9.png"/>
+            </div>
+            <div class="hzhb-wrap">
+                <img src="img/index/1.1.1/qiye_10.png"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--大咖云集 -->
+<!--<div class="j-box">
+    <div class="j-box-tit">
+        <h2> 大咖云集</h2>
+        <div class=" clearfix" style="margin-top: 12px;">
+            <p class="f-fl">游戏行业300余位资深一线开发人员汇聚于此</p>
+            <a class=" f-fr j-more" target="_blank" href="/view/join/tea_form.html"><span>申请加入</span><span class="icn"></span></a>
+        </div>
+    </div>
+    <div class="daka-list">
+        <div class="clearfix">
+            <div class="daka-wrap">
+                <a href="" target="_blank">
+                    <div class="daka-wrap-box">
+                        <img src="img/index/1.1.1/daka.png" height="180" width="180">
+                        <div class="daka-wrap-intro">
+                            <h3 class="name">单鑫</h3>
+                            <p>神古网络CEO、9年Unity使用经验</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="daka-wrap">
+                <a href="" target="_blank">
+                    <div class="daka-wrap-box">
+                        <img src="img/index/1.1.1/daka.png" height="180" width="180">
+                        <div class="daka-wrap-intro">
+                            <h3 class="name">单鑫</h3>
+                            <p>神古网络CEO、9年Unity使用经验</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="daka-wrap">
+                <a href="" target="_blank">
+                    <div class="daka-wrap-box">
+                        <img src="img/index/1.1.1/daka.png" height="180" width="180">
+                        <div class="daka-wrap-intro">
+                            <h3 class="name">单鑫</h3>
+                            <p>神古网络CEO、9年Unity使用经验</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="daka-wrap">
+                <a href="" target="_blank">
+                    <div class="daka-wrap-box">
+                        <img src="img/index/1.1.1/daka.png" height="180" width="180">
+                        <div class="daka-wrap-intro">
+                            <h3 class="name">单鑫</h3>
+                            <p>神古网络CEO、9年Unity使用经验</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="daka-wrap">
+                <a href="" target="_blank">
+                    <div class="daka-wrap-box">
+                        <img src="img/index/1.1.1/daka.png" height="180" width="180">
+
+                        <div class="daka-wrap-intro">
+                            <h3 class="name">单鑫</h3>
+
+                            <p>神古网络CEO、9年Unity使用经验</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="daka-wrap">
+                <a href="" target="_blank" title="">
+                    <div class="daka-wrap-box">
+                        <img src="img/index/1.1.1/daka.png" height="180" width="180">
+
+                        <div class="daka-wrap-intro">
+                            <h3 class="name">单鑫</h3>
+
+                            <p>神古网络CEO、9年Unity使用经验</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
+<script>
+    BizQQWPA.addCustom({
+        aty: '0',
+        nameAccount: '800187260',
+        selector: 'Js_QQWPA'
+    });
+</script>
+<ul class=" box-fix" id="j_marketing_overlays">
+    <li class="item qq ">
+        <div class="qq-wrap j_qq_wrap" id="Js_QQWPA">
+            <!--<iframe src="" style="display: none;"></iframe>-->
+        </div>
+    </li>
+    <li  class="item tel ">
+        <div  class="zytp-index box-shadow">
+            <div class="zytp-top">
+                <p class="font-sz16">免费在线咨询</p>
+                <p>021-51134006</p>
+            </div>
+            <div class="zytp-tel">
+                <div class="zytp-tel-box">
+                    <input type="tel" class="j_tel" placeholder="请输入您的电话号" />
+                    <div class="tel-box-hint">
+                        <p>请输入正确的号码，手机号码请直接输入，座机请加区号</p>
+                    </div>
+                </div>
+
+                <a class="zytp-btn j_btn_call">免费通话咨询</a>
+
+            </div>
+        </div>
+    </li>
+
+</ul>
+
+
+<div class="clear-box"></div>
+
+<div include="view/module/footer.html"></div>
+<script src="js/vendor/jquery-1.11.3.min.js"></script><!--
+<script src="js/index/easing.js"></script>-->
+<script src="js/index/init.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index/index.js"></script>
+<script type="text/javascript" src="/js/vendor/jquery.lazyload.js"></script>
+<script type="text/javascript" src="/js/index/index-extend.js"></script>
+<script>
+    function maiov(data) {
+        var oUl = document.getElementById('search-list');
+        var html = '';
+        if (data.s.length) {
+            oUl.style.display = 'block';
+            for (var i=0; i<data.s.length; i++) {
+                html += '<li><a target="_blank" href="http://www.baidu.com/s?wd='+data.s[i]+'">'+ data.s[i] +'</a></li>';
+            }
+            oUl.innerHTML = html;
+        } else {
+            oUl.style.display = 'none';
+        }
+    }
+    window.onload = function() {
+        var oQ = document.getElementById('search');
+        var oUl = document.getElementById('search-list');
+        oQ.onkeyup = function() {
+            if ( this.value != '' ) {
+                var oScript = document.createElement('script');
+                oScript.src = 'http://suggestion.baidu.com/su?wd='+this.value+'&cb=maiov';
+                document.body.appendChild(oScript);
+            } else {
+                oUl.style.display = 'none';
+            }
+        }
+    }
+</script>
+
+<script>
+    $(function () {
+        var s = document.getElementById("canvas");
+        var h = s.getContext("2d");
+        var A = Math.PI / 180;
+        var a = [
+            {angle: 0, a: 80, b: 10, c: 175},
+            {angle: 180, a: 80, b: 10, c: 175},
+            {angle: 90, a: 160, b: 15,c: 100 },
+            {angle: 270, a: 160,b: 15, c: 100},
+            {angle: 45, a: 240, b: 20, c: 0},
+            {angle: 135,a: 240, b: 20,c: 0 },
+            {angle: 225, a: 240,b: 20, c: 0},
+            {angle: 315, a: 240,b: 20, c: 0},
+            {angle: 270,a: 160, b: 15,c: -100 },
+            {angle: 90, a: 160, b: 15, c: -100},
+            {angle: 180, a: 80, b: 10, c: -175},
+            {angle: 0, a: 80, b: 10, c: -175}
+            ];
+
+
+        var d = [];
+        for (var z = 0; z < a.length; z++) {
+            var n = {x: a[z].a * Math.cos(A * a[z].angle), y: a[z].b * Math.sin(A * a[z].angle) + a[z].c};
+            d.push(n)
+        }
+        var r = [[1, 2, 3, 4, 7], [2, 3, 5, 6], [4, 5], [6, 7], [5, 7, 9, 11], [6, 9, 10], [7, 8, 10], [8, 11], [10, 11], [10, 11], [11]];
+        var p = null;
+        var o = null;
+        iTimer = setInterval(function () {
+            $("#j-rwrap-img").get(0).onmousemove = function (i) {
+                var x = document.body.scrollTop || document.documentElement.scrollTop;
+                var t = i || event;
+                p = t.clientX - this.offsetLeft - 400 -180;
+                o = t.clientY - this.offsetTop - 340 + x;
+                if (Math.abs(p) > 400) {
+                    p = null;
+                    o = null
+                }
+            };
+            $("#j-rwrap-img").get(0).onmouseleave = function (i) {
+                p = null;
+                o = null
+            };
+            q()
+        }, 60);
+        setInterval(function () {
+            for (var x = 0; x < a.length; x++) {
+                a[x].angle += 2;
+                var t = {x: a[x].a * Math.cos(A * a[x].angle), y: a[x].b * Math.sin(A * a[x].angle) + a[x].c};
+                d[x] = t
+            }
+        }, 60);
+        function q(y) {
+            h.clearRect(0, 0, 1000, 500);
+            for (var x = 0; x < d.length; x++) {
+                h.save();
+                h.translate(400, 190);
+                h.beginPath();
+                h.arc(d[x].x, d[x].y, 5, 0, 2 * Math.PI, false);
+                h.shadowOffsetX = 0;
+                h.shadowOffsetY = 0;
+                h.shadowBlur = 20;
+                h.fillStyle = "rgba(255,255,255,.6)";
+                h.fill();
+                h.restore()
+            }
+            for (var x = 0; x < r.length; x++) {
+                for (var t = 0; t < r[x].length; t++) {
+                    h.save();
+                    h.translate(400, 190);
+                    h.beginPath();
+                    h.moveTo(d[x].x, d[x].y);
+                    h.lineTo(d[r[x][t]].x, d[r[x][t]].y);
+                    h.strokeStyle = "rgba(255,255,255,.6)";
+                    h.stroke();
+                    h.restore()
+                }
+            }
+            if (p !== null) {
+                h.save();
+                h.translate(400, 190);
+                h.beginPath();
+                h.arc(p, o, 5, 0, 2 * Math.PI, false);
+                h.shadowOffsetX = 0;
+                h.shadowOffsetY = 0;
+                h.shadowBlur = 20;
+                h.fillStyle = "rgba(255,255,255,.6)";
+                h.fill();
+                h.restore();
+                for (var x = 0; x < d.length; x++) {
+                    if (Math.abs(p - d[x].x) < 400 && Math.abs(o - d[x].y) < 200) {
+                        h.save();
+                        h.translate(400, 190);
+                        h.beginPath();
+                        h.moveTo(p, o);
+                        h.lineTo(d[x].x, d[x].y);
+                        h.strokeStyle = "rgba(255,255,255,.6)";
+                        h.stroke();
+                        h.restore()
+                    }
+                }
+            }
+        }
+    });
+</script>
+<script type="text/javascript">
+    var marketingModule={
+        bindEvents:function(){
+            var self=this;
+            $('#j_marketing_overlays').on('click','.j_btn_call',function(){
+                var $this=$(this),$wrap=$('#j_marketing_overlays'),tel=$wrap.find('.j_tel').val();
+                if(checkTel()&&!self.disabledCall){
+                    self.disabledCall=true;
+                    $this.html('正在进行通话');
+                    console.log('正在进行通话');
+                    self.makeCall(tel,$this);
+                    $wrap.find('.j_tel').val('');
+                    var st=setTimeout(function(){
+                        $this.html('免费通话咨询');
+                        self.disabledCall=false;
+                        clearTimeout(st);
+                    },1000*20);
+                }
+            });
+          /*  $('#j_marketing_overlays').on('click','.j_qq_wrap',function(){
+                var $this=$(this),
+                        href='tencent://message/?Menu=yes&uin=800187260&Service=58&SigT=675C51B86234D58FCE3F5E8A298087FDAC882EEEF8A76E76C48312F55F496E2A68D0612D6FF83A0E1FF805C0A0A700DEE135539A8F18DEA334A1FFAA0CBB9FE25F521806E4386B56C8987E1D993EAB8C70C14FF3088D3317B7D0D7A463277EE18806EE30F5C1F38099B9FE2F59E6F1589C0544D896E55379&SigU=5469399EFD283D31BC6B69783652AEF8085CA659C74C768750458953518F3883731BB0FAA9B11CD5BFF8A7C58989CB91BF3D406DB1727C6D619E7DB387C38FAFE8F579CE0C17A909'+Date.now();
+                        $this.find('iframe').attr('src',href);
+            });*/
+            $('.zytp-btn').on('click',function(){
+                checkTel();
+            });
+
+            $('.box-fix').on('click','.tel',function(e){
+                $('.zytp-index').show();
+            });
+            $('.zytp-index').on('mouseleave',function(e){
+                $('.zytp-index').hide();
+            });
+            function Timeout(){
+                $(".tel-box-hint").show();
+                setTimeout(function(){
+                    $(".tel-box-hint").hide();
+                },1000);
+            };
+            function checkTel(){
+                var isPhone = /^([0-9]{3,4}-)?[0-9]{7,8}$/;
+                var isMob=/^((\+?86)|(\(\+86\)))?(13[0123456789][0-9]{8}|15[0123456789][0-9]{8}|18[023456789][0-9]{8}|147[0-9]{8}|1349[0-9]{7})$/;
+                var value=$('#j_marketing_overlays').find(".j_tel").val().trim();
+                if(isMob.test(value)||isPhone.test(value)){
+                    return true;
+                }
+                else{
+                    Timeout();
+                    return false;
+                }
+            };
+        },
+        makeCall:function(tel,$this){
+            $.ajax({
+                type:'get',
+                url:'http://121.41.74.120/command?Action=Webcall&Account=N00000010053&PBX=sh.ali.5.3&Timeout=20&ServiceNo=02111110000&Exten='+tel,
+                success:function(result){
+                    mainModule.log('电话接通数据',result);
+                    if(result.Succeed){
+                        $this.html('免费通话咨询');
+                    }
+                }
+            })
+        },
+        init:function(){
+            this.bindEvents();
+        }
+    };
+    marketingModule.init();
+
+</script>
+</body>
+</html>
